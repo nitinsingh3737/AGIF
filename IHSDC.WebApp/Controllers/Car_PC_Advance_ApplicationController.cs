@@ -24,9 +24,9 @@ namespace IHSDC.WebApp.Controllers
     public class Car_PC_Advance_ApplicationController : Controller
     {
         //private IHSDCAGIFDBEntities db = new IHSDCAGIFDBEntities();
+
         DBConnection con = new DBConnection();
 
-        
         // GET: Car_PC_Advance_Application
         [Authorize]
         public ActionResult Index()
@@ -37,21 +37,9 @@ namespace IHSDC.WebApp.Controllers
                 {
                     List model = new List();
                     model.carPcModel = con.getApplication();
-                    List<CarPcModel> lst = new List<CarPcModel>();
-                    foreach (var data in model.carPcModel)
-                    {
-                        CarPcModel carPc = new CarPcModel();
 
-                        carPc = data;
 
-                        carPc.Loanee_Name = EncryptDecrypt.DecryptionData(data.Loanee_Name);
-                        carPc.AadharNo = EncryptDecrypt.DecryptionData(data.AadharNo);
-                        carPc.PANNo = EncryptDecrypt.DecryptionData(data.PANNo);
-
-                        lst.Add(carPc);
-                    }
-
-                    return View(lst);
+                    return View(model.carPcModel);
                 }
                 else
                 {
@@ -696,13 +684,7 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult Search(string id, string callaction)
         {
             try
-            {
-                string ipAddress = Request.UserHostAddress;
-                ViewBag.IpAddress = ipAddress;
-
-                ViewBag.time = DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy HH:mm").Trim();
-
-
+            { 
                 ViewBag.action = callaction;
                 ViewBag.Mess1 = TempData["info"];
 
@@ -717,13 +699,10 @@ namespace IHSDC.WebApp.Controllers
                 {
                     return HttpNotFound();
                 }
-                car_PC_Advance_Application.Loanee_Name = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Loanee_Name);
-                car_PC_Advance_Application.AadharNo = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.AadharNo);
-                car_PC_Advance_Application.PANNo = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.PANNo);
                 string a = car_PC_Advance_Application.Status.TrimEnd();
                 return View(car_PC_Advance_Application);
             }
-            catch(Exception ex)
+            catch
             {
                 return View("Error");
             }
@@ -1099,18 +1078,14 @@ namespace IHSDC.WebApp.Controllers
                     car_PC_Advance_Application.DateTimeUpdated = DateTime.Now;
                     car_PC_Advance_Application.UpdatedBy = User.Identity.Name;
                     car_PC_Advance_Application.Status = "New Application";
-
-                    car_PC_Advance_Application.Loanee_Name = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Loanee_Name);
-                    car_PC_Advance_Application.AadharNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.AadharNo);
-                    car_PC_Advance_Application.PANNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.PANNo);
-
+                  
                     con.carPcModel.Add(car_PC_Advance_Application);
                     con.SaveChanges();
                     int id = Convert.ToInt32(car_PC_Advance_Application.Application_Id);
                     ModelState.Clear();
                     ViewBag.Message = "Application Successfully Submit!!";
 
-                    return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = EncryptDecrypt.Encryption(car_PC_Advance_Application.Application_Id.ToString()), callaction = "download" });
+                    return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = car_PC_Advance_Application.Application_Id, callaction = "download" });
                 }
                 else
                 {

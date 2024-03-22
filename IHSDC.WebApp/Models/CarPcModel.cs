@@ -33,12 +33,12 @@ namespace IHSDC.WebApp.Models
         public string ApplicationType { get; set; }
 
         [Required]
-        //[StringLength(12, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 12)]
-        //[RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
+        [StringLength(12, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 12)]
+        [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public string AadharNo { get; set; }
-        //[StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
+        [StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
         [Required]
-        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string PANNo { get; set; }
 
         public string CarLoanType { get; set; }
@@ -47,8 +47,8 @@ namespace IHSDC.WebApp.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
         public DateTime? DateTimeUpdated { get; set; }
-        //[StringLength(50)]
-        //[RegularExpression("([a-zA-Z .&'-]+)", ErrorMessage = "Enter only alphabets")]
+        [StringLength(50)]
+        [RegularExpression("([a-zA-Z .&'-]+)", ErrorMessage = "Enter only alphabets")]
         public string Loanee_Name { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]

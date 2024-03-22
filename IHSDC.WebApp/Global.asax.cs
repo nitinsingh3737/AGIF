@@ -84,19 +84,6 @@ namespace IHSDC.WebApp
         //    controller.Execute(new RequestContext(new HttpContextWrapper(context), routeData));
         //}
 
-        public void Application_AuthenticateRequest(object sender, EventArgs e)
-        {
-            string referer = Request.ServerVariables["HTTP_REFERER"];
-            string login = Request.CurrentExecutionFilePath;
-            if (referer == null && login != "/")
-            {
-                if ((referer == null && login != "/Account/Login"))
-                {
-                    Response.Redirect("/Account/Login");
-                }
-            }
-        }
-
 
     }
 }

@@ -55,14 +55,6 @@ namespace IHSDC.WebApp
                }
            });
 
-
-
-
-
-
-
-
-
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when 
