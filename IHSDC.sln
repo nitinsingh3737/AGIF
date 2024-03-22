@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33027.164
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHSDC.WebApp", "IHSDC.WebApp\IHSDC.WebApp.csproj", "{7443F539-9A80-4679-AD90-76B6EAB59875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94001CF9-14E5-4E34-85A7-6DA22D63A053}
+	EndGlobalSection
+EndGlobal

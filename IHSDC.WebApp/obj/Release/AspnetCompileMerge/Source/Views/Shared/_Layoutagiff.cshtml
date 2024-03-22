@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+<head runat="server">
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    @*@Styles.Render("~/Content/Site.css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <title></title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" type="text/css" href="~/style/style.css" />
+
+
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 98px;
+            height: 87px;
+            float: left;
+        }
+
+        .auto-style2 {
+            margin-left: 0px;
+            width: 551px;
+        }
+
+        .auto-style3 {
+            width: 336px;
+            height: 132px;
+            float: right;
+        }
+    </style>
+
+
+
+    <div id="header">
+        <div id="logo">
+            <div id="logo_text">
+                <!-- class="logo_colour", allows you to change the colour of the text -->
+                <h1><a href="../Default.aspx">AGIF<span class="logo_colour"> Web Portal</span></a></h1>
+                <h2>Insurance. Loans. For Indian Army</h2>
+            </div>
+            <img alt="" class="auto-style3" src="~/Images/agi_bhawan.jpg" />
+        </div>
+        <div id="menubar">
+            <ul id="menu">
+                <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+                <li><a href="../default.aspx">Home</a></li>
+                @*// <li><a href="../search.aspx">Check Status</a></li>*@
+                <li><a href="../House_Building_Advance_Application/Create">Home Advance</a></li>
+                <li><a href="../Car_PC_Advance_Application/Create">Car/PC Advance</a></li>
+                <li><a href="../Claims_Maturity/Create">Claims Maturity</a></li>
+                
+                @if ((Request.IsAuthenticated) & User.IsInRole("Administrator"))
+    {
+            <li><a href="../House_Building_Advance_Application/Index">HBA Recd</a></li>
+            <li><a href="../Claims_Maturity/Index">Claims Recd</a></li>
+            <li><a href="../Car_PC_Advance_Application/Index">Car/PC Recd</a></li>
+}
+                <li><a href="../Contact.aspx">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    @*<asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>*@
+
+</head>
+<body>
+    <main class="container body-content">
+        <form id="form1" runat="server">
+            @*<div id="content_header">
+                <img alt="AGIF" class="auto-style1" src="~/Images/agif_logo.jpg" />
+            </div>*@
+            
+                @*<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">*@
+                    @RenderBody()
+                @*</asp:ContentPlaceHolder>*@
+            
+
+        </form>
+    </main>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

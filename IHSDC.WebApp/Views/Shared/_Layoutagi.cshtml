@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title></title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <script src="~/Scripts/jquery.js"></script>
+    <script src="~/Scripts/jquery/jquery.min.js"></script>
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/Content/mainPage.css" rel="stylesheet" />
+    <link href="~/Content/font.css" rel="stylesheet" />
+    <script src="~/Scripts/bootmin.js"></script>
+
+    <style type="text/css">
+        body {
+            font-size: 18px;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: darkcyan;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        .dropdown-menu > li > a {
+            color: darkcyan;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+        .auto-style1 {
+            width: 98px;
+            height: 87px;
+            float: left;
+        }
+
+        body {
+            background: whitesmoke;
+        }
+
+        .auto-style2 {
+            margin-left: 0px;
+            width: 551px;
+        }
+
+        .auto-style3 {
+            width: 336px;
+            height: 132px;
+            float: right;
+        }
+
+        .top_bar {
+            min-height: 110px;
+            background: rgb(210 0 0);
+            text-align: center;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30bed6', endColorstr='#38cac9',GradientType=1 ); /* IE6-9 */
+        }
+
+        .social {
+            list-style-type: none;
+            margin-bottom: 0px;
+            float: left;
+            padding: 0px;
+            margin-left: 0px;
+        }
+
+            .social li {
+                float: left;
+            }
+
+                .social li a {
+                    padding: 0 10px;
+                    font-size: 20px;
+                    line-height: 50px;
+                    color: #FFF;
+                }
+
+        .rightc {
+            list-style-type: none;
+            margin-bottom: 0px;
+            float: right;
+        }
+
+            .rightc li {
+                margin: 0px 10px;
+                font-size: 18px;
+                float: left;
+                line-height: 50px;
+                color: #FFF;
+            }
+
+                .rightc li a {
+                    color: #FFF;
+                }
+
+        .navbar-brand img {
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+        }
+
+        .header_image {
+            margin-top: -70px;
+            float: left;
+        }
+
+        .nav.navbar-nav.navbar-right span {
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            font-weight: 300;
+            color: #1b6977;
+        }
+
+        .navbar-right li a {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            color: #1b6977 !important;
+        }
+    </style>
+    <style>
+        .context-dark, .bg-gray-dark, .bg-primary {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+            color: #ffffff;
+        }
+
+        .nav-list li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+            .nav-list li a:hover:before {
+                margin-left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+
+        ul, ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 23px;
+            font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-container .col {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-list li a:before {
+            content: "\f14f";
+            font: 400 21px/1 "Material Design Icons";
+            color: #4d6de6;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-left: -28px;
+            margin-right: 7px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .22s ease;
+        }
+
+        .dropdown-submenu {
+            position: relative;
+        }
+
+            .dropdown-submenu > .dropdown-menu {
+                top: 0;
+                left: 100%;
+                margin-top: -6px;
+                margin-left: -1px;
+                -webkit-border-radius: 0 6px 6px 6px;
+                -moz-border-radius: 0 6px 6px;
+                border-radius: 0 6px 6px 6px;
+            }
+
+            .dropdown-submenu:hover > .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-submenu > a:after {
+                display: block;
+                content: " ";
+                float: right;
+                width: 0;
+                height: 0;
+                border-color: transparent;
+                border-style: solid;
+                border-width: 5px 0 5px 5px;
+                border-left-color: #ccc;
+                margin-top: 5px;
+                margin-right: -10px;
+            }
+
+            .dropdown-submenu:hover > a:after {
+                border-left-color: #fff;
+            }
+
+            .dropdown-submenu.pull-left {
+                float: none;
+            }
+
+                .dropdown-submenu.pull-left > .dropdown-menu {
+                    left: -100%;
+                    margin-left: 10px;
+                    -webkit-border-radius: 6px 0 6px 6px;
+                    -moz-border-radius: 6px 0 6px 6px;
+                    border-radius: 6px 0 6px 6px;
+                }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            $('.navbar .dropdown-item').on('click', function (e) {
+                var $el = $(this).children('.dropdown-toggle');
+                var $parent = $el.offsetParent(".dropdown-menu");
+                $(this).parent("li").toggleClass('open');
+
+                if (!$parent.parent().hasClass('navbar-nav')) {
+                    if ($parent.hasClass('show')) {
+                        $parent.removeClass('show');
+                        $el.next().removeClass('show');
+                        $el.next().css({ "top": -999, "left": -999 });
+                    } else {
+                        $parent.parent().find('.show').removeClass('show');
+                        $parent.addClass('show');
+                        $el.next().addClass('show');
+                        $el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 });
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            });
+
+            $('.navbar .dropdown').on('hidden.bs.dropdown', function () {
+                $(this).find('li.dropdown').removeClass('show open');
+                $(this).find('ul.dropdown-menu').removeClass('show open');
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    
+
+    <header id="header">
+        <div class="top_bar" style="text-align:center;">
+            <div>
+                <div class="col-md-12">
+                    <div><img src="~/Images/Main.png" style="max-width:100%;max-height:115px;" /></div>
+                    @*<ul class="social">
+                            <li><a class="display-3">AGIF Web Portal</a></li>
+
+                        </ul>*@
+                </div>
+                @* <div class="col-md-6">*@
+                @*<ul class="rightc">
+                                <li><i class="fa fa-envelope-o"></i> adagif@gmail.com  </li>
+
+                                @if (Session["UserIntId"] == null)
+                            {
+                                <li><i class="fa fa-user"></i> <a href="~/Account/Login">Login</a></li>
+                        }
+                        else
+                        {
+                            <li>@Html.Partial("_LoginPartial")</li>
+                    }
+                            </ul>*@
+                @*</div>*@
+            </div>
+        </div>
+        <!--top_bar-->
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @*<a class="navbar-brand" href="#"><img src="~/Images/logo1.png" style="width:50px;"></a>*@
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li>
+                            <a href="~/Home/Index">Home</a>
+
+                        </li>
+
+                        <li>
+                            <a href="~/Home/AboutUs">About</a>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Benefits</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">While in Service</a>
+                                    <ul class="dropdown-menu" style="width:500px;">
+                                        <li><a href="~/Home/InsuranceCover">Insurance Cover</a></li>
+                                        <li><a href="~/Home/AdditionalInsuranceCovertoArmyAviationOfficers">Additional Insurance Cover to Army Aviation Officers</a></li>
+                                        <li><a href="~/Home/DisabilityBenefits">Disability Benefits</a></li>
+                                        <li><a href="~/Home/ExGratiaDisabilityAllowance">Ex-Gratia Disability Allowance</a></li>
+                                        <li><a href="~/Home/MaturityBenefits">Maturity Benefits</a></li>
+                                        <li><a href="~/Home/FinalWithdrawalfromMaturityBenefit">Final Withdrawal from Maturity Benefit</a></li>
+                                        <li><a href="~/Home/SustenanceAllowancetoDifferentlyAbledChildren">Sustenance Allowance to Differently Abled Children</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">After Retirement</a>
+                                    <ul class="dropdown-menu" style="width:500px;">
+                                        <li><a href="~/Home/ExtendedInsuranceScheme">Extended Insurance Scheme</a></li>
+                                        @*<li><a href="~/Home/MedicalBenefitScheme">Medical Benefit Scheme</a></li>*@
+                                        <li><a href="~/Home/SocialSecurityDepositsScheme">Social Security Deposits Scheme</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        @*<li class="dropdown-submenu">
+            <a href="#"  data-toggle="dropdown">Conveyance (CA)/PC</a>
+            <ul class="dropdown-menu">
+                <li><a href="~/Car_PC_Advance_Application/Create">Apply New </a></li>
+                <li><a href="~/Car_PC_Advance_Application/Index">List</a></li>
+            </ul>
+        </li>*@
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Types Of Loan</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/House_Building_Advance_Application/Create">House Building (HBA) </a></li>
+
+                                <li>
+                                    <a href="~/Car_PC_Advance_Application/CARequirement">Conveyance (CA)</a>
+                                    @*<ul class="dropdown-menu">
+                        <li><a href="~/Car_PC_Advance_Application/Create">Apply New </a></li>
+                        <li><a href="~/Car_PC_Advance_Application/Index">List</a></li>
+                    </ul>*@
+                                </li>
+
+                                <li>
+                                    <a href="~/Car_PC_Advance_Application/PCARequirement">Personal Computer (PCA) </a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="~/Car_PC_Advance_Application/Create">Apply For Loan(PCA/CA)</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Loan Application</a>
+                            @*<a href="~/Search/Search">Search</a>*@
+                            <ul class="dropdown-menu">
+                                <li><a href="~/LoanApplication/upload">Upload Documents</a></li>
+                                <li><a href="~/LoanApplication/download">Download</a></li>
+                                <li><a href="~/LoanApplication/status">Status</a></li>
+                            </ul>
+                        </li>
+
+
+                        @*<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Links</a>
+            <ul class="dropdown-menu">
+                <li><a href="~/Home/MATURITY">Maturity Tables (01 Oct 2018 to 31 Mar 2019)</a></li>
+                <li><a target="_blank" href="~/Home/LatestNews">Latest News</a></li>
+            </ul>
+        </li>*@
+                        @*<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Important Letters</a>
+            <ul class="dropdown-menu">
+                <li><a target="_blank" href="~/Home/importantLetter6">Fraud in name of AGIF</a></li>
+                <li><a target="_blank" href="~/Home/importantLetter">Pre-EMI Revision : HBA</a></li>
+                <li><a target="_blank" href="~/Home/importantLetter1">AGIF Loan : Inward Payment Using NEFT</a></li>
+                <li><a target="_blank" href="~/Home/importantLetter2">Revision of Policy for Grant of HBA</a></li>
+                <li><a target="_blank" href="~/Home/importantLetter3">Review of HBA</a></li>
+                <li><a target="_blank" href="~/Home/importantLetter4">Provisioning of IT Rebate Certificate </a></li>
+                <li><a target="_blank" href="~/Home/importantLetter5">Benevolent Reserve Fund</a></li>
+            </ul>
+        </li>*@
+                        @*<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">FAQ</a>
+            <ul class="dropdown-menu">
+                <li><a href="~/Home/faq" target="_blank">Claims</a></li>
+                <li><a href="~/Home/faq1" target="_blank">Advances General</a></li>
+                <li><a href="~/Home/faq2" target="_blank">HBA</a></li>
+                <li><a href="~/Home/faq3" target="_blank">CA</a></li>
+                <li><a href="~/Home/faq4" target="_blank">PCA</a></li>
+            </ul>
+        </li>*@
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">IT CERT</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/ITCERT/Index">Download</a></li>
+
+                                @if (Session != null)
+                                {
+                                    if (Session["UserIntId"] != null)
+                                    {
+                                        <li><a href="~/ITCERT/upload">Upload File</a></li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Loan CERT</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/LoanCert/Index">Download</a></li>
+
+                                @if (Session != null)
+                                {
+                                    if (Session["UserIntId"] != null)
+                                    {
+                                        <li><a href="~/ITCERT/upload">Upload File</a></li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">BackUp / Restore</a>
+                                @*<a href="~/Search/Search">Search</a>*@
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Backup/BackupDatabase">DataBase Backup</a></li>
+                                    <li><a href="~/Backup/RestoreDatabase">DataBase Restore</a></li>
+                                </ul>
+                            </li>
+                        }
+
+                        <li>
+                            <a href="~/Home/ContactUs">Contact Us</a>
+
+                        </li>
+
+
+                        @if (Session != null)
+                        {
+                            if (Session["UserIntId"] != null)
+                            {
+                                <li style="margin-top:1.2%;">
+                                    @Html.Partial("_LoginPartial")
+                                </li>
+                            }
+                        }
+
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    </header>
+
+
+    @*@Html.Partial("_LoginPartial")*@
+    <div class="container-fluid body-content">
+        @RenderBody()
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+
+        <script>
+            jQuery.fn.liScroll = function (settings) {
+                settings = jQuery.extend({
+                    travelocity: 0.03
+                }, settings);
+                return this.each(function () {
+                    var $strip = jQuery(this);
+                    $strip.addClass("newsticker")
+                    var stripHeight = 1;
+                    $strip.find("li").each(function (i) {
+                        stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
+                    });
+                    var $mask = $strip.wrap("<div class='mask'></div>");
+                    var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
+                    var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width
+                    $strip.height(stripHeight);
+                    var totalTravel = stripHeight;
+                    var defTiming = totalTravel / settings.travelocity;	// thanks to Scott Waye
+                    function scrollnews(spazio, tempo) {
+                        $strip.animate({ top: '-=' + spazio }, tempo, "linear", function () { $strip.css("top", 0); scrollnews(totalTravel, defTiming); });
+                    }
+                    scrollnews(totalTravel, defTiming);
+                    $strip.hover(function () {
+                        jQuery(this).stop();
+                    },
+                        function () {
+                            var offset = jQuery(this).offset();
+                            var residualSpace = offset.top + stripHeight;
+                            var residualTime = residualSpace / settings.travelocity;
+                            scrollnews(stripHeight, residualTime);
+                        });
+                });
+            };
+
+            $(function () {
+                $("ul#ticker01").liScroll();
+                $("ul#ticker02").liScroll();
+                $("ul#ticker03").liScroll();
+                $("ul#ticker04").liScroll();
+            });
+        </script>
+
+    </div>
+
+
+
+</body>
+</html>

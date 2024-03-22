@@ -1,0 +1,196 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layoutagif.cshtml";
+}
+<div class="jumbotron">
+    <h1>@IHSDC.Common.Configurations.Application.Name (@IHSDC.Common.Configurations.Application.Abbreviation)</h1>
+    <p>@IHSDC.Common.Configurations.Application.Subject</p>
+    <p>@IHSDC.Common.Configurations.Application.Description</p>
+   
+        <h1>Welcome</h1>
+   
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+        <h2 style="width: 635px; text-align: justify; color: #003366">The Army Group Insurance Scheme is a group insurance cum savings scheme. </h2>
+        <h2 style="width: 635px; text-align: justify; color: #003366">It provides insurance and allied benefits to all ranks of the Indian Army. It is a society registered with the Registrar of Societies under the Registration of Societies Act (Act XXI) of 1860. </h2>
+        <h2 style="width: 635px; text-align: justify; color: #003366">It is operated entirely on the basis of monthly contributions by all ranks of the Army and is a self supporting and self sustaining organisation. </h2>
+        <h2 style="width: 635px; text-align: justify; color: #003366">AGIF is dynamic in its outlook and keeps revising its schemes to meet the aspirations and needs of its members. The entire cost of running the scheme i.e pay and allowances and maintenance charges of the organization are borne by the Fund.</h2>
+    </asp:Content>
+</div>
+<div class="row">
+    <div class="col-12">
+        <h3><span class="fa fa-bell"></span>&nbsp;&nbsp;New Features Updated</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Visit Details</div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li>IP: @IHSDC.Common.Helpers.MVC.VisitDetails.GetIPAddress()</li>
+                    <li>MAC: @IHSDC.Common.Helpers.MVC.VisitDetails.GetMACAddress()</li>
+                    <li>Machine Name: @IHSDC.Common.Helpers.MVC.VisitDetails.GetMachineName()</li>
+                    <li>Operating System: @IHSDC.Common.Helpers.MVC.VisitDetails.GetBrowser().Platform</li>
+                    <li>Browser: @IHSDC.Common.Helpers.MVC.VisitDetails.GetBrowser().Name (@IHSDC.Common.Helpers.MVC.VisitDetails.GetBrowser().Name)</li>
+                    <li>Time: @DateTime.Now</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Application Statistics</div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li>Total Users: @ViewBag.TotalUser</li>
+                    <li>Online Users: @ViewBag.OnlineUsers</li>
+                    <li>Total Visits: @ViewBag.TotalVisits</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-md-4">
+            <div class="card bg-light mb-3">
+                <div class="card-header">What's New?</div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item list-group-item-primary">Hierarchy Issues Resolved</li>
+                        <li class="list-group-item list-group-item-danger">Bootstrap ver 4.0</li>
+                        <li class="list-group-item list-group-item-info">Fontawesome</li>
+                        <li class="list-group-item list-group-item-warning">Identity Claims, Policy and User Management</li>
+                        <li class="list-group-item list-group-item-success">Automated Visit Logging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+
+</div>
+<br />
+@*<div class="row">
+    <div class="col-12">
+        <h3><span class="fa fa-life-buoy"></span>&nbsp;&nbsp;Ready Reckoner for Developers</h3>
+    </div>
+</div>*@
+@*<div class="row">
+    <div class="col-12">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            How to Change Look and Feel of the Application?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="~/Content/Thumbnails/Yeti.png" alt="Yeti Theme">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h1 class="text-dark bg-light"><u>Yeti Theme</u><br /><small>powered by Bootswatch</small></h1>                                        
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="~/Content/Thumbnails/Default.png" alt="Default Theme">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h1 class="text-dark bg-light">
+                                            <u>Default Bootstrap Theme</u><br />
+                                            <small>powered by Twitter</small>
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="~/Content/Thumbnails/Lux.png" alt="Lux Theme">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h1 class="text-dark bg-light"><u>Lux Theme</u><br /><small>powered by Bootswatch</small></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <p>
+                            There are three themes available, "Default", "Yeti" and "Lux". You will need to make the following changes at line 27 of <i>~/App_Start/BundleConfig.cs</i>
+                            <code>
+                                "~/Content/Yeti/bootstrap.css"
+                            </code>for Yeti,
+                            <code>
+                                "~/Content/Lux/bootstrap.css"
+                            </code>for Lux and
+                            <code>
+                                "~/Content/bootstrap.css"
+                            </code>for Default.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How to add new Roles?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Now you can add new Roles from the Application, please visit @Html.ActionLink("here", "Index", "Roles", new object { }, new { @class = "btn btn-link" }) or select Roles option from the dropdown menu in the navbar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How to implement roles?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            What are Identity Claims and How they are better?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            How to get Subordinate details in Hierarchy?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+@section Scripts{
+<script>
+    jQuery(document).ready(
+        function () {
+            prettyPrint();
+        });
+</script>
+}

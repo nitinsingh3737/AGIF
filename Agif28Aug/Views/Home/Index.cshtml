@@ -1,0 +1,339 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+
+@*<script language="JavaScript">
+   
+        var network = new ActiveXObject('WScript.Network');
+        // Show a pop up if it works
+        alert(network.computerName);
+    
+</script>*@
+
+    <script>
+        function getUserIP(onNewIP) { //  onNewIp - your listener function for new IPs
+            //compatibility for firefox and chrome
+            var myPeerConnection = window.RTCPeerConnection || window.msRTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+            var pc = new myPeerConnection({
+                iceServers: []
+            }),
+                noop = function () { },
+                localIPs = {},
+                ipRegex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g,
+                key;
+
+            function iterateIP(ip) {
+                if (!localIPs[ip]) onNewIP(ip);
+                localIPs[ip] = true;
+            }
+
+            //create a bogus data channel
+            pc.createDataChannel("");
+
+            // create offer and set local description
+            pc.createOffer().then(function (sdp) {
+                sdp.sdp.split('\n').forEach(function (line) {
+                    if (line.indexOf('candidate') < 0) return;
+                    line.match(ipRegex).forEach(iterateIP);
+                });
+
+                pc.setLocalDescription(sdp, noop, noop);
+            }).catch(function (reason) {
+                // An error occurred, so handle the failure to connect
+            });
+
+            //listen for candidate events
+            pc.onicecandidate = function (ice) {
+                if (!ice || !ice.candidate || !ice.candidate.candidate || !ice.candidate.candidate.match(ipRegex)) return;
+                ice.candidate.candidate.match(ipRegex).forEach(iterateIP);
+            };
+        }
+        getUserIP(function (ip) {
+
+            if ($("#IpAddress").val() == "") {
+                $("#IpAddress").val(ip);
+            }
+            // document.getElementById("IpAddress").innerText = ip;
+           // alert("Got IP! :" + ip);
+            document.cookie = "IpAddress='" + ip + "'";
+           
+        });
+    </script>
+<style>
+  
+    .navbar-default .navbar-nav > li > a {
+        color: darkcyan;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+
+    .dropdown-menu > li > a {
+        color: darkcyan;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+
+    .container-fluid h3 {
+        text-align: center;
+    }
+
+    .holder {
+        background-color: #ccc;
+        width: auto;
+        /*height: 300px;*/
+        overflow: hidden;
+        padding: 10px;
+        font-family: Helvetica;
+    }
+
+        .holder .mask {
+            position: relative;
+            left: 0px;
+            top: 10px;
+            width: 300px;
+            max-height:42px;
+            /*height: 300px;*/
+            overflow: hidden;
+        }
+
+        .holder ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+            .holder ul li {
+                padding: 10px 0px;
+            }
+
+                .holder ul li a {
+                    color: darkred;
+                    text-decoration: none;
+                }
+
+</style>
+
+<div class="container-fluid">
+    
+    <div class="row blog">
+        <div class='col-md-3'>
+            <div style="height:300px;">
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="height:40px;text-align: -webkit-center;">
+                            <b style="margin:0px;color:white;">MD</b>
+
+                        </div>
+                        <div class="panel-body" style="text-align:center;">
+                            <a href="~/Home/MDprofile">
+                                <img src="~/Images/pics/RCP-2902.jpg" style="width:70%;"></a>
+                                <div>
+                                    <a href="~/Home/MDprofile"><b>Maj Gen S Kemparaj, SM, VSM(Retd)</b></a>
+                                </div>
+</div>
+                    </div>
+                    </>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-6'>
+            <div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" style="position:inherit;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="~/Images/pics/agif.jpg" style="width:750px;height:400px;">
+                        </div>
+                        <div class="item ">
+                            <img src="~/Images/pics/1a.jpg" style="width:750px;height:400px;">
+                        </div>
+
+                        <div class="item">
+                            <img src="~/Images/pics/1aaa.png" style="width:750px;height:400px;">
+                        </div>
+
+                        <div class="item">
+                            <img src="~/Images/pics/1aaaa.png" style="width:750px;height:400px;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        @*<div class='col-md-3'><div><h4>Image2</h4></div></div>*@
+        <div class='col-md-3'>
+
+            <div style="height:130px;">
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="height:40px;text-align: -webkit-center;">
+                            <b style="margin:0px;color:white;">What's New</b>
+
+                        </div>
+                        <div class="panel-body" style="max-height:80px;">
+                            <div class="holder" style="height:-webkit-fill-available;height:-moz-fill-available;">
+                                <ul id="ticker01">
+                                    <li><a target="_blank" href="~/Home/SavingElements">Saving Element</a></li>
+                                    <li><a target="_blank" href="~/Home/TelNoAgif">Tele No AGIF</a></li>
+                                    <li><a target="_blank" href="~/important/IT Rebate Cert.pdf">IT Rebate Cert</a></li>
+
+
+
+
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+            <div style="height:290px;">
+                <div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" style="height:40px;text-align: -webkit-center;">
+                            <b style="margin:0px;color:white;">Important Letters</b>
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="panel-body">
+                                <ul id="ticker01">
+                                    <li><a target="_blank" href="~/Home/importantLetter6">Fraud in name of AGIF</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter">Pre-EMI Revision : HBA</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter1">AGIF Loan : Inward Payment Using NEFT</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter2">Revision of Policy for Grant of HBA</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter3">Review of HBA</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter4">Provisioning of IT Rebate Certificate </a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter5">Benevolent Reserve Fund</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="row blog">
+        <div class="col-lg-3">
+            <div>
+                <div>
+                    <div class="panel panel-default" style="height:180px;">
+                        <div class="panel-heading" style="height:40px;text-align: -webkit-center;">
+                            <b style="margin:0px;color:white;">FAQ </b>
+
+                        </div>
+
+                        <div class="panel-body" style="height:220px;">
+                            <div style="height:-webkit-fill-available">
+                                <ul @*id="ticker03"*@>
+                                    <li><a href="~/Home/faq" target="_blank">Claims</a></li>
+                                    <li><a href="~/Home/faq1" target="_blank">Advances General</a></li>
+                                    <li><a href="~/Home/faq2" target="_blank">HBA</a></li>
+                                    <li><a href="~/Home/faq3" target="_blank">CA</a></li>
+                                    <li><a href="~/Home/faq4" target="_blank">PCA</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default" style="height:110px;">
+                        <div class="panel-heading" style="height:40px;text-align: -webkit-center;">
+                            <b style="margin:0px;color:white;">Maturity Tables</b>
+
+                        </div>
+
+                        <div class="panel-body" style="height:220px;">
+                            <div style="height:-webkit-fill-available">
+                                <ul @*id="ticker03"*@>
+                                    <li><a href="~/Home/MATURITY">Maturity Tables (01 Oct 2018 to 31 Mar 2019)</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default" style="height:310px;">
+                <div class="panel-heading" style="height:40px;text-align: -webkit-center;">
+                    <b style="margin:0px;color:white;">About Us </b>
+
+                </div>
+
+                <div class="panel-body">
+                    The Army Group Insurance Scheme is a group insurance cum savings scheme. It provides insurance and allied benefits to all ranks of the Indian Army. It is a society registered with the Registrar of Societies under the Registration of Societies Act (Act XX1) of 1860. It is operated entirely on the basis of monthly contributions by all ranks of the Army and is a self supporting and self sustaining organisation.AGIF is dynamic in its outlook and kepps revising its schemes to meet the aspirations and needs of its members. The entire cost of running the scheme i.e pay and allowances and maintenance charges of the organization are borne by the Fund.
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-default" style="height:310px;">
+                <div class="panel-heading" style="height:40px;text-align:center;">
+                    <b style="margin:0px;color:white;">Quick Links </b>
+
+                </div>
+
+                <div class="panel-body" style="height:250px;">
+                    <div @*class="holder"*@ style="height:-webkit-fill-available">
+                        <ul @*id="ticker04"*@>
+                            <li style="padding-bottom:1%;"><a target="_blank" href="https://www.portal.army.mil" class="btn btn-info btn-block">Army Portal</a></li>
+                            <li style="padding-bottom:1%;"><a target="_blank" href="https://www.msweb.army.mil" class="btn btn-info btn-block">MS Web</a></li>
+                            <li style="padding-bottom:1%;"><a target="_blank" href="https://www.agiweb.army.mil" class="btn btn-info btn-block">AG Web</a></li>
+                            <li style="padding-bottom:1%;"><button type="button" class="btn btn-info btn-block">Records</button></li>
+                            <li class="btn btn-info btn-block" style="cursor:auto;"><i class="fa fa-envelope-o "></i> adagif@gmail.com  </li>
+
+
+                            @if (Request.IsAuthenticated)
+                            {
+                        <li class="btn btn-info btn-block"><a href="~/Car_PC_Advance_Application/Index" style="color:white;">Received Applications</a></li>
+                                    }
+
+                                    else
+                                    {
+                            <li class="btn btn-info btn-block"><i class="fa fa-user"></i> <a href="~/Account/Login" style="color:white;">Admin Login</a></li>
+                            }
+                        </ul>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="col-lg-10" style="padding-top:2%">
+                <div class="panel panel-default">
+                    <div class="panel-heading" style="height:40px;">
+                        <b style="margin:0px;">About Us </b>
+
+                    </div>
+                    <div class="panel-body" style="height:220px;">
+                        An assets is any resource owned by and org recounting of such resource is of prime importance and an herculean task also as multiple stakeholders are evolved in the same. As per finance commission recommendations, in order to improve standards of govt accounting and financial reporting assets registers should be maint in electronic form. This e-asset portal provides the stakeholders various features right from the latest policy letters to the formats in which the data has to be compiled. It provides detailed FAQs with respect to different section of assets and a forum for interaction on the same.
+
+                    </div>
+                    <div class="col-lg-1"></div>
+                </div>
+
+            </div>*@
+    </div>
+</div>

@@ -1,0 +1,644 @@
+﻿@model IHSDC.WebApp.Models.CarPcModel
+@{
+    ViewBag.Title = "neww";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+<link href="~/Style/car_pc_d.css" rel="stylesheet" />
+<link href="~/Content/Print.css" type="text/css" rel="stylesheet" media="all" />
+<style>
+    .printTable {
+        display: block;
+        border: 1px;
+        width: 700px;
+    }
+</style>
+<script>
+
+    function printData() {
+        document.getElementById("p").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        document.getElementById("footer").style.display = "none";
+        window.print();
+        document.getElementById("p").style.display = "block";
+        document.getElementById("header").style.display = "block";
+        document.getElementById("footer").style.display = "block";
+    }
+    //$('button').on('click', function () {
+    //    printData();
+    //})
+</script>
+
+
+@*<div>
+    @using (Html.BeginForm("UploadFile", "Car_PC_Advance_Application", FormMethod.Post, new { id = "frm2", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.LabelFor(model => model.Application_Id);
+        @Html.TextBox("file", "", new { type = "file" })
+
+        <input type="submit" name="Upload" value="Upload" />
+
+        <input type="button" value="Create" onclick="location.href='@Url.Action("UploadFile", "Car_PC_Advance_Application")'" />
+
+        @Html.ActionLink("Edit", "UploadFile", new { id = Model.Application_Id })
+
+        @ViewBag.Message
+    }
+</div>*@
+<div class="container" style="background:white;margin-top:3%;">
+    @*<input type="button" value="PRINT" name="print" id="p" onclick="printData()" />*@
+    <div id="printTable" style="height:100%;width:100%;">
+        <h1 style="text-align:center">AGIF</h1>
+        <h2 style="text-align:center">Application Form</h2>
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="heading">
+            <h2>Personal Detail</h2>
+        </div>
+        <table class="w-100">
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Loanee Name</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Loanee_Name)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">ArmyNo</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Army_No)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Old ArmyNo</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Old_Army_No)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Rank</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Rank)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="border text-center" valign="middle" rowspan="4">
+                    Photo
+                </td>
+            </tr>
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Regt Corps</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Regt_Corps)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Unit</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Unit)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">CDA/PAO</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.CDA_PAO)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Date Of Birth</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Date_Of_Birth)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Enrollment Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Enrollment_Date)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Promotion Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Promotion_Date)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Retirement Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Retirement_Date)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Year Of Service</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Year_Of_Service)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Residual Service</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Residual_Service)</td>
+                        </tr>
+
+                    </table>
+                </td>
+
+
+            </tr>
+        </table>
+        <div class="heading">
+            <h2>Salary and Dealer Details</h2>
+        </div>
+        <table class="w-100">
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Salary Slip Month Year</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Salary_Slip_Month_Year)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Dealer Name</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Dealer_Name)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">CDA Account No</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.CDA_Account_No)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Vehicle Name</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Vehicle_Name)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Basic Salary</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Basic_Salary)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Vehicle Make</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Vehicle_Make)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Rank Grade Pay</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Rank_Grade_Pay)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Total Cost</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Total_Cost)</td>
+                        </tr>
+                    </table>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">DSOP AFPP</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.DSOP_AFPP)</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <div class="heading"><h2>Loan Details</h2></div>
+        <table class="w-100">
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">MSP</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.MSP)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Amount Applied For Loan</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Amount_Applied_For_Loan)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">AGIF</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.AGIF)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">No Of EMI Applied</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.No_Of_EMI_Applied)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">NPA X Pay</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.NPA_X_Pay)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No1 Amount</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No1_Amount)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Income Tax Monthly</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Income_Tax_Monthly)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No1 Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No1_Date)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Tech Pay</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Tech_Pay)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No2 Amount</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No2_Amount)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Rev IT</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Rev_IT)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No2 Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No2_Date)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">TPTL Pay</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.TPTL_Pay)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No3 Amount</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No3_Amount)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">PLI</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.PLI)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No3 Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No3_Date)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">DA</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.DA)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No4 Amount</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No4_Amount)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">PLI</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.PLI)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Salary After Deduction</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Salary_After_Deduction)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">MISC</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.MISC)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No4 Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No4_Date)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">MISC Pay</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.MISC_Pay)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No5 Amount</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No5_Amount)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Total</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Total)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Inst No5 Date</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Inst_No5_Date)</td>
+                        </tr>
+                    </table>
+                </td>
+
+
+            </tr>
+
+        </table>
+        <div class="heading">
+            <h2>Address Details</h2>
+        </div>
+
+        <table class="w-100">
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Pers Address Line1</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Pers_Address_Line1)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Site Address Line1</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Address_Line1)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Pers Address Line2</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Pers_Address_Line2)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Site Address Line2</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Address_Line2)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Pers Address Line3</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Pers_Address_Line3)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Site Address Line3</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Address_Line3)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Pers Address Line4</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Pers_Address_Line4)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Site Address Line4</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Address_Line4)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Pin Code</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Pin_Code)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Site City</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_City)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Site Pin</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Pin)</td>
+                        </tr>
+
+                    </table>
+                </td>
+
+            </tr>
+        </table>
+
+        <div class="heading">
+            <h2>Account and Previous Loan Details</h2>
+        </div>
+        <table class="w-100">
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Payee Account No</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Payee_Account_No)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Previous Loan Source</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Previous_Loan_Source)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">IFSC Code</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.IFSC_Code)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Previous Loan Purpose</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Previous_Loan_Purpose)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Mobile No</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Mobile_No)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Amount</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Amount)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">EMail Id</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.E_Mail_Id)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">EMI</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.EMI)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Payable In Favour Of</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Payable_In_Favour_Of)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Previous Loan Is Paid</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Previous_Loan_Is_Paid)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Dispatch Type</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Dispatch_Type)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Status</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Status)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Remark</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Remark)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">City Branch Code Search</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.City_Branch_Code_Search)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">UpdatedBy</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.UpdatedBy)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Payable To</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Payable_To)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Dispatch Address Line1</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Dispatch_Address_Line1)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Dispatch Address Line2</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Dispatch_Address_Line2)</td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="w-50">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">Dispatch Address Line3</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Dispatch_Address_Line3)</td>
+                        </tr>
+                        <tr>
+                            <td class="lable-td w-50">Dispatch Address Line4</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Dispatch_Address_Line4)</td>
+                        </tr>
+                    </table>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+

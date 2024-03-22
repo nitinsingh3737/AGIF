@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHSDC.Common", "IHSDC.Common\IHSDC.Common.csproj", "{E849E133-96DC-42DE-B863-5027265FAE64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHSDC.WebApp", "IHSDC.WebApp\IHSDC.WebApp.csproj", "{7443F539-9A80-4679-AD90-76B6EAB59875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E849E133-96DC-42DE-B863-5027265FAE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E849E133-96DC-42DE-B863-5027265FAE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E849E133-96DC-42DE-B863-5027265FAE64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E849E133-96DC-42DE-B863-5027265FAE64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7443F539-9A80-4679-AD90-76B6EAB59875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94001CF9-14E5-4E34-85A7-6DA22D63A053}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sumit1982.visualstudio.com/
+		SccProjectUniqueName0 = IHSDC.Common\\IHSDC.Common.csproj
+		SccProjectName0 = IHSDC.Common
+		SccLocalPath0 = IHSDC.Common
+		SccProjectUniqueName1 = IHSDC.WebApp\\IHSDC.WebApp.csproj
+		SccProjectName1 = IHSDC.WebApp
+		SccLocalPath1 = IHSDC.WebApp
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal

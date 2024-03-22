@@ -1,0 +1,1809 @@
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ApplicationInsights.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\csc.exe
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\csc.exe.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\csc.rsp
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\csi.exe
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\csi.exe.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\csi.rsp
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Console.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\vbc.exe
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\vbc.rsp
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ClosedXML.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\EntityFramework.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\EntityFramework.SqlServer.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\FastMember.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\IHSDC.Common.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\itextsharp.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Owin.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Helpers.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Mvc.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Optimization.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Razor.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.WebPages.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\WebGrease.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\IHSDC.Common.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ClosedXML.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ClosedXML.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\EntityFramework.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\EntityFramework.SqlServer.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\itextsharp.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Helpers.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Mvc.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Optimization.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.Razor.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.WebPages.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojResolveAssemblyReference.cache
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ApplicationInsights.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\csc.exe
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\csc.exe.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\csc.rsp
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\csi.exe
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\csi.exe.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\csi.rsp
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Console.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\vbc.exe
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\vbc.rsp
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ClosedXML.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\FastMember.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\IHSDC.Common.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\itextsharp.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Owin.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Helpers.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Mvc.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Optimization.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Razor.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.WebPages.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\WebGrease.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ADODB.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\stdole.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ClosedXML.pdb
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ClosedXML.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\EntityFramework.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\itextsharp.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Helpers.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Mvc.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Optimization.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.Razor.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.WebPages.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ApplicationInsights.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csc.exe
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csc.exe.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csc.rsp
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csi.exe
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csi.exe.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csi.rsp
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Console.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\vbc.exe
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\vbc.rsp
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ClosedXML.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\FastMember.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.Common.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\itextsharp.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Owin.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Helpers.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Mvc.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Optimization.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Razor.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\WebGrease.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ADODB.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\stdole.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ClosedXML.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ClosedXML.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\itextsharp.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Helpers.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Mvc.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Razor.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Optimization.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ApplicationInsights.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csc.exe
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csc.exe.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csc.rsp
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csi.exe
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csi.exe.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\csi.rsp
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Console.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\vbc.exe
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\vbc.rsp
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ClosedXML.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\FastMember.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.Common.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\itextsharp.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Owin.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Helpers.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Mvc.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Optimization.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Razor.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\WebGrease.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ADODB.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\stdole.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.Common.pdb
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ClosedXML.pdb
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ClosedXML.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\itextsharp.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Helpers.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Mvc.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Razor.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\System.Web.Optimization.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\RdlCompile.cache
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\RdlCompile.compiled
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+D:\repostitry\IHSDC.WebApp\bin\ApplicationInsights.config
+D:\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+D:\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+D:\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+D:\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe
+D:\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe.config
+D:\repostitry\IHSDC.WebApp\bin\roslyn\csc.rsp
+D:\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe
+D:\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe.config
+D:\repostitry\IHSDC.WebApp\bin\roslyn\csi.rsp
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Console.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe
+D:\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+D:\repostitry\IHSDC.WebApp\bin\roslyn\vbc.rsp
+D:\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+D:\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+D:\repostitry\IHSDC.WebApp\bin\ClosedXML.dll
+D:\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+D:\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+D:\repostitry\IHSDC.WebApp\bin\FastMember.dll
+D:\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll
+D:\repostitry\IHSDC.WebApp\bin\itextsharp.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+D:\repostitry\IHSDC.WebApp\bin\Owin.dll
+D:\repostitry\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+D:\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+D:\repostitry\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+D:\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Razor.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.dll
+D:\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+D:\repostitry\IHSDC.WebApp\bin\WebGrease.dll
+D:\repostitry\IHSDC.WebApp\bin\ADODB.dll
+D:\repostitry\IHSDC.WebApp\bin\stdole.dll
+D:\repostitry\IHSDC.WebApp\bin\IHSDC.Common.pdb
+D:\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+D:\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+D:\repostitry\IHSDC.WebApp\bin\ClosedXML.pdb
+D:\repostitry\IHSDC.WebApp\bin\ClosedXML.xml
+D:\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+D:\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+D:\repostitry\IHSDC.WebApp\bin\itextsharp.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+D:\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+D:\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+D:\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Razor.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+D:\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+D:\repostitry\IHSDC.WebApp\obj\Debug\RdlCompile.cache
+D:\repostitry\IHSDC.WebApp\obj\Debug\RdlCompile.compiled
+D:\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+D:\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+D:\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+D:\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ApplicationInsights.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\csc.rsp
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\csi.rsp
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Console.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\vbc.rsp
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ClosedXML.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\FastMember.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\itextsharp.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Owin.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Razor.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\WebGrease.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ADODB.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\stdole.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\IHSDC.Common.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ClosedXML.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ClosedXML.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\itextsharp.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Razor.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ApplicationInsights.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csc.rsp
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csi.rsp
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Console.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\vbc.rsp
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ClosedXML.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\FastMember.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\itextsharp.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Owin.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Razor.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\WebGrease.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ADODB.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\stdole.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.Common.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ClosedXML.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ClosedXML.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\itextsharp.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Razor.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+G:\15 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ApplicationInsights.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csc.exe.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csc.rsp
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csi.exe.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\csi.rsp
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Console.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\vbc.rsp
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ClosedXML.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\FastMember.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\itextsharp.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Owin.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Razor.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\WebGrease.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ADODB.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\stdole.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.Common.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ClosedXML.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ClosedXML.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\itextsharp.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Helpers.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Mvc.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Razor.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\System.Web.Optimization.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+G:\22 Oct Repositry\repostitry\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ApplicationInsights.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\csc.exe
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\csc.exe.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\csc.rsp
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\csi.exe
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\csi.exe.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\csi.rsp
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Console.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\vbc.exe
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\vbc.rsp
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ClosedXML.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\FastMember.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\IHSDC.Common.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\itextsharp.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Owin.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Helpers.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Mvc.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Optimization.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Razor.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.WebPages.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\WebGrease.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ADODB.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\stdole.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\IHSDC.Common.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ClosedXML.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ClosedXML.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\itextsharp.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Helpers.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Mvc.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Razor.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.WebPages.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\System.Web.Optimization.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ApplicationInsights.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\csc.exe
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\csc.exe.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\csc.rsp
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\csi.exe
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\csi.exe.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\csi.rsp
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Console.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\vbc.exe
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\vbc.rsp
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ClosedXML.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\FastMember.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\IHSDC.Common.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\itextsharp.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Owin.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Helpers.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Mvc.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Optimization.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Razor.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.WebPages.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\WebGrease.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ADODB.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\stdole.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\IHSDC.Common.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ClosedXML.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ClosedXML.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\itextsharp.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Helpers.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Mvc.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Razor.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.WebPages.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\System.Web.Optimization.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ApplicationInsights.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\csc.exe
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\csc.exe.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\csc.rsp
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\csi.exe
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\csi.exe.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\csi.rsp
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Console.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\vbc.exe
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\vbc.rsp
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ClosedXML.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\FastMember.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\IHSDC.Common.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\itextsharp.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Owin.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Helpers.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Mvc.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Optimization.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Razor.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.WebPages.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\WebGrease.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ADODB.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Office.Interop.Access.Dao.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\office.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Vbe.Interop.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\stdole.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\IHSDC.Common.pdb
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\IHSDC.Common.dll.config
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ClosedXML.pdb
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ClosedXML.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\itextsharp.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Helpers.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Mvc.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Razor.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.WebPages.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\System.Web.Optimization.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\bin\office.xml
+A:\repostitry  25 feb 21\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csprojAssemblyReference.cache
+A:\repostitry  25 feb 21\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+A:\repostitry  25 feb 21\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+A:\repostitry  25 feb 21\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+A:\repostitry  25 feb 21\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.ValueTuple.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ApplicationInsights.config
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\IHSDC.WebApp.dll.config
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\IHSDC.WebApp.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\IHSDC.WebApp.pdb
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\csc.exe
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\csc.exe.config
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\csc.rsp
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\csi.exe
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\csi.exe.config
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\csi.rsp
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.AppContext.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Console.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.IO.Compression.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.IO.Pipes.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.Claims.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Threading.Thread.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\vbc.exe
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\vbc.exe.config
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\vbc.rsp
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\Microsoft.VC90.CRT\msvcr90.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\Microsoft.VC90.CRT\README_ENU.txt
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\sqlceca40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\sqlcecompact40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\sqlceer40EN.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\sqlceme40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\sqlceqp40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\sqlcese40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\Microsoft.VC90.CRT\msvcr90.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\Microsoft.VC90.CRT\README_ENU.txt
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\sqlceca40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\sqlcecompact40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\sqlceer40EN.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\sqlceme40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\sqlceqp40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\sqlcese40.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\amd64\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\x86\Microsoft.VC90.CRT\Microsoft.VC90.CRT.manifest
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Antlr3.Runtime.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ClosedXML.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\DocumentFormat.OpenXml.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\EntityFramework.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\EntityFramework.SqlServerCompact.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ExcelNumberFormat.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\FastMember.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\itextsharp.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.Web.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.SqlServer.Types.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Owin.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ReportViewerForMvc.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Syncfusion.Compression.Base.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Syncfusion.Licensing.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Data.SqlClient.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Data.SqlServerCe.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Helpers.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Mvc.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Optimization.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Razor.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.WebPages.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\WebGrease.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Antlr3.Runtime.pdb
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ClosedXML.pdb
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ClosedXML.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\DocumentFormat.OpenXml.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\EntityFramework.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\EntityFramework.SqlServerCompact.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\ExcelNumberFormat.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\itextsharp.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.Web.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Syncfusion.Compression.Base.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Syncfusion.Pdf.Base.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Helpers.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Mvc.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Razor.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.WebPages.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\System.Web.Optimization.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CoreCompileInputs.cache
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.CopyComplete
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.dll
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.pdb
+C:\Users\lanmanager\Desktop\AGIF\AGIF\Source_Code_AGI_2022\IHSDC.WebApp\obj\Debug\IHSDC.WebApp.csproj.AssemblyReference.cache

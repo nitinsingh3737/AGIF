@@ -1,0 +1,374 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="IHSDC.WebApp.Views.Shared.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  
+    <link href="Content/mainPage.css" rel="stylesheet" />
+    <link href="Content/font.css" rel="stylesheet" />
+    <script src="Scripts/bootmin.js"></script>
+        <script src="Scripts/jquery.js"></script>
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 98px;
+            height: 87px;
+            float: left;
+        }
+
+        body {
+            background: whitesmoke;
+        }
+
+        .auto-style2 {
+            margin-left: 0px;
+            width: 551px;
+        }
+
+        .auto-style3 {
+            width: 336px;
+            height: 132px;
+            float: right;
+        }
+
+        .top_bar {
+            min-height: 40px; /*
+        background: #30bed6; /* Old browsers */
+            background: #CC0001;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#30bed6', endColorstr='#38cac9',GradientType=1 ); /* IE6-9 */
+        }
+
+        .social {
+            list-style-type: none;
+            margin-bottom: 0px;
+            float: left;
+            padding: 0px;
+            margin-left: 0px;
+        }
+
+            .social li {
+                float: left;
+            }
+
+                .social li a {
+                    padding: 0 10px;
+                    font-size: 13px;
+                    line-height: 40px;
+                    color: #FFF;
+                }
+
+        .rightc {
+            list-style-type: none;
+            margin-bottom: 0px;
+            float: right;
+        }
+
+            .rightc li {
+                margin: 0px 10px;
+                font-size: 13px;
+                float: left;
+                line-height: 40px;
+                color: #FFF;
+            }
+
+                .rightc li a {
+                    color: #FFF;
+                }
+
+        .navbar-brand img {
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+        }
+
+        .header_image {
+            margin-top: -70px;
+            float: left;
+        }
+
+        .nav.navbar-nav.navbar-right span {
+            font-family: 'Open Sans', sans-serif;
+            font-style: italic;
+            font-weight: 300;
+            color: #1b6977;
+        }
+
+        .navbar-right li a {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #1b6977 !important;
+        }
+    </style>
+    <script>
+
+        $(document).ready(function () {
+
+            $(".dropdown").hover(
+
+                function () {
+
+                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("fast");
+
+                    $(this).toggleClass('open');
+
+                },
+
+                function () {
+
+                    $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("fast");
+
+                    $(this).toggleClass('open');
+
+                }
+
+            );
+
+        });
+    </script>
+    <style>
+        .context-dark, .bg-gray-dark, .bg-primary {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+            color: #ffffff;
+        }
+
+        .nav-list li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+            .nav-list li a:hover:before {
+                margin-left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+
+        ul, ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 23px;
+            font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-container .col {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-list li a:before {
+            content: "\f14f";
+            font: 400 21px/1 "Material Design Icons";
+            color: #4d6de6;
+            display: inline-block;
+            vertical-align: baseline;
+            margin-left: -28px;
+            margin-right: 7px;
+            opacity: 0;
+            visibility: hidden;
+            transition: .22s ease;
+        }
+    </style>
+       
+   
+       
+</head>
+<body>
+     <asp:contentplaceholder id="head" runat="server">
+       
+    </asp:contentplaceholder>
+    <header>
+        <div class="top_bar">
+            <div class="container">
+                <div class="col-md-6">
+                    <%--<ul class="social">
+                        <li><a target="_blank" href="https://www.webenlance.com/"><i class="fa fa-facebook text-white"></i></a></li>
+                        <li><a target="_blank" href="https://webenlance.com"><i class="fa fa-twitter text-white"></i></a></li>
+                        <li><a target="_blank" href="http://webenlance.com"><i class="fa fa-instagram text-white"></i></a></li>
+                    </ul>--%>
+                </div>
+                <div class="col-md-6">
+                    <ul class="rightc">
+                        <li><i class="fa fa-envelope-o"></i> <a href="mailto:#"> adagif@gmail.com</a>  </li>
+                        <li><i class="fa fa-user"></i> <a href="Account/Login">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--top_bar-->
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="Images/logo1.png" style="width:50px;"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="Default.aspx">Home</a>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Benefits</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Home/Bwin">While in Service</a></li>
+                                <li><a href="Home/BafterR">After Retirement</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Apply for Advance</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a  href="/House_Building_Advance_Application/Create">House Building (HBA)</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" href="#">Conveyance (CA)/PC</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Car_PC_Advance_Application/Create">Apply New </a></li>
+                                        <li><a href="Car_PC_Advance_Application/Index">List</a></li>
+                                    </ul>
+                                </li>
+                                <li class="disabled">
+                                    <a href="#" class="dropdown-toggle" data-toggle="" href="#">Claims </a>
+                                   <%-- <ul class="dropdown-menu">
+                                        <li><a href="Claims_Maturity/Create">Apply New </a></li>
+                                        <li><a href="Claims_Maturity/Index">List</a></li>
+                                    </ul>--%>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="Search/Search">Search</a>
+
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">More Links</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Home/MATURITY">Maturity Tables (01 Oct 2018 to 31 Mar 2019)</a></li>
+                                <li><a href="#">Latest News</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Important Letters</a>
+                            <ul class="dropdown-menu">
+                                 <li><a target="_blank" href="/Home/importantLetter6">Fraud in name of AGIF</a></li>
+                                <li><a target="_blank" href="/Home/importantLetter">Pre-EMI Revision : HBA</a></li>
+                                <li><a target="_blank" href="/Home/importantLetter1">AGIF Loan : Inward Payment Using NEFT</a></li>
+                                <li><a target="_blank" href="/Home/importantLetter2">Revision of Policy for Grant of HBA</a></li>
+                                <li><a target="_blank" href="/Home/importantLetter3">Review of HBA</a></li>
+                                <li><a target="_blank" href="/Home/importantLetter4">Provisioning of IT Rebate Certificate </a></li>
+                                <li><a target="_blank" href="/Home/importantLetter5">Benevolent Reserve Fund</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">FAQ</a>
+                            <ul class="dropdown-menu">
+                                 <li><a href="/Home/faq" target="_blank">Claims</a></li>
+                                <li><a href="/Home/faq1" target="_blank">Advances General</a></li>
+                                <li><a href="/Home/faq2" target="_blank">HBA</a></li>
+                                <li><a href="/Home/faq3" target="_blank">CA</a></li>
+                                <li><a href="/Home/faq4" target="_blank">PCA</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+
+                        </li>
+                        <li>
+                            <a href="/Home/ContactUs">ContactUs</a>
+
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    </header>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+   <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                    <div class="pr-xl-4">
+                        <a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                        <p>The Army Group Insurance Scheme is a group insurance cum savings scheme.</p>
+                        <!-- Rights-->
+                        <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>AGIF</span><span>. </span><span>All Rights Reserved.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contacts</h5>
+                    <dl class="contact-list">
+                        <dt>Address:</dt>
+                        <dd>
+
+                            Army Group Insurance Fund
+                            AGI Bhawan,  Rao Tula Ram Marg
+                            Post Bag No 14,
+
+                            PO-Vasant Vihar New Delhi – 110057
+                        </dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>email:</dt>
+                        <dd><a href="mailto:#"> adagif@gmail.com</a></dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>phones:</dt>
+                        <dd>
+                            <span href="tel:#">
+                                011 - 26142749
+                            </span> <span>,</span> <span href="tel:#">011 - 26145058</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <h5>Links</h5>
+                    <ul class="nav-list">
+                       <li><a target="_blank" href="/Home/LatestNews">Latest News</a></li>
+                        <li> <a href="/Search/Search">Search</a></li>
+                        <li><a href="/Home/ContactUs">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+         
+
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="jquery-confirm-master/dist/jquery-confirm.min.js"></script>
+    <link href="jquery-confirm-master/dist/jquery-confirm.min.css" rel="stylesheet" />
+</body>
+</html>

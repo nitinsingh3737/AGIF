@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "BackupDatabase";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+
+<div class="container" id="top" style="background:white;padding:5%;">
+
+    <h2> DataBase BackUp</h2>
+
+    @using (Html.BeginForm("BackupDatabaseFile", "Backup", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <input type="submit" class="btn btn-success" value="Save Backup Now" />
+    }
+    </div>

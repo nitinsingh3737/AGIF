@@ -1,0 +1,620 @@
+﻿@model IHSDC.WebApp.Models.CarPcModel
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+<link href="~/Content/Print.css" type="text/css" rel="stylesheet" media="all" />
+<style>
+    /*input {
+        padding: 10px;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+    }*/
+    lable {
+        font-size: larger;
+    }
+
+    #container {
+        background: white;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .jconfirm .jconfirm-box-container.jconfirm-no-transition {
+        width: fit-content;
+    }
+
+    .col-sm-6 {
+        margin-left: 0%;
+    }
+
+    .jconfirm-title-c {
+        text-align: center
+    }
+
+
+    .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 60px;
+        color: rgb(128, 128, 128,1);
+        /* Adjust the color and opacity of the watermark */
+        pointer-events: none; /* Make sure the watermark doesn't interfere with mouse events */
+        z-index: 9999; /* Make sure the watermark is on top of everything */
+    }
+</style>
+
+<script src="~/Scripts/search/1.js"></script>
+<script src="~/Scripts/search/2.js"></script>
+<link href="~/Scripts/search/3.css" rel="stylesheet" />
+<script src="~/Scripts/search/4.js"></script>
+<script src="~/Scripts/jquery/jquery.min.js"></script>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert.min.js"></script>
+@{
+    ViewBag.Title = "Unit Info";
+
+    var message = TempData["Message"] ?? string.Empty;
+    var messageStatus = TempData["messageStatus"] ?? string.Empty;
+    var messagemidStatus = TempData["messagemidStatus"] ?? string.Empty;
+}
+
+<script>
+    function printData() {
+        // Get the values of ip and time from ViewBag
+        var ip = '@ViewBag.IpAddress';
+        var time = '@ViewBag.time';
+
+        // Add watermark with ip and time values
+        var watermark = document.createElement('div');
+        watermark.classList.add('watermark');
+        watermark.textContent = `${ip} ${time}`;
+        document.body.appendChild(watermark);
+
+        // Apply CSS styling to the watermark
+        watermark.style.color = 'gray'; // Gray color
+        watermark.style.fontFamily = 'Arial, sans-serif'; // Font resembling watermark
+
+        // Hide elements
+        document.getElementById("p").style.display = "none";
+        document.getElementById("header").style.display = "none";
+
+        // Print
+        window.print();
+
+        // Show elements
+        document.getElementById("p").style.display = "block";
+        document.getElementById("header").style.display = "block";
+
+        // Remove watermark after printing
+        watermark.remove();
+    }
+</script>
+
+
+<script>
+
+
+
+
+    function printData2() {
+        //var divToPrint = document.getElementById("printTable");
+        //newWin = window.open("");
+        //newWin.document.body.innerHTML=(divToPrint.outerHTML);
+
+        //newWin.print();
+        //newWin.close();
+        // document.getElementById("top").style.display = "none";
+        document.getElementById("p").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        //document.getElementById("footer").style.display = "none";
+        window.print();
+        // document.getElementById("top").style.display = "block";
+        document.getElementById("p").style.display = "block";
+        document.getElementById("header").style.display = "block";
+        document.getElementById("footer").style.display = "block";
+
+    }
+    //$('button').on('click', function () {
+    //    printData();
+    //})
+
+    $("#btn").click(function () {
+        //Hide all other elements other than printarea.
+        $("#printarea").show();
+        window.print();
+    });
+</script>
+<script>
+    $.noConflict();
+    jQuery(document).ready(function ($) {
+
+        var bar = $('.progress-bar');
+        var percent = $('.percent');
+        var status = $('#status');
+
+        $('#Myform1').ajaxForm({
+            beforeSend: function () {
+                status.empty();
+                var percentVal = '0%';
+                bar.width(percentVal);
+                percent.html(percentVal);
+                document.getElementById("prbar").style.display = "block";
+                //$('#prbar').attr.style.display = "block";
+            },
+            uploadProgress: function (event, position, total, percentComplete) {
+                var percentVal = percentComplete + '%';
+                bar.width(percentVal);
+                percent.html(percentVal);
+            },
+            complete: function (xhr) {
+                status.html("Documents Uploaded.");
+
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+    //function printDiv() {
+
+    //    var divToPrint = document.getElementById("dataTable");
+    //    newWin = window.open("");
+    //    newWin.document.write(divToPrint.outerHTML);
+    //    newWin.print();
+    //    newWin.close();
+
+    //}
+
+  var message = '@message';
+    var messageStatus = '@messageStatus';
+    var messagemidStatus = '@messagemidStatus ';
+    if (message)
+            sweetAlert(message, messagemidStatus, messageStatus);
+
+
+</script>
+
+<span>@TempData["info"]</span>
+@if (ViewBag.action == "upload")
+{
+
+    <div class="container" id="top" style="background:white;padding:5%;">
+
+        @using (Html.BeginForm("UploadApplicationForm", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data", id = "Myform" }))
+        {
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <lable>Application Form</lable>
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", accept = ".jpg,.png", pattern = "/.(jpe?g|png|gif|bmp" })
+
+                </div>
+                @*<div class="col-lg-6">
+                        <lable>Monthly Pay Slip</lable>
+                        @Html.TextBox("file", "", new { type = "file", @class = "form-control" })
+                    </div>*@
+            </div>
+            <div class="row">
+                @if (Model.CarLoanType != "8")
+                {
+                    <div class="col-lg-6">
+                        <lable>Quotation</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control" })
+                        @Html.HiddenFor(model => model.Army_No)
+                        @Html.HiddenFor(model => model.Application_Id)
+                        @Html.HiddenFor(model => model.ApplicationType)
+
+                    </div>
+                }
+                <div class="col-lg-6">
+                    <lable>Monthly Pay Slip</lable>
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                </div>
+                @if (Model.CarLoanType == "8")
+                {
+                    <div class="col-lg-6">
+
+
+                        <lable>Noc From Previous Bank</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+
+                    </div>
+                }
+            </div>
+            <div class="row">
+                @if (Model.CarLoanType != "8")
+                {
+                    <div class="col-lg-6">
+                        <lable>Cancelled Cheque</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+
+                    </div>
+                }
+
+                @if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
+                {
+                    <div class="col-lg-6">
+
+
+                        <lable>Driving License</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+                    </div>
+                }
+                @if (Model.CarLoanType == "8")
+                {
+
+
+                    <div class="col-lg-6">
+
+
+                        <lable>Statement of A/C or BAL AMT Pending </lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+
+                    </div>
+
+
+                }
+
+            </div>
+
+
+
+            if (Model.CarLoanType != "8")
+            {
+                if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
+                {
+                    <div class="row">
+                        <div class="col-lg-6">
+
+
+                            <lable>Copy of Aadhar Card</lable>
+                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+
+                        </div>
+                        <div class="col-lg-6">
+
+
+                            <lable>Copy of PAN Card</lable>
+                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+
+                        </div>
+                    </div>
+                }
+            }
+            if (Model.CarLoanType == "6" || Model.CarLoanType == "8")
+            {
+                <div class="row">
+                    <div class="col-lg-6">
+
+
+                        <lable>Copy of Registration Certificate (RC)</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+
+
+                    </div>
+                    <div class="col-lg-6">
+                        <lable>Insurance Cover Note</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                    </div>
+                </div>
+            }
+            <div class="row" style="margin-top:2%;">
+                <div class="col-lg-6"><button type="submit" class="btn btn-success" id="Upload" value="Upload">Upload</button></div>
+
+            </div>
+
+        }
+        <div id="prbar" style="display:none;margin-top:2%;">
+            <div class="progress" style="width:100%">
+                <div class="progress-bar"></div>
+
+            </div>
+            <div class="percent">0%</div>
+            <div id="status"></div>
+        </div>
+    </div>
+}
+@if (@ViewBag.action == "download")
+{
+    @*<script>
+            $.alert({
+                title: 'Important Note',
+                content: '<div><p>1.    After filling up the application form, user is requested to take the print out of the same and get it countersigned by his CO/ OC Unit. After the countersign of CO/OC Unit on application form, user is requested to scan the required document along with the application form and upload it.</p><p>2.  You can check the status of your application by clicking the status link and providing your army number</p></div><div><p>1. आवेदन पत्र भरने के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि वह उसी का प्रिंट आउट ले और उसकी CO / OC इकाई द्वारा काउंटरसाइन करें। आवेदन पत्र पर CO / OC यूनिट के काउंटरसाइन के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि आवेदन पत्र के साथ आवश्यक दस्तावेज को स्कैन करके उसे अपलोड करें।</p><p>2.   आप स्टेटस लिंक पर क्लिक करके और अपना आर्मी नंबर प्रदान करके अपने आवेदन की स्थिति की जांच कर सकते हैं</p></div>',
+            });
+
+        </script>*@
+
+    <div class="container" id="PrintD" style="background:white;margin-top:3%;">
+
+        <input type="button" value="PRINT" name="print" id="p" onclick="printData()" />
+        <div id="printTable" style="height:95%;width:95%;">
+            <h1 style="text-align:center">AGIF</h1>
+            <h2 style="text-align:center">
+                Application Form:@if (Model.CarLoanType == "5")
+                {<span>New Car</span>}
+                else if (Model.CarLoanType == null)
+                {<span>PCA</span>}
+                else if (Model.CarLoanType == "6")
+                {<span>Old Car</span>}
+                else if (Model.CarLoanType == "7")
+                {<span>Two Wheeler</span>}
+                else if (Model.CarLoanType == "8")
+                {<span>Inward Transfer</span>}
+            </h2>
+            <div class="heading">
+                <h2>Personal Detail</h2>
+            </div>
+            <table class="w-100">
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Loanee Name</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Loanee_Name)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">ArmyNo</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Army_No)</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Old ArmyNo</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Old_Army_No)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Rank</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Rank)</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="border text-center" valign="middle" rowspan="4">
+                        Photo
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Regt Corps</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Regt_Corps)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Unit</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Unit)</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">CDA/PAO</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.CDA_PAO)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Date Of Birth</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Date_Of_Birth)</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Enrollment Date</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Enrollment_Date)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Promotion Date</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Promotion_Date)</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Retirement Date</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Retirement_Date)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Year Of Service</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Year_Of_Service)</td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Residual Service</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Residual_Service)</td>
+                            </tr>
+
+                        </table>
+                    </td>
+
+
+                </tr>
+            </table>
+
+
+
+
+
+
+            <div class="heading">
+                <h2>Account and Previous Loan Details</h2>
+            </div>
+            <table class="w-100">
+                <tr>
+                    <td class="w-50">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Payee Account No</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Payee_Account_No)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Mobile No</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Mobile_No)</td>
+                            </tr>
+                            @*<tr>
+                                    <td class="lable-td w-50">Payable In Favour Of</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Payable_In_Favour_Of)</td>
+                                </tr>*@
+                        </table>
+                    </td>
+                    <td class="w-50">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">IFSC Code</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.IFSC_Code)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">Previous Loan Purpose</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Previous_Loan_Purpose)</td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="w-50">
+                        <table class="table">
+
+                            <tr>
+                                <td class="lable-td w-50">EMail Id</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.E_Mail_Id)</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td class="w-50">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">No Of EMI Applied</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.No_Of_EMI_Applied)</td>
+                            </tr>
+                            @*<tr>
+                                    <td class="lable-td w-50">Site Address Line2</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.No_Of_EMI_Applied)</td>
+                                </tr>*@
+                        </table>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="w-50">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">Amount Applied For Loan</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Amount_Applied_For_Loan)</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <!--<td class="w-50">
+                        <table class="table">-->
+                    @*<tr>
+                            <td class="lable-td w-50">Site Pin</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Pin)</td>
+                        </tr>*@
+                    @*<tr>
+                            <td class="lable-td w-50">Application Status</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Status)</td>
+                        </tr>*@
+                    <!--</table>
+                    </td>-->
+                </tr>
+                <tr></tr>
+            </table>
+
+            <div class="container" style="width:95%">
+                <br />
+                <br />
+                <p align="center">
+                    <strong>LETTER OF AUTHORISATION TO CDA (O) TO DEDUCT EMI </strong>
+                </p>
+                <p align="center">
+                    <strong>OR TO RECOVER OUTSANDING LOAN FROM THE IRLA</strong>
+                </p>
+                <p align="center">
+                    <strong>CDA(O) A/C NO @Model.CDA_Account_No</strong>
+                </p>
+                <p align="center">
+                    (in case of Officer)
+                </p>
+                <p style="text-align:justify;">
+                    1. I, No <u>@Model.Army_No</u> Rank <u>@Model.Rank</u> Name
+                    <u>@Model.Loanee_Name</u>
+                </p>
+                <p style="text-align:justify;">
+                    Regt/Corps <u>@Model.Regt_Corps</u> Unit <u>@Model.Unit</u> in the
+                    event of my becoming non effective in Army for any reason, hereby
+                    voluntarily authorise CDA(O), Pune (for Offr) and PAO(OR)
+                    <u>@Model.CDA_PAO</u> (for JCOs/OR) to pay AGIF on my behalf, an
+                    amount equivalent to the Motor Car advance outstanding in my loan account
+                    and as intimated by AGIF to CDA(O)/PAO(OR) out of my DSOP/AFPP Fund
+                    account, DCRG, encashment of leave and Balance in IRLA as and when such
+                    DSOP/AFPP Fund account or DCRG/IRLA is finalized or from Maturity /Survival
+                    Benefit of AGIF.
+                </p>
+                <p style="text-align:justify;">
+                    2. I will intimate AGIF on applying for premature retirement/release from
+                    the Army and clear all the outstanding dues of the AGIF before proceeding
+                    on premature retirement. If I am dismissed/removed or I resign from service
+                    before repayment of loan, together with interest, the OC/CO/Stn Cdr is
+                    empowered to impound the vehicle while relieving me from duty/service.
+                </p>
+                <p style="text-align:justify;">
+                    3. I, solemnly declare that the details/information furnished by me and averments/certifications made herein are true to the best of my knowledge and belief and have not willfully suppressed any material information
+                </p>
+                <p style="margin-top:5%;">
+                    Date: <span style="float:right;margin-right:5%;">Signature of the applicant</span>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <p style="text-align:center">
+                    <strong>COUNTERSIGNED</strong>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+
+
+                <p style="margin-top:5%;">Date: <span style="float:right;margin-right:5%;">(Signature of CO/OC)</span></p>
+
+
+            </div>
+        </div>
+    </div>
+}

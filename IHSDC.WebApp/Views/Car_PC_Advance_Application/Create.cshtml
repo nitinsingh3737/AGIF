@@ -1,0 +1,1653 @@
+﻿@model IHSDC.WebApp.Models.CarPcModel
+
+@{
+    /**/
+
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+
+}
+
+<script src="~/Scripts/search/1.js"></script>
+<script src="~/Scripts/search/2.js"></script>
+<link href="~/Scripts/search/3.css" rel="stylesheet" />
+<script src="~/Scripts/search/4.js"></script>
+<script src="~/Scripts/jquery/jquery.min.js"></script>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .jconfirm .jconfirm-box-container.jconfirm-no-transition {
+        width: fit-content;
+    }
+
+    .col-sm-6 {
+        margin-left: 0%;
+    }
+
+    .jconfirm-title-c {
+        text-align: center
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+
+        $(function () {
+            $('#ApplicationType').change(function (event) {
+                event.preventDefault();
+                var CAApplication = {
+                    Old_Army_No: $('#oldIC').val() + $('#oldprefixnum').val() + $('#oldsufixnum').val(),
+                    ApplicationType: $('#ApplicationType').val()
+                };
+                $.ajax({
+                    type: "POST",
+                    url: "/Car_PC_Advance_Application/JqAJAX",
+                    data: JSON.stringify(CAApplication),
+                    dataType: "json",
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (data) {
+                        alert(data.msg);
+                    },
+                    error: function () {
+                        alert("Error occured!!")
+                    }
+                });
+            });
+        });
+    });
+</script>
+<script>
+
+    function myFunction() {
+        if (event.keyCode == 101) {
+            event.returnValue = false;
+        }
+
+
+
+    }
+
+
+    function disable() {
+        if ($('#Previous_Loan_Purpose').val() == "NO") {
+            $("#Amount").prop('disabled', true);
+            $("#EMI").prop('disabled', true);
+            $("#Previous_Loan_Is_Paid").prop('disabled', true);
+        }
+        else {
+            $("#Amount").prop('disabled', false);
+            $("#EMI").prop('disabled', false);
+            $("#Previous_Loan_Is_Paid").prop('disabled', false);
+        }
+    }
+
+    function textChange() {
+        var basicSalery = parseInt($('#Basic_Salary').val())
+
+        var cr = basicSalery + parseInt($('#Rank_Grade_Pay').val()) + parseInt($('#MSP').val()) + parseInt($('#NPA_X_Pay').val()) + parseInt($('#Tech_Pay').val()) + parseInt($('#DA').val()) + parseInt($('#TPTL_Pay').val()) + parseInt($('#MISC_Pay').val());
+
+        var debt = parseInt($('#PLI').val()) + parseInt($('#Rev_IT').val()) + parseInt($('#AGIF').val()) + parseInt($('#Income_Tax_Monthly').val()) + parseInt($('#DSOP_AFPP').val()) + parseInt($('#MISC').val())
+
+        $('#Total').val(cr);
+        $('#Salary_After_Deduction').val(cr - debt);
+    }
+
+    function diff_years(dt2, dt1) {
+
+        var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+        diff /= (60 * 60 * 24);
+        return Math.abs(Math.round(diff / 365.25));
+
+    }
+    function handler(e) {
+        debugger;
+        $('#mess').text("This field has been calculated based on your system DateTime. Ensure system DateTime is correct.");
+
+       var dateString = $('#Enrollment_Date').val();
+
+        var dateParts = dateString.split("/");
+
+        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+
+        dt1 = new Date(dateObject);
+        dt2 = new Date();
+        $('#Year_Of_Service').val(diff_years(dt1, dt2));
+        //console.log(diff_years(dt1, dt2));
+        var ser;
+        var c;
+        var rank = parseInt($('#Rank').val());
+        if (rank >= 10) {
+            switch (rank) {
+                case 10:
+                    ser = 34;
+                    break;
+                case 11:
+                    ser = 30;
+                    break;
+                case 12:
+                    ser = 26;
+                    break;
+                case 13:
+                    ser = 24;
+                    break;
+                case 14:
+                    ser = 20;
+                    break;
+            }
+
+            var d = new Date($('#Enrollment_Date').val());
+            var year = d.getFullYear();
+            var month = d.getMonth();
+            var day = d.getDate();
+            var c = new Date(year + ser, month, day)
+            var day = ("0" + c.getDate()).slice(-2);
+            var month = ("0" + (c.getMonth() + 1)).slice(-2);
+            var today = c.getFullYear() + "-" + (month) + "-" + (day);
+            $('#Retirement_Date').val(today);
+        }
+
+
+        var d1 = new Date($('#Enrollment_Date').val());
+        var d2 = new Date($('#Retirement_Date').val());
+
+        var reds = diff_years(d1, d2);
+
+        $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
+
+
+    }
+
+    function calculateResidual_Service(e) {
+        debugger;
+          var dateString = $('#Enrollment_Date').val();
+
+        var dateParts = dateString.split("/");
+
+        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+
+
+          var dateString2 = $('#Retirement_Date').val();
+
+        var dateParts2 = dateString2.split("/");
+
+        var dateObject2 = new Date(+dateParts2[2], dateParts2[1] - 1, +dateParts2[0]); 
+
+        var d1 = new Date(dateObject);
+        var d2 = new Date(dateObject2);
+
+        var reds = diff_years(d1, d2);
+
+        $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
+    }
+
+    function changeApp(e) {
+
+        if ($('#ApplicationType').val() != "3") {
+
+            $("#CarLoanType").prop('disabled', false);
+        }
+        else {
+            $("#CarLoanType").prop('disabled', true);
+        }
+
+
+    }
+
+    function calculateOfficersRetirementDate(e) {
+
+        //$.noConflict();
+        //$(function () {
+        //    $('#Enrollment_Date').datepicker({
+        //        changeMonth: true,
+        //        changeYear: true,
+        //        showButtonPanel: true,
+        //        dateFormat: 'dd/mm/yy',
+        //        minDate: $('#Date_Of_Birth').val(),
+
+        //        startDate: '01/01/2010'
+
+
+        //    });
+        //});
+
+
+        // dt1 = new Date($('#Date_Of_Birth').val());
+        // dt2 = new Date();
+        var ser;
+        var c;
+        var rank = parseInt($('#Rank').val());
+        if (rank < 10) {
+            switch (rank) {
+                case 1:
+                    ser = 60;
+                    break;
+                case 2:
+                    ser = 60;
+                    break;
+                case 3:
+                    ser = 58;
+                    break;
+                case 4:
+                    ser = 56;
+                    break;
+                case 5:
+                    ser = 54;
+                    break;
+                case 6:
+                    ser = 54;
+                    break;
+                case 7:
+                    ser = 52;
+                    break;
+                case 8:
+                    ser = 52;
+                    break;
+                case 9:
+                    ser = 52;
+                    break;
+
+                default:
+                    break;
+            }
+            var d = new Date($('#Date_Of_Birth').val());
+            var year = d.getFullYear();
+            var month = d.getMonth();
+            var day = d.getDate();
+            var c = new Date(year + ser, month, day)
+            var day = ("0" + c.getDate()).slice(-2);
+            var month = ("0" + (c.getMonth() + 1)).slice(-2);
+            var today = c.getFullYear() + "-" + (month) + "-" + (day);
+            $('#Retirement_Date').val(today);
+
+        }
+        else {
+
+        }
+    }
+
+    function calallser(e) {
+        var ser;
+        var c;
+        var rank = parseInt($('#Rank').val());
+        if (rank < 10) {
+            switch (rank) {
+                case 1:
+                    ser = 60;
+                    break;
+                case 2:
+                    ser = 60;
+                    break;
+                case 3:
+                    ser = 58;
+                    break;
+                case 4:
+                    ser = 56;
+                    break;
+                case 5:
+                    ser = 54;
+                    break;
+                case 6:
+                    ser = 54;
+                    break;
+                case 7:
+                    ser = 52;
+                    break;
+                case 8:
+                    ser = 52;
+                    break;
+                case 9:
+                    ser = 52;
+                    break;
+
+                default:
+                    break;
+            }
+            var d = new Date($('#Date_Of_Birth').val());
+            var year = d.getFullYear();
+            var month = d.getMonth();
+            var day = d.getDate();
+            var c = new Date(year + ser, month, day)
+            var day = ("0" + c.getDate()).slice(-2);
+            var month = ("0" + (c.getMonth() + 1)).slice(-2);
+            var today = c.getFullYear() + "-" + (month) + "-" + (day);
+            $('#Retirement_Date').val(today);
+        }
+        else {
+            switch (rank) {
+                case 10:
+                    ser = 34;
+                    break;
+                case 11:
+                    ser = 30;
+                    break;
+                case 12:
+                    ser = 26;
+                    break;
+                case 13:
+                    ser = 24;
+                    break;
+                case 14:
+                    ser = 20;
+                    break;
+            }
+
+            var d = new Date($('#Enrollment_Date').val());
+            var year = d.getFullYear();
+            var month = d.getMonth();
+            var day = d.getDate();
+            var c = new Date(year + ser, month, day)
+            var day = ("0" + c.getDate()).slice(-2);
+            var month = ("0" + (c.getMonth() + 1)).slice(-2);
+            var today = c.getFullYear() + "-" + (month) + "-" + (day);
+            $('#Retirement_Date').val(today);
+        }
+    }
+
+
+</script>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    table {
+        width: -webkit-fill-available;
+    }
+
+    td {
+        padding: 10px;
+        border-top: none;
+    }
+
+    body {
+        background-color: #f1f1f1;
+    }
+
+    .regForm {
+        background-color: #ffffff;
+        margin: 20px;
+        font-family: Raleway;
+        padding: 20px;
+        min-width: 300px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+    }
+
+        /* Mark input boxes that gets an error on validation: */
+        input.invalid {
+            background-color: #ffdddd;
+        }
+
+    /* Hide all steps by default: */
+    .tab {
+        display: none;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    #prevBtn {
+        background-color: #bbbbbb;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+
+        .step.active {
+            opacity: 1;
+        }
+
+        /* Mark the steps that are finished and valid: */
+        .step.finish {
+            background-color: #4CAF50;
+        }
+</style>
+
+@*@using (Html.BeginForm("UploadFile", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div>
+            @Html.TextBox("file", "", new { type = "file" }) <br />
+
+            <input type="submit" value="Upload" />
+
+            @ViewBag.Message
+
+        </div>
+
+
+    }*@
+
+<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+<script src="~/Content/jqueryui.js"></script>
+<script src="~/Content/jquery-ui.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<script src="~/Scripts/globalize/globalize.js"></script>
+<script src="~/Scripts/globalize/cultures/globalize.culture.en-GB.js"></script>
+<script type="text/javascript">
+
+    $.noConflict();
+    jQuery(document).ready(function ($) {
+
+        
+        $(function () {
+            $('.monthPicker').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'MM yy',
+                onClose: function (dateText, inst) {
+                    $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+                }
+            });
+
+             function my_date(date_string) {
+      var date_components = date_string.split("/");
+      var day = date_components[0];
+      var month = date_components[1];
+      var year = date_components[2];
+      return new Date(year, month - 1, day);
+    }
+
+            $('#Date_Of_Birth').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'dd/mm/yy',
+                yearRange: '1900:3000',
+                onSelect: function () {
+                    var dt = $('#Date_Of_Birth').val();
+                    var newdt = new Date(my_date(dt));
+                    newdt.setFullYear(newdt.getFullYear() + 18);
+                    
+            $('#Enrollment_Date').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'dd/mm/yy',
+                minDate: newdt,
+            
+                startDate:'01/01/2010'
+                
+               
+            });
+    }
+            });
+
+            //$('#Enrollment_Date').datepicker({
+            //    changeMonth: true,
+            //    changeYear: true,
+            //    showButtonPanel: true,
+            //    dateFormat: 'dd/mm/yy',
+            //    minDate: $('#Date_Of_Birth').val(),
+            
+            //    startDate:'01/01/2010'
+                
+               
+            //});
+
+            $('#Promotion_Date').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'dd/mm/yy'
+            });
+
+            $('#Retirement_Date').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'dd/mm/yy'
+            });
+
+        });
+    });
+
+
+
+    //$(window).on('load', function () {
+
+    //});
+
+    function check() {
+        $('#month').val(null);
+    }
+    function enter(val) {
+        $('#Old_Army_No').val(val);
+    }
+
+    function isNumber(evt) {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
+
+</script>
+<script>
+    $(document).ready(function () {
+
+        $('#IC').change(
+            function () {
+                $('#oldIC').val($('#IC').val());
+                $('#oldprefixnum').val($('#prefixnum').val());
+                $('#oldsufixnum').val($('#sufixnum').val());
+            }
+
+        );
+
+        $("#prefixnum").change(
+            function () {
+                $('#oldIC').val($("#IC").val());
+                $('#oldprefixnum').val($("#prefixnum").val());
+                $('#oldsufixnum').val($("#sufixnum").val());
+            }
+
+        );
+
+        $("#sufixnum").change(
+            function () {
+
+                $('#oldIC').val($("#IC").val());
+                $('#oldprefixnum').val($("#prefixnum").val());
+                $('#oldsufixnum').val($("#sufixnum").val());
+            }
+
+        );
+
+    });
+</script>
+<script>
+    $.noConflict();
+    $.alert({
+        title: 'Important Note',
+        content: '<div><p>1.    After filling up the application form, user is requested to take the print out of the same and get it countersigned by his CO/ OC Unit. After the countersign of CO/OC Unit on application form, user is requested to scan the required document along with the application form and upload it.</p><p>2.  You can check the status of your application by clicking the status link and providing your army number</p></div><div><p>1. आवेदन पत्र भरने के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि वह उसी का प्रिंट आउट ले और उसकी CO / OC इकाई द्वारा काउंटरसाइन करें। आवेदन पत्र पर CO / OC यूनिट के काउंटरसाइन के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि आवेदन पत्र के साथ आवश्यक दस्तावेज को स्कैन करके उसे अपलोड करें।</p><p>2.   आप स्टेटस लिंक पर क्लिक करके और अपना आर्मी नंबर प्रदान करके अपने आवेदन की स्थिति की जांच कर सकते हैं</p></div>',
+    });
+
+</script>
+
+@*<script>
+
+        $(window).load(function () {
+            $('#myModal').modal('show');
+        });
+    </script>*@
+@using (Html.BeginForm("Create", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="regForm">
+        <div class="tab">
+            <h3 style="color:red;">@ViewBag.Message</h3>
+            <h1>Personal Details</h1>
+            <table class="table table-borderless">
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Loanee_Name, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Loanee_Name, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Loanee_Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label " })
+
+                            <div>
+                                <input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />
+                                <input maxlength="8" onkeypress="return isNumber(event)" size="8" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="IC" type="tel" id="IC" />
+
+                                <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="sufixnum" id="sufixnum" type="text" />
+                            </div>
+
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Old_Army_No, htmlAttributes: new { @class = "control-label " })
+
+                            <div>
+                                <input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3" name="oldprefixnum" id="oldprefixnum" type="text" />
+                                <input maxlength="8" size="8" onkeypress="return isNumber(event)" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="oldIC" id="oldIC" type="tel" />
+
+                                <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="oldsufixnum" id="oldsufixnum" type="text" />
+                            </div>
+
+                            @*<div>
+                                    @Html.EditorFor(model => model.Old_Army_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Old_Army_No, "", new { @class = "text-danger" })
+                                </div>*@
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rank, htmlAttributes: new { @class = "control-label " })
+
+                            <div>
+                                @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                                @*@Html.DropDownListFor(model => model.Rank, new List<SelectListItem>
+                                    {
+                                    new SelectListItem{ Text="Gen", Value = "1" },
+                                    new SelectListItem{ Text="Lt Gen", Value = "2" },
+                                    new SelectListItem{ Text="Maj Gen", Value = "3" },
+                                    new SelectListItem{ Text="Brig", Value = "4" },
+                                    new SelectListItem{ Text="Col", Value = "5" },
+                                    new SelectListItem{ Text="Lt Col", Value = "6" },
+                                    new SelectListItem{ Text="Maj", Value = "7" },
+                                    new SelectListItem{ Text="Capt", Value = "8" },
+                                    new SelectListItem{ Text="Lt", Value = "9" },
+                                    new SelectListItem{ Text="Sub Maj", Value = "10" },
+                                    new SelectListItem{ Text="Nb Sub/Sub", Value = "11" },
+                                    new SelectListItem{ Text="Hav", Value = "12" },
+                                    new SelectListItem{ Text="NK", Value = "13" },
+                                    new SelectListItem{ Text="Sep", Value = "14" },
+                                    }, new { @class = "form-control", onchange = "calallser(event);" })*@
+                                @*@Html.EditorFor(model => model.Rank, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Rank, "", new { @class = "text-danger" })*@
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label class="control-label">Regt/Fmn/Corps</label>
+                            @*@Html.LabelFor(model => model.Regt_Corps, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+
+                                @Html.DropDownListFor(model => model.Regt_Corps, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnits(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                                @Html.ValidationMessageFor(model => model.Regt_Corps, "", new { @class = "text-danger" })
+
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Unit, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Unit, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label class="control-label">CDA/PAO</label>
+                            @*@Html.LabelFor(model => model.CDA_PAO, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.CDA_PAO, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.CDA_PAO, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Date_Of_Birth, htmlAttributes: new { @class = "control-label ", type = "date" })
+                            <div >
+
+                                <input type="text" placeholder="dd/mm/yyyy" id="Date_Of_Birth" name="Date_Of_Birth" class = "form-control", onchange = "calculateOfficersRetirementDate(event);" required = "required" />
+
+                                @*@Html.TextBoxFor(model => model.Date_Of_Birth, new { @class = "form-control", onchange = "calculateOfficersRetirementDate(event);",placeholder="dd/mm/yyyy", @required = "required" })*@
+                               
+                                @Html.ValidationMessageFor(model => model.Date_Of_Birth, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Enrollment/Commision Date</label>
+                            @*@Html.LabelFor(model => model.Enrollment_Date, htmlAttributes: new { @class = "control-label " })*@
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Enrollment_Date" name="Enrollment_Date" class="form-control"  onchange="handler(event);" required="required" />
+                            @*@Html.TextBoxFor(model => model.Enrollment_Date, new { @class = "form-control", onchange = "handler(event);", placeholder = "dd/mm/yyyy", @required = "required" })*@
+                            @Html.ValidationMessageFor(model => model.Enrollment_Date, "", new { @class = "text-danger" })
+                        </div>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Promotion_Date, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                <input type="text" placeholder="dd/mm/yyyy" id="Promotion_Date" name="Promotion_Date" class="form-control"  required="required" />
+                                @*@Html.TextBoxFor(model => model.Promotion_Date, new { @class = "form-control", placeholder = "dd/mm/yyyy", @required = "required" })*@
+                                @Html.ValidationMessageFor(model => model.Promotion_Date, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Retirement Date Present Rank</label>
+
+                            <div>
+
+                                <input type="text" placeholder="dd/mm/yyyy" id="Retirement_Date" name="Retirement_Date" class="form-control"  required="required" onchange = "calculateResidual_Service(event);"/>
+                                @*@Html.TextBoxFor(model => model.Retirement_Date, new { @class = "form-control", @required = "required", placeholder = "dd/mm/yyyy", onchange = "calculateResidual_Service(event);" })*@
+                                @Html.ValidationMessageFor(model => model.Retirement_Date, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Year_Of_Service, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Year_Of_Service, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Year_Of_Service, "", new { @class = "text-danger" })
+
+                            </div>
+                        </div>
+                        <label id="mess" name="mess" style="color:red;"></label>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Residual_Service, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Residual_Service, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Residual_Service, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ApplicationType, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.ApplicationType, (new IHSDC.WebApp.Models.DropDownClass()).LoadAppType(), "--Select--", new { @data_show_subtext = "true", required = "required", onchange = "changeApp(event);", @class = "select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                        </div>
+
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.CarLoanType, (new IHSDC.WebApp.Models.DropDownClass()).LoadLoanType(), "--Select--", new { @data_show_subtext = "true", required = "required", disabled = "disabled", @class = "select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Aadhar No</label>
+                            <div>
+                                @Html.EditorFor(model => model.AadharNo, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.AadharNo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <lable>PAN No</lable>
+                            <div>
+                                @Html.EditorFor(model => model.PANNo, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.PANNo, "", new { @class = "text-danger", minlength = "10", maxlength = "10", size = "10" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tab">
+            <h1>Salary Details</h1>
+            <table>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Salary_Slip_Month_Year, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Salary_Slip_Month_Year, new { htmlAttributes = new { @class = "form-control monthPicker", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Salary_Slip_Month_Year, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label class="control-label">CDA(O) A/c No(Offrs only)</label>
+                            <div>
+                                @Html.EditorFor(model => model.CDA_Account_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.CDA_Account_No, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Basic_Salary, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Basic_Salary, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Basic_Salary, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rank_Grade_Pay, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Rank_Grade_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Rank_Grade_Pay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MSP, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.MSP, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.MSP, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label class="control-label">NPA/X Pay</label>
+                            <div>
+                                @Html.EditorFor(model => model.NPA_X_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.NPA_X_Pay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Tech_Pay, htmlAttributes: new { @class = "control-label ", @required = "required" })
+                            <div>
+                                @Html.EditorFor(model => model.Tech_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Tech_Pay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DA, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.DA, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.DA, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TPTL_Pay, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.TPTL_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.TPTL_Pay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MISC_Pay, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.MISC_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.MISC_Pay, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PLI, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.PLI, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.PLI, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rev_IT, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Rev_IT, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Rev_IT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.AGIF, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.AGIF, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.AGIF, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Income_Tax_Monthly, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Income_Tax_Monthly, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Income_Tax_Monthly, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label class="control-label">DSOP/AFPPF</label>
+                            <div>
+                                @Html.EditorFor(model => model.DSOP_AFPP, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.DSOP_AFPP, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MISC, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.MISC, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.MISC, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Salary_After_Deduction, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Salary_After_Deduction, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Salary_After_Deduction, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div class="tab">
+            <h1>Dealer Details</h1>
+            <table>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <lable class="control-label">Dealer Name</lable>
+                            <div>
+                                @Html.EditorFor(model => model.Dealer_Name, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Dealer_Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Model Name</label>
+                            @*@Html.LabelFor(model => model.Vehicle_Name, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.Vehicle_Name, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Vehicle_Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Company Name</label>
+                            @*@Html.LabelFor(model => model.Vehicle_Make, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.Vehicle_Make, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Vehicle_Make, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Total_Cost, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Total_Cost, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Total_Cost, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div class="tab">
+            <h1>Loan Details:</h1>
+            <table>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Amount_Applied_For_Loan, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Amount_Applied_For_Loan, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Amount_Applied_For_Loan, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.No_Of_EMI_Applied, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.No_Of_EMI_Applied, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.No_Of_EMI_Applied, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No1_Amount, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No1_Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No1_Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>*@
+                </tr>
+                @*<tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No1_Date, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No1_Date, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No1_Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No2_Amount, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No2_Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No2_Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No2_Date, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No2_Date, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No2_Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No3_Amount, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No3_Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No3_Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No3_Date, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No3_Date, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No3_Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No4_Amount, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No4_Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No4_Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No4_Date, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No4_Date, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No4_Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No5_Amount, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No5_Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No5_Amount, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Inst_No5_Date, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Inst_No5_Date, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Inst_No5_Date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>*@
+            </table>
+        </div>
+        <div class="tab">
+            <h1>Address Details</h1>
+            <table>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label class="control-label">Permanent_Addr_Line1</label>
+                            @*@Html.LabelFor(model => model.Pers_Address_Line1, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.Pers_Address_Line1, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Pers_Address_Line1, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+
+                            <label class="control-label">Permanent_Addr_Line2</label>
+
+                            @*@Html.LabelFor(model => model.Pers_Address_Line2, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.Pers_Address_Line2, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Pers_Address_Line2, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+
+                            <label class="control-label">Permanent_Addr_Line3</label>
+
+                            @*@Html.LabelFor(model => model.Pers_Address_Line3, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.Pers_Address_Line3, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Pers_Address_Line3, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+
+                            <label class="control-label">Permanent_Addr_Line4</label>
+
+                            @*@Html.LabelFor(model => model.Pers_Address_Line4, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.EditorFor(model => model.Pers_Address_Line4, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Pers_Address_Line4, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Pin_Code, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Pin_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Pin_Code, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Site_Address_Line1, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Site_Address_Line1, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Site_Address_Line1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>*@
+                </tr>
+                @*<tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Site_Address_Line2, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Site_Address_Line2, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Site_Address_Line2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Site_Address_Line3, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Site_Address_Line3, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Site_Address_Line3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Site_Address_Line4, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Site_Address_Line4, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Site_Address_Line4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>*@
+                @*<tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Site_City, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Site_City, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Site_City, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Site_Pin, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Site_Pin, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                    @Html.ValidationMessageFor(model => model.Site_Pin, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>*@
+            </table>
+        </div>
+        <div class="tab">
+            <h1>Payee Account Details</h1>
+            <table>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Payee_Account_No, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Payee_Account_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Payee_Account_No, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.IFSC_Code, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.IFSC_Code, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.IFSC_Code, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Mobile_No, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Mobile_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Mobile_No, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.E_Mail_Id, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.E_Mail_Id, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.E_Mail_Id, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Previous Loan Taken from AGIF</label>
+                            @*@Html.LabelFor(model => model.Previous_Loan_Purpose, htmlAttributes: new { @class = "control-label " })*@
+                            <div>
+                                @Html.DropDownListFor(model => model.Previous_Loan_Purpose, (new IHSDC.WebApp.Models.DropDownClass()).LoadPreType(), "--Select--", new { @data_show_subtext = "true", onchange = "disable()", required = "required", @class = "select form-control", @data_live_search = "true" })
+                                @Html.ValidationMessageFor(model => model.Previous_Loan_Purpose, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Payable_In_Favour_Of, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Payable_In_Favour_Of, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Payable_In_Favour_Of, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Dispatch_Type, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Dispatch_Type, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Dispatch_Type, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>*@
+                </tr>
+                @*<tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.City_Branch_Code_Search, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.City_Branch_Code_Search, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.City_Branch_Code_Search, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Payable_To, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Payable_To, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Payable_To, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Dispatch_Address_Line1, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Dispatch_Address_Line1, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Dispatch_Address_Line1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Dispatch_Address_Line2, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Dispatch_Address_Line2, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Dispatch_Address_Line2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Dispatch_Address_Line3, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Dispatch_Address_Line3, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Dispatch_Address_Line3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                        <td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Dispatch_Address_Line4, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Dispatch_Address_Line4, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Dispatch_Address_Line4, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>
+                    </tr>*@
+                <tr>
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Previous_Loan_Source, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Previous_Loan_Source, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Previous_Loan_Source, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>*@
+
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.EMI, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.EMI, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.EMI, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Previous_Loan_Is_Paid, htmlAttributes: new { @class = "control-label " })
+                            <div>
+
+                                <select id="Previous_Loan_Is_Paid" name="Previous_Loan_Is_Paid" class="form-control">
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                                @*@Html.EditorFor(model => model.Previous_Loan_Is_Paid, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Previous_Loan_Is_Paid, "", new { @class = "text-danger" })*@
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                <button type="submit" style="display:none;" id="create" value="Create">Submit</button>
+            </div>
+        </div>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+    </div>
+}
+
+<script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the crurrent tab
+
+    function showTab(n) {
+        // This function will display the specified tab of the form...
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        //... and fix the Previous/Next buttons:
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+            document.getElementById("create").style.display = "none";
+        } else {
+            document.getElementById("prevBtn").style.display = "inline";
+            document.getElementById("create").style.display = "none";
+        }
+        if (n == (x.length - 1)) {
+            document.getElementById("nextBtn").style.display = "none";
+            document.getElementById("create").style.display = "inline";
+        } else {
+            document.getElementById("nextBtn").innerHTML = "Next";
+            document.getElementById("nextBtn").style.display = "inline";
+            document.getElementById("create").style.display = "none";
+        }
+        //... and run a function that will display the correct step indicator:
+        fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {
+        // This function will figure out which tab to display
+        var x = document.getElementsByClassName("tab");
+        // Exit the function if any field in the current tab is invalid:
+        if (n == 1 && !validateForm()) return false;
+        // Hide the current tab:
+        x[currentTab].style.display = "none";
+        // Increase or decrease the current tab by 1:
+        currentTab = currentTab + n;
+        // if you have reached the end of the form...
+        if (currentTab >= x.length) {
+            // ... the form gets submitted:
+            document.getElementById("regForm").submit();
+            return false;
+        }
+        // Otherwise, display the correct tab:
+        showTab(currentTab);
+    }
+
+    function validateForm() {
+        // This function deals with validation of the form fields
+
+        var x, y, z, a, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+
+        // A loop that checks every input field in the current tab:
+        for (i = 0; i < y.length; i++) {
+            // If a field is empty...
+
+            if (currentTab == 0) {
+                if (y[1].value.trim() == "") {
+                    y[1].value = "ok";
+                }
+                if (y[4].value.trim() == "") {
+                    y[4].value = "ok";
+                }
+                if (y[11].value == "") {
+
+
+                    y[11].value = "2011-03-03";
+                }
+            }
+            if (y[i].value.trim() == "") {
+                // add an "invalid" class to the field:
+                y[i].className += " invalid";
+                //y[1].classList.remove("invalid");
+                // y[4].classList.remove("invalid");
+                // and set the current valid status to false
+                valid = false;
+
+            }
+
+            if (currentTab == 0) {
+                if (y[15].value.length != 12 || y[16].value.length != 10) {
+                    valid = false;
+                }
+            }
+            //if (y[16].value.length != 10) {
+            //    valid = false;
+            //}
+            if (currentTab == 0) {
+                if (y[1].value == "ok") {
+                    y[1].value = "";
+                }
+                if (y[1].value == "ok") {
+                    y[4].value = "";
+                }
+                if (y[11].value == "2011-03-03") {
+                    y[11].value = "";
+                }
+            }
+        }
+
+        // If the valid status is true, mark the step as finished and valid:
+        if (valid) {
+            document.getElementsByClassName("step")[currentTab].className += " finish";
+        }
+        return valid; // return the valid status
+    }
+
+    function fixStepIndicator(n) {
+        // This function removes the "active" class of all steps...
+        var i, x = document.getElementsByClassName("step");
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        //... and adds the "active" class on the current step:
+        x[n].className += " active";
+    }
+</script>
+
+
+
+
+
+@*<div style="margin-left:13px;font-size:16px">
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

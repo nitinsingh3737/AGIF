@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "RestoreDatabase";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+<script src="~/Scripts/search/1.js"></script>
+<script src="~/Scripts/search/2.js"></script>
+<link href="~/Scripts/search/3.css" rel="stylesheet" />
+<script src="~/Scripts/search/4.js"></script>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert.min.js"></script>
+@{
+    ViewBag.Title = "Unit Info";
+
+    var message = TempData["Message"] ?? string.Empty;
+    var messageStatus = TempData["messageStatus"] ?? string.Empty;
+    var messagemidStatus = TempData["messagemidStatus"] ?? string.Empty;
+}
+
+<script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('input[type=file]').change(function () {
+                console.dir(this.value);
+                console.dir(this.files[0])
+            })
+        });
+</script>
+
+
+
+<div class="container" id="top" style="background:white;padding:5%;">
+
+
+    <h2>Database Restore</h2>
+
+
+
+    @using (Html.BeginForm("RestoreDatabaseFromFile", "Backup", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class="card-body">
+            <div class="row">
+                <div class="col">
+                    <input type="file" id="file" class="form-control" name="file" multiple="true" />
+                </div>
+                <div class="col" style="margin-top:2%">
+                    <input type="submit" value="Upload" class="btn btn-success" />
+
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

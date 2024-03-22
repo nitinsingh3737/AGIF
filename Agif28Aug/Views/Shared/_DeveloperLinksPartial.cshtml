@@ -1,0 +1,7 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+   
+    @Html.ActionLink("Work Space", "Index", "dbo_OffenceDetails", new object { }, new { @class = "nav-item nav-link" })
+  
+}

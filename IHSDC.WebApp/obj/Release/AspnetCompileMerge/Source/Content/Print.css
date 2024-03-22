@@ -1,0 +1,63 @@
+﻿
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    width: 1120px;
+    /*padding: 15px;
+    margin: 0 auto;*/
+}
+
+.heading {
+}
+
+    .heading h2 {
+        font-size: 20px;
+        color: #000;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+.border {
+    border: 1px solid #ddd;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-37 {
+    width: 37%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+    .table td {
+        border: 1px solid #ddd;
+        vertical-align: middle;
+        padding: 8px;
+    }
+
+.lable-td {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}

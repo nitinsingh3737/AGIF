@@ -1,0 +1,659 @@
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\EntityFramework.xml
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\Code\Desktop\main - Copy\IHSDC\IHSDC.Common\bin\Release\Antlr3.Runtime.pdb
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\Antlr3.Runtime.pdb
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\EntityFramework.xml
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Users\it\Desktop\NEW\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\it\Desktop\NEW\IHSDC.Common\obj\Release\IHSDC.Common.csprojResolveAssemblyReference.cache
+C:\Users\it\Desktop\NEW\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\it\Desktop\NEW\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\it\Desktop\NEW\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\it\Desktop\NEW\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\IHSDC.Common.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\ClosedXML.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\EntityFramework.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\FastMember.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\obj\Release\IHSDC.Common.csprojResolveAssemblyReference.cache
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\obj\Release\IHSDC.Common.dll
+E:\Ankit\Agif\1152019\20 Nov 2018\IHSDC_AGIF_24mar\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\obj\Release\IHSDC.Common.csprojResolveAssemblyReference.cache
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\master\source\Workspaces\AGIF\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.csprojResolveAssemblyReference.cache
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\master\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\IHSDC.Common.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\ClosedXML.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\EntityFramework.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\FastMember.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.Razor.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.dll
+E:\Ankit\source\Workspaces\AGIF2\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+D:\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+D:\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll
+D:\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+D:\repostitry\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+D:\repostitry\IHSDC.Common\bin\Release\ClosedXML.dll
+D:\repostitry\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+D:\repostitry\IHSDC.Common\bin\Release\EntityFramework.dll
+D:\repostitry\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+D:\repostitry\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+D:\repostitry\IHSDC.Common\bin\Release\FastMember.dll
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\repostitry\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\repostitry\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+D:\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+D:\repostitry\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+D:\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+D:\repostitry\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+D:\repostitry\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+D:\repostitry\IHSDC.Common\bin\Release\System.Web.Razor.dll
+D:\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+D:\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+D:\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+D:\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+D:\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+D:\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+D:\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+D:\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+D:\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.dll
+D:\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\Master\Desktop\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\ClosedXML.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\EntityFramework.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\FastMember.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.Razor.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+G:\15 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+G:\15 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+G:\15 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+G:\15 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+G:\15 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.dll
+G:\15 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\ClosedXML.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\EntityFramework.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\FastMember.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.Razor.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+G:\22 Oct Repositry\repostitry\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+G:\22 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+G:\22 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+G:\22 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+G:\22 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.dll
+G:\22 Oct Repositry\repostitry\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\FastMember.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\agif\repostitry  copy of 20 Aug 20\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\Master\Pictures\repostitry  copy of 06 Nov 20\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\FastMember.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\repostitry  copy of 09 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\FastMember.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+C:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\ClosedXML.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\EntityFramework.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\FastMember.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.Razor.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+A:\repostitry  25 feb 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+A:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csprojAssemblyReference.cache
+A:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+A:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+A:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.dll
+A:\repostitry  25 feb 21\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.AssemblyReference.cache
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\master\Desktop\repostitry  22 June 21\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\IHSDC.Common.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\ClosedXML.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\EntityFramework.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\FastMember.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.Razor.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.dll
+G:\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\Administrator\Desktop\New folder\repostitry  Domain 05 Nov 21\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\Administrator\Desktop\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ClosedXML.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\EntityFramework.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\FastMember.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Razor.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.AssemblyReference.cache
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.dll
+M:\DDrive\AGI SOURCE CODE AND PUBLISH\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.pdb
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.AssemblyReference.cache
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.dll.config
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\IHSDC.Common.pdb
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Antlr3.Runtime.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ClosedXML.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\EntityFramework.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ExcelNumberFormat.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\FastMember.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.Common.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.ReportViewer.WinForms.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\ReportViewerForMvc.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Licensing.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Helpers.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Mvc.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.Razor.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.Deployment.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\System.Web.WebPages.Razor.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Compression.Base.xml
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\bin\Release\Syncfusion.Pdf.Base.xml
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.csproj.CopyComplete
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.dll
+C:\Users\lanmanager\Desktop\AGIF\Source_Code_AGI_2022\IHSDC.Common\obj\Release\IHSDC.Common.pdb

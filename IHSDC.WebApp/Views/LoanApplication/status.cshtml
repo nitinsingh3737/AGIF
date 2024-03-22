@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "status";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+<div class="container" style="background:white;padding:5%;">
+    <p style="color:red;">@ViewBag.result</p>
+    @using (Html.BeginForm())
+    {
+        <div class="form-group">
+            <label>Enter ArmyNo</label>
+            <input type="text" id="armyNo" name="armyNo" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label>Select Application Type</label>
+            <select id="ltype" name="ltype" class="form-control">
+                <option value="Car/Pc">Car/Pc</option>
+                @*<option value="Claim" disabled>Claim</option>
+                <option value="HBA" disabled>HBA</option>*@
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Search</button>
+    }
+    @if (@ViewBag.status != null)
+    {
+        foreach (var item in @ViewBag.status as IEnumerable<IHSDC.WebApp.Models.CarPcModel>)
+        {
+            if (item.ApplicationType == "3")
+            {
+                <p style="color:red;margin-top:2%;">Your Application Status for PCA is. <b style="color:green;">@item.Status</b></p>
+            }
+            if(item.ApplicationType=="2" || item.ApplicationType=="4" || item.ApplicationType=="5")
+            {
+                <p style="color:red;margin-top:2%;">Your Application Status for CA is. <b style="color:green;">@item.Status</b></p>
+            }
+        }
+
+    }
+</div>
