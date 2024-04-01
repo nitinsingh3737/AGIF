@@ -78,30 +78,29 @@ namespace IHSDC.WebApp.Models
 
         public string CDA_PAO { get; set; }
 
-        public string Date_Of_Birth
-        {
+        public string Date_Of_Birth {
             get;
             set;
         }
-
-
+       
+       
         [Display(Name = "Enrollment_Date")]
-        public string Enrollment_Date { get; set; }
-
-
+        public string  Enrollment_Date { get; set; }
+       
+       
         public string Promotion_Date { get; set; }
-
-
-        public string Retirement_Date { get; set; }
-
+       
+      
+        public string  Retirement_Date { get; set; }
+      
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Year_Of_Service { get; set; }
-
+    
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Residual_Service { get; set; }
-
+    
         [Required]
-        public string Salary_Slip_Month_Year { get; set; }
+        public string  Salary_Slip_Month_Year { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string CDA_Account_No { get; set; }
@@ -155,7 +154,7 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
 
-
+        
         [DisplayName("Dealer Name and Address")]
         public string Dealer_Name { get; set; }
         [StringLength(50)]
@@ -182,35 +181,35 @@ namespace IHSDC.WebApp.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
-        public DateTime? Inst_No1_Date { get; set; }
+        public DateTime?  Inst_No1_Date { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Inst_No2_Amount { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
-        public DateTime? Inst_No2_Date { get; set; }
+        public DateTime?  Inst_No2_Date { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Inst_No3_Amount { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
-        public DateTime? Inst_No3_Date { get; set; }
+        public DateTime?  Inst_No3_Date { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Inst_No4_Amount { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
-        public DateTime? Inst_No4_Date { get; set; }
+        public DateTime?  Inst_No4_Date { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Inst_No5_Amount { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
-        public DateTime? Inst_No5_Date { get; set; }
+        public DateTime?  Inst_No5_Date { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Pers_Address_Line1 { get; set; }
@@ -310,7 +309,7 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [DisplayName("Next Fmn HQ")]
-        public string Next_Fmn_HQ { get; set; }
+        public string Next_Fmn_HQ  { get; set; }
 
 
         [StringLength(50)]
@@ -321,10 +320,10 @@ namespace IHSDC.WebApp.Models
 
         [StringLength(150)]
         [DisplayName("Unit Address")]
-        public string Unit_Address { get; set; }
+        public string Unit_Address  { get; set; }
 
 
-
+        
         [DisplayName("Extension_of_Service_in_Present_Rank")]
         public string Extension_of_Service_in_Present_Rank { get; set; }
 
