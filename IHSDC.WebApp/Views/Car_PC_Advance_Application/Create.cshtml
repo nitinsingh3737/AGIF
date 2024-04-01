@@ -1,8 +1,6 @@
 ﻿@model IHSDC.WebApp.Models.CarPcModel
 
 @{
-    /**/
-
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layoutagi.cshtml";
 
@@ -633,34 +631,82 @@
                             </div>
                         </div>
                     </td>
+                    @*<td style="border-top:none;">
+            <div class="form-group">
+                @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label " })
+
+                <div>
+                    <input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />
+
+                        <input maxlength="8" onkeypress="return isNumber(event)" size="8" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="IC" type="tel" id="IC" />
+
+                        <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="sufixnum" id="sufixnum" type="text" />
+                </div>
+
+            </div>
+        </td>*@
                     <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label " })
-
-                            <div>
-                                <input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />
-                                <input maxlength="8" onkeypress="return isNumber(event)" size="8" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="IC" type="tel" id="IC" />
-
+                        <div class="form-group" >
+                            @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label" })
+                            <div style="display: flex;">
+                                <div id="dropdown" class="dropdown-content">
+                                    <select id="dropdownSelect" class="form-control" onchange="calallser(event);">
+                                        <option value="0">--Prefix Select--</option>
+                                        <option value="IC">IC</option>
+                                        <option value="SS">SS</option>
+                                        <option value="WS">WS</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SL">SL</option>
+                                        <option value="MR">MR</option>
+                                        <option value="MS">MS</option>
+                                        <option value="DR">DR</option>
+                                        <option value="DS">DS</option>
+                                        <option value="NR">NR</option>
+                                        <option value="NS">NS</option>
+                                        <option value="TC">TC</option>
+                                        <option value="JC">JC</option>
+                                    </select>
+                                </div>
+                                <input maxlength="7" onkeypress="return isNumber(event)" size="7" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="IC" type="tel" id="IC" />
                                 <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="sufixnum" id="sufixnum" type="text" />
                             </div>
-
                         </div>
                     </td>
+
+                    @*<input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />*@
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Old_Army_No, htmlAttributes: new { @class = "control-label " })
 
-                            <div>
-                                <input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3" name="oldprefixnum" id="oldprefixnum" type="text" />
-                                <input maxlength="8" size="8" onkeypress="return isNumber(event)" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="oldIC" id="oldIC" type="tel" />
+                            <div style="display: flex;">
+                                <div id="dropdown" class="dropdown-content">
+                                    <select id="dropdownSelect" class="form-control" onchange="calallser(event);">
+                                        <option value="0">--Prefix Select--</option>
+                                        <option value="IC">IC</option>
+                                        <option value="SS">SS</option>
+                                        <option value="WS">WS</option>
+                                        <option value="SC">SC</option>
+                                        <option value="SL">SL</option>
+                                        <option value="MR">MR</option>
+                                        <option value="MS">MS</option>
+                                        <option value="DR">DR</option>
+                                        <option value="DS">DS</option>
+                                        <option value="NR">NR</option>
+                                        <option value="NS">NS</option>
+                                        <option value="TC">TC</option>
+                                        <option value="JC">JC</option>
+                                    </select>
+                                </div>
+                                <input maxlength="7" size="7" onkeypress="return isNumber(event)" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="oldIC" id="oldIC" type="tel" />
 
                                 <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="oldsufixnum" id="oldsufixnum" type="text" />
                             </div>
 
                             @*<div>
-                                    @Html.EditorFor(model => model.Old_Army_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                                    @Html.ValidationMessageFor(model => model.Old_Army_No, "", new { @class = "text-danger" })
-                                </div>*@
+                    @Html.EditorFor(model => model.Old_Army_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Old_Army_No, "", new { @class = "text-danger" })
+                </div>*@
                         </div>
                     </td>
 
@@ -674,31 +720,31 @@
                             <div>
                                 @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
                                 @*@Html.DropDownListFor(model => model.Rank, new List<SelectListItem>
-                                    {
-                                    new SelectListItem{ Text="Gen", Value = "1" },
-                                    new SelectListItem{ Text="Lt Gen", Value = "2" },
-                                    new SelectListItem{ Text="Maj Gen", Value = "3" },
-                                    new SelectListItem{ Text="Brig", Value = "4" },
-                                    new SelectListItem{ Text="Col", Value = "5" },
-                                    new SelectListItem{ Text="Lt Col", Value = "6" },
-                                    new SelectListItem{ Text="Maj", Value = "7" },
-                                    new SelectListItem{ Text="Capt", Value = "8" },
-                                    new SelectListItem{ Text="Lt", Value = "9" },
-                                    new SelectListItem{ Text="Sub Maj", Value = "10" },
-                                    new SelectListItem{ Text="Nb Sub/Sub", Value = "11" },
-                                    new SelectListItem{ Text="Hav", Value = "12" },
-                                    new SelectListItem{ Text="NK", Value = "13" },
-                                    new SelectListItem{ Text="Sep", Value = "14" },
-                                    }, new { @class = "form-control", onchange = "calallser(event);" })*@
+                        {
+                        new SelectListItem{ Text="Gen", Value = "1" },
+                        new SelectListItem{ Text="Lt Gen", Value = "2" },
+                        new SelectListItem{ Text="Maj Gen", Value = "3" },
+                        new SelectListItem{ Text="Brig", Value = "4" },
+                        new SelectListItem{ Text="Col", Value = "5" },
+                        new SelectListItem{ Text="Lt Col", Value = "6" },
+                        new SelectListItem{ Text="Maj", Value = "7" },
+                        new SelectListItem{ Text="Capt", Value = "8" },
+                        new SelectListItem{ Text="Lt", Value = "9" },
+                        new SelectListItem{ Text="Sub Maj", Value = "10" },
+                        new SelectListItem{ Text="Nb Sub/Sub", Value = "11" },
+                        new SelectListItem{ Text="Hav", Value = "12" },
+                        new SelectListItem{ Text="NK", Value = "13" },
+                        new SelectListItem{ Text="Sep", Value = "14" },
+                        }, new { @class = "form-control", onchange = "calallser(event);" })*@
                                 @*@Html.EditorFor(model => model.Rank, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                                    @Html.ValidationMessageFor(model => model.Rank, "", new { @class = "text-danger" })*@
+                        @Html.ValidationMessageFor(model => model.Rank, "", new { @class = "text-danger" })*@
                             </div>
                         </div>
                     </td>
                     <td style="border-top:none;">
                         <div class="form-group">
-                            <label class="control-label">Regt/Fmn/Corps</label>
-                            @*@Html.LabelFor(model => model.Regt_Corps, htmlAttributes: new { @class = "control-label " })*@
+                           
+                            @Html.LabelFor(model => model.Regt_Corps, htmlAttributes: new { @class = "control-label " })
                             <div>
 
                                 @Html.DropDownListFor(model => model.Regt_Corps, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnits(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
@@ -719,6 +765,58 @@
 
                 </tr>
 
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Next_Fmn_HQ, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Next_Fmn_HQ, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Next_Fmn_HQ, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Unit_Pin, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Unit_Pin, new { htmlAttributes = new { @class = "form-control", @required = "required", @maxlength = "6" } })
+                                @Html.ValidationMessageFor(model => model.Unit_Pin, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                           
+                            @Html.LabelFor(model => model.Unit_Address, htmlAttributes: new { @class = "control-label " })
+                            <div>
+
+                                @*@Html.DropDownListFor(model => model.Regt_Corps, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnits(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                                @Html.ValidationMessageFor(model => model.Regt_Corps, "", new { @class = "text-danger" })*@
+
+                                @Html.DropDownListFor(model => model.Unit_Address, new List<SelectListItem>
+        {
+                               new SelectListItem{ Text="--Select--", Value = "0" },
+        new SelectListItem{ Text="c/o 56APO", Value = "1" },
+        new SelectListItem{ Text="c/o 99APO", Value = "2" },
+        
+       
+        }, new { @class = "form-control", onchange = "calallser(event);" })
+                                
+
+                            </div>
+                        </div>
+                    </td>
+
+                   
+
+
+
+                </tr>
+
+
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
@@ -733,12 +831,12 @@
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Date_Of_Birth, htmlAttributes: new { @class = "control-label ", type = "date" })
-                            <div >
+                            <div>
 
-                                <input type="text" placeholder="dd/mm/yyyy" id="Date_Of_Birth" name="Date_Of_Birth" class = "form-control", onchange = "calculateOfficersRetirementDate(event);" required = "required" />
+                                <input type="text" placeholder="dd/mm/yyyy" id="Date_Of_Birth" name="Date_Of_Birth" class="form-control" , onchange="calculateOfficersRetirementDate(event);" required="required" />
 
                                 @*@Html.TextBoxFor(model => model.Date_Of_Birth, new { @class = "form-control", onchange = "calculateOfficersRetirementDate(event);",placeholder="dd/mm/yyyy", @required = "required" })*@
-                               
+
                                 @Html.ValidationMessageFor(model => model.Date_Of_Birth, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -747,11 +845,11 @@
                         <div class="form-group">
                             <label>Enrollment/Commision Date</label>
                             @*@Html.LabelFor(model => model.Enrollment_Date, htmlAttributes: new { @class = "control-label " })*@
-                        <div>
-                            <input type="text" placeholder="dd/mm/yyyy" id="Enrollment_Date" name="Enrollment_Date" class="form-control"  onchange="handler(event);" required="required" />
-                            @*@Html.TextBoxFor(model => model.Enrollment_Date, new { @class = "form-control", onchange = "handler(event);", placeholder = "dd/mm/yyyy", @required = "required" })*@
-                            @Html.ValidationMessageFor(model => model.Enrollment_Date, "", new { @class = "text-danger" })
-                        </div>
+                            <div>
+                                <input type="text" placeholder="dd/mm/yyyy" id="Enrollment_Date" name="Enrollment_Date" class="form-control" onchange="handler(event);" required="required" />
+                                @*@Html.TextBoxFor(model => model.Enrollment_Date, new { @class = "form-control", onchange = "handler(event);", placeholder = "dd/mm/yyyy", @required = "required" })*@
+                                @Html.ValidationMessageFor(model => model.Enrollment_Date, "", new { @class = "text-danger" })
+                            </div>
                         </div>
                     </td>
 
@@ -760,9 +858,27 @@
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
+                            <label>Extension of Service in Present Rank</label>
+                            @*@Html.LabelFor(model => model.Enrollment_Date, htmlAttributes: new { @class = "control-label " })*@
+                        <div>
+
+                            @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
+                        {
+                           new SelectListItem{ Text="--Select--", Value = "0" },
+                           new SelectListItem{ Text="Yes", Value = "1" },
+                           new SelectListItem{ Text="NO", Value = "2" },
+
+
+                        }, new { @class = "form-control", onchange = "calallser(event);" })
+
+                        </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
                             @Html.LabelFor(model => model.Promotion_Date, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                <input type="text" placeholder="dd/mm/yyyy" id="Promotion_Date" name="Promotion_Date" class="form-control"  required="required" />
+                                <input type="text" placeholder="dd/mm/yyyy" id="Promotion_Date" name="Promotion_Date" class="form-control" required="required" />
                                 @*@Html.TextBoxFor(model => model.Promotion_Date, new { @class = "form-control", placeholder = "dd/mm/yyyy", @required = "required" })*@
                                 @Html.ValidationMessageFor(model => model.Promotion_Date, "", new { @class = "text-danger" })
                             </div>
@@ -774,12 +890,17 @@
 
                             <div>
 
-                                <input type="text" placeholder="dd/mm/yyyy" id="Retirement_Date" name="Retirement_Date" class="form-control"  required="required" onchange = "calculateResidual_Service(event);"/>
+                                <input type="text" placeholder="dd/mm/yyyy" id="Retirement_Date" name="Retirement_Date" class="form-control" required="required" onchange="calculateResidual_Service(event);" />
                                 @*@Html.TextBoxFor(model => model.Retirement_Date, new { @class = "form-control", @required = "required", placeholder = "dd/mm/yyyy", onchange = "calculateResidual_Service(event);" })*@
                                 @Html.ValidationMessageFor(model => model.Retirement_Date, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
+                    
+
+                </tr>
+
+                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Year_Of_Service, htmlAttributes: new { @class = "control-label " })
@@ -791,10 +912,6 @@
                         </div>
                         <label id="mess" name="mess" style="color:red;"></label>
                     </td>
-
-                </tr>
-
-                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Residual_Service, htmlAttributes: new { @class = "control-label " })
@@ -812,6 +929,9 @@
                         </div>
 
                     </td>
+                    
+                </tr>
+                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
@@ -820,8 +940,6 @@
                         </div>
 
                     </td>
-                </tr>
-                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Aadhar No</label>
@@ -1038,7 +1156,8 @@
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
-                            <lable class="control-label">Dealer Name</lable>
+                            @Html.LabelFor(model => model.Dealer_Name, htmlAttributes: new { @class = "control-label" })
+                            @*<lable class="control-label">Dealer Name</lable>*@
                             <div>
                                 @Html.EditorFor(model => model.Dealer_Name, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
                                 @Html.ValidationMessageFor(model => model.Dealer_Name, "", new { @class = "text-danger" })
@@ -1055,6 +1174,29 @@
                             </div>
                         </div>
                     </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Vehicle_Type, htmlAttributes: new { @class = "control-label" })
+                          
+                            <div>
+                                @Html.DropDownListFor(model => model.Vehicle_Type, new List<SelectListItem>
+                           {
+                              new SelectListItem{ Text="--Select--", Value = "0" },
+                              new SelectListItem{ Text="Petrol", Value = "1" },
+                              new SelectListItem{ Text="Diesel", Value = "2" },
+                              new SelectListItem{ Text="CNG", Value = "3" },
+                              new SelectListItem{ Text="Electric", Value = "4" },
+
+
+                           }, new { @class = "form-control", onchange = "calallser(event);" })
+
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Company Name</label>
@@ -1065,8 +1207,6 @@
                             </div>
                         </div>
                     </td>
-                </tr>
-                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Total_Cost, htmlAttributes: new { @class = "control-label " })
