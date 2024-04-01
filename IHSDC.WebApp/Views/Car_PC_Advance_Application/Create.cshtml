@@ -983,6 +983,9 @@
                             </div>
                         </div>
                     </td>
+                   
+                </tr>
+                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Basic_Salary, htmlAttributes: new { @class = "control-label " })
@@ -992,7 +995,21 @@
                             </div>
                         </div>
                     </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PLI, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.PLI, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.PLI, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+
+
                 </tr>
+
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
@@ -1003,6 +1020,20 @@
                             </div>
                         </div>
                     </td>
+                   
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rev_IT, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Rev_IT, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Rev_IT, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                    
+                </tr>
+                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.MSP, htmlAttributes: new { @class = "control-label " })
@@ -1013,7 +1044,21 @@
                         </div>
 
                     </td>
+                    
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.AGIF, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.AGIF, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.AGIF, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    
 
+
+                </tr>
+                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label class="control-label">NPA/X Pay</label>
@@ -1023,9 +1068,19 @@
                             </div>
                         </div>
                     </td>
+                    
 
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Income_Tax_Monthly, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Income_Tax_Monthly, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.Income_Tax_Monthly, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    
                 </tr>
-
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
@@ -1038,77 +1093,6 @@
                     </td>
                     <td style="border-top:none;">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.DA, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.DA, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.DA, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.TPTL_Pay, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.TPTL_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.TPTL_Pay, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.MISC_Pay, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.MISC_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.MISC_Pay, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.PLI, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.PLI, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.PLI, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Rev_IT, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.Rev_IT, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.Rev_IT, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-
-
-                </tr>
-                <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.AGIF, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.AGIF, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.AGIF, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Income_Tax_Monthly, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.Income_Tax_Monthly, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.Income_Tax_Monthly, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-top:none;">
-                        <div class="form-group">
                             <label class="control-label">DSOP/AFPPF</label>
                             <div>
                                 @Html.EditorFor(model => model.DSOP_AFPP, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
@@ -1116,37 +1100,76 @@
                             </div>
                         </div>
                     </td>
-                </tr>
-                <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.MISC, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.MISC, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                                @Html.ValidationMessageFor(model => model.MISC, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                                @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Salary_After_Deduction, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.Salary_After_Deduction, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                                @Html.ValidationMessageFor(model => model.Salary_After_Deduction, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
+                    
+
                 </tr>
 
+
+
+                @*//ajay*@ 
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DA, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.DA, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                            @Html.ValidationMessageFor(model => model.DA, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MISC, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.MISC, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                            @Html.ValidationMessageFor(model => model.MISC, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                
+            </tr>
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TPTL_Pay, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.TPTL_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                            @Html.ValidationMessageFor(model => model.TPTL_Pay, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MISC_Pay, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.MISC_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                            @Html.ValidationMessageFor(model => model.MISC_Pay, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Salary_After_Deduction, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Salary_After_Deduction, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Salary_After_Deduction, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
 
             </table>
         </div>
