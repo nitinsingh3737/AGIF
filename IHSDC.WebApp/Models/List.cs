@@ -8,6 +8,5 @@ namespace IHSDC.WebApp.Models
     public class List
     {
         public IList<CarPcModel> carPcModel { get; set; }
-
     }
 }

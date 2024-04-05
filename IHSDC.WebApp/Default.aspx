@@ -14,7 +14,7 @@
 
 
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 <script src="jquery-confirm-master/dist/jquery-confirm.min.js"></script>
     <link href="jquery-confirm-master/dist/jquery-confirm.min.css" rel="stylesheet" />

@@ -1,6 +1,8 @@
 ﻿@model IHSDC.WebApp.Models.CarPcModel
 
 @{
+    /**/
+
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layoutagi.cshtml";
 
@@ -10,7 +12,7 @@
 <script src="~/Scripts/search/2.js"></script>
 <link href="~/Scripts/search/3.css" rel="stylesheet" />
 <script src="~/Scripts/search/4.js"></script>
-<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery/jquery.min.js"></script>
 <link href="~/Content/sweetalert.css" rel="stylesheet" />
 <script src="~/Scripts/sweetalert.min.js"></script>
 
@@ -104,11 +106,11 @@
         debugger;
         $('#mess').text("This field has been calculated based on your system DateTime. Ensure system DateTime is correct.");
 
-       var dateString = $('#Enrollment_Date').val();
+        var dateString = $('#Enrollment_Date').val();
 
         var dateParts = dateString.split("/");
 
-        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
 
         dt1 = new Date(dateObject);
         dt2 = new Date();
@@ -160,18 +162,18 @@
 
     function calculateResidual_Service(e) {
         debugger;
-          var dateString = $('#Enrollment_Date').val();
+        var dateString = $('#Enrollment_Date').val();
 
         var dateParts = dateString.split("/");
 
-        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
+        var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
 
 
-          var dateString2 = $('#Retirement_Date').val();
+        var dateString2 = $('#Retirement_Date').val();
 
         var dateParts2 = dateString2.split("/");
 
-        var dateObject2 = new Date(+dateParts2[2], dateParts2[1] - 1, +dateParts2[0]); 
+        var dateObject2 = new Date(+dateParts2[2], dateParts2[1] - 1, +dateParts2[0]);
 
         var d1 = new Date(dateObject);
         var d2 = new Date(dateObject2);
@@ -464,7 +466,7 @@
     $.noConflict();
     jQuery(document).ready(function ($) {
 
-        
+
         $(function () {
             $('.monthPicker').datepicker({
                 changeMonth: true,
@@ -476,13 +478,13 @@
                 }
             });
 
-             function my_date(date_string) {
-      var date_components = date_string.split("/");
-      var day = date_components[0];
-      var month = date_components[1];
-      var year = date_components[2];
-      return new Date(year, month - 1, day);
-    }
+            function my_date(date_string) {
+                var date_components = date_string.split("/");
+                var day = date_components[0];
+                var month = date_components[1];
+                var year = date_components[2];
+                return new Date(year, month - 1, day);
+            }
 
             $('#Date_Of_Birth').datepicker({
                 changeMonth: true,
@@ -494,19 +496,19 @@
                     var dt = $('#Date_Of_Birth').val();
                     var newdt = new Date(my_date(dt));
                     newdt.setFullYear(newdt.getFullYear() + 18);
-                    
-            $('#Enrollment_Date').datepicker({
-                changeMonth: true,
-                changeYear: true,
-                showButtonPanel: true,
-                dateFormat: 'dd/mm/yy',
-                minDate: newdt,
-            
-                startDate:'01/01/2010'
-                
-               
-            });
-    }
+
+                    $('#Enrollment_Date').datepicker({
+                        changeMonth: true,
+                        changeYear: true,
+                        showButtonPanel: true,
+                        dateFormat: 'dd/mm/yy',
+                        minDate: newdt,
+
+                        startDate: '01/01/2010'
+
+
+                    });
+                }
             });
 
             //$('#Enrollment_Date').datepicker({
@@ -515,10 +517,10 @@
             //    showButtonPanel: true,
             //    dateFormat: 'dd/mm/yy',
             //    minDate: $('#Date_Of_Birth').val(),
-            
+
             //    startDate:'01/01/2010'
-                
-               
+
+
             //});
 
             $('#Promotion_Date').datepicker({
@@ -631,22 +633,8 @@
                             </div>
                         </div>
                     </td>
-                    @*<td style="border-top:none;">
-            <div class="form-group">
-                @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label " })
-
-                <div>
-                    <input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />
-
-                        <input maxlength="8" onkeypress="return isNumber(event)" size="8" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="IC" type="tel" id="IC" />
-
-                        <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="sufixnum" id="sufixnum" type="text" />
-                </div>
-
-            </div>
-        </td>*@
                     <td style="border-top:none;">
-                        <div class="form-group" >
+                        <div class="form-group">
                             @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label" })
                             <div style="display: flex;">
                                 <div id="dropdown" class="dropdown-content">
@@ -665,6 +653,7 @@
                                         <option value="NS">NS</option>
                                         <option value="TC">TC</option>
                                         <option value="JC">JC</option>
+                                        <option value="JC">OR</option>
                                     </select>
                                 </div>
                                 <input maxlength="7" onkeypress="return isNumber(event)" size="7" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="IC" type="tel" id="IC" />
@@ -696,6 +685,7 @@
                                         <option value="NS">NS</option>
                                         <option value="TC">TC</option>
                                         <option value="JC">JC</option>
+                                        <option value="JC">OR</option>
                                     </select>
                                 </div>
                                 <input maxlength="7" size="7" onkeypress="return isNumber(event)" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="oldIC" id="oldIC" type="tel" />
@@ -704,9 +694,9 @@
                             </div>
 
                             @*<div>
-                    @Html.EditorFor(model => model.Old_Army_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                    @Html.ValidationMessageFor(model => model.Old_Army_No, "", new { @class = "text-danger" })
-                </div>*@
+                                    @Html.EditorFor(model => model.Old_Army_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Old_Army_No, "", new { @class = "text-danger" })
+                                </div>*@
                         </div>
                     </td>
 
@@ -720,30 +710,30 @@
                             <div>
                                 @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
                                 @*@Html.DropDownListFor(model => model.Rank, new List<SelectListItem>
-                        {
-                        new SelectListItem{ Text="Gen", Value = "1" },
-                        new SelectListItem{ Text="Lt Gen", Value = "2" },
-                        new SelectListItem{ Text="Maj Gen", Value = "3" },
-                        new SelectListItem{ Text="Brig", Value = "4" },
-                        new SelectListItem{ Text="Col", Value = "5" },
-                        new SelectListItem{ Text="Lt Col", Value = "6" },
-                        new SelectListItem{ Text="Maj", Value = "7" },
-                        new SelectListItem{ Text="Capt", Value = "8" },
-                        new SelectListItem{ Text="Lt", Value = "9" },
-                        new SelectListItem{ Text="Sub Maj", Value = "10" },
-                        new SelectListItem{ Text="Nb Sub/Sub", Value = "11" },
-                        new SelectListItem{ Text="Hav", Value = "12" },
-                        new SelectListItem{ Text="NK", Value = "13" },
-                        new SelectListItem{ Text="Sep", Value = "14" },
-                        }, new { @class = "form-control", onchange = "calallser(event);" })*@
+                                    {
+                                    new SelectListItem{ Text="Gen", Value = "1" },
+                                    new SelectListItem{ Text="Lt Gen", Value = "2" },
+                                    new SelectListItem{ Text="Maj Gen", Value = "3" },
+                                    new SelectListItem{ Text="Brig", Value = "4" },
+                                    new SelectListItem{ Text="Col", Value = "5" },
+                                    new SelectListItem{ Text="Lt Col", Value = "6" },
+                                    new SelectListItem{ Text="Maj", Value = "7" },
+                                    new SelectListItem{ Text="Capt", Value = "8" },
+                                    new SelectListItem{ Text="Lt", Value = "9" },
+                                    new SelectListItem{ Text="Sub Maj", Value = "10" },
+                                    new SelectListItem{ Text="Nb Sub/Sub", Value = "11" },
+                                    new SelectListItem{ Text="Hav", Value = "12" },
+                                    new SelectListItem{ Text="NK", Value = "13" },
+                                    new SelectListItem{ Text="Sep", Value = "14" },
+                                    }, new { @class = "form-control", onchange = "calallser(event);" })*@
                                 @*@Html.EditorFor(model => model.Rank, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                        @Html.ValidationMessageFor(model => model.Rank, "", new { @class = "text-danger" })*@
+                                    @Html.ValidationMessageFor(model => model.Rank, "", new { @class = "text-danger" })*@
                             </div>
                         </div>
                     </td>
                     <td style="border-top:none;">
                         <div class="form-group">
-                           
+
                             @Html.LabelFor(model => model.Regt_Corps, htmlAttributes: new { @class = "control-label " })
                             <div>
 
@@ -769,10 +759,10 @@
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Next_Fmn_HQ, htmlAttributes: new { @class = "control-label " })
+                            @Html.LabelFor(model => model.Next_Fmn_Hq, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Next_Fmn_HQ, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                                @Html.ValidationMessageFor(model => model.Next_Fmn_HQ, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.Next_Fmn_Hq, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Next_Fmn_Hq, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
@@ -782,35 +772,36 @@
                             @Html.LabelFor(model => model.Unit_Pin, htmlAttributes: new { @class = "control-label " })
                             <div>
                                 @Html.EditorFor(model => model.Unit_Pin, new { htmlAttributes = new { @class = "form-control", @required = "required", @maxlength = "6" } })
-                                @Html.ValidationMessageFor(model => model.Unit_Pin, "", new { @class = "text-danger" })
+
+                                @Html.ValidationMessageFor(model => model.Unit_Pin, "", new { @class = "text-danger", minlength = "6", maxlength = "6", size = "6" })
                             </div>
                         </div>
                     </td>
 
                     <td style="border-top:none;">
                         <div class="form-group">
-                           
+
                             @Html.LabelFor(model => model.Unit_Address, htmlAttributes: new { @class = "control-label " })
                             <div>
 
                                 @*@Html.DropDownListFor(model => model.Regt_Corps, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnits(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
-                                @Html.ValidationMessageFor(model => model.Regt_Corps, "", new { @class = "text-danger" })*@
+                                    @Html.ValidationMessageFor(model => model.Regt_Corps, "", new { @class = "text-danger" })*@
 
                                 @Html.DropDownListFor(model => model.Unit_Address, new List<SelectListItem>
         {
                                new SelectListItem{ Text="--Select--", Value = "0" },
         new SelectListItem{ Text="c/o 56APO", Value = "1" },
         new SelectListItem{ Text="c/o 99APO", Value = "2" },
-        
-       
+
+
         }, new { @class = "form-control", onchange = "calallser(event);" })
-                                
+
 
                             </div>
                         </div>
                     </td>
 
-                   
+
 
 
 
@@ -860,18 +851,18 @@
                         <div class="form-group">
                             <label>Extension of Service in Present Rank</label>
                             @*@Html.LabelFor(model => model.Enrollment_Date, htmlAttributes: new { @class = "control-label " })*@
-                        <div>
+                            <div>
 
-                            @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
-                        {
-                           new SelectListItem{ Text="--Select--", Value = "0" },
-                           new SelectListItem{ Text="Yes", Value = "1" },
-                           new SelectListItem{ Text="NO", Value = "2" },
+                                @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
+                            {
+                               new SelectListItem{ Text="--Select--", Value = "0" },
+                               new SelectListItem{ Text="Yes", Value = "1" },
+                               new SelectListItem{ Text="NO", Value = "2" },
 
 
-                        }, new { @class = "form-control", onchange = "calallser(event);" })
+                            }, new { @class = "form-control", onchange = "calallser(event);" })
 
-                        </div>
+                            </div>
                         </div>
                     </td>
                     <td style="border-top:none;">
@@ -896,7 +887,7 @@
                             </div>
                         </div>
                     </td>
-                    
+
 
                 </tr>
 
@@ -929,7 +920,7 @@
                         </div>
 
                     </td>
-                    
+
                 </tr>
                 <tr>
                     <td style="border-top:none;">
@@ -953,7 +944,7 @@
                         <div class="form-group">
                             <lable>PAN No</lable>
                             <div>
-                                @Html.EditorFor(model => model.PANNo, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.EditorFor(model => model.PANNo, new { htmlAttributes = new { @class = "form-control", @required = "required", @maxlength = "10" } })
                                 @Html.ValidationMessageFor(model => model.PANNo, "", new { @class = "text-danger", minlength = "10", maxlength = "10", size = "10" })
                             </div>
                         </div>
@@ -965,11 +956,20 @@
             <h1>Salary Details</h1>
             <table>
                 <tr>
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Salary_Slip_Month_Year, htmlAttributes: new { @class = "control-label " })
+                                <div>
+                                    @Html.EditorFor(model => model.Salary_Slip_Month_Year, new { htmlAttributes = new { @class = "form-control monthPicker", @required = "required" } })
+                                    @Html.ValidationMessageFor(model => model.Salary_Slip_Month_Year, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </td>*@
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Salary_Slip_Month_Year, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Salary_Slip_Month_Year, new { htmlAttributes = new { @class = "form-control monthPicker", @required = "required" } })
+                                @Html.EditorFor(model => model.Salary_Slip_Month_Year, new { htmlAttributes = new { @class = "form-control monthPicker", @required = "required", onchange = "validateDate();" } })
                                 @Html.ValidationMessageFor(model => model.Salary_Slip_Month_Year, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -978,12 +978,12 @@
                         <div class="form-group">
                             <label class="control-label">CDA(O) A/c No(Offrs only)</label>
                             <div>
-                                @Html.EditorFor(model => model.CDA_Account_No, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                                @Html.ValidationMessageFor(model => model.CDA_Account_No, "", new { @class = "text-danger" })
+                                @Html.EditorFor(model => model.CDA_Account_No, new { htmlAttributes = new { @class = "form-control", @required = "required", @maxlength = "15" } })
+                                @Html.ValidationMessageFor(model => model.CDA_Account_No, "", new { @class = "text-danger", minlength = "15", maxlength = "15", size = "15" })
                             </div>
                         </div>
                     </td>
-                   
+
                 </tr>
                 <tr>
                     <td style="border-top:none;">
@@ -1020,7 +1020,7 @@
                             </div>
                         </div>
                     </td>
-                   
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Rev_IT, htmlAttributes: new { @class = "control-label " })
@@ -1031,7 +1031,7 @@
                         </div>
                     </td>
 
-                    
+
                 </tr>
                 <tr>
                     <td style="border-top:none;">
@@ -1044,7 +1044,7 @@
                         </div>
 
                     </td>
-                    
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.AGIF, htmlAttributes: new { @class = "control-label " })
@@ -1054,7 +1054,7 @@
                             </div>
                         </div>
                     </td>
-                    
+
 
 
                 </tr>
@@ -1068,7 +1068,7 @@
                             </div>
                         </div>
                     </td>
-                    
+
 
                     <td style="border-top:none;">
                         <div class="form-group">
@@ -1079,7 +1079,7 @@
                             </div>
                         </div>
                     </td>
-                    
+
                 </tr>
                 <tr>
                     <td style="border-top:none;">
@@ -1100,76 +1100,77 @@
                             </div>
                         </div>
                     </td>
-                    
+
 
                 </tr>
 
 
 
-                @*//ajay*@ 
-            <tr>
-                <td style="border-top:none;">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.DA, htmlAttributes: new { @class = "control-label " })
-                        <div>
-                            @Html.EditorFor(model => model.DA, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                            @Html.ValidationMessageFor(model => model.DA, "", new { @class = "text-danger" })
+                @*//ajay*@
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.DA, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.DA, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.DA, "", new { @class = "text-danger" })
+                            </div>
                         </div>
-                    </div>
-                </td>
-                <td style="border-top:none;">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.MISC, htmlAttributes: new { @class = "control-label " })
-                        <div>
-                            @Html.EditorFor(model => model.MISC, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                            @Html.ValidationMessageFor(model => model.MISC, "", new { @class = "text-danger" })
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MISC, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.MISC, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.MISC, "", new { @class = "text-danger" })
+                            </div>
                         </div>
-                    </div>
-                </td>
-                
-            </tr>
-            <tr>
-                <td style="border-top:none;">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.TPTL_Pay, htmlAttributes: new { @class = "control-label " })
-                        <div>
-                            @Html.EditorFor(model => model.TPTL_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                            @Html.ValidationMessageFor(model => model.TPTL_Pay, "", new { @class = "text-danger" })
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TPTL_Pay, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.TPTL_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.TPTL_Pay, "", new { @class = "text-danger" })
+                            </div>
                         </div>
-                    </div>
-                </td>
-                <td style="border-top:none;">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label " })
-                        <div>
-                            @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                            @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MISC_Pay, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.MISC_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
+                                @Html.ValidationMessageFor(model => model.MISC_Pay, "", new { @class = "text-danger" })
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="border-top:none;">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.MISC_Pay, htmlAttributes: new { @class = "control-label " })
-                        <div>
-                            @Html.EditorFor(model => model.MISC_Pay, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()", onchange = "textChange()" } })
-                            @Html.ValidationMessageFor(model => model.MISC_Pay, "", new { @class = "text-danger" })
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Total, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Total, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Total, "", new { @class = "text-danger" })
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td style="border-top:none;">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Salary_After_Deduction, htmlAttributes: new { @class = "control-label " })
-                        <div>
-                            @Html.EditorFor(model => model.Salary_After_Deduction, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
-                            @Html.ValidationMessageFor(model => model.Salary_After_Deduction, "", new { @class = "text-danger" })
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Salary_After_Deduction, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Salary_After_Deduction, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Salary_After_Deduction, "", new { @class = "text-danger" })
+                            </div>
                         </div>
-                    </div>
-                </td>
-            </tr>
+                    </td>
+                </tr>
 
             </table>
         </div>
@@ -1200,16 +1201,16 @@
 
                     <td style="border-top:none;">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Vehicle_Type, htmlAttributes: new { @class = "control-label" })
-                          
+                            @Html.LabelFor(model => model.Veh_Type, htmlAttributes: new { @class = "control-label" })
+
                             <div>
-                                @Html.DropDownListFor(model => model.Vehicle_Type, new List<SelectListItem>
+                                @Html.DropDownListFor(model => model.Veh_Type, new List<SelectListItem>
                            {
                               new SelectListItem{ Text="--Select--", Value = "0" },
-                              new SelectListItem{ Text="Petrol", Value = "1" },
-                              new SelectListItem{ Text="Diesel", Value = "2" },
-                              new SelectListItem{ Text="CNG", Value = "3" },
-                              new SelectListItem{ Text="Electric", Value = "4" },
+                              new SelectListItem{ Text="Petrol/Hybrid", Value = "Petrol/Hybrid" },
+                              new SelectListItem{ Text="Diesel", Value = "Diesel" },
+                              new SelectListItem{ Text="CNG", Value = "CNG" },
+                              new SelectListItem{ Text="Electric", Value = "Electric" },
 
 
                            }, new { @class = "form-control", onchange = "calallser(event);" })
@@ -1219,7 +1220,7 @@
                     </td>
                 </tr>
                 <tr>
-                    
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Company Name</label>
@@ -1265,15 +1266,27 @@
                             </div>
                         </div>
                     </td>
-                    @*<td style="border-top:none;">
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Inst_No1_Amount, htmlAttributes: new { @class = "control-label " })
-                                <div>
-                                    @Html.EditorFor(model => model.Inst_No1_Amount, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
-                                    @Html.ValidationMessageFor(model => model.Inst_No1_Amount, "", new { @class = "text-danger" })
-                                </div>
+                </tr>
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Amt_Eligible_for_loan, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Amt_Eligible_for_loan, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.Amt_Eligible_for_loan, "", new { @class = "text-danger" })
                             </div>
-                        </td>*@
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.EMI_Eligible_for_loan, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.EMI_Eligible_for_loan, new { htmlAttributes = new { @class = "form-control", @required = "required", onkeypress = "myFunction()" } })
+                                @Html.ValidationMessageFor(model => model.EMI_Eligible_for_loan, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
                 </tr>
                 @*<tr>
                         <td style="border-top:none;">
@@ -1764,9 +1777,17 @@
 
             }
 
+            /*ajay 03-04-24*/
+
+            //if (currentTab == 0) {
+            //    if (y[15].value.length != 12 || y[16].value.length != 10) {
+            //        valid = false;
+            //    }
+            //}
+            /*ajay 03-04-24*/
             if (currentTab == 0) {
                 if (y[15].value.length != 12 || y[16].value.length != 10) {
-                    valid = false;
+                    valid = true;
                 }
             }
             //if (y[16].value.length != 10) {
@@ -1803,9 +1824,21 @@
     }
 </script>
 
+<script>
+    function validateDate() {
+        var selectedDate = new Date(document.getElementById("Salary_Slip_Month_Year").value);
+        var currentDate = new Date();
+        var threeMonthsAgo = new Date();
+        threeMonthsAgo.setMonth(currentDate.getMonth() - 3);
 
+        if (selectedDate < threeMonthsAgo) {
+            alert("Please select a date within the last three months.");
+            document.getElementById("Salary_Slip_Month_Year").value = ""; // Clear the input field
+        }
+    }
+</script>
 
-
+ 
 
 @*<div style="margin-left:13px;font-size:16px">
         @Html.ActionLink("Back to List", "Index")

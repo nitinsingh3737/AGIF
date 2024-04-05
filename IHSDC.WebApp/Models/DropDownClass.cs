@@ -32,8 +32,30 @@ namespace IHSDC.WebApp.Models
         public SelectList LoadAppType()
         {
             return new SelectList(new SelectListItem[]{
-                new SelectListItem{Text="Car/Two Wheeler",Value="2"},
-                new SelectListItem{Text="Computer",Value="3"}
+                new SelectListItem{Text="Car & Two Wheeler Application",Value="2"}
+                //,new SelectListItem{Text="Computer",Value="3"}
+            }, "Value", "Text");
+        }
+
+        //ajay 2-4-24
+       
+        public SelectList LoadPrefix()
+        {
+            return new SelectList(new SelectListItem[]{
+                new SelectListItem{Text="IC",Value="IC"}
+                ,new SelectListItem{Text="SS",Value="SS"}
+                ,new SelectListItem{Text="WS",Value="WS"}
+                ,new SelectListItem{Text="SC",Value="SC"}
+                ,new SelectListItem{Text="SL",Value="SL"}
+                ,new SelectListItem{Text="MR",Value="MR"}
+                ,new SelectListItem{Text="MS",Value="MS"}
+                ,new SelectListItem{Text="DR",Value="DR"}
+                ,new SelectListItem{Text="DS",Value="DS"}
+                ,new SelectListItem{Text="NR",Value="NR"}
+                ,new SelectListItem{Text="NS",Value="NS"}
+                ,new SelectListItem{Text="TC",Value="TC"}
+                ,new SelectListItem{Text="JC",Value="JC"}
+                
             }, "Value", "Text");
         }
         public SelectList LoadLoanType()

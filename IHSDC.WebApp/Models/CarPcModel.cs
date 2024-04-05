@@ -34,12 +34,12 @@ namespace IHSDC.WebApp.Models
         public string ApplicationType { get; set; }
 
         [Required]
-        [StringLength(12, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 12)]
-        [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
+        //[StringLength(12, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 12)]
+        //[RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public string AadharNo { get; set; }
-        [StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
+        //[StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
         [Required]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string PANNo { get; set; }
 
         public string CarLoanType { get; set; }
@@ -48,10 +48,10 @@ namespace IHSDC.WebApp.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",
                       ApplyFormatInEditMode = true)]
         public DateTime? DateTimeUpdated { get; set; }
-        [StringLength(50)]
-        [RegularExpression("([a-zA-Z .&'-]+)", ErrorMessage = "Enter only alphabets")]
+        //[StringLength(50)]
+        //[RegularExpression("([a-zA-Z .&'-]+)", ErrorMessage = "Enter only alphabets")]
 
-        [DisplayName("Name of Applicant")]
+        [Display(Name = "Name of Applicant")]
         public string Loanee_Name { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
@@ -59,23 +59,22 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Old_Army_No { get; set; }
-        [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
 
-        [DisplayName("Rank & Trade")]
+
+        [StringLength(50)]
+        [Display (Name ="Rank & Trade")]
+        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Rank { get; set; }
         [StringLength(50)]
-
-        [DisplayName("Regt/Corps")]
+        [Display(Name ="Regt/Corps")]
         public string Regt_Corps { get; set; }
-        [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
 
-        [DisplayName("Present_Unit")]
+        [StringLength(50)]
+        [Display(Name ="Present_Unit")]
+        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Unit { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
-
         public string CDA_PAO { get; set; }
 
         public string Date_Of_Birth {
@@ -152,10 +151,8 @@ namespace IHSDC.WebApp.Models
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Salary_After_Deduction { get; set; }
         [StringLength(50)]
+        [Display (Name ="Dealer Name and Address")]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
-
-        
-        [DisplayName("Dealer Name and Address")]
         public string Dealer_Name { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
@@ -165,8 +162,7 @@ namespace IHSDC.WebApp.Models
         public string Vehicle_Make { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
-
-        [DisplayName("Cost of Veh Ex Showroom")]
+        [Display (Name ="Cost of Veh Ex Showroom")]
         public int? Total_Cost { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
@@ -305,31 +301,16 @@ namespace IHSDC.WebApp.Models
         public string CancelledCheque { get; set; }
         public string DrivingLicence { get; set; }
 
-        //inserting new property
-        [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
-        [DisplayName("Next Fmn HQ")]
-        public string Next_Fmn_HQ  { get; set; }
-
-
-        [StringLength(50)]
-        //[RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
-        [DisplayName("Unit Pin")]
+        //ajay 03-04-24
+        public string Next_Fmn_Hq {get; set;}
         public string Unit_Pin { get; set; }
+        public string Unit_Address { get; set; }
+        public string Extension_of_Service_in_Present_Rank {get; set;}
+        public string Veh_Type { get; set; }
+        public string Amt_Eligible_for_loan { get; set; }
 
+        public string EMI_Eligible_for_loan { get; set; }
 
-        [StringLength(150)]
-        [DisplayName("Unit Address")]
-        public string Unit_Address  { get; set; }
-
-
-        
-        [DisplayName("Extension_of_Service_in_Present_Rank")]
-        public string Extension_of_Service_in_Present_Rank { get; set; }
-
-
-        [DisplayName("Vehicle_Type")]
-        public string Vehicle_Type { get; set; }
 
     }
 }

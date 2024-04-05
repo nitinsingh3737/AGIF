@@ -69,11 +69,11 @@ namespace IHSDC.WebApp.Controllers
         {
            try
             { 
-                if (collection["ltype"] == "Car/Pc")
+                if (collection["ltype"] == "Car")
                 {
                     CarPcModel data = new CarPcModel();
                     CarPcModel carPc = new CarPcModel();
-                    data.Army_No = collection["armyNo"].Trim();
+                    data.Army_No = collection["armyno"].Trim();
                     data = con.carPcModel.FirstOrDefault(x => x.Army_No == data.Army_No);
                 
                     if (data != null)

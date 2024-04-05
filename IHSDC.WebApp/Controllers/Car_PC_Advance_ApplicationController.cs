@@ -24,9 +24,9 @@ namespace IHSDC.WebApp.Controllers
     public class Car_PC_Advance_ApplicationController : Controller
     {
         //private IHSDCAGIFDBEntities db = new IHSDCAGIFDBEntities();
-
         DBConnection con = new DBConnection();
 
+        
         // GET: Car_PC_Advance_Application
         [Authorize]
         public ActionResult Index()
@@ -37,9 +37,21 @@ namespace IHSDC.WebApp.Controllers
                 {
                     List model = new List();
                     model.carPcModel = con.getApplication();
+                    List<CarPcModel> lst = new List<CarPcModel>();
+                    foreach (var data in model.carPcModel)
+                    {
+                        CarPcModel carPc = new CarPcModel();
 
+                        carPc = data;
 
-                    return View(model.carPcModel);
+                        carPc.Loanee_Name = EncryptDecrypt.DecryptionData(data.Loanee_Name);
+                        carPc.AadharNo = EncryptDecrypt.DecryptionData(data.AadharNo);
+                        carPc.PANNo = EncryptDecrypt.DecryptionData(data.PANNo);
+
+                        lst.Add(carPc);
+                    }
+
+                    return View(lst);
                 }
                 else
                 {
@@ -684,7 +696,13 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult Search(string id, string callaction)
         {
             try
-            { 
+            {
+                string ipAddress = Request.UserHostAddress;
+                ViewBag.IpAddress = ipAddress;
+
+                ViewBag.time = DateTime.Now.ToLocalTime().ToString("dd/MM/yyyy HH:mm").Trim();
+
+
                 ViewBag.action = callaction;
                 ViewBag.Mess1 = TempData["info"];
 
@@ -699,10 +717,13 @@ namespace IHSDC.WebApp.Controllers
                 {
                     return HttpNotFound();
                 }
+                car_PC_Advance_Application.Loanee_Name = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Loanee_Name);
+                car_PC_Advance_Application.AadharNo = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.AadharNo);
+                car_PC_Advance_Application.PANNo = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.PANNo);
                 string a = car_PC_Advance_Application.Status.TrimEnd();
                 return View(car_PC_Advance_Application);
             }
-            catch
+            catch(Exception ex)
             {
                 return View("Error");
             }
@@ -781,8 +802,8 @@ namespace IHSDC.WebApp.Controllers
                     {
                         collection["ApplicationType"] = "CA";
                         DrivingLicense = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[4].FileName), "DrivingLicense", Path.GetExtension(file[0].FileName));
-                        CopyofAadharCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[5].FileName), "CopyofAadharCard", Path.GetExtension(file[0].FileName));
-                        CopyofPANCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[6].FileName), "CopyofPANCard", Path.GetExtension(file[0].FileName));
+                        //CopyofAadharCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[5].FileName), "CopyofAadharCard", Path.GetExtension(file[0].FileName));
+                        //CopyofPANCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[6].FileName), "CopyofPANCard", Path.GetExtension(file[0].FileName));
                     }
                     if (collection["ApplicationType"] == "3")
                     {
@@ -791,8 +812,8 @@ namespace IHSDC.WebApp.Controllers
                     if (collection["ApplicationType"] == "4")
                     {
                         DrivingLicense = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[4].FileName), "DrivingLicense", Path.GetExtension(file[0].FileName));
-                        CopyofAadharCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[5].FileName), "CopyofAadharCard", Path.GetExtension(file[0].FileName));
-                        CopyofPANCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[6].FileName), "CopyofPANCard", Path.GetExtension(file[0].FileName));
+                        //CopyofAadharCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[5].FileName), "CopyofAadharCard", Path.GetExtension(file[0].FileName));
+                        //CopyofPANCard = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[6].FileName), "CopyofPANCard", Path.GetExtension(file[0].FileName));
                         collection["ApplicationType"] = "OLDCAR";
                         RC = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[0].FileName), "RC", Path.GetExtension(file[0].FileName));
                         Insurance = string.Format("{1}{2}", Path.GetFileNameWithoutExtension(file[0].FileName), "Insurance", Path.GetExtension(file[0].FileName)); 
@@ -1033,7 +1054,8 @@ namespace IHSDC.WebApp.Controllers
             "Dispatch_Type,City_Branch_Code_Search,Payable_To," +
             "Dispatch_Address_Line1,Dispatch_Address_Line2,Dispatch_Address_Line3," +
             "Dispatch_Address_Line4,CarLoanType,Previous_Loan_Source,Previous_Loan_Purpose," +
-            "Amount,EMI,Previous_Loan_Is_Paid,Status,UpdatedBy,AadharNo,PANNo")] CarPcModel car_PC_Advance_Application,FormCollection collection)
+            "Amount,EMI,Previous_Loan_Is_Paid,Status,UpdatedBy,AadharNo,PANNo," +
+            "Next_Fmn_Hq,Unit_Pin,Unit_Address,Extension_of_Service_in_Present_Rank,Veh_Type,Amt_Eligible_for_loan,EMI_Eligible_for_loan")] CarPcModel car_PC_Advance_Application,FormCollection collection)
         {
             if (ModelState.IsValid)
             {
@@ -1078,14 +1100,18 @@ namespace IHSDC.WebApp.Controllers
                     car_PC_Advance_Application.DateTimeUpdated = DateTime.Now;
                     car_PC_Advance_Application.UpdatedBy = User.Identity.Name;
                     car_PC_Advance_Application.Status = "New Application";
-                  
+
+                    car_PC_Advance_Application.Loanee_Name = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Loanee_Name);
+                    car_PC_Advance_Application.AadharNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.AadharNo);
+                    car_PC_Advance_Application.PANNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.PANNo);
+
                     con.carPcModel.Add(car_PC_Advance_Application);
                     con.SaveChanges();
                     int id = Convert.ToInt32(car_PC_Advance_Application.Application_Id);
                     ModelState.Clear();
                     ViewBag.Message = "Application Successfully Submit!!";
 
-                    return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = car_PC_Advance_Application.Application_Id, callaction = "download" });
+                    return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = EncryptDecrypt.Encryption(car_PC_Advance_Application.Application_Id.ToString()), callaction = "download" });
                 }
                 else
                 {

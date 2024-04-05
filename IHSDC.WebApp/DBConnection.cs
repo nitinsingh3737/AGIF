@@ -15,8 +15,7 @@ namespace IHSDC.WebApp
             public DBConnection() : base("IHSDCDBDBContext")
             {
 
-            } 
-       
+            }
        
         public virtual DbSet<CarPcModel> carPcModel { get; set; }
         public virtual DbSet<certModel> certModel { get; set; }
@@ -64,15 +63,11 @@ namespace IHSDC.WebApp
             public IList<CarPcModel> getApplication()
             {
                 var data = GetDataInList<CarPcModel>("select * from CarPcModels").ToList();
-
                 return data;
 
             }
 
-
-        
-
-        public IList<Unit> unitList()
+            public IList<Unit> unitList()
             {
                 var data = GetDataInList<Unit>("sp_select_Unit").ToList();
                 return data;
