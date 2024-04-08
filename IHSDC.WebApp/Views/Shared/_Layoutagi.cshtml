@@ -381,7 +381,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Upload Documents</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Upload/Download</a>
                             @*<a href="~/Search/Search">Search</a>*@
                             <ul class="dropdown-menu">
                                 <li><a href="~/LoanApplication/upload">Upload Documents</a></li>
@@ -487,56 +487,65 @@
 
 
     @*@Html.Partial("_LoginPartial")*@
-    <div class="container-fluid body-content">
-        @RenderBody()
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+<div class="container-fluid body-content">
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
 
 
-        <script>
-            jQuery.fn.liScroll = function (settings) {
-                settings = jQuery.extend({
-                    travelocity: 0.03
-                }, settings);
-                return this.each(function () {
-                    var $strip = jQuery(this);
-                    $strip.addClass("newsticker")
-                    var stripHeight = 1;
-                    $strip.find("li").each(function (i) {
-                        stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
-                    });
-                    var $mask = $strip.wrap("<div class='mask'></div>");
-                    var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
-                    var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width
-                    $strip.height(stripHeight);
-                    var totalTravel = stripHeight;
-                    var defTiming = totalTravel / settings.travelocity;	// thanks to Scott Waye
-                    function scrollnews(spazio, tempo) {
-                        $strip.animate({ top: '-=' + spazio }, tempo, "linear", function () { $strip.css("top", 0); scrollnews(totalTravel, defTiming); });
-                    }
-                    scrollnews(totalTravel, defTiming);
-                    $strip.hover(function () {
-                        jQuery(this).stop();
-                    },
-                        function () {
-                            var offset = jQuery(this).offset();
-                            var residualSpace = offset.top + stripHeight;
-                            var residualTime = residualSpace / settings.travelocity;
-                            scrollnews(stripHeight, residualTime);
-                        });
+    <script>
+        jQuery.fn.liScroll = function (settings) {
+            settings = jQuery.extend({
+                travelocity: 0.03
+            }, settings);
+            return this.each(function () {
+                var $strip = jQuery(this);
+                $strip.addClass("newsticker")
+                var stripHeight = 1;
+                $strip.find("li").each(function (i) {
+                    stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
                 });
-            };
-
-            $(function () {
-                $("ul#ticker01").liScroll();
-                $("ul#ticker02").liScroll();
-                $("ul#ticker03").liScroll();
-                $("ul#ticker04").liScroll();
+                var $mask = $strip.wrap("<div class='mask'></div>");
+                var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
+                var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width
+                $strip.height(stripHeight);
+                var totalTravel = stripHeight;
+                var defTiming = totalTravel / settings.travelocity;	// thanks to Scott Waye
+                function scrollnews(spazio, tempo) {
+                    $strip.animate({ top: '-=' + spazio }, tempo, "linear", function () { $strip.css("top", 0); scrollnews(totalTravel, defTiming); });
+                }
+                scrollnews(totalTravel, defTiming);
+                $strip.hover(function () {
+                    jQuery(this).stop();
+                },
+                    function () {
+                        var offset = jQuery(this).offset();
+                        var residualSpace = offset.top + stripHeight;
+                        var residualTime = residualSpace / settings.travelocity;
+                        scrollnews(stripHeight, residualTime);
+                    });
             });
-        </script>
+        };
 
-    </div>
+        $(function () {
+            $("ul#ticker01").liScroll();
+            $("ul#ticker02").liScroll();
+            $("ul#ticker03").liScroll();
+            $("ul#ticker04").liScroll();
+        });
+    </script>
+
+
+    <script>
+        function ValInData(input) {
+            var regex = /[^a-zA-Z0-9/_& ]/g;
+            input.value = input.value.replace(regex, "");
+        }
+        
+    </script>
+
+</div>
 
 
 

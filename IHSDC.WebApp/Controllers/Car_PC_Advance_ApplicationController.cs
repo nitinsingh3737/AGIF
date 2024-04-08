@@ -1330,5 +1330,14 @@ namespace IHSDC.WebApp.Controllers
             base.Dispose(disposing);
         }
 
+
+        
+        public ActionResult LoadDropdownOptions(string parameter)
+        {
+            // Use the parameter as needed in your method
+            var dropdownData = (new IHSDC.WebApp.Models.DropDownClass()).LoadUnitss(parameter);
+            return Json(dropdownData, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

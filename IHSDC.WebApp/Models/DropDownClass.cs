@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,12 +29,18 @@ namespace IHSDC.WebApp.Models
             Unit model = new Unit();
             return new SelectList(con.unitList(), "unitName", "unitName");
         }
+        public SelectList LoadUnitss(string unitName)
+        {
+            DBConnection con = new DBConnection();
+            Unit model = new Unit();
+            return new SelectList(con.unitList(), "unitName", "unitName");
+        }
 
         public SelectList LoadAppType()
         {
             return new SelectList(new SelectListItem[]{
-                new SelectListItem{Text="Car & Two Wheeler Application",Value="2"}
-                //,new SelectListItem{Text="Computer",Value="3"}
+                new SelectListItem{Text="Car",Value="2"}
+                ,new SelectListItem{Text="Two Wheeler Application",Value="3"}
             }, "Value", "Text");
         }
 

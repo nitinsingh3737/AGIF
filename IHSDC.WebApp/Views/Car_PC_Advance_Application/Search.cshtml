@@ -187,7 +187,9 @@
 {
 
     <div class="container" id="top" style="background:white;padding:5%;">
-
+        <div class="alert alert-info" role="alert">
+            Files to be uploaded in PDF format only. File size should be maximum 3MB.
+        </div>
         @using (Html.BeginForm("UploadApplicationForm", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data", id = "Myform" }))
         {
 
@@ -197,7 +199,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <lable>Application Form</lable>
-                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", accept = ".jpg,.png", pattern = "/.(jpe?g|png|gif|bmp" })
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", accept = ".pdf", id= "uploadForm" })
 
                 </div>
                 @*<div class="col-lg-6">
@@ -210,7 +212,7 @@
                 {
                     <div class="col-lg-6">
                         <lable>Quotation</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
                         @Html.HiddenFor(model => model.Army_No)
                         @Html.HiddenFor(model => model.Application_Id)
                         @Html.HiddenFor(model => model.ApplicationType)
@@ -219,7 +221,7 @@
                 }
                 <div class="col-lg-6">
                     <lable>Monthly Pay Slip</lable>
-                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
                 </div>
                 @if (Model.CarLoanType == "8")
                 {
@@ -227,7 +229,7 @@
 
 
                         <lable>Noc From Previous Bank</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
 
 
                     </div>
@@ -238,7 +240,7 @@
                 {
                     <div class="col-lg-6">
                         <lable>Cancelled Cheque</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
 
 
                     </div>
@@ -250,7 +252,7 @@
 
 
                         <lable>Driving License</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
 
                     </div>
                 }
@@ -262,7 +264,7 @@
 
 
                         <lable>Statement of A/C or BAL AMT Pending </lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
 
 
                     </div>
@@ -283,7 +285,7 @@
 
 
                             <lable>Copy of Aadhar Card</lable>
-                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
 
 
                         </div>
@@ -291,7 +293,7 @@
 
 
                             <lable>Copy of PAN Card</lable>
-                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
 
 
                         </div>
@@ -310,13 +312,13 @@
 
 
                         <lable>Copy of Registration Certificate (RC)</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" , id = "uploadForm" })
 
 
                     </div>
                     <div class="col-lg-6">
                         <lable>Insurance Cover Note</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".jpg,.png" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
                     </div>
                 </div>
             }
@@ -395,7 +397,7 @@
                     <td class="w-37">
                         <table class="table">
                             <tr>
-                                <td class="lable-td w-50">Loanee Name</td>
+                                <td class="lable-td w-50">Name of Applicant</td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Loanee_Name)</td>
                             </tr>
                             <tr>
@@ -416,9 +418,9 @@
                             </tr>
                         </table>
                     </td>
-                    <td class="border text-center" valign="middle" rowspan="4">
+                    @*<td class="border text-center" valign="middle" rowspan="4">
                         Photo
-                    </td>
+                    </td>*@
                 </tr>
                 <tr>
                     <td class="w-37">
@@ -647,3 +649,17 @@
         </div>
     </div>
 }
+
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function (event) {
+        var fileInput = document.getElementById('fileInput');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+            alert('Please upload a PDF file.');
+            event.preventDefault();
+        }
+    });
+</script>

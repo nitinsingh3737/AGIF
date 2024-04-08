@@ -9,5 +9,7 @@ namespace IHSDC.WebApp.Models
     {
         public int Id { get; set; }
         public string unitName { get; set; }
+
+        public string NewField { get; set; }    
     }
 }
