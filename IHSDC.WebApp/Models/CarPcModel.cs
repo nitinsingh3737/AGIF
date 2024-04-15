@@ -31,6 +31,7 @@ namespace IHSDC.WebApp.Models
         public int Application_Id { get; set; }
 
         [Required]
+        [Display(Name ="Application Type")]
         public string ApplicationType { get; set; }
 
         [Required]
@@ -39,9 +40,10 @@ namespace IHSDC.WebApp.Models
         public string AadharNo { get; set; }
         //[StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
         [Required]
-        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string PANNo { get; set; }
 
+        [Display(Name ="Car Loan Type")]
         public string CarLoanType { get; set; }
 
         [DataType(DataType.Date)]
@@ -168,7 +170,7 @@ namespace IHSDC.WebApp.Models
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Amount_Applied_For_Loan { get; set; }
 
-        [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
+        //[RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? No_Of_EMI_Applied { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
@@ -310,6 +312,10 @@ namespace IHSDC.WebApp.Models
         public string Amt_Eligible_for_loan { get; set; }
 
         public string EMI_Eligible_for_loan { get; set; }
+
+       
+        public string FileUpload  { get; set; }
+     
 
 
     }

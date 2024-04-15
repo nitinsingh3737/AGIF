@@ -270,3 +270,23 @@ A:\repostitry  25 feb 21\IHSDC.Common\obj\Debug\IHSDC.Common.csproj.CoreCompileI
 A:\repostitry  25 feb 21\IHSDC.Common\obj\Debug\IHSDC.Common.csproj.CopyComplete
 A:\repostitry  25 feb 21\IHSDC.Common\obj\Debug\IHSDC.Common.dll
 A:\repostitry  25 feb 21\IHSDC.Common\obj\Debug\IHSDC.Common.pdb
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\IHSDC.Common.dll.config
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\IHSDC.Common.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\IHSDC.Common.pdb
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\Syncfusion.Licensing.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\Syncfusion.Pdf.Base.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\System.Web.Helpers.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\System.Web.Mvc.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\System.Web.Razor.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\System.Web.WebPages.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\Syncfusion.Compression.Base.xml
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\bin\Debug\Syncfusion.Pdf.Base.xml
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\obj\Debug\IHSDC.Common.csproj.AssemblyReference.cache
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\obj\Debug\IHSDC.Common.csproj.CoreCompileInputs.cache
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\obj\Debug\IHSDC.Common.csproj.CopyComplete
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\obj\Debug\IHSDC.Common.dll
+C:\Users\lanmanager\Desktop\WFH\Source_Code_AGI_2022\IHSDC.Common\obj\Debug\IHSDC.Common.pdb

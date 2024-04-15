@@ -1,0 +1,78 @@
+﻿@model IHSDC.WebApp.Models.certModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+@{
+    var message = TempData["Message"] ?? string.Empty;
+    var messageStatus = TempData["messageStatus"] ?? string.Empty;
+    var messagemidStatus = TempData["messagemidStatus"] ?? string.Empty;
+}
+<script>
+    $(document).ready(function () {
+
+        $("#fin").css('display', 'block');
+        $("#pro").css('display', 'none');
+
+        $(function () {
+            $('#ltype').change(function (event) {
+                if ($("#ltype").val() == "Final") {
+                    $("#fin").css('display', 'block');
+                    $("#pro").css('display', 'none');
+                }
+                if ($("#ltype").val() == "Pro") {
+                    $("#pro").css('display', 'block');
+                    $("#fin").css('display', 'none');
+                }
+
+            })
+
+            //$('#pro').change(function (event) {
+
+            //})
+        })
+    });
+</script>
+<script src="~/Scripts/jquery/jquery.min.js"></script>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert.min.js"></script>
+<div class="container" style="background:white;padding:5%;">
+    @*multipart/form-data*@
+    @using (Html.BeginForm("Index1", "LoanCert", FormMethod.Post, new { enctype = "application/x-www-form-urlencoded" }))
+    {
+
+        <div class="form-group">
+            <label>
+                Enter ArmyNo
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                (E.g. IC/JC/OR12345X)
+            </label>            <input type="text" id="FolioNo" name="FolioNo" class="form-control" required />
+        </div>
+
+
+
+        @*<div class="form-group">
+                <label>Year</label>
+                @Html.DropDownList("fyear", (new IHSDC.WebApp.Models.DropDownClass()).loadYear("HBAFIN"), new { @data_show_subtext = "true", @id = "fin", @class = "select form-control", @data_live_search = "true" })
+
+                @Html.DropDownList("year", (new IHSDC.WebApp.Models.DropDownClass()).loadYear("HBAPRO"), new { @data_show_subtext = "true", @id = "pro", @class = "select form-control", @data_live_search = "true" })
+
+            </div>*@
+
+        <button type="submit" class="btn btn-success">Search</button>
+    }
+</div>
+<script type="text/javascript">
+
+  var message = '@message';
+    var messageStatus = '@messageStatus';
+    var messagemidStatus = '@messagemidStatus ';
+    if (message)
+            sweetAlert(message, messagemidStatus, messageStatus);
+
+
+
+</script>

@@ -1,0 +1,585 @@
+﻿
+@model IHSDC.WebApp.Models.Claims_Maturity
+@{
+    ViewBag.Title = "det";
+    Layout = "~/Views/Shared/_Layoutagiff.cshtml";
+}
+
+
+<link href="~/Style/car_pc_d.css" rel="stylesheet" />
+<style>
+    .printTable {
+        display: block;
+        border: 1px solid #000;
+        width: 700px;
+    }
+</style>
+<script>
+
+    function printData() {
+        var divToPrint = document.getElementById("printTable");
+        newWin = window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+    }
+
+    $('button').on('click', function () {
+        printData();
+    })
+</script>
+
+<div class="di">
+    <h2><u>Details Of Maturity Claims Received </u></h2><input type="button" value="PRINT" />
+
+                    <table id="printTable" class="ta">
+                        <tr>
+                            <td colspan="2">
+                                <table>
+                                    <colgroup>
+                                        <col width="100" style="text-align:left;" />
+                                        <col width="150" style="text-align:left;" />
+                                        <col width="100" style="text-align:left;" />
+                                        <col width="150" style="text-align:left;" />
+                                        <col width="100" style="text-align:left;" />
+                                        <col width="150" style="text-align:left;" />
+
+                                    </colgroup>
+
+                                    <tr>
+                                        <td colspan="8" style="font-size:16px;font-weight:bold">Personal Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.OldArmyNumber)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.OldArmyNumber)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.ArmyNumber)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.ArmyNumber)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.Rank)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Rank)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PersName)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PersName)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.Unit)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Unit)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.AdharNo)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.AdharNo)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.CdaPao)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.CdaPao)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.DOB)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.DOB)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.DOE)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.DOE)
+                                            </dd>
+                                        </td></dl>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.RetirementDate)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.RetirementDate)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.YearOfService)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.YearOfService)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.MedCat)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.MedCat)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.ReasonForDischarge)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.ReasonForDischarge)
+                                            </dd>
+
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.CdaAccountNo)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.CdaAccountNo)
+                                            </dd>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.AgiMembershipAsOR)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.AgiMembershipAsOR)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.AgiMembershipAsGC)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.AgiMembershipAsGC)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.OndeputationandAmount)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.OndeputationandAmount)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.AsAOP)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.AsAOP)
+                                            </dd>
+
+                                        </td>
+
+                                    </tr>
+                                </table><br />
+                                <table>
+                                    <colgroup>
+                                        <col width="200" />
+                                        <col width="200" />
+                                        <col width="200" />
+                                        <col width="200" />
+                                    </colgroup>
+
+
+                                    <tr>
+                                        <td colspan="2" style="font-size:16px;font-weight:bold">Salary Details</td>
+                                        <td colspan="2" style="font-size:16px;font-weight:bold">Dealer Details</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="4" style="font-size:16px;font-weight:bold">Accounts Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PayeeAccNo)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PayeeAccNo)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.IFSCCode)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.IFSCCode)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.MobileNo)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.MobileNo)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.EmailId)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.EmailId)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PayableAtBankName)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PayableAtBankName)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PayableInFavour)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PayableInFavour)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4" style="font-size:16px;font-weight:bold">Address Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="font-size:16px;font-weight:bold">Permenant Address</td>
+                                        <td colspan="2" style="font-size:16px;font-weight:bold">Site Address</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PersAddressLine1)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PersAddressLine1)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.SiteAddressLine1)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.SiteAddressLine1)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PersAddressLine2)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PersAddressLine2)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.Site_AddressLine2)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Site_AddressLine2)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PersAddressLine3)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PersAddressLine3)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.SiteAddressLine3)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.SiteAddressLine3)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PersAddressLine4)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PersAddressLine4)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.SiteAddressLine4)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.SiteAddressLine4)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PinCode)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PinCode)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.SiteCity)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.SiteCity)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.SitePIN)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.SitePIN)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+
+                                        <td colspan="2" style="font-size:16px;font-weight:bold">Previous Loan Details</td>
+
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PreviousLoanSource)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PreviousLoanSource)
+                                            </dd>
+                                        </td>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PreviousLoanPurpose)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PreviousLoanPurpose)
+                                            </dd>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.PreviousLoanAmount)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.PreviousLoanAmount)
+                                            </dd>
+                                        </td>
+
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.FirstNominee)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.FirstNominee)
+                                            </dd>
+                                        </td>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Status)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Status)
+                                </dd>
+                            </td>
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Remark)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Remark)
+                                </dd>
+                            </td>
+
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.UpdatedBy)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.UpdatedBy)
+                                </dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.DateTimeUpdated)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.DateTimeUpdated)
+                                </dd>
+
+
+
+                        </tr>
+                    </table>
+
+    </td>
+    </tr>
+    </table>
+
+
+
+
+    <div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Application_ID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>
+
+
+
+
