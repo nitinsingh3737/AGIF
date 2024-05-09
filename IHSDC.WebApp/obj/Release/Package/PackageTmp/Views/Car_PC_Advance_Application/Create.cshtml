@@ -95,7 +95,7 @@
 
     function changeApp(e) {
 
-        if ($('#ApplicationType').val() != "3") {
+        if ($('#ApplicationType').val() != "7") {
 
             $("#CarLoanType").prop('disabled', false);
         }
@@ -293,14 +293,28 @@
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel: true,
-                dateFormat: 'dd/mm/yy'
+                dateFormat: 'dd/mm/yy',
+                onSelect: function () {
+                    var dt = $('#Promotion_Date').val();
+                    handler(dt);
+                    var newdt = new Date(my_date(dt));
+                    newdt.setFullYear(newdt.getFullYear() + 18);
+
+                }
             });
 
             $('#Retirement_Date').datepicker({
                 changeMonth: true,
                 changeYear: true,
                 showButtonPanel: true,
-                dateFormat: 'dd/mm/yy'
+                dateFormat: 'dd/mm/yy',
+                 onSelect: function () {
+                    var dt = $('#Promotion_Date').val();
+                    handler(dt);
+                    var newdt = new Date(my_date(dt));
+                    newdt.setFullYear(newdt.getFullYear() + 18);
+
+                }
             });
 
         });
@@ -371,9 +385,11 @@
 
 </script>
 
-<script src="https://unpkg.com/inputmask@4.0.4/dist/inputmask/dependencyLibs/inputmask.dependencyLib.js"></script>
-<script src="https://unpkg.com/inputmask@4.0.4/dist/inputmask/inputmask.js"></script>
-<script src="https://unpkg.com/inputmask@4.0.4/dist/inputmask/inputmask.date.extensions.js"></script>
+
+<script src="~/Scripts/inputmask.date.extensions.js"></script>
+<script src="~/Scripts/inputmask.dependencyLib.js"></script>
+<script src="~/Scripts/inputmask.js"></script>
+
 @using (Html.BeginForm("Create", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
@@ -401,7 +417,7 @@
                             @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label" })
                             <div style="display: flex;">
                                 <div id="dropdown" class="dropdown-content">
-                                    <select id="dropdownSelect" class="form-control" onchange="calallser(event);">
+                                    <select id="dropdownSelect" name="prefixnum" class="form-control" onchange="calallser(event);">
                                         <option value="0">--Prefix Select--</option>
                                         <option value="IC">IC</option>
                                         <option value="SS">SS</option>
@@ -435,7 +451,7 @@
 
                             <div style="display: flex;">
                                 <div id="dropdown" class="dropdown-content">
-                                    <select id="dropdownSelect1" class="form-control" onchange="calallser(event);">
+                                    <select id="dropdownSelect1" name="prefixnum" class="form-control" onchange="calallser(event);">
                                         <option value="0">--Prefix Select--</option>
                                         <option value="IC">IC</option>
                                         <option value="SS">SS</option>
@@ -471,7 +487,8 @@
                             @Html.LabelFor(model => model.Rank, htmlAttributes: new { @class = "control-label " })
 
                             <div>
-                                @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true"})
+                                @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                               
                                 @*@Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })*@
                             </div>
                         </div>
@@ -518,7 +535,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Unit_Pin, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Unit_Pin, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", @maxlength = "6" } })
+                                @Html.EditorFor(model => model.Unit_Pin, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataNo(this)", @maxlength = "6" } })
 
                                 @Html.ValidationMessageFor(model => model.Unit_Pin, "", new { @class = "text-danger", minlength = "6", maxlength = "6", size = "6" })
                             </div>
@@ -572,7 +589,7 @@
                             @Html.LabelFor(model => model.Date_Of_Birth, htmlAttributes: new { @class = "control-label ", type = "date" })
                             <div>
 
-                                <input type="text" placeholder="dd/mm/yyyy" id="Date_Of_Birth" name="Date_Of_Birth" class="form-control" , onchange="calculateOfficersRetirementDate(event);" required="required" />
+                                <input type="text" placeholder="dd/mm/yyyy" id="Date_Of_Birth" name="Date_Of_Birth" class="form-control" required="required" />
 
                                 @*@Html.TextBoxFor(model => model.Date_Of_Birth, new { @class = "form-control", onchange = "calculateOfficersRetirementDate(event);",placeholder="dd/mm/yyyy", @required = "required", @onkeyup = "ValInData(this)" })*@
 
@@ -596,6 +613,42 @@
 
                 <tr>
 
+                    @*<td style="border-top:none;">
+            <div class="form-group">
+                <label>Extension of Service in Present Rank</label>
+                <div>
+                    @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
+                    {
+                       new SelectListItem{ Text="--Select--", Value = "0" },
+                       new SelectListItem{ Text="Yes", Value = "1" },
+                       new SelectListItem{ Text="NO", Value = "2" },
+                    }, new { @class = "form-control", id = "extensionSelect", onchange = "handleExtensionChange(event);" })
+
+                </div>
+                <div id="uploadOption" style="display: none;">
+                    @Html.TextBoxFor(model => model.FileUpload, new { type = "file", id = "fileUpload" })
+                </div>
+            </div>
+        </td>*@
+                    @*<td style="border-top:none;">
+                        <div class="form-group">
+                            <label>Extension of Service in Present Rank</label>
+                            <div>
+                                @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
+                                {
+                                   new SelectListItem{ Text="--Select--", Value = "0" },
+                                   new SelectListItem{ Text="Yes", Value = "1" },
+                                   new SelectListItem{ Text="NO", Value = "2" },
+                                }, new { @class = "form-control", id = "extensionSelect", onchange = "handleExtensionChange(event);" })
+
+                            </div>
+                            <div id="ExtentionfileUpload" style="display: none;">
+                                @Html.TextBoxFor(model => model.ExtentionfileUpload, new { type = "file", id = "ExtentionfileUpload" })
+                            </div>
+
+                        </div>
+                    </td>*@
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Extension of Service in Present Rank</label>
@@ -609,26 +662,30 @@
 
                             </div>
                             <div id="uploadOption" style="display: none;">
-                                @Html.TextBoxFor(model => model.FileUpload, new { type = "file", id = "fileUpload" })
+                             Change the accept attribute to only accept PDF files 
+                            @Html.TextBoxFor(model => model.ExtentionfileUpload, new { type = "file", id = "ExtentionfileUpload", accept = ".pdf" })
+            <span id="fileUploadError" style="color: red;"></span>
+                             Display error message here 
                             </div>
                         </div>
                     </td>
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Promotion_Date, htmlAttributes: new { @class = "control-label " })
                             <div>
                                 <input type="text" placeholder="dd/mm/yyyy" id="Promotion_Date" name="Promotion_Date" class="form-control" required="required" />
-                                @*@Html.TextBoxFor(model => model.Promotion_Date, new { @class = "form-control", placeholder = "dd/mm/yyyy", @required = "required", @onkeyup = "ValInData(this)" })*@
+                                @*@Html.TextBoxFor(model => model.Promotion_Date, new { @class = "form-control", placeholder = "dd/mm/yyyy", @required = "required" })*@
                                 @Html.ValidationMessageFor(model => model.Promotion_Date, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
-                    
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Retirement Date Present Rank</label>
                             <div>
-                                <input type="text" placeholder="dd/mm/yyyy" id="Retirement_Date" name="Retirement_Date" class="form-control" required="required" onchange="calculateResidual_Service(event);" />
+                                <input type="text" placeholder="dd/mm/yyyy" id="Retirement_Date" name="Retirement_Date" class="form-control" required="required"  />
                                 @Html.ValidationMessageFor(model => model.Retirement_Date, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -644,7 +701,7 @@
                             <div>
                                 @Html.EditorFor(model => model.Year_Of_Service, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
                                 @Html.ValidationMessageFor(model => model.Year_Of_Service, "", new { @class = "text-danger" })
-
+                                <span id="Year_Of_ServiceError" style="color: red;"></span>
                             </div>
                         </div>
                         <label id="mess" name="mess" style="color:red;"></label>
@@ -655,6 +712,7 @@
                             <div>
                                 @Html.EditorFor(model => model.Residual_Service, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
                                 @Html.ValidationMessageFor(model => model.Residual_Service, "", new { @class = "text-danger" })
+                                <span id="Residual_ServiceError" style="color: red;"></span>
                             </div>
                         </div>
                     </td>
@@ -690,7 +748,7 @@
                         <div class="form-group">
                             <lable>PAN No</lable>
                             <div>
-                                @Html.EditorFor(model => model.PANNo, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", @maxlength = "10" } })
+                                @Html.EditorFor(model => model.PANNo, new { htmlAttributes = new { @class = "form-control", @required = "required", @maxlength = "10", data_inputmask = "'alias': 'AAAAA9999A', 'placeholder': 'AAAAA9999A'" } })
                                 @Html.ValidationMessageFor(model => model.PANNo, "", new { @class = "text-danger", minlength = "10", maxlength = "10", size = "10" })
                             </div>
                         </div>
@@ -709,26 +767,25 @@
                             @Html.LabelFor(model => model.Salary_Slip_Month_Year, htmlAttributes: new { @class = "control-label " })
                             <div>
 
-                                @Html.EditorFor(model => model.Salary_Slip_Month_Year, new { htmlAttributes = new { @class = "form-control monthPicker", @required = "required", @onkeyup = "ValInData(this)", onchange = "validateDate();" } })
+                                @Html.EditorFor(model => model.Salary_Slip_Month_Year, new { htmlAttributes = new { @class = "form-control monthPicker", @required = "required", @onkeyup = "ValInData(this)", onchange = "Validate_Salary_Slip_date(event);" } })
                                 @Html.ValidationMessageFor(model => model.Salary_Slip_Month_Year, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
 
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label class="control-label">CDA(O) A/c No(Offrs only)</label>
                             <div>
-                                @Html.EditorFor(model => model.CDA_Account_No, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", @id = "CDA_Account_No", data_inputmask = "'alias': '99/999/999999A', 'placeholder': '__/___/_______'" } })
-                                @*<input id="CDA_Account_No" class="form-control" type="text" required="required" maxlength="15" pattern="\d{2}/\d{3}/\d{6}[A-Z]" title="Please enter a valid CDA Account number in the format XX/XXX/XXXXXXY" placeholder="XX/XXX/XXXXXXY" value='__/___/_______' />
-                                <small class="text-danger">Format: XX/XXX/XXXXXXY</small>*@
+                                @Html.EditorFor(model => model.CDA_Account_No, new { htmlAttributes = new { @class = "form-control", @required = "required", @id = "CDA_Account_No", data_inputmask = "'alias': '99/999/999999A', 'placeholder': '99/999/999999A'" } })  @*__/___/_______*@
+
                                 @Html.ValidationMessageFor(model => model.CDA_Account_No, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
 
 
-                    
                 </tr>
                 <tr>
                     <td style="border-top:none;">
@@ -989,6 +1046,7 @@
                 </tr>
             </table>
         </div>
+
         <div class="tab">
             <h1>Loan Details:</h1>
             <table>
@@ -1008,6 +1066,16 @@
                             <div>
                                 @Html.EditorFor(model => model.EMI_Eligible_for_loan, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()", @maxlength = "2" } })
                                 @Html.ValidationMessageFor(model => model.EMI_Eligible_for_loan, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Loan_amount_admissible, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Loan_amount_admissible, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()", @maxlength = "2" } })
+                                @Html.ValidationMessageFor(model => model.Loan_amount_admissible, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
@@ -1112,7 +1180,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Payee_Account_No, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Payee_Account_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
+                                @Html.EditorFor(model => model.Payee_Account_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", @maxlength = "16", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
                                 @Html.ValidationMessageFor(model => model.Payee_Account_No, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -1121,7 +1189,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.IFSC_Code, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.IFSC_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", @placeholder = "XXXX1234567" } })
+                                @Html.EditorFor(model => model.IFSC_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", data_inputmask = "'alias': 'AAAA9999999', 'placeholder': 'AAAA9999999'" } })
                                 @Html.ValidationMessageFor(model => model.IFSC_Code, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -1130,7 +1198,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Mobile_No, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Mobile_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
+                                @Html.EditorFor(model => model.Mobile_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", @onkeyup = "ValInData(this)", @maxlength = "10", onkeypress = "myFunction()" } })
                                 @Html.ValidationMessageFor(model => model.Mobile_No, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -1203,6 +1271,7 @@
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                 <button type="submit" style="display:none;" id="create" value="Create">Submit</button>
+                <button type="button" id="DataFill" value="DataFill">Demo data fill</button>
             </div>
         </div>
         <!-- Circles which indicates the steps of the form: -->
@@ -1217,21 +1286,38 @@
     </div>
 }
 
-<script>
-    Inputmask().mask("CDA_Account_No");
-</script>
-
 @*<script>
-   
-    var inputField = document.getElementById("CDA_Account_No");
-
-   
-    inputField.addEventListener("input", function () {
-        var inputValue = inputField.value.replace(/[^\dA-Z]/g, ''); // Remove non-digit and non-letter characters
-        var formattedValue = inputValue.replace(/^(\d{2})(\d{3})(\d{6})([A-Z]?)$/, "$1/$2/$3$4"); // Insert slashes
-        inputField.value = formattedValue;
-    });
-</script>*@
+        Inputmask().mask("CDA_Account_No");
+    </script>*@
+<script>
+    Inputmask("99/999/999999A", {
+        definitions: {
+            'A': {
+                validator: "[A-Za-z]",
+                cardinality: 1,
+                casing: "upper" // optional, forces the letter to be uppercase
+            }
+        }
+    }).mask(document.getElementById("CDA_Account_No"));
+    Inputmask("AAAAA9999A", {
+        definitions: {
+            'A': {
+                validator: "[A-Za-z]",
+                cardinality: 1,
+                casing: "upper" // optional, forces the letter to be uppercase
+            }
+        }
+    }).mask(document.getElementById("PANNo"));
+    Inputmask("AAAA9999999", {
+        definitions: {
+            'A': {
+                validator: "[A-Za-z]",
+                cardinality: 1,
+                casing: "upper" // optional, forces the letter to be uppercase
+            }
+        }
+    }).mask(document.getElementById("IFSC_Code"));
+</script>
 
 <script src="~/Content/CustomJS/Create.js"></script>
 

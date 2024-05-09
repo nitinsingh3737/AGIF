@@ -40,7 +40,7 @@ namespace IHSDC.WebApp.Models
         public string AadharNo { get; set; }
         //[StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
         [Required]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string PANNo { get; set; }
 
         [Display(Name ="Car Loan Type")]
@@ -56,10 +56,10 @@ namespace IHSDC.WebApp.Models
         [Display(Name = "Name of Applicant")]
         public string Loanee_Name { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Army_No { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Old_Army_No { get; set; }
 
 
@@ -103,7 +103,7 @@ namespace IHSDC.WebApp.Models
         [Required]
         public string  Salary_Slip_Month_Year { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string CDA_Account_No { get; set; }
 
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
@@ -246,13 +246,14 @@ namespace IHSDC.WebApp.Models
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Payee_Account_No { get; set; }
         [StringLength(11, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 11)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string IFSC_Code { get; set; }
-        [StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+
+        //[StringLength(10, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 10)]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Mobile_No { get; set; }
         [StringLength(50)]
-        [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Enter valid email address")]
+        //[RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Enter valid email address")]
         public string E_Mail_Id { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
@@ -313,8 +314,10 @@ namespace IHSDC.WebApp.Models
 
         public string EMI_Eligible_for_loan { get; set; }
 
-        public string FileUpload  { get; set; }
+
+        public string ExtentionfileUpload  { get; set; }
 
 
+        public string Loan_amount_admissible { get; set; }
     }
 }

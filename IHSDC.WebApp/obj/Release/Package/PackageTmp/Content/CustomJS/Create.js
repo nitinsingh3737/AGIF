@@ -1,5 +1,194 @@
 ﻿$(document).ready(function () {
+
+
+    $("#Year_Of_Service").keypress(function () {
+        /* $("span").text(i += 1);*/
+        alert("raju rastogi");
+    });
+
+
+
+
+    $("#DataFill").click(function () {
+
+        /* Personal Details */
+       
+        $('#Loanee_Name').val("AK PATIL");
+
+        $('#dropdownSelect').val("IC");
+        $('#IC').val("45678833");
+        $('#SuffixLetter').val("M");
+
+        $('#dropdownSelect1').val("IC");
+        $('#oldIC').val("45678833");
+        $('#oldsufixnum').val("M");
+
+        $('#Rank').val("SUB");
+        $('#Regt_Corps').val("ASSAM");
+        $('#Unit').val("ASDC");
+        $('#Next_Fmn_Hq').val("DGIS");
+        $('#Unit_Pin').val("567654");
+
+        $('#Unit_Address').val("c/o 56 APO");
+        $('#CDA_PAO').val("TEST1");
+        $('#Date_Of_Birth').val("01/04/2000");
+        $('#Enrollment_Date').val("01/04/2018");
+        $('#Extension_of_Service_in_Present_Rank').val("Yes");
+        
+
+        $('#ExtentionfileUpload').val("abc.pdf");
+        $('#Promotion_Date').val("01/04/2024");
+        $('#Retirement_Date').val("01/04/2050");
+        
+        $('#Year_Of_Service').val("6");
+        $('#Residual_Service').val("26");
+        $('#ApplicationType').val("CAR");
+        $('#CarLoanType').val("New Car");
+        $('#AadharNo').val("166797505883");
+        $('#PANNo').val("TYSSS9899B");
+
+
+
+       /* Salary Details */
+        $('#Salary_Slip_Month_Year').val("April 2024");
+        $('#CDA_Account_No').val("77/788/889999N");
+        $('#Basic_Salary').val("78654");
+
+        $('#PLI').val("31");
+        $('#Rank_Grade_Pay').val("33");
+        $('#Rev_IT').val("33");
+        $('#MSP').val("33");
+        $('#AGIF').val("33");
+        $('#NPA_X_Pay').val("33");
+        $('#Income_Tax_Monthly').val("33");
+        $('#Tech_Pay').val("33");
+        $('#DSOP_AFPP').val("33");
+
+        $('#DA').val("33");
+        $('#MISC').val("33");
+        $('#TPTL_Pay').val("33");
+        $('#MISC_Pay').val("33");
+       
+        /*Dealers Details*/
+
+        $('#Dealer_Name').val("AutoNation");
+
+        $('#Vehicle_Name').val("rx433t");
+        $('#Veh_Type').val("Electric");
+        $('#Vehicle_Make').val("abcCompany");
+
+        $('#Total_Cost').val("675465");
+
+        /*Loan Details*/
+
+        $('#Amt_Eligible_for_loan').val("1000000");
+        $('#EMI_Eligible_for_loan').val("60");
+        $('#Loan_amount_admissible').val("15000000");
+
+        $('#Amount_Applied_For_Loan').val("900000");
+        $('#No_Of_EMI_Applied').val('30');
+
+     /*   Address Details*/
+        
+
+        $('#Pers_Address_Line1').val("NEW DELHI");
+        $('#Permanent_Addr_Line2').val("NEW DELHI");
+        $('#Pers_Address_Line3').val("NEW DELHI");
+        $('#Pers_Address_Line4').val("NEW DELHI");
+        $('#Pin_Code').val("110067");
+
+        /*Payee Account Details*/
+        $('#Payee_Account_No').val("6786968576896785");
+        $('#IFSC_Code').val("FCSA4995387");
+        $('#Mobile_No').val("8527262163");
+        $('#E_Mail_Id').val("ajaysingh945464@gmail.com");
+        $('#Previous_Loan_Purpose').val("HBA");
+        $('#Amount').val("567654");
+        $('#EMI').val("45");
+        $('#Previous_Loan_Is_Paid').val("Yes")
+
+    });
+
+    $('#Rank').change(function () {
+        alert("Rank change");
+        $('#Date_Of_Birth').val('');
+        $('#Promotion_Date').val('');
+        $('#Enrollment_Date').val('');
+        $('#Retirement_Date').val('');
+        $('#Residual_Service').val('');
+        $('#Year_Of_Service').val('');
+    });
+
+   
     
+    ss
+
+    $('#Promotion_Date').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'dd/mm/yy'
+    });
+    var data = $('#prefixnum').val();
+    alert(data);
+
+    //var selectedValue = $("#extensionSelect").val();
+    $('#Veh_Type').change(function () {
+        alert("Prefix change");
+        var prefix = $('#dropdownSelect').val();
+        alert(prefix);
+        var Admissiable_Amount = 0;
+        var ApplicationType = $('#ApplicationType').val();
+        var CarLoanType = $('#CarLoanType').val();
+        if (prefix == "JC" || prefix == "OR") {
+            if (ApplicationType == "Car") {
+
+                if (CarLoanType === 5) {
+                    /* NEW CAR*/
+                    Admissiable_Amount = 10;
+                }
+                else if (CarLoanType === 6) {
+                    /* OLD CAR*/
+                    Admissiable_Amount = 5;
+                }
+                else if (CarLoanType == 7) {
+                    /*EV*/
+                    Admissiable_Amount = 15;
+                }
+
+            }
+            else {
+                Admissiable_Amount = 2;
+
+            }
+
+        }
+        else {
+            if (ApplicationType == "Car") {
+
+                if (CarLoanType === 5) {
+                    /* NEW CAR*/
+                    Admissiable_Amount = 20;
+                }
+                else if (CarLoanType === 6) {
+                    /* OLD CAR*/
+                    Admissiable_Amount = 10;
+                }
+                else if (CarLoanType == 7) {
+                    /*EV*/
+                    Admissiable_Amount = 25;
+                }
+
+            }
+            else {
+                Admissiable_Amount = 10;
+
+            }
+        }
+
+        $('#Loan_amount_admissible').val(Admissiable_Amount);
+
+    });
 });
 var Rank;
 
@@ -8,8 +197,7 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
 
 function showTab(n) {
-    
-    
+
     // This function will display the specified tab of the form...
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
@@ -34,7 +222,7 @@ function showTab(n) {
 }
 
 function nextPrev(n) {
-    
+   
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     // Exit the function if any field in the current tab is invalid:
@@ -65,10 +253,11 @@ function fixStepIndicator(n) {
     //... and adds the "active" class on the current step:
     x[n].className += " active";
 }
+
 /*Set Automatically Suffix*/
 function SetOldSuffixLetter(obj) {
-   
-    
+
+
     var arr1 = [], arr2 = [];
     var ArmyNumber = $(obj).val();
     var fixed = "98765432";
@@ -149,12 +338,12 @@ function SetOldSuffixLetter(obj) {
     $('#dropdownSelect1').val(Prefix);
     $('#oldIC').val(ArmyNumber);
     var Suffix = document.getElementById("SuffixLetter").value;
-  
-   
+
+
 }
 
 function SetSuffixLetter(obj) {
-    
+
 
     var arr1 = [], arr2 = [];
     var ArmyNumber = $(obj).val();
@@ -239,182 +428,48 @@ function SetSuffixLetter(obj) {
     $('#oldsufixnum').val(Suffix);
 
 }
+
+
 /*date handler */
 function diff_years(dt2, dt1) {
-
+    debugger;
     var diff = (dt2.getTime() - dt1.getTime()) / 1000;
     diff /= (60 * 60 * 24);
     return Math.abs(Math.round(diff / 365.25));
 
 }
-function calallser2(e) {
-    var ser;
-    var c;
-    alert("hello bhai");
-    debugger;
 
- 
-    var ranks = $('#Rank').val(); // Assuming rank is a string representing an integer
-    var rank = parseInt(ranks);
-    if (!rank) {
-        alert("Rank value is empty. Please enter a valid rank.");
-        return;
-    }
+//function diff_years(dt2, dt1) {
+//    var diff = (dt1.getTime() - dt2.getTime()) / 1000;
+//    diff /= (60 * 60 * 24);
+//    var years = Math.round(diff / 365.25);
+//    return years >= 0 ? "+" + years : years;
+//}
 
 
-
-    alert(rank);
-    if (rank < 10) {
-    switch (rank) {
-        case 1:
-            ser = 54;
-            break;
-        case 2:
-            ser = 60;
-            break;
-        case 3:
-            ser = 58;
-            break;
-        case 4:
-            ser = 56;
-            break;
-        case 5:
-            ser = 54;
-            break;
-        case 6:
-            ser = 54;
-            break;
-        case 7:
-            ser = 52;
-            break;
-        case 8:
-            ser = 52;
-            break;
-        case 9:
-            ser = 52;
-            break;
-
-        default:
-            break;
-        }
-        alert(ser);
-    //var d = new Date($('#Date_Of_Birth').val());
-    //var year = d.getFullYear();
-    //var month = d.getMonth();
-    //var day = d.getDate();
-    //var c = new Date(year + ser, month, day)
-    //var day = ("0" + c.getDate()).slice(-2);
-    //var month = ("0" + (c.getMonth() + 1)).slice(-2);
-    //    var today = c.getFullYear() + "-" + (month) + "-" + (day);
-    //    alert(today);
-    //$('#Retirement_Date').val(today);
-
-        // Assuming the date format is YYYY-MM-DD
-        var dateOfBirthString = $('#Date_Of_Birth').val();
-        var dateParts = dateOfBirthString.split('-');
-
-        // Ensure that the dateParts array has three elements
-        if (dateParts.length === 3) {
-            var year = parseInt(dateParts[0], 10);
-            var month = parseInt(dateParts[1], 10) - 1; // Months are zero-based (0-11)
-            var day = parseInt(dateParts[2], 10);
-
-            // Check if the parsed values are valid
-            if (!isNaN(year) && !isNaN(month) && !isNaN(day)) {
-                var d = new Date(year, month, day);
-                if (!isNaN(d.getTime())) { // Check if the Date object is valid
-                    var yearsToAdd = 65; // Assuming retirement age is 65 years
-                    var c = new Date(year + yearsToAdd, month, day);
-                    var formattedDay = ("0" + c.getDate()).slice(-2);
-                    var formattedMonth = ("0" + (c.getMonth() + 1)).slice(-2);
-                    var today = c.getFullYear() + "-" + formattedMonth + "-" + formattedDay;
-                    alert(today);
-                    $('#Retirement_Date').val(today);
-                } else {
-                    console.error('Invalid date.');
-                }
-            } else {
-                console.error('Invalid date format.');
-            }
-        } else {
-            console.error('Invalid date string.');
-        }
-
-}
-    else {
-        switch (rank) {
-            case 10:
-                ser = 34;
-                break;
-            case 11:
-                ser = 30;
-                break;
-            case 12:
-                ser = 26;
-                break;
-            case 13:
-                ser = 24;
-                break;
-            case 14:
-                ser = 20;
-                break;
-        }
-
-        //var d = new Date($('#Enrollment_Date').val());
-        //var year = d.getFullYear();
-        //var month = d.getMonth();
-        //var day = d.getDate();
-        //var c = new Date(year + ser, month, day)
-        //var day = ("0" + c.getDate()).slice(-2);
-        //var month = ("0" + (c.getMonth() + 1)).slice(-2);
-        //var today = c.getFullYear() + "-" + (month) + "-" + (day);
-        //$('#Retirement_Date').val(today);
-
-        //alert('#Retirement_Date');
-
-        var date = e;
-        alert(date);
-        // Retrieve the enrollment date from the input field
-        var enrollmentDate = new Date($('#Enrollment_Date').val());
-
-        // Extract year, month, and day from the enrollment date
-        var year = date.getFullYear();
-        var month = date.getMonth();
-        var day = date.getDate();
-
-        var enrollmentDate = new Date(year + 18, month, day);
-        alert(enrollmentDate);
-        // Calculate the retirement date (adding 25 years to the enrollment year)
-        var retirementDate = new Date(year + 25, month, day);
-
-        // Format the retirement date as YYYY-MM-DD
-        var retirementYear = retirementDate.getFullYear();
-        var retirementMonth = ("0" + (retirementDate.getMonth() + 1)).slice(-2);
-        var retirementDay = ("0" + retirementDate.getDate()).slice(-2);
-        var formattedRetirementDate = retirementYear + "-" + retirementMonth + "-" + retirementDay;
-
-        // Set the retirement date value to the appropriate input field
-        $('#Retirement_Date').val(formattedRetirementDate);
-
-        // Alert the retirement date (optional for debugging)
-        alert(formattedRetirementDate);
-
-    }
-}
 
 function calallser1(e) {
     var ser;
-    var ranks = $('#Rank').val(); // Assuming rank is a string representing an integer
+    var ranks = $('#Rank').val(); // Assuming rank is a string repr+esenting an integer
     var rank = parseInt(ranks);
 
+    var Regiment = $('#Regt_Corps').val().toUpperCase();
+   
+    
     if (!rank) {
         alert("Rank value is empty. Please enter a valid rank.");
+        $('#Date_Of_Birth').val('');
+        return;
+    }
+    if (Regiment == '') {
+        alert("Regt/Corps value is empty. Please enter a valid Regt/Corps.");
+        $('#Date_Of_Birth').val('');
         return;
     }
    
     var dateOfBirthString = e;
-    alert(dateOfBirthString);
-    debugger;
+    
+     
     var dateParts = dateOfBirthString.split('/');
 
     // Ensure that the dateParts array has three elements
@@ -425,65 +480,335 @@ function calallser1(e) {
 
         // Check if the parsed values are valid
         if (!isNaN(year) && !isNaN(month) && !isNaN(day)) {
+
+            var BirthDate = new Date(year + 0, month, day);
+          
             var enrollmentDate = new Date(year + 18, month, day); // Enrollment after 18 years
-            var retirementAge = 65; // Retirement age is assumed to be 65
+            /*var retirementAge = 65;*/ // Retirement age is assumed to be 65
 
             if (rank < 10) {
-                switch (rank) {
-                    case 1:
-                        ser = 61;
+                switch (Regiment) {
+                    case "INF":
+                    case "ASSAM":
+                    case "PBG":
+                    case "GUARDS": 
+                    case "PARA":
+                    case "PUNJAB":
+                    case "MADRAS":
+                    case "GREN":
+                    case "MARATHA LI":
+                    case "RAJ RIF":
+                    case "RAJPUT":
+                    case "JAT":
+                    case "SIKH":
+                    case "SIKH LI":
+                    case "DOGRA":
+
+                    case "GARH RIF":
+                    case "KUMAON":
+                    case "BIHAR":
+                    case "MAHAR":
+                    case "JAK RIF":
+                    case "LS":
+                    case "NAGA":
+                    case "JAK LI":
+                    case "1GR":
+                    case "3GR":
+                    case "4GR":
+                    case "5GR":
+                    case "8GR":
+                    case "9GR":
+                    case "11GR":
+
+
+                    case "MECH INF":
+                    case "39 GTC":
+                    case "GS":
+                    case "JAG":
+                    case "MF":
+                    case "14GR":
+                    case "58GTC":
+                    
+                    
+                        switch (rank) {
+                            case 1:
+                                ser = 60;
+                                break;
+                            case 2:
+                                ser = 60;
+                                break;
+                            case 3:
+                                ser = 58;
+                                break;
+                            case 4:
+                                ser = 56;
+                                break;
+                            case 5:
+                                ser = 54;
+                                break;
+                            case 6:
+                                ser = 54;
+                                break;
+                            //case 7:
+                            //    ser = 54;
+                            //    break;
+                            case 8:
+                                ser = 52;
+                                break;
+
+                            default:
+                                break;
+                        }
                         break;
-                    case 2:
-                        ser = 61;
+                    case "ASC":
+                    case "AOC":
+                    case "EME":
+                    case "PIONEER CORPS":
+                        switch (rank) {
+                            case 1:
+                                ser = 60;
+                                break;
+                            case 2:
+                                ser = 60;
+                                break;
+                            case 3:
+                                ser = 58;
+                                break;
+                            case 4:
+                                ser = 56;
+                                break;
+                            case 5:
+                                ser = 54;
+                                break;
+                            case 6:
+                                ser = 54;
+                                break;
+                            //case 7:
+                            //    ser = 54;
+                            //    break;
+                            case 8:
+                                ser = 54;
+                                break;
+                           
+                            default:
+                                break;
+                        }
                         break;
-                    case 3:
-                        ser = 58;
+                    case "AMC":
+                    case "ADC":
+                    case "RVC":
+                    case "MNS":
+                        switch (rank) {
+                            case 1:
+                                ser = 61;
+                                break;
+                            case 2:
+                                ser = 61;
+                                break;
+                            case 3:
+                                ser = 60;
+                                break;
+                            case 4:
+                                ser = 59;
+                                break;
+                            case 5:
+                                ser = 58;
+                                break;
+                            case 6:
+                                ser = 56;
+                                break;
+                            
+                            default:
+                                break;
+                        }
                         break;
-                    case 4:
-                        ser = 56;
+                    case "AMC(NT)OFFRS":
+                        switch (rank) {
+                            case 1:
+                                ser = 60;
+                                break;
+                            case 2:
+                                ser = 60;
+                                break;
+                            case 3:
+                                ser = 60;
+                                break;
+                            case 4:
+                                ser = 59;
+                                break;
+                            default:
+                                break;
+                        }
                         break;
-                    case 5:
-                        ser = 54;
+                    case "SL(RO)":
+                    case "SL(QM)":
+                    case "SL(TECH)":
+                    case "APTC":
+                        switch (rank) {
+                            case 1:
+                                ser = 60;
+                                break;
+                            case 2:
+                                ser = 60;
+                                break;
+                            case 3:
+                                ser = 59;
+                                break;
+                            case 4:
+                                ser = 58;
+                                break;
+                            case 5:
+                                ser = 57;
+                                break;
+                            default:
+                                break;
+                        }
                         break;
-                    case 6:
-                        ser = 54;
+                    case "JAG":
+                    case "AEC":
+                    case "MF":
+                    case "SCO":
+                    case "FOOD INSPECTION ORG":
+                        switch (rank) {
+                            case 1:
+                                ser = 60;
+                                break;
+                            case 2:
+                                ser = 60;
+                                break;
+                            case 3:
+                                ser = 59;
+                                break;
+                            case 4:
+                                ser = 58;
+                                break;
+                            case 5:
+                                ser = 57;
+                                break;
+                            default:
+                                break;
+                        }
                         break;
-                    case 7:
-                        ser = 52;
+                    case "All Short Service Commission Offrs":
+                        ser = 10 + 4;
                         break;
-                    case 8:
-                        ser = 52;
-                        break;
-                    case 9:
-                        ser = 52;
+                    case "RT JCO":
+                        ser = 57;
                         break;
                     default:
                         break;
-                    // Add cases for other ranks
-                }
-            } else {
-                switch (rank) {
-                    case 10:
-                        ser = 34;
-                        break;
-                    case 11:
-                        ser = 30;
-                        break;
-                    case 12:
-                        ser = 26;
-                        break;
-                    case 13:
-                        ser = 24;
-                        break;
-                    case 14:
-                        ser = 20;
-                        break;
-                    // Add cases for other ranks
                 }
             }
-            debugger;
-            var retirementDate = new Date(enrollmentDate.getFullYear() + ser, enrollmentDate.getMonth(), enrollmentDate.getDate());
-            retirementDate.setFullYear(retirementDate.getFullYear() + retirementAge);
+            //else {
+            //    // Handle the case when rank is 10 or greater
+            //}
+            else {
+                switch (Regiment) {
+                    case "ALL ARMS/SERVICE":
+                        switch (rank) {
+                            //case 10:
+                            //    ser = 60;
+                            //    break;
+                            //case 11:
+                            //    ser = 60;
+                            //    break;
+                            case 12:
+                                ser = 32;
+                                break;
+                            case 13:
+                                ser = 28;
+                                break;
+                            case 14:
+                                ser = 26;
+                                break;
+                            case 15:
+                                ser = 24;
+                                break;
+                            case 16:
+                                ser = 22;
+                                break;
+                            //case 17:
+                            //    ser = 54;
+                            //    break;
+                            case 18:
+                                ser = 17;
+                                break;
+                            case 44:
+                                ser = 20;
+                                break;
+                            case 55:
+                                ser = 20;
+                                break;
+                            case 56:
+                                ser = 20;
+                                break;
+                            case 57:
+                                ser = 20;
+                                break;
+                            case 58:
+                                ser = 20;
+                                break;
+                            case 59:
+                                ser = 20;
+                                break;
+                            case 60:
+                                ser = 20;
+                                break;
+                            case 61:
+                                ser = 20;
+                                break;
+                            case 62:
+                                ser = 20;
+                                break;
+                            case 63:
+                                ser = 20;
+                                break;
+                           
+                            default:
+                                break;
+                        }
+                        break;
+                    case "EME":
+                        switch (rank) {
+                            case 64:
+                                ser = 20;
+                                break;
+                        }
+                        break;
+                    case "ASC":
+                    case "AOC":
+                        switch (rank) {
+                            case 65:
+                                ser = 20;
+                                break;
+                        }
+                        break;
+                    case "ENGR":
+                        switch (rank) {
+                            case 66:
+                                ser = 20;
+                                break;
+                        }
+                        break;
+                }
+            }
+             
+            if (ser != null) {
+                if (rank < 10) {
+
+                    var retirementDate = new Date(BirthDate.getFullYear() + ser, BirthDate.getMonth(), BirthDate.getDate());
+                    retirementDate.setFullYear(retirementDate.getFullYear());
+                }
+                else {
+                    var retirementDate = new Date(enrollmentDate.getFullYear() + ser, enrollmentDate.getMonth(), enrollmentDate.getDate());
+                    retirementDate.setFullYear(retirementDate.getFullYear());
+                }
+
+            }
+            else {
+                var retirementDate = new Date(enrollmentDate.getFullYear() + 30, enrollmentDate.getMonth(), enrollmentDate.getDate());
+            }
+           
 
             var formattedEnrollmentDate = formatDate(enrollmentDate);
             var formattedRetirementDate = formatDate(retirementDate);
@@ -493,7 +818,7 @@ function calallser1(e) {
             $('#Retirement_Date').val(formattedRetirementDate);
 
             // Alert the dates (optional for debugging)
-            alert("Enrollment Date: " + formattedEnrollmentDate + "\nRetirement Date: " + formattedRetirementDate);
+           /* alert("Enrollment Date: " + formattedEnrollmentDate + "\nRetirement Date: " + formattedRetirementDate);*/
         } else {
             console.error('Invalid date.');
         }
@@ -503,16 +828,16 @@ function calallser1(e) {
 }
 
 function formatDate(date) {
-    debugger;
+     
     var year = date.getFullYear();
     var month = ("0" + (date.getMonth() + 1)).slice(-2);
     var day = ("0" + date.getDate()).slice(-2);
-    return year + "-" + month + "-" + day;
+    return day + "/" + month + "/" + year ;
 }
 
 
 function handler(e) {
-    
+  
     $('#mess').text("This field has been calculated based on your system DateTime. Ensure system DateTime is correct.");
 
     var dateString = $('#Enrollment_Date').val();
@@ -525,45 +850,10 @@ function handler(e) {
     dt2 = new Date();
     $('#Year_Of_Service').val(diff_years(dt1, dt2));
     //console.log(diff_years(dt1, dt2));
-    var ser;
-    var c;
-    var rank = parseInt($('#Rank').val());
-    alert(rank);
-    if (rank >= 10) {
-        switch (rank) {
-            case 10:
-                ser = 34;
-                break;
-            case 11:
-                ser = 30;
-                break;
-            case 12:
-                ser = 26;
-                break;
-            case 13:
-                ser = 24;
-                break;
-            case 14:
-                ser = 20;
-                break;
-        }
-
-        var d = new Date($('#Enrollment_Date').val());
-        var year = d.getFullYear();
-        var month = d.getMonth();
-        var day = d.getDate();
-        var c = new Date(year + ser, month, day)
-        var day = ("0" + c.getDate()).slice(-2);
-        var month = ("0" + (c.getMonth() + 1)).slice(-2);
-        var today = c.getFullYear() + "-" + (month) + "-" + (day);
-        $('#Retirement_Date').val(today);
-    }
-
     
-
     var d1 = new Date($('#Enrollment_Date').val());
     var d2 = new Date($('#Retirement_Date').val());
-
+  
 
 
     var reds = diff_years(d1, d2);
@@ -573,83 +863,10 @@ function handler(e) {
 
 }
 
-function calculateOfficersRetirementDate(e) {
-
-    //$.noConflict();
-    //$(function () {
-    //    $('#Enrollment_Date').datepicker({
-    //        changeMonth: true,
-    //        changeYear: true,
-    //        showButtonPanel: true,
-    //        dateFormat: 'dd/mm/yy',
-    //        minDate: $('#Date_Of_Birth').val(),
-
-    //        startDate: '01/01/2010'
-
-
-    //    });
-    //});
-
-
-    // dt1 = new Date($('#Date_Of_Birth').val());
-    // dt2 = new Date();
-
-    debugger;
-    var ser;
-    var c;
-    var rank = parseInt($('#Rank').val());
-    if (rank < 10) {
-        switch (rank) {
-            case 1:
-                ser = 60;
-                break;
-            case 2:
-                ser = 60;
-                break;
-            case 3:
-                ser = 58;
-                break;
-            case 4:
-                ser = 56;
-                break;
-            case 5:
-                ser = 54;
-                break;
-            case 6:
-                ser = 54;
-                break;
-            case 7:
-                ser = 52;
-                break;
-            case 8:
-                ser = 52;
-                break;
-            case 9:
-                ser = 52;
-                break;
-
-            default:
-                break;
-        }
-        var d = new Date($('#Date_Of_Birth').val());
-        var year = d.getFullYear();
-        var month = d.getMonth();
-        var day = d.getDate();
-        var c = new Date(year + ser, month, day)
-        var day = ("0" + c.getDate()).slice(-2);
-        var month = ("0" + (c.getMonth() + 1)).slice(-2);
-        var today = c.getFullYear() + "-" + (month) + "-" + (day);
-        $('#Retirement_Date').val(today);
-
-    }
-    else {
-
-    }
-}
 
 
 function calculateResidual_Service(e) {
-    
+     
     var dateString = $('#Enrollment_Date').val();
 
     var dateParts = dateString.split("/");
@@ -671,31 +888,156 @@ function calculateResidual_Service(e) {
     $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
 }
 
-/*increase or extention in service by 2 years*/
+
 function handleExtensionChange(event) {
     var selectedValue = event.target.value;
-    if (selectedValue === "1" || selectedValue.toLowerCase() === "yes") {
+    var date = $('#Date_Of_Birth').val();
+    var Rank = $('#Rank').val();
 
-        document.getElementById("uploadOption").style.display = "block";
-    } else {
-
-        document.getElementById("uploadOption").style.display = "none";
+    // Check if Date of Birth is empty
+    if (!date) {
+        alert("Date of Birth value is empty. Please enter a valid Date of Birth.");
+        $('#Date_Of_Birth').val('');
+        $('#extensionSelect').val('0');
+        return;
     }
 
-    if (selectedValue === "1") {
+    // Check if Rank is 12
+    if (Rank === '12') {
+        alert("ajay");
+        var promotionDate = $('#Promotion_Date').val();
 
-        alert("Please upload a copy of the pt order of extension of service.");
+        // Check if Promotion Date is empty
+        if (!promotionDate) {
+            alert("Promotion Date value is empty. Please enter a valid Promotion Date");
+            $('#extensionSelect').val('0');
+            return;
+        }
 
-        var retirementDate = document.getElementById("Retirement_Date").value;
-      
-        var retirementDateInput = document.getElementById("Retirement_Date");
-        var currentDate = new Date(retirementDateInput.value);
-        var newRetirementDate = new Date(currentDate.getFullYear() + 2, currentDate.getMonth(), currentDate.getDate());
-        var RetirementDate = formatDate(newRetirementDate);
+        // Display upload option if selectedValue is "1" or "yes"
+        if (selectedValue === "1" || selectedValue.toLowerCase() === "yes") {
+            document.getElementById("uploadOption").style.display = "block"; // Show upload option
+            alert("Please upload a copy of Pt II order of extn of service or pay slip in which Pt II order adjusted");
 
-        $('#Retirement_Date').val(RetirementDate);
+            var retirementDate = new Date(promotionDate);
+            retirementDate.setFullYear(retirementDate.getFullYear() + 4);
+
+            var RetirementDate = extensionFormatDate(retirementDate);
+
+            $('#Retirement_Date').val(RetirementDate);
+
+
+              /* For Residual Service*/
+            var dateString = $('#Enrollment_Date').val();
+
+            var dateParts = dateString.split("/");
+
+            var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+
+            dt1 = new Date(dateObject);
+            dt2 = new Date();
+            $('#Year_Of_Service').val(diff_years(dt1, dt2));
+            //console.log(diff_years(dt1, dt2));
+
+            var d1 = new Date($('#Enrollment_Date').val());
+            var d2 = new Date($('#Retirement_Date').val());
+
+
+
+            var reds = diff_years(d1, d2);
+
+            $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
+            $('#mess').text('');
+        } else {
+            document.getElementById("uploadOption").style.display = "none"; // Hide upload option
+            // Instead of setting to "no", we clear the value of FileUpload field
+            $('#ExtentionfileUpload').val(""); // Clear the value
+            $('#fileUploadError').text(""); // Clear any previous error message
+
+            //var retirementDate = new Date($('#Retirement_Date').val());
+            //retirementDate.setFullYear(retirementDate.getFullYear() - 4);
+
+            //var RetirementDate1 = extensionFormatDate(retirementDate);
+            //$('#Retirement_Date').val('');
+            var dt = $('#Date_Of_Birth').val();
+            calallser1(dt);
+
+            $('#Promotion_Date').val('');
+            $('#Residual_Service').val('');
+            $('#Year_Of_Service').val('');
+            $('#mess').text('');
+        }
+    } else {
+        // For Rank other than 12
+        // Similar logic as above, with adjustments for retirement years
+        if (selectedValue === "1" || selectedValue.toLowerCase() === "yes") {
+            document.getElementById("uploadOption").style.display = "block"; // Show upload option
+            alert("Please upload a copy of Pt II order of extn of service or pay slip in which Pt II order adjusted");
+
+            var retirementDate = new Date($('#Retirement_Date').val());
+            retirementDate.setFullYear(retirementDate.getFullYear() + 2);
+
+            var RetirementDate = extensionFormatDate(retirementDate);
+
+            $('#Retirement_Date').val(RetirementDate);
+            $('#Year_Of_Service').val('');
+            $('#Residual_Service').val('');
+            $('#Promotion_Date').val('');
+            $('#mess').text('');
+        } else {
+            document.getElementById("uploadOption").style.display = "none"; // Hide upload option
+            // Instead of setting to "no", we clear the value of FileUpload field
+            $('#FileUpload').val(""); // Clear the value
+            $('#fileUploadError').text(""); // Clear any previous error message
+
+            var retirementDate = new Date($('#Retirement_Date').val());
+            retirementDate.setFullYear(retirementDate.getFullYear() - 2);
+
+            var RetirementDate1 = extensionFormatDate(retirementDate);
+            $('#Retirement_Date').val(RetirementDate1);
+            $('#Year_Of_Service').val('');
+            $('#Residual_Service').val('');
+            $('#Promotion_Date').val('');
+            $('#mess').text('');
+        }
     }
 }
+
+
+
+
+// Function to format date for extension
+function extensionFormatDate(date) {
+    var month = '' + (date.getMonth() + 1);
+    var day = '' + date.getDate();
+    var year = date.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [day,month,year ].join('/');
+}
+
+
+// Function to handle file upload validation
+$('#fileUpload').change(function () {
+    var fileInput = this;
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+    if (!allowedExtensions.exec(filePath)) {
+        // If the uploaded file is not a PDF, display an error message
+        $('#fileUploadError').text("Only PDF files are allowed.");
+        fileInput.value = ''; // Clear the file input
+        return false;
+    }
+    // Clear any previous error message if a PDF file is selected
+    $('#fileUploadError').text("");
+});
+
+
+
+
 
 function formatDates(date) {
     var day = date.getDate();
@@ -709,81 +1051,168 @@ function formatDates(date) {
 
 //Validating the form
 
+//function validateForm() {
+
+//    debugger;
+//    var x, y, z, a, i, valid = true;
+//    x = document.getElementsByClassName("tab");
+//    y = x[currentTab].getElementsByTagName("input");
+
+
+//    for (i = 0; i < y.length; i++) {
+
+
+//        if (currentTab == 0) {
+//            if (y[1].value.trim() == "") {
+//                y[1].value = "ok";
+//            }
+//            if (y[4].value.trim() == "") {
+//                y[4].value = "ok";
+//            }
+//            if (y[11].value == "") {
+
+
+//                y[11].value = "2011-03-03";
+//            }
+//        }
+//        if (y[i].value.trim() == "") {
+
+//            y[i].className += " invalid";
+
+//            valid = false;
+
+//        }
+
+//        /*ajay 03-04-24*/
+
+//       // if (currentTab == 0) {
+//       //  if (y[18].value.length != 12 || y[19].value.length != 10) {
+//       //      valid = false;
+//       //    }
+//       //}
+
+
+//        if (currentTab == 0) {
+//            if (y[1].value == "ok") {
+//                y[1].value = "";
+//            }
+//            if (y[1].value == "ok") {
+//                y[4].value = "";
+//            }
+//            if (y[11].value == "2011-03-03") {
+//                y[11].value = "";
+//            }
+//        }
+//    }
+
+
+//    if (valid) {
+//        document.getElementsByClassName("step")[currentTab].className += " finish";
+//    }
+//    return valid;
+//}
+
+function validateFileUpload() {
+    debugger;
+    var fileUpload = $('#ExtentionfileUpload').val();
+    alert(fileUpload);
+    if (fileUpload == "") {
+
+        $('#ExtentionfileUpload').val("BLANK");
+        // Set error message if fileUpload is empty
+        $('#fileUploadError').text("Please select a PDF file only");
+        return true; // Field is invalid
+    }
+    // Clear error message if fileUpload is not empty
+    $('#fileUploadError').text("");
+    return true; // Field is valid
+}
+
+
+function validateResidualService() {
+    debugger;
+    var ResidualService = $('#Residual_Service').val();
+    alert(ResidualService);
+    if (ResidualService <= 2) {
+        // Set error message if fileUpload is empty
+        $('#Residual_ServiceError').text("Retirement date of more than 02 yrs (24 months) only to be accepted");
+        return false;
+        // Field is invalid
+    }
+    // Clear error message if fileUpload is not empty
+    $('#Residual_ServiceError').text("");
+    return true;
+     // Field is valid
+}
+
+function validateYearOfService() {
+    debugger;
+    var Year_Of_Service = $('#Year_Of_Service').val();
+    alert(Year_Of_Service);
+    var prefix = $('#dropdownSelect').val();
+    if (prefix == "JC" || prefix == "OR") {
+        if (Year_Of_Service <= 5) {
+            // Set error message if fileUpload is empty
+            $('#Year_Of_ServiceError').text("Retirement date of more than 02 yrs (24 months) only to be accepted");
+            return false;
+            // Field is invalid
+        }
+        else {
+            $('#Year_Of_ServiceError').text("");
+            return true;
+        }
+    } else {
+        $('#Year_Of_ServiceError').text("");
+        return true;
+    }
+    // Clear error message if fileUpload is not empty
+   
+    // Field is valid
+}
+
 function validateForm() {
-    // This function deals with validation of the form fields
     
-    var x, y, z, a, i, valid = true;
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    // Validate FileUpload field
+    /*valid = validateFileUpload() && valid;*/
+    valid = validateYearOfService() && valid;
+
+    valid = validateResidualService() && valid;
+
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
 
+    
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-
-        if (currentTab == 0) {
-            if (y[1].value.trim() == "") {
-                y[1].value = "ok";
-            }
-            if (y[4].value.trim() == "") {
-                y[4].value = "ok";
-            }
-            if (y[11].value == "") {
-
-
-                y[11].value = "2011-03-03";
-            }
-        }
         if (y[i].value.trim() == "") {
             // add an "invalid" class to the field:
-            y[i].className += " invalid";
-            //y[1].classList.remove("invalid");
-            // y[4].classList.remove("invalid");
+            y[i].classList.add("invalid");
             // and set the current valid status to false
             valid = false;
-
         }
-
-        /*ajay 03-04-24*/
-
-        //if (currentTab == 0) {
-        //    if (y[15].value.length != 12 || y[16].value.length != 10) {
-        //        valid = false;
-        //    }
-        //}
-        /*ajay 03-04-24*/
-        if (currentTab == 0) {
-            if (y[15].value.length != 12 || y[16].value.length != 10) {
-                valid = true;
-            }
+        if (y[11].value.trim() == "") {
+            y[11].classList.remove("invalid");
+            valid = true;
         }
-        //if (y[16].value.length != 10) {
-        //    valid = false;
-        //}
-        if (currentTab == 0) {
-            if (y[1].value == "ok") {
-                y[1].value = "";
-            }
-            if (y[1].value == "ok") {
-                y[4].value = "";
-            }
-            if (y[11].value == "2011-03-03") {
-                y[11].value = "";
-            }
-        }
+        
     }
 
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
-        document.getElementsByClassName("step")[currentTab].className += " finish";
+        document.getElementsByClassName("step")[currentTab].classList.add("finish");
     }
     return valid; // return the valid status
 }
 
+
+
 //Salary slip Month year date picker
 
 
-function validateDate() {
-    
+function Validate_Salary_Slip_date(event) {
     var selectedDate = new Date(document.getElementById("Salary_Slip_Month_Year").value);
     var currentDate = new Date();
     var threeMonthsAgo = new Date();
@@ -791,16 +1220,21 @@ function validateDate() {
 
     if (selectedDate < threeMonthsAgo) {
         alert("Please select a date within the last three months.");
-        document.getElementById("Salary_Slip_Month_Year").value = ""; // Clear the input field
+        // Prevent the form from being submitted
+        event.preventDefault();
+        // Clear the input field using vanilla JavaScript
+        document.getElementById("Salary_Slip_Month_Year").value = '';
+        alert(Salary_Slip_Month_Year);
+        // If you're sure jQuery is properly included, you can also use:
+        // $('#Salary_Slip_Month_Year').val('');
     }
 }
-
 
 //Fetching the value of the Regt/Corps
 
 
 // Get references to dropdown and input field
-debugger;
+ 
 var dropdown = document.getElementById("Regt_Corps");
 var inputField = document.getElementById("CDA_PAO");
 
@@ -849,7 +1283,7 @@ dropdown1.addEventListener("change", function () {
 
     var selectedOption = $(this).find('option:selected');
     var selectedId = selectedOption.val();
-    alert(selectedId);
+   
  
 
 
@@ -878,7 +1312,7 @@ jQuery(document).ready(function ($) {
             var year = date_components[2];
             return new Date(year, month - 1, day);
         }
-        debugger;
+         
         $('#Date_Of_Birth').datepicker({
             changeMonth: true,
             changeYear: true,
@@ -887,7 +1321,7 @@ jQuery(document).ready(function ($) {
             yearRange: '1900:3000',
             onSelect: function () {
                 var dt = $('#Date_Of_Birth').val();
-                alert("ajay" + dt);
+              
                 var newdt = new Date(my_date(dt));
                 newdt.setFullYear(newdt.getFullYear() + 18);
 
@@ -912,6 +1346,7 @@ jQuery(document).ready(function ($) {
             changeYear: true,
             showButtonPanel: true,
             dateFormat: 'dd/mm/yy'
+
         });
 
         $('#Retirement_Date').datepicker({

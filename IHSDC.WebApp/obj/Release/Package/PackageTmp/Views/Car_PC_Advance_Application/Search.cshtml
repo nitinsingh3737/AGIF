@@ -65,6 +65,44 @@
     var messagemidStatus = TempData["messagemidStatus"] ?? string.Empty;
 }
 
+@*<script type="text/javascript">
+        function handleInputChange(element) {
+
+            var fileInput = element;
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+            if (!allowedExtensions.exec(filePath)) {
+                // If the uploaded file is not a PDF, display an error message
+                $('#fileUploadError').text("Only PDF files are allowed.");
+                $('#fileUploadError1').text("Only PDF files are allowed.");
+                fileInput.value = ''; // Clear the file input
+                return false;
+            }
+            // Clear any previous error message if a PDF file is selected
+            $('#fileUploadError').text("");
+        }
+
+    </script>*@
+
+    <script type="text/javascript">
+        function handleInputChange(element, errorMessageId) {
+        var fileInput = element;
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+        if (!allowedExtensions.exec(filePath)) {
+            // If the uploaded file is not a PDF, display an error message
+            $('#' + errorMessageId).text("Only PDF files are allowed.");
+        fileInput.value = ''; // Clear the file input
+        return false;
+        }
+        // Clear any previous error message if a PDF file is selected
+        $('#' + errorMessageId).text("");
+    }
+</script>
+
+
 <script>
     function printData() {
         // Get the values of ip and time from ViewBag
@@ -112,53 +150,53 @@
         //newWin.close();
         // document.getElementById("top").style.display = "none";
         document.getElementById("p").style.display = "none";
-        document.getElementById("header").style.display = "none";
-        //document.getElementById("footer").style.display = "none";
-        window.print();
-        // document.getElementById("top").style.display = "block";
-        document.getElementById("p").style.display = "block";
-        document.getElementById("header").style.display = "block";
-        document.getElementById("footer").style.display = "block";
+    document.getElementById("header").style.display = "none";
+    //document.getElementById("footer").style.display = "none";
+    window.print();
+    // document.getElementById("top").style.display = "block";
+    document.getElementById("p").style.display = "block";
+    document.getElementById("header").style.display = "block";
+    document.getElementById("footer").style.display = "block";
 
-    }
-    //$('button').on('click', function () {
-    //    printData();
-    //})
+}
+//$('button').on('click', function () {
+        //    printData();
+        //})
 
-    $("#btn").click(function () {
-        //Hide all other elements other than printarea.
-        $("#printarea").show();
-        window.print();
-    });
+        $("#btn").click(function () {
+            //Hide all other elements other than printarea.
+            $("#printarea").show();
+            window.print();
+        });
 </script>
 <script>
     $.noConflict();
     jQuery(document).ready(function ($) {
 
-        var bar = $('.progress-bar');
-        var percent = $('.percent');
-        var status = $('#status');
+    var bar = $('.progress-bar');
+    var percent = $('.percent');
+    var status = $('#status');
 
-        $('#Myform1').ajaxForm({
-            beforeSend: function () {
-                status.empty();
-                var percentVal = '0%';
-                bar.width(percentVal);
-                percent.html(percentVal);
-                document.getElementById("prbar").style.display = "block";
-                //$('#prbar').attr.style.display = "block";
-            },
-            uploadProgress: function (event, position, total, percentComplete) {
-                var percentVal = percentComplete + '%';
-                bar.width(percentVal);
-                percent.html(percentVal);
-            },
-            complete: function (xhr) {
-                status.html("Documents Uploaded.");
+    $('#Myform1').ajaxForm({
+        beforeSend: function () {
+        status.empty();
+    var percentVal = '0%';
+    bar.width(percentVal);
+    percent.html(percentVal);
+    document.getElementById("prbar").style.display = "block";
+            //$('#prbar').attr.style.display = "block";
+        },
+    uploadProgress: function (event, position, total, percentComplete) {
+            var percentVal = percentComplete + '%';
+    bar.width(percentVal);
+    percent.html(percentVal);
+        },
+    complete: function (xhr) {
+        status.html("Documents Uploaded.");
 
-            }
-        });
+        }
     });
+});
 </script>
 
 <script type="text/javascript">
@@ -199,29 +237,27 @@
             <div class="row">
                 <div class="col-lg-12">
                     <lable>Application Form</lable>
-                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", accept = ".pdf", id= "uploadForm" })
-
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", onchange = "handleInputChange(this,'Application')", accept = ".pdf", id = "uploadForm" })
+                    <span id="Application" style="color: red;"></span>
                 </div>
-                @*<div class="col-lg-6">
-                    <lable>Monthly Pay Slip</lable>
-                    @Html.TextBox("file", "", new { type = "file", @class = "form-control" })
-                </div>*@
+
             </div>
             <div class="row">
                 @if (Model.CarLoanType != "8")
                 {
                     <div class="col-lg-6">
                         <lable>Quotation</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Quotation')", accept = ".pdf", id = "uploadForm" })
                         @Html.HiddenFor(model => model.Army_No)
                         @Html.HiddenFor(model => model.Application_Id)
                         @Html.HiddenFor(model => model.ApplicationType)
-
+                        <span id="Quotation" style="color: red;"></span>
                     </div>
                 }
                 <div class="col-lg-6">
                     <lable>Monthly Pay Slip</lable>
-                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'MonthlySlip')", accept = ".pdf", id = "uploadForm" })
+                    <span id="MonthlySlip" style="color: red;"></span>
                 </div>
                 @if (Model.CarLoanType == "8")
                 {
@@ -229,8 +265,8 @@
 
 
                         <lable>Noc From Previous Bank</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Noc')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Noc" style="color: red;"></span>
 
                     </div>
                 }
@@ -240,8 +276,8 @@
                 {
                     <div class="col-lg-6">
                         <lable>Cancelled Cheque</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'CancelledCheque')", accept = ".pdf", id = "uploadForm" })
+                        <span id="CancelledCheque" style="color: red;"></span>
 
                     </div>
                 }
@@ -252,8 +288,8 @@
 
 
                         <lable>Driving License</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'DrivingLicense')", accept = ".pdf", id = "uploadForm" })
+                        <span id="DrivingLicense" style="color: red;"></span>
                     </div>
                 }
                 @if (Model.CarLoanType == "8")
@@ -264,8 +300,8 @@
 
 
                         <lable>Statement of A/C or BAL AMT Pending </lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'AMTPending')", accept = ".pdf", id = "uploadForm" })
+                        <span id="AMTPending" style="color: red;"></span>
 
                     </div>
 
@@ -277,29 +313,29 @@
             //ajay 03-04-24
 
             @*if (Model.CarLoanType != "8")
-            {
-                if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
                 {
-                    <div class="row">
-                        <div class="col-lg-6">
+                    if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
+                    {
+                        <div class="row">
+                            <div class="col-lg-6">
 
 
-                            <lable>Copy of Aadhar Card</lable>
-                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
+                                <lable>Copy of Aadhar Card</lable>
+                                @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
 
 
+                            </div>
+                            <div class="col-lg-6">
+
+
+                                <lable>Copy of PAN Card</lable>
+                                @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
+
+
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-
-
-                            <lable>Copy of PAN Card</lable>
-                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
-
-
-                        </div>
-                    </div>
-                }
-            }*@
+                    }
+                }*@
 
 
 
@@ -312,13 +348,14 @@
 
 
                         <lable>Copy of Registration Certificate (RC)</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" , id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'RC')", accept = ".pdf", id = "uploadForm" })
+                        <span id="RC" style="color: red;"></span>
 
                     </div>
                     <div class="col-lg-6">
                         <lable>Insurance Cover Note</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Insurance')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Insurance" style="color: red;"></span>
                     </div>
                 </div>
             }
@@ -340,16 +377,16 @@
                         return allFilled;
                     }
 
-                    // Enable/disable upload button based on required fields
-                    $('input[required]').on('input', function () {
-                        var uploadButton = $('#Upload');
-                        if (checkRequiredFields()) {
-                            uploadButton.prop('disabled', false);
-                        } else {
-                            uploadButton.prop('disabled', true);
-                        }
-                    });
-                });
+                            // Enable/disable upload button based on required fields
+                            $('input[required]').on('input', function () {
+                                var uploadButton = $('#Upload');
+                if (checkRequiredFields()) {
+                    uploadButton.prop('disabled', false);
+                                } else {
+                    uploadButton.prop('disabled', true);
+                                }
+                            });
+                        });
             </script>
         }
         <div id="prbar" style="display:none;margin-top:2%;">
@@ -419,8 +456,8 @@
                         </table>
                     </td>
                     @*<td class="border text-center" valign="middle" rowspan="4">
-                        Photo
-                    </td>*@
+                            Photo
+                        </td>*@
                 </tr>
                 <tr>
                     <td class="w-37">
@@ -653,13 +690,13 @@
 
 <script>
     document.getElementById('uploadForm').addEventListener('submit', function (event) {
-        var fileInput = document.getElementById('fileInput');
-        var filePath = fileInput.value;
-        var allowedExtensions = /(\.pdf)$/i;
+    var fileInput = document.getElementById('fileInput');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.pdf)$/i;
 
-        if (!allowedExtensions.exec(filePath)) {
-            alert('Please upload a PDF file.');
-            event.preventDefault();
-        }
-    });
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Please upload a PDF file.');
+    event.preventDefault();
+    }
+});
 </script>

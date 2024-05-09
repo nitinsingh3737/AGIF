@@ -19,6 +19,7 @@ namespace IHSDC.WebApp
        
         public virtual DbSet<CarPcModel> carPcModel { get; set; }
         public virtual DbSet<certModel> certModel { get; set; }
+        //public virtual DbSet<tbl_LoanFrequency>  LoanFrequency { get; set; }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)
         //{
@@ -80,6 +81,16 @@ namespace IHSDC.WebApp
             var data = GetDataInList<Unit>("sp_select_CDA_PAO @unitName='"+ UnitName + "'");
             return data;
         }
+
+
+        public IList<Unit> CheckArmyNo (string armyno)
+        {
+
+            var data = GetDataInList<Unit>("sp_select_armyNo @armyno='" + armyno + "'");
+            return data;
+        }
+
+
 
 
         public bool insertcert(certModel model)

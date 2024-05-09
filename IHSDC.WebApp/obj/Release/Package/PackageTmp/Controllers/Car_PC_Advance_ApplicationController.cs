@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Core.Objects;
+using System.Data.Entity.Validation;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -828,7 +829,7 @@ namespace IHSDC.WebApp.Controllers
                 {
                     foreach (HttpPostedFileBase fileobj in file)
                     {
-                        if (fileobj.ContentType == "image/png" || fileobj.ContentType == "image/jpg" || fileobj.ContentType == "image/jpeg")
+                        if (fileobj.ContentType == "application/pdf")
                         {
                             if (fileobj != null)
                             {
@@ -895,7 +896,7 @@ namespace IHSDC.WebApp.Controllers
                         else
                         {
                             ts.Dispose();                            
-                            DisplayMessage("File Format Not Supported!! Please Select JPG/PNG Images only", "", "i");
+                            DisplayMessage("File Format Not Supported!! Please Select pdf only", "", "i");
                         //    return RedirectToAction("upload", "LoanApplication");
                             return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = collection["Application_Id"].TrimEnd(), callaction = "upload"});
                         }
@@ -917,6 +918,131 @@ namespace IHSDC.WebApp.Controllers
                 ViewBag.Message1 = "File upload failed!!";
                 return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = collection["Application_Id"].TrimEnd() });
             }
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(HttpPostedFileBase ExtentionfileUpload , [Bind(Include = "Application_Id,ApplicationType,DateTimeUpdated," +
+    "Loanee_Name,Army_No,Old_Army_No," +
+    "Rank,Regt_Corps,Unit,CDA_PAO,Date_Of_Birth,Enrollment_Date," +
+    "Promotion_Date,Retirement_Date,Year_Of_Service," +
+    "Residual_Service,Salary_Slip_Month_Year," +
+    "CDA_Account_No,Basic_Salary," +
+    "Rank_Grade_Pay,DSOP_AFPP,MSP," +
+    "AGIF,NPA_X_Pay,Income_Tax_Monthly," +
+    "Tech_Pay,Rev_IT,TPTL_Pay,PLI,DA," +
+    "MISC,MISC_Pay,Total,Salary_After_Deduction,Dealer_Name,Vehicle_Name,Vehicle_Make," +
+    "Total_Cost,Amount_Applied_For_Loan,No_Of_EMI_Applied,Inst_No1_Amount," +
+    "Inst_No1_Date,Inst_No2_Amount,Inst_No2_Date,Inst_No3_Amount," +
+    "Inst_No3_Date,Inst_No4_Amount,Inst_No4_Date,Inst_No5_Amount," +
+    "Inst_No5_Date,Pers_Address_Line1,Pers_Address_Line2," +
+    "Pers_Address_Line3,Pers_Address_Line4,Pin_Code," +
+    "Site_Address_Line1,Site_Address_Line2,Site_Address_Line3," +
+    "Site_Address_Line4,Site_City,Site_Pin,Payee_Account_No," +
+    "IFSC_Code,Mobile_No,E_Mail_Id,Payable_In_Favour_Of," +
+    "Dispatch_Type,City_Branch_Code_Search,Payable_To," +
+    "Dispatch_Address_Line1,Dispatch_Address_Line2,Dispatch_Address_Line3," +
+    "Dispatch_Address_Line4,CarLoanType,Previous_Loan_Source,Previous_Loan_Purpose," +
+    "Amount,EMI,Previous_Loan_Is_Paid,Status,UpdatedBy,AadharNo,PANNo," +
+    "Loan_amount_admissible,ExtentionfileUpload,Next_Fmn_Hq,Unit_Pin,Unit_Address,Extension_of_Service_in_Present_Rank,Veh_Type,Amt_Eligible_for_loan,EMI_Eligible_for_loan")] CarPcModel car_PC_Advance_Application, FormCollection collection)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Handle file upload
+                    // Handle file upload
+                    if (ExtentionfileUpload != null && ExtentionfileUpload.ContentLength > 0)
+                    {
+                        if (ExtentionfileUpload.ContentType == "application/pdf") // Check if the uploaded file is a PDF
+                        {
+                            
+                            string fileName = Path.GetFileName(ExtentionfileUpload.FileName);
+                            string path = Path.Combine(Server.MapPath("~/UploadedFiles"), fileName);
+                            ExtentionfileUpload.SaveAs(path);
+                            car_PC_Advance_Application.ExtentionfileUpload = fileName;
+
+                           //            db.SaveChanges();
+                        }
+                        else
+                        {
+                            car_PC_Advance_Application.ExtentionfileUpload = "null";
+                            //ViewBag.Message = "Please upload a PDF file.";
+                            //return View(car_PC_Advance_Application);
+                        }
+                    }
+
+
+                    if (collection["prefixnum"] == "ok")
+                    {
+                        collection["prefixnum"] = "";
+                    }
+
+                    if (collection["oldprefixnum"] == "ok")
+                    {
+                        collection["oldprefixnum"] = "";
+                    }
+                    car_PC_Advance_Application.Army_No = collection["prefixnum"] + collection["IC"] + collection["sufixnum"];
+                    car_PC_Advance_Application.Old_Army_No = collection["oldprefixnum"] + collection["oldIC"] + collection["oldsufixnum"];
+
+
+                    CarPcModel carPc = con.carPcModel.FirstOrDefault(x => x.Army_No == car_PC_Advance_Application.Army_No && x.ApplicationType == car_PC_Advance_Application.ApplicationType);
+
+
+                    if (carPc == null)
+                    {
+                        //car_PC_Advance_Application.Army_No = "3336322a";
+                        //car_PC_Advance_Application.Old_Army_No = "3336322a";
+
+                        //car_PC_Advance_Application.CDA_Account_No = "TESTING";
+
+                        car_PC_Advance_Application.DateTimeUpdated = DateTime.Now;
+                        car_PC_Advance_Application.UpdatedBy = User.Identity.Name;
+                        car_PC_Advance_Application.Status = "New Application";
+
+                        car_PC_Advance_Application.Loanee_Name = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Loanee_Name);
+                        car_PC_Advance_Application.AadharNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.AadharNo);
+                        car_PC_Advance_Application.PANNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.PANNo);
+
+                        car_PC_Advance_Application.Mobile_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Mobile_No);
+                        car_PC_Advance_Application.E_Mail_Id = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.E_Mail_Id);
+                        //car_PC_Advance_Application.Army_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Army_No);
+
+                        con.carPcModel.Add(car_PC_Advance_Application);
+                        con.SaveChanges();
+
+                        int id = Convert.ToInt32(car_PC_Advance_Application.Application_Id);
+                        ModelState.Clear();
+                        ViewBag.Message = "Application Successfully Submit!!";
+
+                        return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = EncryptDecrypt.Encryption(car_PC_Advance_Application.Application_Id.ToString()), callaction = "download" });
+                    }
+                    else
+                    {
+                        ViewBag.Message = "You have already applied for a loan in this category.";
+                        ModelState.Clear();
+                        return View(car_PC_Advance_Application);
+                    }
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    foreach (var validationErrors in ex.EntityValidationErrors)
+                    {
+                        foreach (var validationError in validationErrors.ValidationErrors)
+                        {
+                            System.Diagnostics.Debug.WriteLine("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                        }
+                    }
+                    throw; // re-throw the exception to let it bubble up and be handled by the global exception handler or catch block higher up in the call stack
+                }
+            }
+            else
+            {
+                return View(car_PC_Advance_Application);
+            }
+       
+          
         }
 
         //[HttpPost]
@@ -1031,98 +1157,7 @@ namespace IHSDC.WebApp.Controllers
         //// POST: Car_PC_Advance_Application/Create
         //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(HttpPostedFileBase file, [Bind(Include = "Application_Id,ApplicationType,DateTimeUpdated," +
-            "Loanee_Name,Army_No,Old_Army_No," +
-            "Rank,Regt_Corps,Unit,CDA_PAO,Date_Of_Birth,Enrollment_Date," +
-            "Promotion_Date,Retirement_Date,Year_Of_Service," +
-            "Residual_Service,Salary_Slip_Month_Year," +
-            "CDA_Account_No,Basic_Salary," +
-            "Rank_Grade_Pay,DSOP_AFPP,MSP," +
-            "AGIF,NPA_X_Pay,Income_Tax_Monthly," +
-            "Tech_Pay,Rev_IT,TPTL_Pay,PLI,DA," +
-            "MISC,MISC_Pay,Total,Salary_After_Deduction,Dealer_Name,Vehicle_Name,Vehicle_Make," +
-            "Total_Cost,Amount_Applied_For_Loan,No_Of_EMI_Applied,Inst_No1_Amount," +
-            "Inst_No1_Date,Inst_No2_Amount,Inst_No2_Date,Inst_No3_Amount," +
-            "Inst_No3_Date,Inst_No4_Amount,Inst_No4_Date,Inst_No5_Amount," +
-            "Inst_No5_Date,Pers_Address_Line1,Pers_Address_Line2," +
-            "Pers_Address_Line3,Pers_Address_Line4,Pin_Code," +
-            "Site_Address_Line1,Site_Address_Line2,Site_Address_Line3," +
-            "Site_Address_Line4,Site_City,Site_Pin,Payee_Account_No," +
-            "IFSC_Code,Mobile_No,E_Mail_Id,Payable_In_Favour_Of," +
-            "Dispatch_Type,City_Branch_Code_Search,Payable_To," +
-            "Dispatch_Address_Line1,Dispatch_Address_Line2,Dispatch_Address_Line3," +
-            "Dispatch_Address_Line4,CarLoanType,Previous_Loan_Source,Previous_Loan_Purpose," +
-            "Amount,EMI,Previous_Loan_Is_Paid,Status,UpdatedBy,AadharNo,PANNo," +
-            "FileUpload,Next_Fmn_Hq,Unit_Pin,Unit_Address,Extension_of_Service_in_Present_Rank,Veh_Type,Amt_Eligible_for_loan,EMI_Eligible_for_loan")] CarPcModel car_PC_Advance_Application,FormCollection collection)
-        {
-            if (ModelState.IsValid)
-            {
-                //if (file.ContentLength > 0)
-                //{
-                //    string _FileName = Path.GetFileName(file.FileName);
-                //    string _path = Path.Combine(Server.MapPath("~/UploadedFiles"), car_PC_Advance_Application.Army_No+Path.GetExtension(_FileName));
-                //    file.SaveAs(_path);
-                //}
-                if(collection["prefixnum"]== "ok")
-                {
-                    collection["prefixnum"] = "";
-                }
 
-                if (collection["oldprefixnum"] == "ok")
-                {
-                    collection["oldprefixnum"] = "";
-                }
-
-                car_PC_Advance_Application.Army_No = collection["prefixnum"] + collection["IC"] +collection["sufixnum"];
-                car_PC_Advance_Application.Old_Army_No =  collection["oldprefixnum"] + collection["oldIC"] + collection["oldsufixnum"];
-
-                CarPcModel carPc = con.carPcModel.FirstOrDefault(x=>x.Army_No==car_PC_Advance_Application.Army_No && x.ApplicationType==car_PC_Advance_Application.ApplicationType);
-
-
-                if (carPc==null)
-                {
-                    //if (car_PC_Advance_Application.CarLoanType == "2")
-                    //{
-                    //    car_PC_Advance_Application.ApplicationType = "4";
-                    //}
-                    //if (car_PC_Advance_Application.CarLoanType == "3")
-                    //{
-                    //    car_PC_Advance_Application.ApplicationType = "5";
-                    //}
-
-                    //if (car_PC_Advance_Application.CarLoanType == "3")
-                    //{
-                    //    car_PC_Advance_Application.ApplicationType = "5";
-                    //}
-
-                    car_PC_Advance_Application.DateTimeUpdated = DateTime.Now;
-                    car_PC_Advance_Application.UpdatedBy = User.Identity.Name;
-                    car_PC_Advance_Application.Status = "New Application";
-
-                    car_PC_Advance_Application.Loanee_Name = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Loanee_Name);
-                    car_PC_Advance_Application.AadharNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.AadharNo);
-                    car_PC_Advance_Application.PANNo = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.PANNo);
-
-                    con.carPcModel.Add(car_PC_Advance_Application);
-                    con.SaveChanges();
-                    int id = Convert.ToInt32(car_PC_Advance_Application.Application_Id);
-                    ModelState.Clear();
-                    ViewBag.Message = "Application Successfully Submit!!";
-
-                    return RedirectToAction("Search", "Car_PC_Advance_Application", new { id = EncryptDecrypt.Encryption(car_PC_Advance_Application.Application_Id.ToString()), callaction = "download" });
-                }
-                else
-                {
-                    ViewBag.Message = "You have already applied for loan in this category.";
-                    ModelState.Clear();
-                    return View(car_PC_Advance_Application);
-                }
-            }
-
-            return View(car_PC_Advance_Application);
-        }
 
         // GET: Car_PC_Advance_Application/Edit/5
         public ActionResult Edit(String id)

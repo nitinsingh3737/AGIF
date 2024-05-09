@@ -58,7 +58,7 @@ PO-Vasant Vihar New Delhi – 110057
 
 
    
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <script src="Scripts/jquery/jquery.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
 <script src="jquery-confirm-master/dist/jquery-confirm.min.js"></script>

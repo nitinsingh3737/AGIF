@@ -1,10 +1,206 @@
 ﻿$(document).ready(function () {
 
+    $("#DataFill").click(function () {
+
+        /* Personal Details */
+       
+        $('#Loanee_Name').val("AK PATIL");
+
+        $('#dropdownSelect').val("IC");
+        $('#IC').val("45678833");
+        $('#SuffixLetter').val("M");
+
+        $('#dropdownSelect1').val("IC");
+        $('#oldIC').val("45678833");
+        $('#oldsufixnum').val("M");
+
+        $('#Rank').val("SUB");
+        $('#Regt_Corps').val("ASSAM");
+        $('#Unit').val("ASDC");
+        $('#Next_Fmn_Hq').val("DGIS");
+        $('#Unit_Pin').val("567654");
+
+        $('#Unit_Address').val("c/o 56 APO");
+        $('#CDA_PAO').val("TEST1");
+        $('#Date_Of_Birth').val("01/04/2000");
+        $('#Enrollment_Date').val("01/04/2018");
+        $('#Extension_of_Service_in_Present_Rank').val("Yes");
+        
+
+        $('#ExtentionfileUpload').val("abc.pdf");
+        $('#Promotion_Date').val("01/04/2024");
+        $('#Retirement_Date').val("01/04/2050");
+        
+        $('#Year_Of_Service').val("6");
+        $('#Residual_Service').val("26");
+        $('#ApplicationType').val("CAR");
+        $('#CarLoanType').val("New Car");
+        $('#AadharNo').val("166797505883");
+        $('#PANNo').val("TYSSS9899B");
+
+
+
+       /* Salary Details */
+        $('#Salary_Slip_Month_Year').val("April 2024");
+        $('#CDA_Account_No').val("77/788/889999N");
+        $('#Basic_Salary').val("78654");
+
+        $('#PLI').val("31");
+        $('#Rank_Grade_Pay').val("33");
+        $('#Rev_IT').val("33");
+        $('#MSP').val("33");
+        $('#AGIF').val("33");
+        $('#NPA_X_Pay').val("33");
+        $('#Income_Tax_Monthly').val("33");
+        $('#Tech_Pay').val("33");
+        $('#DSOP_AFPP').val("33");
+
+        $('#DA').val("33");
+        $('#MISC').val("33");
+        $('#TPTL_Pay').val("33");
+        $('#MISC_Pay').val("33");
+       
+        /*Dealers Details*/
+
+        $('#Dealer_Name').val("AutoNation");
+
+        $('#Vehicle_Name').val("rx433t");
+        $('#Veh_Type').val("Electric");
+        $('#Vehicle_Make').val("abcCompany");
+
+        $('#Total_Cost').val("675465");
+
+        /*Loan Details*/
+
+        $('#Amt_Eligible_for_loan').val("1000000");
+        $('#EMI_Eligible_for_loan').val("60");
+        $('#Loan_amount_admissible').val("15000000");
+
+        $('#Amount_Applied_For_Loan').val("900000");
+        $('#No_Of_EMI_Applied').val('30');
+
+     /*   Address Details*/
+        
+
+        $('#Pers_Address_Line1').val("NEW DELHI");
+        $('#Permanent_Addr_Line2').val("NEW DELHI");
+        $('#Pers_Address_Line3').val("NEW DELHI");
+        $('#Pers_Address_Line4').val("NEW DELHI");
+        $('#Pin_Code').val("110067");
+
+        /*Payee Account Details*/
+        $('#Payee_Account_No').val("6786968576896785");
+        $('#IFSC_Code').val("FCSA4995387");
+        $('#Mobile_No').val("8527262163");
+        $('#E_Mail_Id').val("ajaysingh945464@gmail.com");
+        $('#Previous_Loan_Purpose').val("HBA");
+        $('#Amount').val("567654");
+        $('#EMI').val("45");
+        $('#Previous_Loan_Is_Paid').val("Yes")
+
+    });
+
+    $('#Rank').change(function () {
+      
+        $('#Date_Of_Birth').val('');
+        $('#Promotion_Date').val('');
+        $('#Enrollment_Date').val('');
+        $('#Retirement_Date').val('');
+        $('#Residual_Service').val('');
+        $('#Year_Of_Service').val('');
+    });
+
+    //$('#dropdownSelect').change(function () {
+    //    var prefix = $(this).val(); 
+    //    alert(prefix);
+    //    if (prefix === "JC" || prefix === "OR") {
+    //        // Disable the input field if prefix is "JC" or "OR"
+    //        $('#CDA_Account_No').prop('disabled', true);
+    //    } else {
+    //        // Enable the input field for other prefixes
+        
+    //        $('#CDA_Account_No').prop('disabled', false);
+    //    }
+    //});
+
+
+    $('#dropdownSelect').change(function () {
+        var prefix = $(this).val(); 
+        if (prefix === "JC" || prefix === "OR") {
+            $('#CDA_Account_No').val("random");
+            $('#CDA_Account_No').prop('readonly',true); 
+        } else {
+            $('#CDA_Account_No').prop('readonly', false);
+        }
+    });
+
+
+   
     $('#Promotion_Date').datepicker({
         changeMonth: true,
         changeYear: true,
         showButtonPanel: true,
         dateFormat: 'dd/mm/yy'
+    });
+    var data = $('#prefixnum').val();
+  
+
+    //var selectedValue = $("#extensionSelect").val();
+    $('#Veh_Type').change(function () {
+       
+        var prefix = $('#dropdownSelect').val();
+        
+        var Admissiable_Amount = 0;
+        var ApplicationType = $('#ApplicationType').val();
+        var CarLoanType = $('#CarLoanType').val();
+        if (prefix == "JC" || prefix == "OR") {
+            if (ApplicationType == "Car") {
+
+                if (CarLoanType === 5) {
+                    /* NEW CAR*/
+                    Admissiable_Amount = 10;
+                }
+                else if (CarLoanType === 6) {
+                    /* OLD CAR*/
+                    Admissiable_Amount = 5;
+                }
+                else if (CarLoanType == 7) {
+                    /*EV*/
+                    Admissiable_Amount = 15;
+                }
+
+            }
+            else {
+                Admissiable_Amount = 2;
+
+            }
+
+        }
+        else {
+            if (ApplicationType == "Car") {
+
+                if (CarLoanType === 5) {
+                    /* NEW CAR*/
+                    Admissiable_Amount = 20;
+                }
+                else if (CarLoanType === 6) {
+                    /* OLD CAR*/
+                    Admissiable_Amount = 10;
+                }
+                else if (CarLoanType == 7) {
+                    /*EV*/
+                    Admissiable_Amount = 25;
+                }
+
+            }
+            else {
+                Admissiable_Amount = 10;
+
+            }
+        }
+
+        $('#Loan_amount_admissible').val(Admissiable_Amount);
+
     });
 });
 var Rank;
@@ -14,8 +210,7 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
 
 function showTab(n) {
-    
-    
+
     // This function will display the specified tab of the form...
     var x = document.getElementsByClassName("tab");
     x[n].style.display = "block";
@@ -40,10 +235,11 @@ function showTab(n) {
 }
 
 function nextPrev(n) {
-    
+   
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     // Exit the function if any field in the current tab is invalid:
+
     if (n == 1 && !validateForm()) return false;
     // Hide the current tab:
     x[currentTab].style.display = "none";
@@ -71,10 +267,14 @@ function fixStepIndicator(n) {
     //... and adds the "active" class on the current step:
     x[n].className += " active";
 }
+
+/*Set Automatically Suffix*/
+
+
 /*Set Automatically Suffix*/
 function SetOldSuffixLetter(obj) {
-   
-    
+
+
     var arr1 = [], arr2 = [];
     var ArmyNumber = $(obj).val();
     var fixed = "98765432";
@@ -155,12 +355,12 @@ function SetOldSuffixLetter(obj) {
     $('#dropdownSelect1').val(Prefix);
     $('#oldIC').val(ArmyNumber);
     var Suffix = document.getElementById("SuffixLetter").value;
-  
-   
+
+
 }
 
 function SetSuffixLetter(obj) {
-    
+
 
     var arr1 = [], arr2 = [];
     var ArmyNumber = $(obj).val();
@@ -245,24 +445,34 @@ function SetSuffixLetter(obj) {
     $('#oldsufixnum').val(Suffix);
 
 }
+
+
 /*date handler */
 function diff_years(dt2, dt1) {
-    debugger;
+     
     var diff = (dt2.getTime() - dt1.getTime()) / 1000;
     diff /= (60 * 60 * 24);
     return Math.abs(Math.round(diff / 365.25));
 
 }
 
+//function diff_years(dt2, dt1) {
+//    var diff = (dt1.getTime() - dt2.getTime()) / 1000;
+//    diff /= (60 * 60 * 24);
+//    var years = Math.round(diff / 365.25);
+//    return years >= 0 ? "+" + years : years;
+//}
+
+
 
 function calallser1(e) {
     var ser;
-    var ranks = $('#Rank').val(); // Assuming rank is a string representing an integer
+    var ranks = $('#Rank').val(); // Assuming rank is a string repr+esenting an integer
     var rank = parseInt(ranks);
 
     var Regiment = $('#Regt_Corps').val().toUpperCase();
    
-    alert(Regiment);
+    
     if (!rank) {
         alert("Rank value is empty. Please enter a valid rank.");
         $('#Date_Of_Birth').val('');
@@ -275,8 +485,8 @@ function calallser1(e) {
     }
    
     var dateOfBirthString = e;
-    alert(dateOfBirthString);
-    debugger;
+    
+     
     var dateParts = dateOfBirthString.split('/');
 
     // Ensure that the dateParts array has three elements
@@ -289,7 +499,7 @@ function calallser1(e) {
         if (!isNaN(year) && !isNaN(month) && !isNaN(day)) {
 
             var BirthDate = new Date(year + 0, month, day);
-            alert(BirthDate);
+          
             var enrollmentDate = new Date(year + 18, month, day); // Enrollment after 18 years
             /*var retirementAge = 65;*/ // Retirement age is assumed to be 65
 
@@ -599,7 +809,7 @@ function calallser1(e) {
                         break;
                 }
             }
-            debugger;
+             
             if (ser != null) {
                 if (rank < 10) {
 
@@ -625,7 +835,7 @@ function calallser1(e) {
             $('#Retirement_Date').val(formattedRetirementDate);
 
             // Alert the dates (optional for debugging)
-            alert("Enrollment Date: " + formattedEnrollmentDate + "\nRetirement Date: " + formattedRetirementDate);
+           /* alert("Enrollment Date: " + formattedEnrollmentDate + "\nRetirement Date: " + formattedRetirementDate);*/
         } else {
             console.error('Invalid date.');
         }
@@ -635,7 +845,7 @@ function calallser1(e) {
 }
 
 function formatDate(date) {
-    debugger;
+     
     var year = date.getFullYear();
     var month = ("0" + (date.getMonth() + 1)).slice(-2);
     var day = ("0" + date.getDate()).slice(-2);
@@ -644,7 +854,7 @@ function formatDate(date) {
 
 
 function handler(e) {
-    alert("hii bhai");
+  
     $('#mess').text("This field has been calculated based on your system DateTime. Ensure system DateTime is correct.");
 
     var dateString = $('#Enrollment_Date').val();
@@ -671,8 +881,9 @@ function handler(e) {
 }
 
 
+
 function calculateResidual_Service(e) {
-    debugger;
+     
     var dateString = $('#Enrollment_Date').val();
 
     var dateParts = dateString.split("/");
@@ -694,31 +905,133 @@ function calculateResidual_Service(e) {
     $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
 }
 
-/*increase or extention in service by 2 years*/
+
 function handleExtensionChange(event) {
     var selectedValue = event.target.value;
-    if (selectedValue === "1" || selectedValue.toLowerCase() === "yes") {
+    var date = $('#Date_Of_Birth').val();
+    var Rank = $('#Rank').val();
 
-        document.getElementById("uploadOption").style.display = "block";
-    } else {
-
-        document.getElementById("uploadOption").style.display = "none";
+    // Check if Date of Birth is empty
+    if (!date) {
+        alert("Date of Birth value is empty. Please enter a valid Date of Birth.");
+        $('#Date_Of_Birth').val('');
+        $('#extensionSelect').val('0');
+        return;
     }
 
-    if (selectedValue === "1") {
+    // Check if Rank is 12
+    if (Rank === '12') {
+        
+        var promotionDate = $('#Promotion_Date').val();
 
-        alert("Please upload a copy of the pt order of extension of service.");
+        // Check if Promotion Date is empty
+        if (!promotionDate) {
+            alert("Promotion Date value is empty. Please enter a valid Promotion Date");
+            $('#extensionSelect').val('0');
+            return;
+        }
 
-        var retirementDate = document.getElementById("Retirement_Date").value;
-      
-        var retirementDateInput = document.getElementById("Retirement_Date");
-        var currentDate = new Date(retirementDateInput.value);
-        var newRetirementDate = new Date(currentDate.getFullYear() + 2, currentDate.getMonth(), currentDate.getDate());
-        var RetirementDate = formatDate(newRetirementDate);
+        
+        if (selectedValue.toLowerCase() === "yes") {
 
-        $('#Retirement_Date').val(RetirementDate);
+            var retirementDate = new Date(promotionDate);
+            retirementDate.setFullYear(retirementDate.getFullYear() + 4);
+            var RetirementDate = extensionFormatDate(retirementDate);
+
+            $('#Retirement_Date').val(RetirementDate);
+
+
+              /* For Residual Service*/
+            var dateString = $('#Enrollment_Date').val();
+
+            var dateParts = dateString.split("/");
+
+            var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+
+            dt1 = new Date(dateObject);
+            dt2 = new Date();
+            $('#Year_Of_Service').val(diff_years(dt1, dt2));
+            var d1 = new Date($('#Enrollment_Date').val());
+            var d2 = new Date($('#Retirement_Date').val());
+            var reds = diff_years(d1, d2);
+            $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
+            $('#mess').text('');
+        } else {
+          
+            var dt = $('#Date_Of_Birth').val();
+            calallser1(dt);
+
+            $('#Promotion_Date').val('');
+            $('#Residual_Service').val('');
+            $('#Year_Of_Service').val('');
+            $('#mess').text('');
+        }
+    } else {
+       
+        if (selectedValue.toLowerCase() === "yes") {
+            var retirementDate = new Date($('#Retirement_Date').val());
+            retirementDate.setFullYear(retirementDate.getFullYear() + 2);
+
+            var RetirementDate = extensionFormatDate(retirementDate);
+
+            $('#Retirement_Date').val(RetirementDate);
+            $('#Year_Of_Service').val('');
+            $('#Residual_Service').val('');
+            $('#Promotion_Date').val('');
+            $('#mess').text('');
+        } else {
+            document.getElementById("uploadOption").style.display = "none"; // Hide upload option
+            $('#ExtentionfileUpload').val(''); // Clear the value
+            $('#fileUploadError').text(""); // Clear any previous error message
+
+            var retirementDate = new Date($('#Retirement_Date').val());
+            retirementDate.setFullYear(retirementDate.getFullYear() - 2);
+
+            var RetirementDate1 = extensionFormatDate(retirementDate);
+            $('#Retirement_Date').val(RetirementDate1);
+            $('#Year_Of_Service').val('');
+            $('#Residual_Service').val('');
+            $('#Promotion_Date').val('');
+            $('#mess').text('');
+        }
     }
 }
+
+
+
+
+// Function to format date for extension
+function extensionFormatDate(date) {
+    var month = '' + (date.getMonth() + 1);
+    var day = '' + date.getDate();
+    var year = date.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [day,month,year ].join('/');
+}
+
+
+// Function to handle file upload validation
+$('#fileUpload').change(function () {
+    var fileInput = this;
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+    if (!allowedExtensions.exec(filePath)) {
+        // If the uploaded file is not a PDF, display an error message
+        $('#fileUploadError').text("Only PDF files are allowed.");
+        fileInput.value = ''; // Clear the file input
+        return false;
+    }
+    // Clear any previous error message if a PDF file is selected
+    $('#fileUploadError').text("");
+});
+
+
+
+
 
 function formatDates(date) {
     var day = date.getDate();
@@ -732,81 +1045,176 @@ function formatDates(date) {
 
 //Validating the form
 
-function validateForm() {
-    // This function deals with validation of the form fields
+//function validateForm() {
+
+//     
+//    var x, y, z, a, i, valid = true;
+//    x = document.getElementsByClassName("tab");
+//    y = x[currentTab].getElementsByTagName("input");
+
+
+//    for (i = 0; i < y.length; i++) {
+
+
+//        if (currentTab == 0) {
+//            if (y[1].value.trim() == "") {
+//                y[1].value = "ok";
+//            }
+//            if (y[4].value.trim() == "") {
+//                y[4].value = "ok";
+//            }
+//            if (y[11].value == "") {
+
+
+//                y[11].value = "2011-03-03";
+//            }
+//        }
+//        if (y[i].value.trim() == "") {
+
+//            y[i].className += " invalid";
+
+//            valid = false;
+
+//        }
+
+//        /*ajay 03-04-24*/
+
+//       // if (currentTab == 0) {
+//       //  if (y[18].value.length != 12 || y[19].value.length != 10) {
+//       //      valid = false;
+//       //    }
+//       //}
+
+
+//        if (currentTab == 0) {
+//            if (y[1].value == "ok") {
+//                y[1].value = "";
+//            }
+//            if (y[1].value == "ok") {
+//                y[4].value = "";
+//            }
+//            if (y[11].value == "2011-03-03") {
+//                y[11].value = "";
+//            }
+//        }
+//    }
+
+
+//    if (valid) {
+//        document.getElementsByClassName("step")[currentTab].className += " finish";
+//    }
+//    return valid;
+//}
+
+
+
+function validateResidualService() {
+     
+    var ResidualService = $('#Residual_Service').val();
     
-    var x, y, z, a, i, valid = true;
+    if (ResidualService <= 2) {
+        // Set error message if fileUpload is empty
+        $('#Residual_ServiceError').text("Retirement date of more than 02 yrs (24 months) only to be accepted");
+        return false;
+        // Field is invalid
+    }
+    // Clear error message if fileUpload is not empty
+    $('#Residual_ServiceError').text("");
+    return true;
+     // Field is valid
+}
+
+function validateYearOfService() {
+    
+    var Year_Of_Service = $('#Year_Of_Service').val();
+   
+    var prefix = $('#dropdownSelect').val();
+    if (prefix == "JC" || prefix == "OR") {
+        if (Year_Of_Service <= 5) {
+            // Set error message if fileUpload is empty
+            $('#Year_Of_ServiceError').text("Retirement date of more than 02 yrs (24 months) only to be accepted");
+            return false;
+            // Field is invalid
+        }
+        else {
+            $('#Year_Of_ServiceError').text("");
+            return true;
+        }
+    } else {
+        $('#Year_Of_ServiceError').text("");
+        return true;
+    }
+    // Clear error message if fileUpload is not empty
+   
+    // Field is valid
+}
+
+function validateForm() {
+    debugger;
+    // This function deals with validation of the form fields
+    var x, y, i, valid = true;
+    // Validate FileUpload field
+    
+    valid = validateYearOfService() && valid;
+
+    valid = validateResidualService() && valid;
+
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
+   // A loop that checks every input field in the current tab:
+   /* y = document.querySelectorAll('input');*/
 
-    // A loop that checks every input field in the current tab:
+    // A loop that checks every input field:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-
-        if (currentTab == 0) {
-            if (y[1].value.trim() == "") {
-                y[1].value = "ok";
-            }
-            if (y[4].value.trim() == "") {
-                y[4].value = "ok";
-            }
-            if (y[11].value == "") {
-
-
-                y[11].value = "2011-03-03";
-            }
-        }
-        if (y[i].value.trim() == "") {
+        if (y[i].value.trim() === "") {
             // add an "invalid" class to the field:
-            y[i].className += " invalid";
-            //y[1].classList.remove("invalid");
-            // y[4].classList.remove("invalid");
+            y[i].classList.add("invalid");
+
+            // Get the name attribute of the input field
+            var fieldName = y[i].getAttribute("name");
+
+            // Create a new span element for the error message
+            var errorMessage = document.createElement("span");
+            errorMessage.className = "error";
+            errorMessage.textContent = fieldName + " is required";
+
+            // Insert the error message after the input field
+            y[i].parentNode.insertBefore(errorMessage, y[i].nextSibling);
+
             // and set the current valid status to false
             valid = false;
-
-        }
-
-        /*ajay 03-04-24*/
-
-        //if (currentTab == 0) {
-        //    if (y[15].value.length != 12 || y[16].value.length != 10) {
-        //        valid = false;
-        //    }
-        //}
-        /*ajay 03-04-24*/
-        if (currentTab == 0) {
-            if (y[15].value.length != 12 || y[16].value.length != 10) {
-                valid = true;
+        } else {
+            // If the field is not empty, remove any existing error message
+            if (y[i].nextSibling && y[i].nextSibling.className === "error") {
+                y[i].parentNode.removeChild(y[i].nextSibling);
             }
         }
-        //if (y[16].value.length != 10) {
-        //    valid = false;
-        //}
-        if (currentTab == 0) {
-            if (y[1].value == "ok") {
-                y[1].value = "";
+
+        // Add event listener to detect changes in the input field
+        y[i].addEventListener("change", function () {
+            if (this.value.trim() !== "") {
+                // If the field is filled, remove any existing error message
+                if (this.nextSibling && this.nextSibling.className === "error") {
+                    this.parentNode.removeChild(this.nextSibling);
+                }
             }
-            if (y[1].value == "ok") {
-                y[4].value = "";
-            }
-            if (y[11].value == "2011-03-03") {
-                y[11].value = "";
-            }
-        }
+        });
     }
 
     // If the valid status is true, mark the step as finished and valid:
     if (valid) {
-        document.getElementsByClassName("step")[currentTab].className += " finish";
+        document.getElementsByClassName("step")[currentTab].classList.add("finish");
     }
     return valid; // return the valid status
 }
 
+
+
 //Salary slip Month year date picker
 
 
-function validateDate() {
-    
+function Validate_Salary_Slip_date(event) {
     var selectedDate = new Date(document.getElementById("Salary_Slip_Month_Year").value);
     var currentDate = new Date();
     var threeMonthsAgo = new Date();
@@ -814,16 +1222,21 @@ function validateDate() {
 
     if (selectedDate < threeMonthsAgo) {
         alert("Please select a date within the last three months.");
-        document.getElementById("Salary_Slip_Month_Year").value = ""; // Clear the input field
+        // Prevent the form from being submitted
+        event.preventDefault();
+        // Clear the input field using vanilla JavaScript
+        document.getElementById("Salary_Slip_Month_Year").value = '';
+        
+        // If you're sure jQuery is properly included, you can also use:
+        // $('#Salary_Slip_Month_Year').val('');
     }
 }
-
 
 //Fetching the value of the Regt/Corps
 
 
 // Get references to dropdown and input field
-debugger;
+ 
 var dropdown = document.getElementById("Regt_Corps");
 var inputField = document.getElementById("CDA_PAO");
 
@@ -872,7 +1285,7 @@ dropdown1.addEventListener("change", function () {
 
     var selectedOption = $(this).find('option:selected');
     var selectedId = selectedOption.val();
-    alert(selectedId);
+   
  
 
 
@@ -901,7 +1314,7 @@ jQuery(document).ready(function ($) {
             var year = date_components[2];
             return new Date(year, month - 1, day);
         }
-        debugger;
+         
         $('#Date_Of_Birth').datepicker({
             changeMonth: true,
             changeYear: true,
@@ -910,7 +1323,7 @@ jQuery(document).ready(function ($) {
             yearRange: '1900:3000',
             onSelect: function () {
                 var dt = $('#Date_Of_Birth').val();
-                alert("ajay" + dt);
+              
                 var newdt = new Date(my_date(dt));
                 newdt.setFullYear(newdt.getFullYear() + 18);
 
@@ -928,7 +1341,7 @@ jQuery(document).ready(function ($) {
             }
         });
 
-
+ 
 
         $('#Promotion_Date').datepicker({
             changeMonth: true,
@@ -947,3 +1360,55 @@ jQuery(document).ready(function ($) {
 
     });
 });
+
+
+
+
+
+
+
+
+//08-05-24
+
+$("#FrequencyOfLoan").change(function () {
+    debugger;
+    // Get the selected value of #FrequencyOfLoan
+    var selectedValue = $(this).val();
+    var armyNo = $('#dropdownSelect').val() + $('.ic').val() + $('#SuffixLetter').val();
+    // Make the AJAX call with the selected value as a parameter
+    $.ajax({
+        url: "/Car_PC_Advance_Application/CheckArmyNo",
+        type: "GET",
+        dataType: "json",
+        data: { frequency: armyNo }, // Pass the parameter here
+        //success: function (data) {
+        //    $("#dataContainer").html(data);
+        //},
+        success: function (data) {
+            if (data.length >= 1) {
+                // Show SweetAlert message
+                Swal.fire({
+                    title: 'Warning!',
+                    text: 'You have already applied for a loan in this category.',
+                    icon: 'warning',
+                    confirmButtonText: 'OK'
+                }).then(function () {
+                    // Redirect or do whatever action you want here to restrict page movement
+                    // For example, redirect to a specific page
+                    window.location.href = "/Car_PC_Advance_Application/Create"; // Replace with your desired URL
+                });
+            } else {
+                // Proceed with normal operations
+                // Initialize the DataTable or any other action you want to perform
+                $('#dataTable').DataTable();
+            }
+        },
+        error: function () {
+            alert('Error occurred while fetching data.');
+        }
+    });
+});
+
+
+
+    

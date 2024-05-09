@@ -65,6 +65,44 @@
     var messagemidStatus = TempData["messagemidStatus"] ?? string.Empty;
 }
 
+@*<script type="text/javascript">
+        function handleInputChange(element) {
+
+            var fileInput = element;
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+            if (!allowedExtensions.exec(filePath)) {
+                // If the uploaded file is not a PDF, display an error message
+                $('#fileUploadError').text("Only PDF files are allowed.");
+                $('#fileUploadError1').text("Only PDF files are allowed.");
+                fileInput.value = ''; // Clear the file input
+                return false;
+            }
+            // Clear any previous error message if a PDF file is selected
+            $('#fileUploadError').text("");
+        }
+
+    </script>*@
+
+<script type="text/javascript">
+    function handleInputChange(element, errorMessageId) {
+        var fileInput = element;
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+        if (!allowedExtensions.exec(filePath)) {
+            // If the uploaded file is not a PDF, display an error message
+            $('#' + errorMessageId).text("Only PDF files are allowed.");
+            fileInput.value = ''; // Clear the file input
+            return false;
+        }
+        // Clear any previous error message if a PDF file is selected
+        $('#' + errorMessageId).text("");
+    }
+</script>
+
+
 <script>
     function printData() {
         // Get the values of ip and time from ViewBag
@@ -197,31 +235,47 @@
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
             <div class="row">
-                <div class="col-lg-12">
-                    <lable>Application Form</lable>
-                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", accept = ".pdf", id= "uploadForm" })
 
-                </div>
-                @*<div class="col-lg-6">
-                    <lable>Monthly Pay Slip</lable>
-                    @Html.TextBox("file", "", new { type = "file", @class = "form-control" })
-                </div>*@
+                @if (Model.Extension_of_Service_in_Present_Rank == "YES")
+                {
+                    <div class="col-lg-6">
+                        <lable>Application Form</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", onchange = "handleInputChange(this,'Application')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Application" style="color: red;"></span>
+                    </div>
+                    <div class="col-lg-6">
+                        <lable>Extension of Service</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'ExtentionfileUpload')", accept = ".pdf", id = "uploadForm" })
+                        <span id="ExtentionfileUpload" style="color: red;"></span>
+                    </div>
+                }
+                else
+                {
+                    <div class="col-lg-12">
+                        <lable>Application Form</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", onchange = "handleInputChange(this,'Application')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Application" style="color: red;"></span>
+                    </div>
+
+                }
             </div>
             <div class="row">
                 @if (Model.CarLoanType != "8")
                 {
                     <div class="col-lg-6">
                         <lable>Quotation</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Quotation')", accept = ".pdf", id = "uploadForm" })
                         @Html.HiddenFor(model => model.Army_No)
                         @Html.HiddenFor(model => model.Application_Id)
                         @Html.HiddenFor(model => model.ApplicationType)
-
+                        <span id="Quotation" style="color: red;"></span>
                     </div>
                 }
+
                 <div class="col-lg-6">
                     <lable>Monthly Pay Slip</lable>
-                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'MonthlySlip')", accept = ".pdf", id = "uploadForm" })
+                    <span id="MonthlySlip" style="color: red;"></span>
                 </div>
                 @if (Model.CarLoanType == "8")
                 {
@@ -229,8 +283,8 @@
 
 
                         <lable>Noc From Previous Bank</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Noc')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Noc" style="color: red;"></span>
 
                     </div>
                 }
@@ -240,8 +294,8 @@
                 {
                     <div class="col-lg-6">
                         <lable>Cancelled Cheque</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'CancelledCheque')", accept = ".pdf", id = "uploadForm" })
+                        <span id="CancelledCheque" style="color: red;"></span>
 
                     </div>
                 }
@@ -252,8 +306,8 @@
 
 
                         <lable>Driving License</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'DrivingLicense')", accept = ".pdf", id = "uploadForm" })
+                        <span id="DrivingLicense" style="color: red;"></span>
                     </div>
                 }
                 @if (Model.CarLoanType == "8")
@@ -264,8 +318,8 @@
 
 
                         <lable>Statement of A/C or BAL AMT Pending </lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'AMTPending')", accept = ".pdf", id = "uploadForm" })
+                        <span id="AMTPending" style="color: red;"></span>
 
                     </div>
 
@@ -277,29 +331,29 @@
             //ajay 03-04-24
 
             @*if (Model.CarLoanType != "8")
-            {
-                if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
                 {
-                    <div class="row">
-                        <div class="col-lg-6">
+                    if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
+                    {
+                        <div class="row">
+                            <div class="col-lg-6">
 
 
-                            <lable>Copy of Aadhar Card</lable>
-                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
+                                <lable>Copy of Aadhar Card</lable>
+                                @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
 
 
+                            </div>
+                            <div class="col-lg-6">
+
+
+                                <lable>Copy of PAN Card</lable>
+                                @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
+
+
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-
-
-                            <lable>Copy of PAN Card</lable>
-                            @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" })
-
-
-                        </div>
-                    </div>
-                }
-            }*@
+                    }
+                }*@
 
 
 
@@ -312,13 +366,14 @@
 
 
                         <lable>Copy of Registration Certificate (RC)</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf" , id = "uploadForm" })
-
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'RC')", accept = ".pdf", id = "uploadForm" })
+                        <span id="RC" style="color: red;"></span>
 
                     </div>
                     <div class="col-lg-6">
                         <lable>Insurance Cover Note</lable>
-                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", accept = ".pdf", id = "uploadForm" })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Insurance')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Insurance" style="color: red;"></span>
                     </div>
                 </div>
             }
@@ -376,119 +431,265 @@
 
         <input type="button" value="PRINT" name="print" id="p" onclick="printData()" />
         <div id="printTable" style="height:95%;width:95%;">
-            <h1 style="text-align:center">AGIF</h1>
+            <h1 style="text-align:center"><strong><u>ARMY GROUP INSURANCE FUND</u></strong></h1>
             <h2 style="text-align:center">
-                Application Form:@if (Model.CarLoanType == "5")
-                {<span>New Car</span>}
-                else if (Model.CarLoanType == null)
-                {<span>PCA</span>}
-                else if (Model.CarLoanType == "6")
-                {<span>Old Car</span>}
-                else if (Model.CarLoanType == "7")
-                {<span>Two Wheeler</span>}
-                else if (Model.CarLoanType == "8")
-                {<span>Inward Transfer</span>}
+                @*Application Form:@if (Model.CarLoanType == "5")
+                    {<span>New Car</span>}
+                    else if (Model.CarLoanType == null)
+                    {<span>PCA</span>}
+                    else if (Model.CarLoanType == "6")
+                    {<span>Old Car</span>}
+                    else if (Model.CarLoanType == "7")
+                    {<span>Two Wheeler</span>}
+                    else if (Model.CarLoanType == "8")
+                    {<span>Inward Transfer</span>}*@
+                <strong><u>APPLICATION FORM :CAR / TWO WHEELER ADVANCE</u></strong>
             </h2>
-            <div class="heading">
-                <h2>Personal Detail</h2>
-            </div>
-            <table class="w-100">
-                <tr>
-                    <td class="w-37">
-                        <table class="table">
+            <br />
+            @*<div class="heading">
+                    <h2>Personal Detail</h2>
+                </div>*@
+
+        <table class="w-100">
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
                             <tr>
-                                <td class="lable-td w-50">Name of Applicant</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Loanee_Name)</td>
+                                <td class="lable-td w-50" style=" width: 60%;">1. Type of Advance Required</td>
+                                <td class="detail-td w-50">
+
+                                    @if (Model.CarLoanType == "5")
+                                    {<span>New Car</span>}
+                                    else if (Model.CarLoanType == null)
+                                    {<span>PCA</span>}
+                                    else if (Model.CarLoanType == "6")
+                                    {<span>Second Hand Car</span>}
+                                    else if (Model.CarLoanType == "7")
+                                    {<span>Two Wheeler</span>}
+                                    else if (Model.CarLoanType == "8")
+                                    {<span>Inward Transfer</span>}
+                                </td>
+
                             </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
                             <tr>
-                                <td class="lable-td w-50">ArmyNo</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.FrequencyOfLoan)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="" style="width: 0%;">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td w-50">2. ArmyNo</td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Army_No)</td>
+
                             </tr>
-                        </table>
-                    </td>
-                    <td class="w-37">
-                        <table class="table">
+                        </tbody>
+                    </table>
+                </td>
+
+                <td class="w-70">
+                    <table class="table">
+                        <tbody>
                             <tr>
-                                <td class="lable-td w-50">Old ArmyNo</td>
+                                <td class="lable-td" style="width: 75%;">
+                                    Old SS/JC/Army No(In case of Offr/JCO)
+                                </td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Old_Army_No)</td>
                             </tr>
+                        </tbody>
+                    </table>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
                             <tr>
-                                <td class="lable-td w-50">Rank</td>
+                                <td class="lable-td w-50">3. Rank</td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Rank)</td>
                             </tr>
-                        </table>
-                    </td>
-                    @*<td class="border text-center" valign="middle" rowspan="4">
-                        Photo
-                    </td>*@
-                </tr>
-                <tr>
-                    <td class="w-37">
-                        <table class="table">
+
+
+                        </tbody>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+
+                        <tbody>
                             <tr>
-                                <td class="lable-td w-50">Regt Corps</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Regt_Corps)</td>
+                                <td class="lable-td w-37">
+                                    CDA(O)A/c No (In case of Offrs)
+                                </td>
+                                <td class="detail-td w-50" style="width: 27%;">
+                                    @Html.DisplayFor(model => model.Old_Army_No)
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td " style="width: 59%;">
+                                    4. Name   (In block capital letters)
+                                </td>
+                                <td class="detail-td ">@Html.DisplayFor(model => model.Loanee_Name) </td>
+
                             </tr>
                             <tr>
-                                <td class="lable-td w-50">Unit</td>
+                                <td class="lable-td w-50">6. Unit</td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Unit)</td>
                             </tr>
-                        </table>
-                    </td>
-                    <td class="w-37">
-                        <table class="table">
+
+
+                        </tbody>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
                             <tr>
-                                <td class="lable-td w-50">CDA/PAO</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.CDA_PAO)</td>
+                                <td class="lable-td w-50">5. Regt/Corps</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Regt_Corps)</td>
+                            </tr>
+
+
+                            <tr>
+                                <td class="lable-td w-50">7.Fmn HQ</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Next_Fmn_Hq)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td w-50">8.c/o 56/99 APO,PIN</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Unit_Address)</td>
                             </tr>
                             <tr>
-                                <td class="lable-td w-50">Date Of Birth</td>
+                                <td class="lable-td w-50" style="width: 70%;">
+                                    10. Type of Commission (For Offrs Only)
+                                </td>
+                                <td class="detail-td w-50"> </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </td>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td w-50">9.Date Of Birth</td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Date_Of_Birth)</td>
                             </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="w-37">
-                        <table class="table">
                             <tr>
-                                <td class="lable-td w-50">Enrollment Date</td>
+                                <td class="lable-td w-50" style="
+    width: 63%;
+">
+                                    11. Date of Commission/Enrolment
+                                </td>
                                 <td class="detail-td w-50">@Html.DisplayFor(model => model.Enrollment_Date)</td>
                             </tr>
-                            <tr>
-                                <td class="lable-td w-50">Promotion Date</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Promotion_Date)</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="w-37">
-                        <table class="table">
-                            <tr>
-                                <td class="lable-td w-50">Retirement Date</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Retirement_Date)</td>
-                            </tr>
-                            <tr>
-                                <td class="lable-td w-50">Year Of Service</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Year_Of_Service)</td>
-                            </tr>
-                        </table>
-                    </td>
 
-                </tr>
-                <tr>
-                    <td class="w-37">
-                        <table class="table">
-                            <tr>
-                                <td class="lable-td w-50">Residual Service</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Residual_Service)</td>
-                            </tr>
+                        </tbody>
+                    </table>
+                </td>
 
-                        </table>
-                    </td>
+            </tr>
 
 
-                </tr>
-            </table>
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td w-50">12. Mobile No</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Mobile_No)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">14. E-Mail</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.E_Mail_Id)</td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </td>
+                <td class="w-70">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td " style="width: 63%;">
+                                    13. Date of Promotion(Sub Maj)
+                                </td>
+                                <td class="detail-td">
+                                    @Html.DisplayFor(model => model.Promotion_Date)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50">15. Adhar Card No</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.AadharNo)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+
+            </tr>
+       
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td class="lable-td w-50">16. PAN Card No</td>
+                            <td class="detail-td w-50">@Html.DisplayFor(model => model.PANNo)</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="w-37">
+                    <table class="table">
+                        <tr>
+                            <td>17. Permanent Home Address</td>
+                            <td>@Html.DisplayFor(model => model.Pers_Address_Line1)</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
 
 
 
@@ -499,152 +700,267 @@
                 <h2>Account and Previous Loan Details</h2>
             </div>
             <table class="w-100">
-                <tr>
-                    <td class="w-50">
-                        <table class="table">
-                            <tr>
-                                <td class="lable-td w-50">Payee Account No</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Payee_Account_No)</td>
-                            </tr>
-                            <tr>
-                                <td class="lable-td w-50">Mobile No</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Mobile_No)</td>
-                            </tr>
-                            @*<tr>
-                                    <td class="lable-td w-50">Payable In Favour Of</td>
-                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Payable_In_Favour_Of)</td>
-                                </tr>*@
-                        </table>
-                    </td>
-                    <td class="w-50">
-                        <table class="table">
-                            <tr>
-                                <td class="lable-td w-50">IFSC Code</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.IFSC_Code)</td>
-                            </tr>
-                            <tr>
-                                <td class="lable-td w-50">Previous Loan Purpose</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Previous_Loan_Purpose)</td>
-                            </tr>
-                        </table>
-                    </td>
+                
 
-                </tr>
-                <tr>
-                    <td class="w-50">
-                        <table class="table">
-
-                            <tr>
-                                <td class="lable-td w-50">EMail Id</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.E_Mail_Id)</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="w-50">
-                        <table class="table">
-                            <tr>
-                                <td class="lable-td w-50">No Of EMI Applied</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.No_Of_EMI_Applied)</td>
-                            </tr>
-                            @*<tr>
-                                    <td class="lable-td w-50">Site Address Line2</td>
-                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.No_Of_EMI_Applied)</td>
-                                </tr>*@
-                        </table>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td class="w-50">
-                        <table class="table">
-                            <tr>
-                                <td class="lable-td w-50">Amount Applied For Loan</td>
-                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Amount_Applied_For_Loan)</td>
-                            </tr>
-                        </table>
-                    </td>
-                    <!--<td class="w-50">
-                        <table class="table">-->
-                    @*<tr>
-                            <td class="lable-td w-50">Site Pin</td>
-                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Site_Pin)</td>
-                        </tr>*@
-                    @*<tr>
-                            <td class="lable-td w-50">Application Status</td>
-                            <td class="detail-td w-50">@Html.DisplayFor(model => model.Status)</td>
-                        </tr>*@
-                    <!--</table>
-                    </td>-->
-                </tr>
-                <tr></tr>
+             
+               
             </table>
-
             <div class="container" style="width:95%">
                 <br />
                 <br />
-                <p align="center">
-                    <strong>LETTER OF AUTHORISATION TO CDA (O) TO DEDUCT EMI </strong>
-                </p>
-                <p align="center">
-                    <strong>OR TO RECOVER OUTSANDING LOAN FROM THE IRLA</strong>
-                </p>
-                <p align="center">
-                    <strong>CDA(O) A/C NO @Model.CDA_Account_No</strong>
-                </p>
-                <p align="center">
-                    (in case of Officer)
+                <p style="text-align:justify;">
+                    23.	I have read the rules regulating the grant of advance to AGIF members for purchase of four wheeler/ two wheeler and agree to abide by the terms and conditions stipulated therein from time to time.
                 </p>
                 <p style="text-align:justify;">
-                    1. I, No <u>@Model.Army_No</u> Rank <u>@Model.Rank</u> Name
-                    <u>@Model.Loanee_Name</u>
+                    24.	I state and certify that :
                 </p>
                 <p style="text-align:justify;">
-                    Regt/Corps <u>@Model.Regt_Corps</u> Unit <u>@Model.Unit</u> in the
-                    event of my becoming non effective in Army for any reason, hereby
-                    voluntarily authorise CDA(O), Pune (for Offr) and PAO(OR)
-                    <u>@Model.CDA_PAO</u> (for JCOs/OR) to pay AGIF on my behalf, an
-                    amount equivalent to the Motor Car advance outstanding in my loan account
-                    and as intimated by AGIF to CDA(O)/PAO(OR) out of my DSOP/AFPP Fund
-                    account, DCRG, encashment of leave and Balance in IRLA as and when such
-                    DSOP/AFPP Fund account or DCRG/IRLA is finalized or from Maturity /Survival
-                    Benefit of AGIF.
+                    (a)	I am not a re-employed Officer.
                 </p>
                 <p style="text-align:justify;">
-                    2. I will intimate AGIF on applying for premature retirement/release from
-                    the Army and clear all the outstanding dues of the AGIF before proceeding
-                    on premature retirement. If I am dismissed/removed or I resign from service
-                    before repayment of loan, together with interest, the OC/CO/Stn Cdr is
-                    empowered to impound the vehicle while relieving me from duty/service.
+                    (b)	My previous loan (if applicable) has been liquidated before applying for the fresh loan.
                 </p>
                 <p style="text-align:justify;">
-                    3. I, solemnly declare that the details/information furnished by me and averments/certifications made herein are true to the best of my knowledge and belief and have not willfully suppressed any material information
+                    (c)	I have/have not drawn any loan/advance from the Govt in which DCRG and AGI Benefits are attached/not attached. The outstanding amount of loan along with interest and my other dues may be recovered from my DCRG, Commuted value of pension, DSOP/AFPP Fund, Encashment of leave, Insurance/Disability/Maturity/Survival Benefit of AGIF. I agree to pay the one time non-refundable insurance premium and abide by its terms and conditions.
+                </p>
+                <p style="text-align:justify;">
+                    (d)	I shall refund in one lump sum the full advance together with interest outstanding thereon, in case, I wish to sell the vehicle purchased out of AGIF advance prior to its sale.
+                </p>
+                <p style="text-align:justify;">
+                    (e)	The vehicle will be kept comprehensively insured from the date of its purchase till the advance together with interest is fully repaid to AGIF. I will not use the vehicle for any commercial purpose.
+                </p>
+
+                <p style="text-align:justify;">
+                    (f)	I shall refund the advance in one lump-sum with interest in the event of my failure to produce the relevant documents of the purchase of vehicle within the stipulated time, failing which I authorise MD, AGIF to effect recovery of the entire outstanding amount together with interest through my IRLA.
+
                 </p>
                 <p style="margin-top:5%;">
-                    Date: <span style="float:right;margin-right:5%;">Signature of the applicant</span>
+                    Date: <span style="float:right;margin-right:5%;">(Signature of Applicant)</span>
+                </p>
+                <br />
+                <br />
+                <p style="text-align:justify;">25.	In the event of my becoming non-effective or during active service before liquidation of the advance with interest, I hereby authorise CDA(O)/ PAO(OR) to recover the outstanding advance and interest from my DSOP/AFPP Fund/DCRG/Leave Encashment and remit the same to AGIF.  If it is not so possible for any reason then from Insurance/Disability/Maturity/Survival benefits due from the AGIF.</p>
+                <p>26.	I will ensure that I will maintain adequate credit in my IRLA during the duration of repayment of complete loan instalments. In case of any debit balance resulting in non-remittance of EMI (instalment) by the CDA (O)/PAO(OR) to AGIF, I undertake to pay it directly alongwith interest for period of default of two percent over and above the rate of interest at which the loan was sanctioned, as levied by the AGIF for the delayed period of instalments.</p>
+                <p>27.	If, at any time, it is found that I have obtained Car/Two Wheeler Advance from AGIF by misrepresentation, misstatement or fraud or have committed a breach of the terms, conditions/instructions issued from time to time by AGIF, I shall without prejudice, be liable to legal, disciplinary or any other action and will become liable to repay in one lump-sum the entire amount of the advance or the balance of the outstanding loan together with interest for period of default of two percent higher than the rate of interest at which the loan was sanctioned, to AGIF without any demur. </p>
+                <p><strong>28.	I will intimate change of address to AGIF immediately, failing which AGIF will not be liable/responsible for any loss caused to me.  I also understand that AGIF shall send all correspondence, notice, cheques etc at the last intimated address by me.</strong></p>
+                <p>29.	I, solemnly declare that the details/information furnished by me and averments/certifications made herein are true to the best of my knowledge and belief and have not willfully suppressed any material information. </p>
+                <p style="margin-top:5%;">
+                    Date: <span style="float:right;margin-right:5%;">(Signature of the applicant)</span>
                 </p>
                 <p>
                     <strong></strong>
                 </p>
+                <br />
+                <br />
+                <p style="text-align:center">
+                    <strong>RECOMMENDATION</strong>
+                </p>
+                <br />
+                <br />
+                <p style="text-align:justify;">I have scrutinised the application of No________________Rank ______________ Name_______________________________ Regt _____________________ and have satisfied myself of the correctness of details shown therein.  Application is recommended for sanction.</p>
+                <br />
+                <br />
+                <br />
+
+                <p style="margin-top:5%;">
+                    Unit Stamp <span style="float:right;margin-right:5%;">Signature of CO/OC___________________</span>
+                    <span style="float:right;margin-right:5%;">Designation _________________________</span>
+                    Date: <span style="float:right;margin-right:5%;">Rank & Name ________________________</span>
+                </p>
+
+
+
+            </div>
+            @*<div class="container" style="width:95%">
+                    <br />
+                    <br />
+                    <p align="center">
+                        <strong>LETTER OF AUTHORISATION TO CDA (O) TO DEDUCT EMI </strong>
+                    </p>
+                    <p align="center">
+                        <strong>OR TO RECOVER OUTSANDING LOAN FROM THE IRLA</strong>
+                    </p>
+                    <p align="center">
+                        <strong>CDA(O) A/C NO @Model.CDA_Account_No</strong>
+                    </p>
+                    <p align="center">
+                        (in case of Officer)
+                    </p>
+                    <p style="text-align:justify;">
+                        1. I, No <u>@Model.Army_No</u> Rank <u>@Model.Rank</u> Name
+                        <u>@Model.Loanee_Name</u>
+                    </p>
+                    <p style="text-align:justify;">
+                        Regt/Corps <u>@Model.Regt_Corps</u> Unit <u>@Model.Unit</u> in the
+                        event of my becoming non effective in Army for any reason, hereby
+                        voluntarily authorise CDA(O), Pune (for Offr) and PAO(OR)
+                        <u>@Model.CDA_PAO</u> (for JCOs/OR) to pay AGIF on my behalf, an
+                        amount equivalent to the Motor Car advance outstanding in my loan account
+                        and as intimated by AGIF to CDA(O)/PAO(OR) out of my DSOP/AFPP Fund
+                        account, DCRG, encashment of leave and Balance in IRLA as and when such
+                        DSOP/AFPP Fund account or DCRG/IRLA is finalized or from Maturity /Survival
+                        Benefit of AGIF.
+                    </p>
+                    <p style="text-align:justify;">
+                        2. I will intimate AGIF on applying for premature retirement/release from
+                        the Army and clear all the outstanding dues of the AGIF before proceeding
+                        on premature retirement. If I am dismissed/removed or I resign from service
+                        before repayment of loan, together with interest, the OC/CO/Stn Cdr is
+                        empowered to impound the vehicle while relieving me from duty/service.
+                    </p>
+                    <p style="text-align:justify;">
+                        3. I, solemnly declare that the details/information furnished by me and averments/certifications made herein are true to the best of my knowledge and belief and have not willfully suppressed any material information
+                    </p>
+                    <p style="margin-top:5%;">
+                        Date: <span style="float:right;margin-right:5%;">Signature of the applicant</span>
+                    </p>
+                    <p>
+                        <strong></strong>
+                    </p>
+                    <p>
+                        <strong></strong>
+                    </p>
+                    <p style="text-align:center">
+                        <strong>COUNTERSIGNED</strong>
+                    </p>
+                    <p>
+                        <strong></strong>
+                    </p>
+                    <p>
+                        <strong></strong>
+                    </p>
+                    <p>
+                        <strong></strong>
+                    </p>
+
+
+                    <p style="margin-top:5%;">Date: <span style="float:right;margin-right:5%;">(Signature of CO/OC)</span></p>
+
+
+
+                </div>*@
+
+
+            @*//FINETUNE*@
+            <br />
+            <div class="container" style="width:95%">
+                <br />
+                <br />
+                <p style="text-align:center">
+                    <strong><u>AGREEMENT</u></strong>
+                </p>
+                <br />
+                <br />
+                <p style="text-align:justify;">
+                    AN AGREEMENT MADE THIS _______ day of Two thousand ________ between (Name of applicant) ____________________________________ son/daughter/wife of _________________________ (thereinafter the borrower which expression shall include heirs, administrators, executors and legal representatives) of the one part and Army Group Insurance Fund, a society registered under the Societies Registration Act, 1860 having its office at AGI Bhawan, Rao Tula Ram Marg, New Delhi, hereinafter called the Society, which expression shall include its successors in office and assigns of the other part.
+
+                    WHEREAS the Borrower who is the member of AGIF has agreed under the provisions of the Rules framed by the Society to regulate the grant of advance to AGIF members for purchase of Motor Car (hereinafter referred to as the 'said rules' which expression shall, where the context so admit include any amendments there of or addition thereto for the time being in force) applied to the Society for an advance of  *₹_____________ (Rupees _________________________________) to the Borrower on the terms and conditions where in after contained.
+
+                </p>
+                <p><strong>NOW IT IS HEREBY AGREED by and between the parties hereto as follows:-</strong></p>
+                <p style="text-align:justify;">
+                    1.	In consideration of the sum of *₹ __________ to be paid by the Society after the execution of this agreement for the purchase of conveyance to the Borrower in the manner as provided in the said rules, the Borrower hereby agrees with the Society to repay to the Society the said amount with interest calculated according to said rules by monthly deductions from his salary or if the borrower within that period becomes insolvent or quits the service of the Govt or dies, the whole amount of the loan together with interest accrued thereon shall immediately become due and payable to the Society as provided in the said rules and hereby authorising the Society to make such deductions.
+                </p>
+                <p style="text-align:justify;">
+                    2.	In case the vehicle for which loan has been obtained meets with an accident or gets damaged due to unforeseen event and is declare beyond economical repairs or is lost due to theft or fire, the amount claimed from Insurance company will be paid in full towards balance amount of loan to AGIF. For balance loan amount EMI will continue.
+                </p>
+                <p style="text-align:justify;">
+                    3.	That based on this Agreement, the society shall be entitled to recover through the PAO (OR)/CDA(O) and /or receive the balance of the said advance with interest remaining unpaid and any other dues at the time of his retirement/dismissal/ premature retirement from service and death preceding retirement or cancellation of the Booking from the whole or any specified part of the gratuity that may be sanctioned to him, Insurance/Disability/Maturity/survival benefit of AGIF, death benefits, DSOP Fund, payable to the beneficiaries, without any demur from any quarter.
+                </p>
+                <p style="text-align:justify;">
+                    4.	NOW THIS INDENTURE WITNESSESS that in pursuance of the said agreement and for the consideration aforesaid the Borrower both hereby covenant to pay to the SOCIETY the sum of *Rs ................... aforesaid or the balance thereof remaining unpaid at the date of these presents by equal payments of *₹........................ each on the first day of every month and will pay interest on the sum for the time being remaining due and owing calculated according to the said rules. AND THE BORROWER both agree and I authorise the PAO (OR)/ CDA (O) to deduct ₹____________  and pay AGIF on my behalf an amount equivalent to ₹___________ that such payments may be recovered by monthly deductions from my salary in the manner provided by the said rules and in further pursuance of the said agreement the Borrower thereby assign and transfer upto the Society the Motor Vehicle the particulars whereof are set out in the schedule hereunto written by way of security for the said advance and the interest thereon as required by the said rule.
+                </p>
+                <p style="text-align:justify;">
+                    5.	IN VIEW OF THE FOREGOING TERMS AND CONDITIONS MENTIONED HEREIN ABOVE, THE BORROWER i.e. The Applicant as hereunto set his hand and Rank................................................Name ........................................................................................in the office of ..................................... for and on behalf of the AGIF has hereunto set his hand.
+                </p>
+                <p><strong>FIELDS MARKED WITH (*) TO BE FILLED BY AGIF</strong></p>
+                <p style="margin-top:5%;">
+                    <span style="float:right;margin-right:5%;">(Signature of the Applicant as Borrower)</span>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <br />
+                <br />
+                <p style="text-align:center">
+                    <strong><u>COUNTERSIGNED BY CO/OC</u></strong>
+                </p>
+                <p>
+                    <strong></strong>
+                </p>
+                <br />
+                <br />
+
+
+            </div>
+
+            <div class="container" style="width:95%">
+                <p style="text-align:right">
+                    <strong><u>CDA(O)/PAO(OR) Copy</u></strong>
+                </p>
+                <br />
+                <br />
+                <p style="text-align:center">
+                    <strong>
+                        <u>
+                            LETTER OF AUTHORISATION TO CDA(O) TO DEDUCT EMI
+                        </u>
+                    </strong>
+                </p>
+                <p style="text-align:center">
+                    <strong>
+                        <u>
+                            OR TO RECOVER OUTSTANDING LOAN FROM THE IRLA
+                        </u>
+                    </strong>
+                </p>
+                <p style="text-align:center">
+                    <strong>
+                        <u>
+                            Offrs 		: CDA (O) A/C NO_______/________/____________
+                        </u>
+                    </strong>
+                </p>
+                <p style="text-align:center">
+                    <strong>
+                        <u>
+                            JCOs/OR 	: PAO (OR)     _______________________________
+                        </u>
+                    </strong>
+                </p>
+                <br />
+                <br />
+                <p style="text-align:justify;">
+                    1.	I, No ______________ Rank _____________ Name _____________________________ Regt/Corps _____________________ Unit ____________________________ hereby voluntarily authorise CDA(O), Pune (for Offrs) and PAO(OR) _________________________ (for JCOs/OR) to deduct EMI on account of Conveyance loan taken from the AGIF from monthly pay and allowances entitlement and remit the same to AGIF.
+                </p>
+                <p style="text-align:justify;">
+                    2.	I, No ______________ Rank _____________ Name _____________________________ Regt/Corps _____________________ Unit ____________________________in the event of my becoming non effective in Army for any reason, hereby voluntarily authorise CDA(O),Pune (for Offrs) and PAO(OR) ________________________ (for JCOs/OR)  to pay AGIF on my behalf, an amount equivalent to the Motor Car advance outstanding in my loan account and as intimated by AGIF to CDA(O)/PAO(OR) out of my DSOP/AFPP Fund account, DCRG, encashment of leave and Balance in IRLA as and when such DSOP/AFPP Fund account or DCRG/IRLA is finalized or from Maturity/Survival Benefit of AGIF.
+                </p>
+
+                <p>
+                    <strong></strong>
+                </p>
+
+
+                <p style="margin-top:5%;">Date	………………… <span style="float:right;margin-right:5%;">(Signature of applicant)</span></p>
+
                 <p>
                     <strong></strong>
                 </p>
                 <p style="text-align:center">
-                    <strong>COUNTERSIGNED</strong>
+                    <strong><u>COUNTERSIGNED</u></strong>
                 </p>
                 <p>
                     <strong></strong>
                 </p>
-                <p>
-                    <strong></strong>
-                </p>
-                <p>
-                    <strong></strong>
-                </p>
-
-
-                <p style="margin-top:5%;">Date: <span style="float:right;margin-right:5%;">(Signature of CO/OC)</span></p>
-
-
+                <br />
+                <br />
+                <p style="margin-top:5%;">Date (Unit Stamp)	 <span style="float:right;margin-right:5%;">(Signature of CO/OC/IO) </span></p>
+                <br />
+                <br />
             </div>
         </div>
     </div>

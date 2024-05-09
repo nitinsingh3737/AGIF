@@ -805,7 +805,7 @@
                     return window['eval']('(' + s + ')');
                 };
 
-                var httpData = function (xhr, type, s) { // mostly lifted from jq1.4.4
+                var httpData = function (xhr, type, s) { // mostly lifted from 
 
                     var ct = xhr.getResponseHeader('content-type') || '',
                         xml = type === 'xml' || !type && ct.indexOf('xml') >= 0,

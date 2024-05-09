@@ -1566,16 +1566,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/dataTables1/bootstrap.min.js">
       <publishTime>02/23/2018 23:26:07</publishTime>
     </File>
-    <File Include="Scripts/dataTables1/jquery-1.10.2.js">
+    <File Include="Scripts/dataTables1/jquery/jquery.js">
       <publishTime>02/23/2018 23:26:10</publishTime>
     </File>
-    <File Include="Scripts/dataTables1/jquery-1.10.2.min.js">
+    <File Include="Scripts/dataTables1/jquery/jquery.min.js">
       <publishTime>02/23/2018 23:26:10</publishTime>
     </File>
-    <File Include="Scripts/dataTables1/jquery-1.10.2.min.map">
+    <File Include="Scripts/dataTables1/jquery/jquery.min.map">
       <publishTime>02/23/2018 23:26:10</publishTime>
     </File>
-    <File Include="Scripts/dataTables1/jquery-1.4.4.min.js">
+    <File Include="Scripts/dataTables1/jquery-3.7.1.min.js">
       <publishTime>03/05/2011 15:02:44</publishTime>
     </File>
     <File Include="Scripts/dataTables1/jquery-ui.js">

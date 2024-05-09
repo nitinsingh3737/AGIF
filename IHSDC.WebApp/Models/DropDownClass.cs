@@ -63,13 +63,32 @@ namespace IHSDC.WebApp.Models
             }, "Value", "Text");
         }
 
-       
+        //public SelectList LoadFrequency()
+        //{
+        //    try
+        //    {
+        //        using (var con = new DBConnection())
+        //        {
+        //            var loan = con.LoanFrequency.ToList(); // Convert to list
+        //            return new SelectList(loan, "Id", "Frequency");
+        //            // Change "Id" and "Name" to the actual properties you want to display
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine("An error occurred: " + ex.Message);
+        //    }
+        //    return new SelectList(new List<object>());
+        //}
+
+
         public SelectList LoadLoanType()
         {
             return new SelectList(new SelectListItem[]{
                 new SelectListItem{Text="New Car",Value="5"},
                 new SelectListItem{Text="Old Car",Value="6"},
-                new SelectListItem{Text="Inward Transfer",Value="8"}
+                 new SelectListItem{Text="EV",Value="7"}
+                //new SelectListItem{Text="Inward Transfer",Value="8"}
                 
             }, "Value", "Text");
         }

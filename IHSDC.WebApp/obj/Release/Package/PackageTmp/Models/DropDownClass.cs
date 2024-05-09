@@ -69,6 +69,7 @@ namespace IHSDC.WebApp.Models
             return new SelectList(new SelectListItem[]{
                 new SelectListItem{Text="New Car",Value="5"},
                 new SelectListItem{Text="Old Car",Value="6"},
+                 new SelectListItem{Text="EV",Value="7"},
                 new SelectListItem{Text="Inward Transfer",Value="8"}
                 
             }, "Value", "Text");

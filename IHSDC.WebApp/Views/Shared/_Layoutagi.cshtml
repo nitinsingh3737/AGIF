@@ -1,6 +1,4 @@
 ﻿<!DOCTYPE html>
-
-
 <html>
 <head>
     <title></title>
@@ -13,7 +11,7 @@
     @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
     <link href="~/Content/mainPage.css" rel="stylesheet" />
     <link href="~/Content/font.css" rel="stylesheet" />
-    <script src="~/Scripts/bootmin.js"></script>
+    <script src="~/Scripts/bootstrap/js/bootstrap.js"></script>
 
     <style type="text/css">
         body {
@@ -261,7 +259,7 @@
 
 </head>
 <body>
-    
+
 
     <header id="header">
         <div class="top_bar" style="text-align:center;">
@@ -344,23 +342,31 @@
                             </ul>
                         </li>
                         @*<li class="dropdown-submenu">
-            <a href="#"  data-toggle="dropdown">Conveyance (CA)/PC</a>
-            <ul class="dropdown-menu">
-                <li><a href="~/Car_PC_Advance_Application/Create">Apply New </a></li>
-                <li><a href="~/Car_PC_Advance_Application/Index">List</a></li>
-            </ul>
-        </li>*@
+                                <a href="#"  data-toggle="dropdown">Conveyance (CA)/PC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Car_PC_Advance_Application/Create">Apply New </a></li>
+                                    <li><a href="~/Car_PC_Advance_Application/Index">List</a></li>
+                                </ul>
+                            </li>*@
+
+                        <li class="dropdown-submenu">
+                            <a href="#" data-toggle="dropdown">Testing</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="~/Car_PC_Advance_Application/formShow">Test Form </a></li>
+                                @*<li><a href="~/Car_PC_Advance_Application/Index">List</a></li>*@
+                            </ul>
+                        </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guidelines for Application</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guidelines for Applicant</a>
                             <ul class="dropdown-menu">
                                 <li><a href="~/House_Building_Advance_Application/Create">House Building (HBA) </a></li>
 
                                 <li>
                                     <a href="~/Car_PC_Advance_Application/CARequirement">Conveyance (CA)</a>
                                     @*<ul class="dropdown-menu">
-                        <li><a href="~/Car_PC_Advance_Application/Create">Apply New </a></li>
-                        <li><a href="~/Car_PC_Advance_Application/Index">List</a></li>
-                    </ul>*@
+                                            <li><a href="~/Car_PC_Advance_Application/Create">Apply New </a></li>
+                                            <li><a href="~/Car_PC_Advance_Application/Index">List</a></li>
+                                        </ul>*@
                                 </li>
 
                                 <li>
@@ -370,16 +376,26 @@
                             </ul>
                         </li>
                         @*<li>
-                            <a href="~/Car_PC_Advance_Application/Create">Apply For Loan(PCA/CA)</a>
-                        </li>*@
+                                <a href="~/Car_PC_Advance_Application/Create">Apply For Loan(PCA/CA)</a>
+                            </li>*@
+                        @*<li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Apply For Loan(PCA/CA)</a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Car_PC_Advance_Application/Create">Conveyance Advance (CA) Car/Two Wheeler</a></li>
+                                    <li><a href="~/Car_PC_Advance_Application/Create">Personal Computer Advance(PCA)</a></li>
+                                </ul>
+                            </li>*@
+
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Apply For Loan(PCA/CA)</a>
-                            @*<a href="~/Search/Search">Search</a>*@
                             <ul class="dropdown-menu">
-                                <li><a href="~/Car_PC_Advance_Application/Create">Conveyance Advance (CA) Car/Two Wheeler</a></li>
-                                <li><a href="~/Car_PC_Advance_Application/Create">Personal Computer Advance(PCA)</a></li>
+                                <li><a href="~/Car_PC_Advance_Application/Create" class="loan-type" data-loan-type="ca">Conveyance Advance (CA) Car/Two Wheeler</a></li>
+                                <li><a href="~/Car_PC_Advance_Application/Create" class="loan-type" data-loan-type="pca">Personal Computer Advance(PCA)</a></li>
                             </ul>
                         </li>
+
+
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Upload/Download</a>
                             @*<a href="~/Search/Search">Search</a>*@
@@ -392,34 +408,34 @@
 
 
                         @*<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Links</a>
-            <ul class="dropdown-menu">
-                <li><a href="~/Home/MATURITY">Maturity Tables (01 Oct 2018 to 31 Mar 2019)</a></li>
-                <li><a target="_blank" href="~/Home/LatestNews">Latest News</a></li>
-            </ul>
-        </li>*@
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Links</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Home/MATURITY">Maturity Tables (01 Oct 2018 to 31 Mar 2019)</a></li>
+                                    <li><a target="_blank" href="~/Home/LatestNews">Latest News</a></li>
+                                </ul>
+                            </li>*@
                         @*<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Important Letters</a>
-            <ul class="dropdown-menu">
-                <li><a target="_blank" href="~/Home/importantLetter6">Fraud in name of AGIF</a></li>
-                <li><a target="_blank" href="~/Home/importantLetter">Pre-EMI Revision : HBA</a></li>
-                <li><a target="_blank" href="~/Home/importantLetter1">AGIF Loan : Inward Payment Using NEFT</a></li>
-                <li><a target="_blank" href="~/Home/importantLetter2">Revision of Policy for Grant of HBA</a></li>
-                <li><a target="_blank" href="~/Home/importantLetter3">Review of HBA</a></li>
-                <li><a target="_blank" href="~/Home/importantLetter4">Provisioning of IT Rebate Certificate </a></li>
-                <li><a target="_blank" href="~/Home/importantLetter5">Benevolent Reserve Fund</a></li>
-            </ul>
-        </li>*@
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Important Letters</a>
+                                <ul class="dropdown-menu">
+                                    <li><a target="_blank" href="~/Home/importantLetter6">Fraud in name of AGIF</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter">Pre-EMI Revision : HBA</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter1">AGIF Loan : Inward Payment Using NEFT</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter2">Revision of Policy for Grant of HBA</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter3">Review of HBA</a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter4">Provisioning of IT Rebate Certificate </a></li>
+                                    <li><a target="_blank" href="~/Home/importantLetter5">Benevolent Reserve Fund</a></li>
+                                </ul>
+                            </li>*@
                         @*<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">FAQ</a>
-            <ul class="dropdown-menu">
-                <li><a href="~/Home/faq" target="_blank">Claims</a></li>
-                <li><a href="~/Home/faq1" target="_blank">Advances General</a></li>
-                <li><a href="~/Home/faq2" target="_blank">HBA</a></li>
-                <li><a href="~/Home/faq3" target="_blank">CA</a></li>
-                <li><a href="~/Home/faq4" target="_blank">PCA</a></li>
-            </ul>
-        </li>*@
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">FAQ</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Home/faq" target="_blank">Claims</a></li>
+                                    <li><a href="~/Home/faq1" target="_blank">Advances General</a></li>
+                                    <li><a href="~/Home/faq2" target="_blank">HBA</a></li>
+                                    <li><a href="~/Home/faq3" target="_blank">CA</a></li>
+                                    <li><a href="~/Home/faq4" target="_blank">PCA</a></li>
+                                </ul>
+                            </li>*@
 
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">IT CERT</a>
@@ -487,75 +503,75 @@
 
 
     @*@Html.Partial("_LoginPartial")*@
-<div class="container-fluid body-content">
-    @RenderBody()
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <div class="container-fluid body-content">
+        @RenderBody()
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 
 
-    <script>
-        jQuery.fn.liScroll = function (settings) {
-            settings = jQuery.extend({
-                travelocity: 0.03
-            }, settings);
-            return this.each(function () {
-                var $strip = jQuery(this);
-                $strip.addClass("newsticker")
-                var stripHeight = 1;
-                $strip.find("li").each(function (i) {
-                    stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
-                });
-                var $mask = $strip.wrap("<div class='mask'></div>");
-                var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
-                var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width
-                $strip.height(stripHeight);
-                var totalTravel = stripHeight;
-                var defTiming = totalTravel / settings.travelocity;	// thanks to Scott Waye
-                function scrollnews(spazio, tempo) {
-                    $strip.animate({ top: '-=' + spazio }, tempo, "linear", function () { $strip.css("top", 0); scrollnews(totalTravel, defTiming); });
-                }
-                scrollnews(totalTravel, defTiming);
-                $strip.hover(function () {
-                    jQuery(this).stop();
-                },
-                    function () {
-                        var offset = jQuery(this).offset();
-                        var residualSpace = offset.top + stripHeight;
-                        var residualTime = residualSpace / settings.travelocity;
-                        scrollnews(stripHeight, residualTime);
+        <script>
+            jQuery.fn.liScroll = function (settings) {
+                settings = jQuery.extend({
+                    travelocity: 0.03
+                }, settings);
+                return this.each(function () {
+                    var $strip = jQuery(this);
+                    $strip.addClass("newsticker")
+                    var stripHeight = 1;
+                    $strip.find("li").each(function (i) {
+                        stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
                     });
+                    var $mask = $strip.wrap("<div class='mask'></div>");
+                    var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");
+                    var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width
+                    $strip.height(stripHeight);
+                    var totalTravel = stripHeight;
+                    var defTiming = totalTravel / settings.travelocity;	// thanks to Scott Waye
+                    function scrollnews(spazio, tempo) {
+                        $strip.animate({ top: '-=' + spazio }, tempo, "linear", function () { $strip.css("top", 0); scrollnews(totalTravel, defTiming); });
+                    }
+                    scrollnews(totalTravel, defTiming);
+                    $strip.hover(function () {
+                        jQuery(this).stop();
+                    },
+                        function () {
+                            var offset = jQuery(this).offset();
+                            var residualSpace = offset.top + stripHeight;
+                            var residualTime = residualSpace / settings.travelocity;
+                            scrollnews(stripHeight, residualTime);
+                        });
+                });
+            };
+
+            $(function () {
+                $("ul#ticker01").liScroll();
+                $("ul#ticker02").liScroll();
+                $("ul#ticker03").liScroll();
+                $("ul#ticker04").liScroll();
             });
-        };
-
-        $(function () {
-            $("ul#ticker01").liScroll();
-            $("ul#ticker02").liScroll();
-            $("ul#ticker03").liScroll();
-            $("ul#ticker04").liScroll();
-        });
-    </script>
+        </script>
 
 
-    <script>
-        function ValInData(input) {
-            var regex = /[^a-zA-Z0-9/_& ]/g;
-            input.value = input.value.replace(regex, "");
-        }
+        <script>
+            function ValInData(input) {
+                var regex = /[^a-zA-Z0-9/_& ]/g;
+                input.value = input.value.replace(regex, "");
+            }
 
-        function ValInDataLetter(input) {
-            var regex = /[^a-zA-Z/_& ]/g;
-            input.value = input.value.replace(regex, "");
-        }
+            function ValInDataLetter(input) {
+                var regex = /[^a-zA-Z/_& ]/g;
+                input.value = input.value.replace(regex, "");
+            }
 
-        function ValInDataNo(input) {
-            var regex = /[^0-9/_& ]/g;
-            input.value = input.value.replace(regex, "");
-        }
-        
-    </script>
+            function ValInDataNo(input) {
+                var regex = /[^0-9/_& ]/g;
+                input.value = input.value.replace(regex, "");
+            }
 
-</div>
+        </script>
+
+    </div>
 
 
 

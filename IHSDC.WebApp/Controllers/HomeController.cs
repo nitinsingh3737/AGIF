@@ -14,6 +14,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Windows.Data;
+using static System.Net.WebRequestMethods;
 using Access = Microsoft.Office.Interop.Access;
 
 namespace IHSDC.WebApp.Controllers
@@ -215,7 +216,7 @@ namespace IHSDC.WebApp.Controllers
         {
             try 
             { 
-                return File("~/_forms/mat/RA_OFF_OCT_MAR19", "application/all");
+                return File("~/_forms/mat/RA_OFF_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
@@ -226,7 +227,7 @@ namespace IHSDC.WebApp.Controllers
         {
             try
             { 
-                return File("~/_forms/mat/RA_JCOR_OCT_MAR19", "application/all");
+                return File("~/_forms/mat/RA_JCOR_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
@@ -237,7 +238,7 @@ namespace IHSDC.WebApp.Controllers
         {
             try
             { 
-                return File("~/_forms/mat/TA_OFF_OCT_MAR19", "application/all");
+                return File("~/_forms/mat/TA_OFF_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
@@ -248,7 +249,7 @@ namespace IHSDC.WebApp.Controllers
         {
             try
             { 
-                return File("~/_forms/mat/TA_JCOR_OCT_MAR19", "application/all");
+                return File("~/_forms/mat/TA_JCOR_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
@@ -259,7 +260,7 @@ namespace IHSDC.WebApp.Controllers
         {
             try
             { 
-                return File("~/_forms/mat/APSD_OFF_OCT_MAR19", "application/all");
+                return File("~/_forms/mat/APSD_OFF_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
@@ -269,8 +270,9 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult DownloadPDF5()
         {
             try
-            { 
-                return File("~/_forms/mat/APSD_JCOR_OCT_MAR19", "application/all");
+            {
+                
+                return File("~/_forms/mat/APSD_JCOR_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
@@ -281,7 +283,7 @@ namespace IHSDC.WebApp.Controllers
         {
             try
             { 
-                return File("~/_forms/mat/DSC_JCOR_OCT_MAR19", "application/all");
+                return File("~/_forms/mat/DSC_JCOR_OCT_MAR19.pdf", "application/pdf");
             }
             catch
             {
