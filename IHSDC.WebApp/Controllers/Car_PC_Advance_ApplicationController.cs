@@ -16,6 +16,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using DocumentFormat.OpenXml.Presentation;
 using IHSDC.WebApp.Models;
 using Access = Microsoft.Office.Interop.Access;
 
@@ -711,7 +712,11 @@ namespace IHSDC.WebApp.Controllers
                 ViewBag.Message = TempData["message"];
                 ViewBag.ApplicationId = TempData["ApplicationId"];
 
-                int NewId = Convert.ToInt32(EncryptDecrypt.Decryption(id));
+
+                int NewId = 48;
+
+                //int NewId = Convert.ToInt32(EncryptDecrypt.Decryption(id));
+                //int NewId = Convert.ToInt32(id);
 
                 if (id == null)
                 {
@@ -978,7 +983,9 @@ namespace IHSDC.WebApp.Controllers
                     }
 
                    
-                    car_PC_Advance_Application.Army_No = collection["prefixnum"][0] + collection["IC"] + collection["sufixnum"];
+                   
+                    car_PC_Advance_Application.Army_No = collection["prefixnum"] + collection["IC"] + collection["sufixnum"];
+
                     car_PC_Advance_Application.Old_Army_No = collection["prefixnum"] + collection["oldIC"] + collection["oldsufixnum"];
 
 
@@ -1366,18 +1373,7 @@ namespace IHSDC.WebApp.Controllers
             return Json(data, JsonRequestBehavior.AllowGet);
         }
 
-        //public ActionResult CDA_PAO_Load (string parameter)
-        //{
-        //    // Use the parameter as needed in your method
-        //    var dropdownData = (new IHSDC.WebApp.Models.DropDownClass()).CDA_PAO_LoadUnits(parameter);
-        //    return Json(dropdownData, JsonRequestBehavior.AllowGet);
-        //}
-
-
-        public ActionResult formShow()
-        {
-            return View();
-        }
+        
         [HttpGet]
         public ActionResult CheckArmyNo(string frequency)
         {

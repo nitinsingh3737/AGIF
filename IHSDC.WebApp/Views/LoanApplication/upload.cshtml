@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "upload";
+    ViewBag.Title = "HandleAction";
     Layout = "~/Views/Shared/_Layoutagi.cshtml";
 }
 
@@ -17,9 +17,28 @@
             <label>Select Application Type</label>
             <select id="ltype" name="ltype" class="form-control">
                 <option value="Car">Car</option>
-                <option value="PCA">Personal Computer Advance</option>
+                <option value="Car/Pc">Car/Pc</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-success">Search</button>
+        <div id="result"></div>
+        <input type="hidden" id="action" name="action" value="" />
+        <button type="button" id="btnUpload" class="btn btn-success" onclick="setAction('upload')">Upload</button>
+        <button type="button" id="btnDownload" class="btn btn-success" onclick="setAction('download')">Download</button>
+        <button type="button" id="btnStatus" class="btn btn-success" onclick="setAction('status')">Status</button>
     }
 </div>
+
+<script>
+    function setAction(action) {
+        document.getElementById('action').value = action;
+        document.forms[0].submit();
+    }
+</script>
+<script>
+    $('#btnUpload').click(function () {
+        alert("hii");
+    });
+</script>
+
+
+@*<script src="~/Content/CustomJS/LoanApplication.js"></script>*@

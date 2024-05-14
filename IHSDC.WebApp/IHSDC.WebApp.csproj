@@ -293,6 +293,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\Car_PC_Advance_Application1Controller.cs" />
     <Compile Include="Controllers\Car_PC_Advance_ApplicationController.cs" />
+    <Compile Include="Controllers\ClaimController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FinalITCERT.cs" />
     <Compile Include="Controllers\HierarchyController.cs" />
@@ -329,6 +330,7 @@
     <Compile Include="Models\ApplicationDatabaseHelper.cs" />
     <Compile Include="Models\CarPcModel.cs" />
     <Compile Include="Models\certModel.cs" />
+    <Compile Include="Models\Claim.cs" />
     <Compile Include="Models\DropDownClass.cs" />
     <Compile Include="Models\duplicateClass.cs" />
     <Compile Include="Models\EncryptDecrypt.cs" />
@@ -405,6 +407,7 @@
     <Content Include="Content\CustomJS\DeleteConfirmation.js" />
     <Content Include="Content\CustomJS\fontawesome.css" />
     <Content Include="Content\CustomJS\fontawesome.min.css" />
+    <Content Include="Content\CustomJS\LoanApplication.js" />
     <Content Include="Content\CustomJS\sweetalert.css" />
     <Content Include="Content\CustomJS\sweetalert.min.js" />
     <Content Include="Content\dataTables1\bootstrap.css" />
@@ -610,6 +613,7 @@
     <Content Include="Content\DataTables\images\sort_desc.png" />
     <Content Include="Content\DataTables\images\sort_desc_disabled.png" />
     <Content Include="Content\DataTables\swf\flashExport.swf" />
+    <Content Include="Content\DeveloperJs\Claim.js" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\font.css" />
@@ -1737,6 +1741,8 @@
     <Content Include="Scripts\jquery\jquery.min.map" />
     <Content Include="Scripts\jquery\jquery.slim.min.map" />
     <Content Include="Views\Car_PC_Advance_Application\formShow.cshtml" />
+    <Content Include="Views\Claim\Create.cshtml" />
+    <Content Include="Views\Claim\Search.cshtml" />
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
     <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />

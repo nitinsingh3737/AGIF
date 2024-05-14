@@ -19,6 +19,8 @@ namespace IHSDC.WebApp
        
         public virtual DbSet<CarPcModel> carPcModel { get; set; }
         public virtual DbSet<certModel> certModel { get; set; }
+
+        public virtual DbSet<Claim> Claims {get; set; }
         //public virtual DbSet<tbl_LoanFrequency>  LoanFrequency { get; set; }
 
         //protected override void OnModelCreating(DbModelBuilder modelBuilder)

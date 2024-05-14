@@ -309,7 +309,7 @@
                         changeYear: true,
                         showButtonPanel: true,
                         dateFormat: 'dd/mm/yy',
-                        minDate: newdt,
+                      /*  minDate: newdt,*/
 
                         startDate: '01/01/2010'
 
@@ -433,11 +433,11 @@
 </script>
 
 <script>
-    var ApplicationType = "@ViewBag.ApplicationId";
+      var applicationType = "@ViewBag.ApplicationId";
     Swal.fire({
         icon: 'info',
         title: 'Alert!',
-        text: ApplicationType
+        text: applicationType
     });
 </script>
 
@@ -468,15 +468,7 @@
             <table class="table table-borderless">
 
                 <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Loanee_Name, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.Loanee_Name, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataLetter(this)" } })
-                                @Html.ValidationMessageFor(model => model.Loanee_Name, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label" })
@@ -506,10 +498,6 @@
                             </div>
                         </div>
                     </td>
-
-
-                    @*<input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />*@
-
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Old_Army_No, htmlAttributes: new { @class = "control-label " })
@@ -543,10 +531,6 @@
 
                         </div>
                     </td>
-
-                </tr>
-
-                <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Rank, htmlAttributes: new { @class = "control-label " })
@@ -557,6 +541,52 @@
                                 @*@Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })*@
                             </div>
                         </div>
+                    </td>
+                    
+
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Loanee_Name, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Loanee_Name, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataLetter(this)" } })
+                                @Html.ValidationMessageFor(model => model.Loanee_Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group" id="Application-Type">
+                            @Html.LabelFor(model => model.ApplicationType, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.ApplicationType, (new IHSDC.WebApp.Models.DropDownClass()).LoadAppType(), "--Select--", new { @data_show_subtext = "true", required = "required", onchange = "changeApp(event);", @class = "select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                        </div>
+
+                    </td>
+
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.CarLoanType, (new IHSDC.WebApp.Models.DropDownClass()).LoadLoanType(), "--Select--", new { @data_show_subtext = "true", required = "required", disabled = "disabled", @class = "select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                        </div>
+
+                    </td>
+
+                   
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FrequencyOfLoan, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.FrequencyOfLoan, new SelectList(new List<object>(), "Value", "Text"), "--Select--", new { id = "FrequencyOfLoan", @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.FrequencyOfLoan, "", new { @class = "text-danger" })
+                        </div>
+
                     </td>
                     <td style="border-top:none;">
                         <div class="form-group">
@@ -674,6 +704,7 @@
                         </div>
                     </td>
 
+
                 </tr>
 
                 <tr>
@@ -688,7 +719,7 @@
                                    new SelectListItem{ Text="--Select--", Value = "0" },
                                    new SelectListItem{ Text="YES", Value = "YES" },
                                    new SelectListItem{ Text="NO", Value = "NO" },
-                                }, new { @class = "form-control", id = "extensionSelect", onchange = "handleExtensionChange(event);" })
+                                }, new { @class = "form-control Extension", id = "extensionSelect", onchange = "handleExtensionChange(event);" })
 
                             </div>
 
@@ -741,25 +772,11 @@
                             </div>
                         </div>
                     </td>
-                    <td style="border-top:none;">
-                        <div class="form-group" id="Application-Type">
-                            @Html.LabelFor(model => model.ApplicationType, htmlAttributes: new { @class = "control-label " })
-                            @Html.DropDownListFor(model => model.ApplicationType, (new IHSDC.WebApp.Models.DropDownClass()).LoadAppType(), "--Select--", new { @data_show_subtext = "true", required = "required", onchange = "changeApp(event);", @class = "select form-control", @data_live_search = "true" })
-                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
-                        </div>
-
-                    </td>
+                    
 
                 </tr>
                 <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
-                            @Html.DropDownListFor(model => model.CarLoanType, (new IHSDC.WebApp.Models.DropDownClass()).LoadLoanType(), "--Select--", new { @data_show_subtext = "true", required = "required", disabled = "disabled", @class = "select form-control", @data_live_search = "true" })
-                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
-                        </div>
-
-                    </td>
+                   
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Aadhar No</label>
@@ -780,15 +797,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="border-top:none;">
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.FrequencyOfLoan, htmlAttributes: new { @class = "control-label " })
-                            @Html.DropDownListFor(model => model.FrequencyOfLoan, new SelectList(new List<object>(), "Value", "Text"), "--Select--", new { id = "FrequencyOfLoan", @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
-                            @Html.ValidationMessageFor(model => model.FrequencyOfLoan, "", new { @class = "text-danger" })
-                        </div>
-
-                    </td>
+                    
 
                 </tr>
             </table>
@@ -1334,7 +1343,7 @@
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                 <button type="submit" style="display:none;" id="create" value="Create">Submit</button>
-                @*<button type="button" id="DataFill" value="DataFill">Demo data fill</button>*@
+                <button type="button" id="DataFill" value="DataFill">Demo data fill</button>
             </div>
         </div>
         <!-- Circles which indicates the steps of the form: -->

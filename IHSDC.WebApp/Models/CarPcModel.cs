@@ -92,7 +92,7 @@ namespace IHSDC.WebApp.Models
         }
 
 
-        [Display(Name = "Enrollment_Date")]
+        [Display(Name = "Enrollment Date")]
         public string Enrollment_Date { get; set; }
 
         [Display(Name = "Promotion Date")]
@@ -242,7 +242,8 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line2")]
-        public string Pers_Address_Line2 { get; set; }
+        public string Pers_Address_Line2 { get; set; } 
+
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line3")]

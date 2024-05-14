@@ -7,14 +7,14 @@
         $('#Loanee_Name').val("AK PATIL");
 
         $('#dropdownSelect').val("IC");
-        $('#IC').val("45678833");
+        $('.ic').val("45678833");
         $('#SuffixLetter').val("M");
 
         $('#dropdownSelect1').val("IC");
         $('#oldIC').val("45678833");
         $('#oldsufixnum').val("M");
 
-        $('#Rank').val("SUB");
+        $('#Rank').val("19");
         $('#Regt_Corps').val("ASSAM");
         $('#Unit').val("ASDC");
         $('#Next_Fmn_Hq').val("DGIS");
@@ -24,7 +24,7 @@
         $('#CDA_PAO').val("TEST1");
         $('#Date_Of_Birth').val("01/04/2000");
         $('#Enrollment_Date').val("01/04/2018");
-        $('#Extension_of_Service_in_Present_Rank').val("Yes");
+        $('#Extension_of_Service_in_Present_Rank').val("YES");
         
 
         $('#ExtentionfileUpload').val("abc.pdf");
@@ -83,6 +83,7 @@
         
 
         $('#Pers_Address_Line1').val("NEW DELHI");
+        $('#Pers_Address_Line2').val("New DELHI");
         $('#Permanent_Addr_Line2').val("NEW DELHI");
         $('#Pers_Address_Line3').val("NEW DELHI");
         $('#Pers_Address_Line4').val("NEW DELHI");
@@ -1371,7 +1372,7 @@ jQuery(document).ready(function ($) {
 //08-05-24
 
 $("#FrequencyOfLoan").change(function () {
-    debugger;
+
     // Get the selected value of #FrequencyOfLoan
     var selectedValue = $(this).val();
     var armyNo = $('#dropdownSelect').val() + $('.ic').val() + $('#SuffixLetter').val();
