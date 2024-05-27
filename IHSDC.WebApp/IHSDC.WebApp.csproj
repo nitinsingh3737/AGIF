@@ -405,6 +405,7 @@
     <Content Include="Content\CustomJS\DeleteConfirmation.js" />
     <Content Include="Content\CustomJS\fontawesome.css" />
     <Content Include="Content\CustomJS\fontawesome.min.css" />
+    <Content Include="Content\CustomJS\LoanApplication.js" />
     <Content Include="Content\CustomJS\sweetalert.css" />
     <Content Include="Content\CustomJS\sweetalert.min.js" />
     <Content Include="Content\dataTables1\bootstrap.css" />
@@ -1736,7 +1737,6 @@
     <Content Include="Style\.vs\VSWorkspaceState.json" />
     <Content Include="Scripts\jquery\jquery.min.map" />
     <Content Include="Scripts\jquery\jquery.slim.min.map" />
-    <Content Include="Views\Car_PC_Advance_Application\formShow.cshtml" />
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
     <None Include="_bin_deployableAssemblies\amd64\sqlceca40.dll" />
@@ -1775,14 +1775,6 @@
     <Content Include="_forms\extended_insurance\Indemnity_Bond_with_one_Sureity_for_Insurance_and_Extended_I.pdf" />
     <Content Include="_forms\final_withdrawl_maturity_benefits\50%25_withdrawal_on_children_edn.pdf" />
     <Content Include="_forms\final_withdrawl_maturity_benefits\50%25_withdrawal_on_marriage_of_ward.pdf" />
-    <Content Include="_forms\mat\APSD_JCOR_OCT_MAR19" />
-    <Content Include="_forms\mat\APSD_OFF_OCT_MAR19" />
-    <Content Include="_forms\mat\DSC_JCOR_OCT_MAR19" />
-    <Content Include="_forms\mat\RA_GC_OCT_MAR19" />
-    <Content Include="_forms\mat\RA_JCOR_OCT_MAR19" />
-    <Content Include="_forms\mat\RA_OFF_OCT_MAR19" />
-    <Content Include="_forms\mat\TA_JCOR_OCT_MAR19" />
-    <Content Include="_forms\mat\TA_OFF_OCT_MAR19" />
     <Content Include="Views\Upload\UploadFile.cshtml" />
     <Content Include="Views\House_Building_Advance_Application\ChangeStatus.cshtml" />
     <Content Include="Views\House_Building_Advance_Application\Create.cshtml" />
@@ -1852,6 +1844,7 @@
     <Folder Include="Style\.vs\Style\v15\" />
     <Folder Include="Views\Analytics\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="_forms\mat\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">

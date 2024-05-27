@@ -5,6 +5,21 @@
     Layout = "~/Views/Shared/_Layoutagi.cshtml";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">Please Contact to Administrator.</h2>
+@*<h1 class="text-danger">Error.</h1>
+    <h2 class="text-danger">Please Contact to Administrator. AJ</h2>*@
 
+@model System.Web.Mvc.HandleErrorInfo
+
+
+
+<h1 class="text-danger">Error</h1>
+<h2 class="text-danger">An unexpected error occurred. Please contact the administrator.</h2>
+
+@if (Model != null)
+{
+    <div>
+        <h3>Exception Details:</h3>
+        <p>@Model.Exception.Message</p>
+        <p>@Model.Exception.StackTrace</p>
+    </div>
+}

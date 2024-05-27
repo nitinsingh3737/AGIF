@@ -10,24 +10,9 @@ namespace IHSDC.WebApp.Models
 {
     public class CarPcModel
     {
-        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        //{
-        //    if (DateTime.Parse(Date_Of_Birth) > DateTime.Parse(Enrollment_Date))
-        //    {
-        //        yield return
-        //          new ValidationResult(errorMessage: "Enrollment Date must be greater than Date Of Birth",
-        //                               memberNames: new[] { "Enrollment_Date" });
-        //    }
-        //}
-
-        //public CarPcModel()
-        //{
-        //    this.DateTimeUpdated = DateTimeUpdated.ToString("");
-        //}
-
-        // public IList<CarPcModel> carPcModel { get; set; }
+        
         [Key]
-        //public int Application_Id { get; set; }
+      
         public int Application_Id { get; set; }
 
         [Required]
@@ -242,7 +227,8 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line2")]
-        public string Pers_Address_Line2 { get; set; }
+        public string Pers_Address_Line2 { get; set; } 
+
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line3")]
@@ -290,6 +276,7 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         //[RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Enter valid email address")]
         [Display(Name = "E-Mail Id")]
+        [EmailAddress]
         public string E_Mail_Id { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]

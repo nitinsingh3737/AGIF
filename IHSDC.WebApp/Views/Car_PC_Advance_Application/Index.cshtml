@@ -31,7 +31,7 @@
         @Html.ActionLink("Export To CSV", "ExportToCsv")
         @using (Html.BeginForm("ExportToCsvDateWise", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
-            <input type="date" id="date" name="date" />
+            <input type="date" id="date" name="date" required/>
             <button type="submit" value="Download">ExportToCsvDateWise</button>
         }
         <table id="table" class="table table-striped table-bordered" style="width:100%">

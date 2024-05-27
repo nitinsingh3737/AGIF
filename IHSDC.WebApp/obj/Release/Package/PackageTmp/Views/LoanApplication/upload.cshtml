@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "upload";
+    ViewBag.Title = "HandleAction";
     Layout = "~/Views/Shared/_Layoutagi.cshtml";
 }
 
@@ -9,6 +9,7 @@
     <p style="color:red;">@ViewBag.Mess1</p>
     @using (Html.BeginForm())
     {
+        @Html.AntiForgeryToken()
         <div class="form-group">
             <label>Enter ArmyNo</label>
             <input type="text" id="armyNo" name="armyNo" class="form-control" required />
@@ -17,9 +18,12 @@
             <label>Select Application Type</label>
             <select id="ltype" name="ltype" class="form-control">
                 <option value="Car">Car</option>
-                <option value="PCA">Personal Computer Advance</option>
+                <option value="Car/Pc">Car/Pc</option>
             </select>
         </div>
+        <div id="result"></div>
+
         <button type="submit" class="btn btn-success">Search</button>
+
     }
 </div>

@@ -181,7 +181,8 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+            LoginViewModel model = new LoginViewModel();
+            return View(model);
         }
 
 
@@ -190,62 +191,58 @@ namespace IHSDC.WebApp.Controllers
         // POST: /Account/Login
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                Information("You are required to login in order to continue, please login with credentials provided by your superior HQ.", true);
-                return View(model);
-            }
-
-            var loggedinUser = await UserManager.FindAsync(model.Username, model.Password);
-            if (loggedinUser != null)
-            {
-                // change the security stamp only on correct username/password
-                await UserManager.UpdateSecurityStampAsync(loggedinUser.Id);
-            }
-
-            // This doesn't count login failures towards account lockout
-            // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, shouldLockout: true);
-            switch (result)
-            {
-                case SignInStatus.Success:
-                    Session["UserIntId"] = _db.Users.FirstOrDefault(i => i.UserName == model.Username).IntId;
-                    Session["Username"] = model.Username;
-
-                    //var currentuser = UserManager.FindById(User.Identity.GetUserId());
-                    //ApplicationUserRole Arole = new ApplicationUserRole();
-
-
-
-
-                    //if (User.IsInRole("Dir"))
-                    //{
-                    //    Session["Role"] = "Dir";
-                    //}
-                    //else if (User.IsInRole("AAG"))
-                    //{
-                    //    Session["Role"] = "AAG";
-                    //}
-                    //else
-                    //{
-                    //    Session["Role"] = "Nill";
-                    //}
-
-                    LogSignin(User.Identity.Name, _db.Users.FirstOrDefault(i => i.UserName == model.Username).IntId.ToString(), Session.SessionID);
-                    LogVisit();                    
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    Danger("Invalid login attempt.", true);
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                if (!ModelState.IsValid)
+                {
+                    Information("You are required to login in order to continue, please login with credentials provided by your superior HQ.", true);
                     return View(model);
+                }
+
+                var loggedinUser = await UserManager.FindAsync(model.Username, model.Password);
+                if (loggedinUser != null)
+                {
+                    // change the security stamp only on correct username/password
+                    await UserManager.UpdateSecurityStampAsync(loggedinUser.Id);
+                }
+
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, change to shouldLockout: true
+                var result = await SignInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, shouldLockout: true);
+                switch (result)
+                {
+                    case SignInStatus.Success:
+                        Session["UserIntId"] = _db.Users.FirstOrDefault(i => i.UserName == model.Username).IntId;
+                        Session["Username"] = model.Username;
+
+                        LogSignin(User.Identity.Name, _db.Users.FirstOrDefault(i => i.UserName == model.Username).IntId.ToString(), Session.SessionID);
+                        LogVisit();
+                        return RedirectToAction("Index", "Home");
+                    case SignInStatus.LockedOut:
+                        return View("Lockout");
+                    case SignInStatus.RequiresVerification:
+                        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    case SignInStatus.Failure:
+                    default:
+                        Danger("Invalid login attempt.", true);
+                        ModelState.AddModelError("", "Invalid login attempt.");
+                        return View(model);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                //string ret = ex.Message.ToString();
+                if(Session["UserIntId"]!=null)
+                return RedirectToAction("Index", "Home");
+                else
+                    return RedirectToAction("Login", "Account");
+                //return View("Error");
             }
         }
 

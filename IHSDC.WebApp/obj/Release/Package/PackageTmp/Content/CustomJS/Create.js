@@ -1,29 +1,50 @@
 ﻿$(document).ready(function () {
 
-
-    $("#Year_Of_Service").keypress(function () {
-        /* $("span").text(i += 1);*/
-        alert("raju rastogi");
-    });
-
+    Inputmask("99/999/999999A", {
+        definitions: {
+            'A': {
+                validator: "[A-Za-z]",
+                cardinality: 1,
+                casing: "upper" // optional, forces the letter to be uppercase
+            }
+        }
+    }).mask(document.getElementById("CDA_Account_No"));
+    Inputmask("AAAAA9999A", {
+        definitions: {
+            'A': {
+                validator: "[A-Za-z]",
+                cardinality: 1,
+                casing: "upper" // optional, forces the letter to be uppercase
+            }
+        }
+    }).mask(document.getElementById("PANNo"));
+    Inputmask("AAAA9999999", {
+        definitions: {
+            'A': {
+                validator: "[A-Za-z]",
+                cardinality: 1,
+                casing: "upper" // optional, forces the letter to be uppercase
+            }
+        }
+    }).mask(document.getElementById("IFSC_Code"));
 
 
 
     $("#DataFill").click(function () {
 
         /* Personal Details */
-       
+
         $('#Loanee_Name').val("AK PATIL");
 
         $('#dropdownSelect').val("IC");
-        $('#IC').val("45678833");
+        $('.ic').val("45678833");
         $('#SuffixLetter').val("M");
 
         $('#dropdownSelect1').val("IC");
         $('#oldIC').val("45678833");
         $('#oldsufixnum').val("M");
 
-        $('#Rank').val("SUB");
+        $('#Rank').val("19");
         $('#Regt_Corps').val("ASSAM");
         $('#Unit').val("ASDC");
         $('#Next_Fmn_Hq').val("DGIS");
@@ -33,13 +54,13 @@
         $('#CDA_PAO').val("TEST1");
         $('#Date_Of_Birth').val("01/04/2000");
         $('#Enrollment_Date').val("01/04/2018");
-        $('#Extension_of_Service_in_Present_Rank').val("Yes");
-        
+        $('#Extension_of_Service_in_Present_Rank').val("YES");
+
 
         $('#ExtentionfileUpload').val("abc.pdf");
         $('#Promotion_Date').val("01/04/2024");
         $('#Retirement_Date').val("01/04/2050");
-        
+
         $('#Year_Of_Service').val("6");
         $('#Residual_Service').val("26");
         $('#ApplicationType').val("CAR");
@@ -49,7 +70,7 @@
 
 
 
-       /* Salary Details */
+        /* Salary Details */
         $('#Salary_Slip_Month_Year').val("April 2024");
         $('#CDA_Account_No').val("77/788/889999N");
         $('#Basic_Salary').val("78654");
@@ -68,7 +89,7 @@
         $('#MISC').val("33");
         $('#TPTL_Pay').val("33");
         $('#MISC_Pay').val("33");
-       
+
         /*Dealers Details*/
 
         $('#Dealer_Name').val("AutoNation");
@@ -88,10 +109,11 @@
         $('#Amount_Applied_For_Loan').val("900000");
         $('#No_Of_EMI_Applied').val('30');
 
-     /*   Address Details*/
-        
+        /*   Address Details*/
+
 
         $('#Pers_Address_Line1').val("NEW DELHI");
+        $('#Pers_Address_Line2').val("New DELHI");
         $('#Permanent_Addr_Line2').val("NEW DELHI");
         $('#Pers_Address_Line3').val("NEW DELHI");
         $('#Pers_Address_Line4').val("NEW DELHI");
@@ -110,7 +132,7 @@
     });
 
     $('#Rank').change(function () {
-        alert("Rank change");
+
         $('#Date_Of_Birth').val('');
         $('#Promotion_Date').val('');
         $('#Enrollment_Date').val('');
@@ -119,9 +141,32 @@
         $('#Year_Of_Service').val('');
     });
 
-   
-    
-    ss
+    $('#dropdownSelect').change(function () {
+        var prefix = $(this).val();
+        alert(prefix);
+        if (prefix === "JC" || prefix === "OR") {
+            // Disable the input field if prefix is "JC" or "OR"
+            $('#CDA_Account_No').val("77/788/889999N");
+            $('#CDA_Account_No').prop('disabled', true);
+        } else {
+            // Enable the input field for other prefixes
+
+            $('#CDA_Account_No').prop('disabled', false);
+        }
+    });
+
+    /*--22May-Ajay*/
+    //$('#dropdownSelect').change(function () {
+    //    var prefix = $(this).val();
+    //    if (prefix === "JC" || prefix === "OR") {
+    //        $('#CDA_Account_No').val("random");
+    //        $('#CDA_Account_No').prop('readonly', true);
+    //    } else {
+    //        $('#CDA_Account_No').prop('readonly', false);
+    //    }
+    //});
+
+
 
     $('#Promotion_Date').datepicker({
         changeMonth: true,
@@ -130,13 +175,13 @@
         dateFormat: 'dd/mm/yy'
     });
     var data = $('#prefixnum').val();
-    alert(data);
+
 
     //var selectedValue = $("#extensionSelect").val();
     $('#Veh_Type').change(function () {
-        alert("Prefix change");
+
         var prefix = $('#dropdownSelect').val();
-        alert(prefix);
+
         var Admissiable_Amount = 0;
         var ApplicationType = $('#ApplicationType').val();
         var CarLoanType = $('#CarLoanType').val();
@@ -222,10 +267,11 @@ function showTab(n) {
 }
 
 function nextPrev(n) {
-   
+
     // This function will figure out which tab to display
     var x = document.getElementsByClassName("tab");
     // Exit the function if any field in the current tab is invalid:
+
     if (n == 1 && !validateForm()) return false;
     // Hide the current tab:
     x[currentTab].style.display = "none";
@@ -244,7 +290,7 @@ function nextPrev(n) {
 
 
 function fixStepIndicator(n) {
-    
+
     // This function removes the "active" class of all steps...
     var i, x = document.getElementsByClassName("step");
     for (i = 0; i < x.length; i++) {
@@ -253,6 +299,9 @@ function fixStepIndicator(n) {
     //... and adds the "active" class on the current step:
     x[n].className += " active";
 }
+
+/*Set Automatically Suffix*/
+
 
 /*Set Automatically Suffix*/
 function SetOldSuffixLetter(obj) {
@@ -333,11 +382,11 @@ function SetOldSuffixLetter(obj) {
     }
     $('#oldsufixnum').val(Sletter.toString());
 
-    var Prefix = document.getElementById("dropdownSelect1").value;
+    //var Prefix = document.getElementById("dropdownSelect1").value;
 
-    $('#dropdownSelect1').val(Prefix);
-    $('#oldIC').val(ArmyNumber);
-    var Suffix = document.getElementById("SuffixLetter").value;
+    //$('#dropdownSelect1').val(Prefix);
+    //$('#oldIC').val(ArmyNumber);
+    //var Suffix = document.getElementById("SuffixLetter").value;
 
 
 }
@@ -422,17 +471,17 @@ function SetSuffixLetter(obj) {
 
     var Prefix = document.getElementById("dropdownSelect").value;
 
-    $('#dropdownSelect1').val(Prefix);
-    $('#oldIC').val(ArmyNumber);
+    //$('#dropdownSelect1').val(Prefix);
+    //$('#oldIC').val(ArmyNumber);
     var Suffix = document.getElementById("SuffixLetter").value;
-    $('#oldsufixnum').val(Suffix);
+    /* $('#oldsufixnum').val(Suffix);*/
 
 }
 
 
 /*date handler */
 function diff_years(dt2, dt1) {
-    debugger;
+
     var diff = (dt2.getTime() - dt1.getTime()) / 1000;
     diff /= (60 * 60 * 24);
     return Math.abs(Math.round(diff / 365.25));
@@ -454,8 +503,8 @@ function calallser1(e) {
     var rank = parseInt(ranks);
 
     var Regiment = $('#Regt_Corps').val().toUpperCase();
-   
-    
+
+
     if (!rank) {
         alert("Rank value is empty. Please enter a valid rank.");
         $('#Date_Of_Birth').val('');
@@ -466,15 +515,15 @@ function calallser1(e) {
         $('#Date_Of_Birth').val('');
         return;
     }
-   
+
     var dateOfBirthString = e;
-    
-     
+
+
     var dateParts = dateOfBirthString.split('/');
 
     // Ensure that the dateParts array has three elements
     if (dateParts.length === 3) {
-        var day  = parseInt(dateParts[0], 10);
+        var day = parseInt(dateParts[0], 10);
         var month = parseInt(dateParts[1], 10) - 1; // Months are zero-based (0-11)
         var year = parseInt(dateParts[2], 10);
 
@@ -482,7 +531,7 @@ function calallser1(e) {
         if (!isNaN(year) && !isNaN(month) && !isNaN(day)) {
 
             var BirthDate = new Date(year + 0, month, day);
-          
+
             var enrollmentDate = new Date(year + 18, month, day); // Enrollment after 18 years
             /*var retirementAge = 65;*/ // Retirement age is assumed to be 65
 
@@ -491,7 +540,7 @@ function calallser1(e) {
                     case "INF":
                     case "ASSAM":
                     case "PBG":
-                    case "GUARDS": 
+                    case "GUARDS":
                     case "PARA":
                     case "PUNJAB":
                     case "MADRAS":
@@ -528,8 +577,8 @@ function calallser1(e) {
                     case "MF":
                     case "14GR":
                     case "58GTC":
-                    
-                    
+
+
                         switch (rank) {
                             case 1:
                                 ser = 60;
@@ -589,7 +638,7 @@ function calallser1(e) {
                             case 8:
                                 ser = 54;
                                 break;
-                           
+
                             default:
                                 break;
                         }
@@ -617,7 +666,7 @@ function calallser1(e) {
                             case 6:
                                 ser = 56;
                                 break;
-                            
+
                             default:
                                 break;
                         }
@@ -763,7 +812,7 @@ function calallser1(e) {
                             case 63:
                                 ser = 20;
                                 break;
-                           
+
                             default:
                                 break;
                         }
@@ -792,7 +841,7 @@ function calallser1(e) {
                         break;
                 }
             }
-             
+
             if (ser != null) {
                 if (rank < 10) {
 
@@ -808,7 +857,7 @@ function calallser1(e) {
             else {
                 var retirementDate = new Date(enrollmentDate.getFullYear() + 30, enrollmentDate.getMonth(), enrollmentDate.getDate());
             }
-           
+
 
             var formattedEnrollmentDate = formatDate(enrollmentDate);
             var formattedRetirementDate = formatDate(retirementDate);
@@ -818,7 +867,7 @@ function calallser1(e) {
             $('#Retirement_Date').val(formattedRetirementDate);
 
             // Alert the dates (optional for debugging)
-           /* alert("Enrollment Date: " + formattedEnrollmentDate + "\nRetirement Date: " + formattedRetirementDate);*/
+            /* alert("Enrollment Date: " + formattedEnrollmentDate + "\nRetirement Date: " + formattedRetirementDate);*/
         } else {
             console.error('Invalid date.');
         }
@@ -828,16 +877,16 @@ function calallser1(e) {
 }
 
 function formatDate(date) {
-     
+
     var year = date.getFullYear();
     var month = ("0" + (date.getMonth() + 1)).slice(-2);
     var day = ("0" + date.getDate()).slice(-2);
-    return day + "/" + month + "/" + year ;
+    return day + "/" + month + "/" + year;
 }
 
 
 function handler(e) {
-  
+
     $('#mess').text("This field has been calculated based on your system DateTime. Ensure system DateTime is correct.");
 
     var dateString = $('#Enrollment_Date').val();
@@ -850,10 +899,10 @@ function handler(e) {
     dt2 = new Date();
     $('#Year_Of_Service').val(diff_years(dt1, dt2));
     //console.log(diff_years(dt1, dt2));
-    
+
     var d1 = new Date($('#Enrollment_Date').val());
     var d2 = new Date($('#Retirement_Date').val());
-  
+
 
 
     var reds = diff_years(d1, d2);
@@ -866,7 +915,7 @@ function handler(e) {
 
 
 function calculateResidual_Service(e) {
-     
+
     var dateString = $('#Enrollment_Date').val();
 
     var dateParts = dateString.split("/");
@@ -904,7 +953,7 @@ function handleExtensionChange(event) {
 
     // Check if Rank is 12
     if (Rank === '12') {
-        alert("ajay");
+
         var promotionDate = $('#Promotion_Date').val();
 
         // Check if Promotion Date is empty
@@ -914,20 +963,17 @@ function handleExtensionChange(event) {
             return;
         }
 
-        // Display upload option if selectedValue is "1" or "yes"
-        if (selectedValue === "1" || selectedValue.toLowerCase() === "yes") {
-            document.getElementById("uploadOption").style.display = "block"; // Show upload option
-            alert("Please upload a copy of Pt II order of extn of service or pay slip in which Pt II order adjusted");
+
+        if (selectedValue.toLowerCase() === "yes") {
 
             var retirementDate = new Date(promotionDate);
             retirementDate.setFullYear(retirementDate.getFullYear() + 4);
-
             var RetirementDate = extensionFormatDate(retirementDate);
 
             $('#Retirement_Date').val(RetirementDate);
 
 
-              /* For Residual Service*/
+            /* For Residual Service*/
             var dateString = $('#Enrollment_Date').val();
 
             var dateParts = dateString.split("/");
@@ -937,28 +983,13 @@ function handleExtensionChange(event) {
             dt1 = new Date(dateObject);
             dt2 = new Date();
             $('#Year_Of_Service').val(diff_years(dt1, dt2));
-            //console.log(diff_years(dt1, dt2));
-
             var d1 = new Date($('#Enrollment_Date').val());
             var d2 = new Date($('#Retirement_Date').val());
-
-
-
             var reds = diff_years(d1, d2);
-
             $('#Residual_Service').val(reds - parseInt($('#Year_Of_Service').val()));
             $('#mess').text('');
         } else {
-            document.getElementById("uploadOption").style.display = "none"; // Hide upload option
-            // Instead of setting to "no", we clear the value of FileUpload field
-            $('#ExtentionfileUpload').val(""); // Clear the value
-            $('#fileUploadError').text(""); // Clear any previous error message
 
-            //var retirementDate = new Date($('#Retirement_Date').val());
-            //retirementDate.setFullYear(retirementDate.getFullYear() - 4);
-
-            //var RetirementDate1 = extensionFormatDate(retirementDate);
-            //$('#Retirement_Date').val('');
             var dt = $('#Date_Of_Birth').val();
             calallser1(dt);
 
@@ -968,12 +999,8 @@ function handleExtensionChange(event) {
             $('#mess').text('');
         }
     } else {
-        // For Rank other than 12
-        // Similar logic as above, with adjustments for retirement years
-        if (selectedValue === "1" || selectedValue.toLowerCase() === "yes") {
-            document.getElementById("uploadOption").style.display = "block"; // Show upload option
-            alert("Please upload a copy of Pt II order of extn of service or pay slip in which Pt II order adjusted");
 
+        if (selectedValue.toLowerCase() === "yes") {
             var retirementDate = new Date($('#Retirement_Date').val());
             retirementDate.setFullYear(retirementDate.getFullYear() + 2);
 
@@ -986,8 +1013,7 @@ function handleExtensionChange(event) {
             $('#mess').text('');
         } else {
             document.getElementById("uploadOption").style.display = "none"; // Hide upload option
-            // Instead of setting to "no", we clear the value of FileUpload field
-            $('#FileUpload').val(""); // Clear the value
+            $('#ExtentionfileUpload').val(''); // Clear the value
             $('#fileUploadError').text(""); // Clear any previous error message
 
             var retirementDate = new Date($('#Retirement_Date').val());
@@ -1003,9 +1029,6 @@ function handleExtensionChange(event) {
     }
 }
 
-
-
-
 // Function to format date for extension
 function extensionFormatDate(date) {
     var month = '' + (date.getMonth() + 1);
@@ -1015,7 +1038,7 @@ function extensionFormatDate(date) {
     if (month.length < 2) month = '0' + month;
     if (day.length < 2) day = '0' + day;
 
-    return [day,month,year ].join('/');
+    return [day, month, year].join('/');
 }
 
 
@@ -1053,7 +1076,7 @@ function formatDates(date) {
 
 //function validateForm() {
 
-//    debugger;
+//     
 //    var x, y, z, a, i, valid = true;
 //    x = document.getElementsByClassName("tab");
 //    y = x[currentTab].getElementsByTagName("input");
@@ -1112,27 +1135,12 @@ function formatDates(date) {
 //    return valid;
 //}
 
-function validateFileUpload() {
-    debugger;
-    var fileUpload = $('#ExtentionfileUpload').val();
-    alert(fileUpload);
-    if (fileUpload == "") {
-
-        $('#ExtentionfileUpload').val("BLANK");
-        // Set error message if fileUpload is empty
-        $('#fileUploadError').text("Please select a PDF file only");
-        return true; // Field is invalid
-    }
-    // Clear error message if fileUpload is not empty
-    $('#fileUploadError').text("");
-    return true; // Field is valid
-}
 
 
 function validateResidualService() {
-    debugger;
+
     var ResidualService = $('#Residual_Service').val();
-    alert(ResidualService);
+
     if (ResidualService <= 2) {
         // Set error message if fileUpload is empty
         $('#Residual_ServiceError').text("Retirement date of more than 02 yrs (24 months) only to be accepted");
@@ -1142,13 +1150,13 @@ function validateResidualService() {
     // Clear error message if fileUpload is not empty
     $('#Residual_ServiceError').text("");
     return true;
-     // Field is valid
+    // Field is valid
 }
 
 function validateYearOfService() {
-    debugger;
+
     var Year_Of_Service = $('#Year_Of_Service').val();
-    alert(Year_Of_Service);
+
     var prefix = $('#dropdownSelect').val();
     if (prefix == "JC" || prefix == "OR") {
         if (Year_Of_Service <= 5) {
@@ -1166,38 +1174,69 @@ function validateYearOfService() {
         return true;
     }
     // Clear error message if fileUpload is not empty
-   
+
     // Field is valid
 }
 
 function validateForm() {
-    
+
     // This function deals with validation of the form fields
     var x, y, i, valid = true;
     // Validate FileUpload field
-    /*valid = validateFileUpload() && valid;*/
+
     valid = validateYearOfService() && valid;
 
     valid = validateResidualService() && valid;
 
     x = document.getElementsByClassName("tab");
-    y = x[currentTab].getElementsByTagName("input");
 
-    
+    /* y = x[currentTab].getElementsByTagName("input");*/
+
+    var inputs = x[currentTab].getElementsByTagName("input");
+    var selects = x[currentTab].getElementsByTagName("select");
+    var y = Array.prototype.slice.call(inputs).concat(Array.prototype.slice.call(selects));
+
+
     // A loop that checks every input field in the current tab:
+    /* y = document.querySelectorAll('input');*/
+
+    // A loop that checks every input field:
     for (i = 0; i < y.length; i++) {
         // If a field is empty...
-        if (y[i].value.trim() == "") {
+        if (y[i].value.trim() === "" || y[i].value.trim() === "0") {
             // add an "invalid" class to the field:
             y[i].classList.add("invalid");
+
+            // Get the name attribute of the input field
+            var fieldName = y[i].getAttribute("name");
+
+            // Create a new span element for the error message
+            var errorMessage = document.createElement("span");
+            errorMessage.className = "error";
+            errorMessage.textContent = fieldName + "is required";
+
+            // Insert the error message after the input field
+            y[i].parentNode.insertBefore(errorMessage, y[i].nextSibling);
+
             // and set the current valid status to false
             valid = false;
+        } else {
+            // If the field is not empty, remove any existing error message
+            if (y[i].nextSibling && y[i].nextSibling.className === "error") {
+                y[i].parentNode.removeChild(y[i].nextSibling);
+            }
         }
-        if (y[11].value.trim() == "") {
-            y[11].classList.remove("invalid");
-            valid = true;
-        }
-        
+
+        // Add event listener to detect changes in the input field
+        y[i].addEventListener("change", function () {
+            if (this.value.trim() !== "") {
+                /*alert("hii");*/
+                // If the field is filled, remove any existing error message
+                if (this.nextSibling && this.nextSibling.className === "error") {
+                    this.parentNode.removeChild(this.nextSibling);
+                }
+            }
+        });
     }
 
     // If the valid status is true, mark the step as finished and valid:
@@ -1224,7 +1263,7 @@ function Validate_Salary_Slip_date(event) {
         event.preventDefault();
         // Clear the input field using vanilla JavaScript
         document.getElementById("Salary_Slip_Month_Year").value = '';
-        alert(Salary_Slip_Month_Year);
+
         // If you're sure jQuery is properly included, you can also use:
         // $('#Salary_Slip_Month_Year').val('');
     }
@@ -1234,7 +1273,7 @@ function Validate_Salary_Slip_date(event) {
 
 
 // Get references to dropdown and input field
- 
+
 var dropdown = document.getElementById("Regt_Corps");
 var inputField = document.getElementById("CDA_PAO");
 
@@ -1243,7 +1282,7 @@ dropdown.addEventListener("change", function () {
     var selectedOption = dropdown.options[dropdown.selectedIndex];
 
     var selectedId = selectedOption.value;
-  
+
 
     var selectedOption = $(this).find('option:selected');
     var selectedId = selectedOption.val();
@@ -1251,7 +1290,7 @@ dropdown.addEventListener("change", function () {
         .then(response => response.json())
         .then(data => {
             if (data && data.length > 0) {
-                const firstUnit = data[0]; 
+                const firstUnit = data[0];
                 if (firstUnit && firstUnit.unitName !== undefined) {
                     inputField.value = firstUnit.CDA_PAO;
                 } else {
@@ -1283,10 +1322,6 @@ dropdown1.addEventListener("change", function () {
 
     var selectedOption = $(this).find('option:selected');
     var selectedId = selectedOption.val();
-   
- 
-
-
 
 });
 
@@ -1312,7 +1347,7 @@ jQuery(document).ready(function ($) {
             var year = date_components[2];
             return new Date(year, month - 1, day);
         }
-         
+
         $('#Date_Of_Birth').datepicker({
             changeMonth: true,
             changeYear: true,
@@ -1321,7 +1356,7 @@ jQuery(document).ready(function ($) {
             yearRange: '1900:3000',
             onSelect: function () {
                 var dt = $('#Date_Of_Birth').val();
-              
+
                 var newdt = new Date(my_date(dt));
                 newdt.setFullYear(newdt.getFullYear() + 18);
 
@@ -1358,3 +1393,49 @@ jQuery(document).ready(function ($) {
 
     });
 });
+
+
+
+
+
+
+
+
+//08-05-24
+
+//$("#FrequencyOfLoan").change(function () {
+
+
+//    var selectedValue = $(this).val();
+//    var armyNo = $('#dropdownSelect').val() + $('.ic').val() + $('#SuffixLetter').val();
+
+//    $.ajax({
+//        url: "/Car_PC_Advance_Application/CheckArmyNo",
+//        type: "GET",
+//        dataType: "json",
+//        data: { frequency: armyNo },
+//        success: function (data) {
+//            if (data.length >= 1) {
+
+//                Swal.fire({
+//                    title: 'Warning!',
+//                    text: 'You have already applied for a loan in this category.',
+//                    icon: 'warning',
+//                    confirmButtonText: 'OK'
+//                }).then(function () {
+
+//                    window.location.href = "/Car_PC_Advance_Application/Create"; // Replace with your desired URL
+//                });
+//            } else {
+
+//                $('#dataTable').DataTable();
+//            }
+//        },
+//        error: function () {
+//            alert('Error occurred while fetching data.');
+//        }
+//    });
+//});
+
+
+

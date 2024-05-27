@@ -1,0 +1,3 @@
+27-05-2024 15:54:49: System.IO.IOException: C:\Users\lanmanager\Desktop\ACG\240524\AGIF-ACG\Source_Code_AGI_2022\IHSDC.WebApp\important\AGI Journal.pdf not found as file or resource.
+   at iTextSharp.text.io.RandomAccessSourceFactory.CreateByReadingToMemory(String filename)
+   at IHSDC.WebApp.Controllers.HomeController.LetterWatermark(String pdf) in C:\Users\lanmanager\Desktop\ACG\240524\AGIF-ACG\Source_Code_AGI_2022\IHSDC.WebApp\Controllers\HomeController.cs:line 350

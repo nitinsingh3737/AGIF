@@ -27,7 +27,7 @@ html, body {
 }
 
 .w-100 {
-    width: 100%;
+    width: 105%;
 }
 
 .w-75 {
@@ -37,6 +37,15 @@ html, body {
 .w-37 {
     width: 37%;
 }
+
+.w-30{
+    width:30%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
 
 .w-50 {
     width: 50%;

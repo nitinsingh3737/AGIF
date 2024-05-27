@@ -32,23 +32,55 @@
         color: red;
     }
 </style>
-@*<script>
-        $(document).ready(function () {
-
-            $(document).on("click", ".loan-type", function () {
-                var loanType = $(this).data("loan-type");
 
 
-                if (loanType === "ca") {
-                    $('#CarLoanType, #FrequencyOfLoan').closest("td").show();
-                    $('#Application-Type').closest("td").hide();
-                } else if (loanType === "pca") {
-                    $('#CarLoanType, #FrequencyOfLoan').closest("td").hide();
-                    $('#Application-Type').closest("td").show();
-                }
-            });
-        });
-    </script>*@
+<script>
+    function changeApp(event) {
+        var selectedValue = event.target.value; // Get the selected value of Application Type dropdown
+        var frequencyDropdown = document.getElementById('FrequencyOfLoan'); // Get the Frequency of Loan dropdown
+
+        // Clear existing options
+        frequencyDropdown.innerHTML = '';
+
+        // Define options based on the selected application type
+        if (selectedValue === '2') { // Car
+            addOption(frequencyDropdown, '0', '--select--');
+            addOption(frequencyDropdown, '1st Time', '1st Time');
+            addOption(frequencyDropdown, '2nd Time', '2nd Time');
+
+            $("#CarLoanType").prop('disabled', false);
+            $("#Veh_Type").prop('disabled', false);
+            // Add more options as needed
+        } else if (selectedValue === '7') { // Two Wheeler
+            $("#CarLoanType").prop('disabled', true);
+            $("#Veh_Type").prop('disabled', true);
+            addOption(frequencyDropdown, '0', '--select--');
+            addOption(frequencyDropdown, '1st Time', '1st Time');
+            addOption(frequencyDropdown, '2nd Time', '2nd Time');
+            addOption(frequencyDropdown, '3rd Time', '3rd Time');
+            // Add more options as needed
+        }
+    }
+
+    function addOption(selectElement, value, text) {
+        var option = document.createElement('option');
+        option.value = value;
+        option.text = text;
+        selectElement.add(option);
+    }
+
+    function validateForm() {
+        var frequencyDropdown = document.getElementById('FrequencyOfLoan');
+        var selectedValue = frequencyDropdown.value;
+        if (selectedValue === '0') {
+            alert('Please select an option from the dropdown.');
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
+
+
 
 <script>
     $(document).ready(function () {
@@ -191,6 +223,19 @@
     .tab {
         display: none;
     }
+    /*input:invalid {
+        background-color: ivory;
+        border: none;
+        outline: 2px solid red;
+        border-radius: 5px;
+    }
+
+    input:valid {
+        background-color: ivory;
+        border: none;
+        outline: 2px solid green;
+        border-radius: 5px;
+    }*/
 
     button {
         background-color: #4CAF50;
@@ -232,29 +277,7 @@
         }
 </style>
 
-@*@using (Html.BeginForm("UploadFile", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-
-        <div>
-            @Html.TextBox("file", "", new { type = "file" }) <br />
-
-            <input type="submit" value="Upload" />
-
-            @ViewBag.Message
-
-        </div>
-
-
-    }*@
-
-@*-09/05/24*@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-
-
-
-@*end*@
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
@@ -309,7 +332,7 @@
                         changeYear: true,
                         showButtonPanel: true,
                         dateFormat: 'dd/mm/yy',
-                        minDate: newdt,
+                        /*  minDate: newdt,*/
 
                         startDate: '01/01/2010'
 
@@ -416,73 +439,55 @@
 
 </script>
 
+    @*<script>
+        alert("@TempData["Message"]");
+    </script>*@
 
-<script>
-  // Get the message from the ViewBag or any other source
-    var message = "@ViewBag.Message";
-   
 
-  // Display SweetAlert popup with the message
-  Swal.fire({
-    icon: 'info',
-    title: 'Alert!',
-    text: message
-  });
-
-    
-</script>
-
-<script>
-    var ApplicationType = "@ViewBag.ApplicationId";
-    Swal.fire({
+    @*<script>
+    @if (TempData["Message"] != null)
+    {
+        var message = "@ViewBag.Message";
+    }
+      Swal.fire({
         icon: 'info',
         title: 'Alert!',
-        text: ApplicationType
-    });
-</script>
+        text: message
+      });
+    </script>*@
+
+@*<script>
+        var ApplicationType = "@ViewBag.ApplicationId";
+        Swal.fire({
+            icon: 'info',
+            title: 'Alert!',
+            text: ApplicationType
+        });
+    </script>*@
 
 <script src="~/Scripts/inputmask.date.extensions.js"></script>
 <script src="~/Scripts/inputmask.dependencyLib.js"></script>
 <script src="~/Scripts/inputmask.js"></script>
-<!--<div id="caFields" style="display: none;">
-    <h3>ak1</h3>-->
-<!-- Fields for CA -->
-<!-- Add your CA specific fields here -->
-<!--</div>
 
-<div id="pcaFields" style="display: none;">
-    <h3>ak3</h3>-->
-<!-- Fields for PCA -->
-<!-- Add your PCA specific fields here -->
-<!--</div>-->
+
+
 @using (Html.BeginForm("Create", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-
-
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="regForm">
         <div class="tab">
             <h3 style="color:red;">@ViewBag.Message</h3>
             <h1>Personal Details</h1>
-            <table class="table table-borderless">
+            <table class="table table-borderless" id="PersonalDetail">
 
                 <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Loanee_Name, htmlAttributes: new { @class = "control-label " })
-                            <div>
-                                @Html.EditorFor(model => model.Loanee_Name, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataLetter(this)" } })
-                                @Html.ValidationMessageFor(model => model.Loanee_Name, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-                    </td>
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label" })
                             <div style="display: flex;">
                                 <div id="dropdown" class="dropdown-content">
-                                    <select id="dropdownSelect" name="prefixnum" class="form-control" onchange="calallser(event);">
+                                    <select id="dropdownSelect" name="prefixnum" class="form-control requiredField" onchange="calallser(event);">
                                         <option value="0">--Prefix Select--</option>
                                         <option value="IC">IC</option>
                                         <option value="SS">SS</option>
@@ -500,23 +505,19 @@
                                         <option value="OR">OR</option>
                                     </select>
                                 </div>
-                                <input maxlength="8" onchange="SetSuffixLetter(this)" onkeypress="return isNumber(event)" size="7" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6 ic" name="IC" type="tel" />
+                                <input maxlength="8" onchange="SetSuffixLetter(this)" onkeypress="return isNumber(event)" size="7" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6 ic requiredField" name="IC" type="tel" />
                                 <input maxlength="1" size="1" readonly=true style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="sufixnum" id="SuffixLetter" type="text" />
 
                             </div>
                         </div>
                     </td>
-
-
-                    @*<input maxlength="3" size="3" style="border-radius:5px;height:35px;" placeholder="Prefix" class="col-lg-3 valid" name="prefixnum" id="prefixnum" type="text" />*@
-
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Old_Army_No, htmlAttributes: new { @class = "control-label " })
 
                             <div style="display: flex;">
                                 <div id="dropdown" class="dropdown-content">
-                                    <select id="dropdownSelect1" name="prefixnum" class="form-control" onchange="calallser(event);">
+                                    <select id="dropdownSelect1" name="Oldprefixnum" class="form-control requiredField" onchange="calallser(event);">
                                         <option value="0">--Prefix Select--</option>
                                         <option value="IC">IC</option>
                                         <option value="SS">SS</option>
@@ -535,12 +536,23 @@
                                     </select>
                                 </div>
                                 @*@Html.TextBoxFor(m => m.ANumber, new { @class = "form-control", @required = true, @onkeypress = "return blockSpecialChar(event)", @onchange = "SetSuffixLetter(this)", @maxlength = "6", @onkeyup = "ValInData(this)" })*@
-                                <input maxlength="8" size="7" onchange="SetOldSuffixLetter(this)" onkeypress="return isNumber(event)" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6" name="oldIC" id="oldIC" type="tel" />
+                                <input maxlength="8" size="7" onchange="SetOldSuffixLetter(this)" onkeypress="return isNumber(event)" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6 ic requiredField" name="oldIC" id="oldIC" type="tel" />
 
                                 <input maxlength="1" size="1" style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="oldsufixnum" id="oldsufixnum" type="text" />
                             </div>
 
 
+                        </div>
+                    </td>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rank, htmlAttributes: new { @class = "control-label " })
+
+                            <div>
+                                @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "requiredField select form-control ", @data_live_search = "true" })
+
+                                @*@Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })*@
+                            </div>
                         </div>
                     </td>
 
@@ -549,15 +561,65 @@
                 <tr>
                     <td style="border-top:none;">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.Rank, htmlAttributes: new { @class = "control-label " })
-
+                            @Html.LabelFor(model => model.Loanee_Name, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
-
-                                @*@Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })*@
+                                @Html.EditorFor(model => model.Loanee_Name, new { htmlAttributes = new { @class = "form-control requiredField", @required = "required", @onkeyup = "ValInDataLetter(this)" } })
+                                @Html.ValidationMessageFor(model => model.Loanee_Name, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
+                    <td style="border-top:none;">
+                        <div class="form-group" id="Application-Type">
+                            @Html.LabelFor(model => model.ApplicationType, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.ApplicationType, (new IHSDC.WebApp.Models.DropDownClass()).LoadAppType(), "--Select--", new { @data_show_subtext = "true", required = "required", onchange = "changeApp(event);", @class = "requiredField select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                        </div>
+
+                    </td>
+
+
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
+                                @Html.DropDownListFor(model => model.CarLoanType, (new IHSDC.WebApp.Models.DropDownClass()).LoadLoanType(), "--Select--", new { @data_show_subtext = "true", required = "required", disabled = "disabled", @class = "select form-control", @data_live_search = "true" })
+                                @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                            </div>
+
+                        </td>*@
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
+                            <select id="CarLoanType" class="form-control" required>
+                                <option value="NULL">--select--</option>
+                                <option value="New Car">New Car</option>
+                                <option value="Old Car">Old Car</option>
+                                <option value="EV">EV</option>
+                            </select>
+                            @Html.ValidationMessageFor(model => model.CarLoanType, "", new { @class = "text-danger" })
+                        </div>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td style="border-top:none;">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.FrequencyOfLoan, htmlAttributes: new { @class = "control-label " })
+                            @Html.DropDownListFor(model => model.FrequencyOfLoan, (new IHSDC.WebApp.Models.DropDownClass()).LoadFrequencyType(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "requiredField select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.FrequencyOfLoan, "", new { @class = "text-danger" })
+                        </div>
+
+                    </td>
+                    @*<td style="border-top:none;">
+                            <div class="form-group" id="FrequencyOfLoanContainer">
+                                @Html.LabelFor(model => model.FrequencyOfLoan, htmlAttributes: new { @class = "control-label " })
+                                <select id="FrequencyOfLoan" class="form-control" required>
+                                    <option value="0">--select--</option>
+                                </select>
+                                @Html.ValidationMessageFor(model => model.FrequencyOfLoan, "", new { @class = "text-danger" })
+                            </div>
+                        </td>*@
+
                     <td style="border-top:none;">
                         <div class="form-group">
 
@@ -612,28 +674,11 @@
 
                             @Html.LabelFor(model => model.Unit_Address, htmlAttributes: new { @class = "control-label " })
                             <div>
-
-                                @*@Html.DropDownListFor(model => model.Regt_Corps, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnits(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
-                                    @Html.ValidationMessageFor(model => model.Regt_Corps, "", new { @class = "text-danger" })*@
-
-                                @Html.DropDownListFor(model => model.Unit_Address, new List<SelectListItem>
-        {
-                               new SelectListItem{ Text="--Select--", Value = "0" },
-                               new SelectListItem{ Text="c/o 56 APO", Value = "c/o 56 APO" },
-                               new SelectListItem{ Text="c/o 99 APO", Value = "c/o 99 APO" },
-
-
-        }, new { @class = "form-control", onchange = "calallser(event);" })
-
-
+                                @Html.DropDownListFor(model => model.Unit_Address, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnitAddress(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                                @Html.ValidationMessageFor(model => model.Unit_Address, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
-
-
-
-
-
                 </tr>
 
 
@@ -674,26 +719,35 @@
                         </div>
                     </td>
 
+
                 </tr>
 
                 <tr>
-
-
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Extension of Service in Present Rank</label>
                             <div>
-                                @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
-                                {
-                                   new SelectListItem{ Text="--Select--", Value = "0" },
-                                   new SelectListItem{ Text="YES", Value = "YES" },
-                                   new SelectListItem{ Text="NO", Value = "NO" },
-                                }, new { @class = "form-control", id = "extensionSelect", onchange = "handleExtensionChange(event);" })
-
+                                @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadExtentionOfService(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                                @Html.ValidationMessageFor(model => model.Extension_of_Service_in_Present_Rank, "", new { @class = "text-danger" })
                             </div>
-
                         </div>
                     </td>
+
+                    @*<td style="border-top:none;">
+                            <div class="form-group">
+                                <label>Extension of Service in Present Rank</label>
+                                <div>
+                                    @Html.DropDownListFor(model => model.Extension_of_Service_in_Present_Rank, new List<SelectListItem>
+                                    {
+                                       new SelectListItem{ Text="--Select--", Value = "0" },
+                                       new SelectListItem{ Text="YES", Value = "YES" },
+                                       new SelectListItem{ Text="NO", Value = "NO" },
+                                    }, new { @class = "form-control Extension", id = "extensionSelect", onchange = "handleExtensionChange(event);" })
+
+                                </div>
+
+                            </div>
+                        </td>*@
 
                     <td style="border-top:none;">
                         <div class="form-group">
@@ -742,25 +796,6 @@
                         </div>
                     </td>
                     <td style="border-top:none;">
-                        <div class="form-group" id="Application-Type">
-                            @Html.LabelFor(model => model.ApplicationType, htmlAttributes: new { @class = "control-label " })
-                            @Html.DropDownListFor(model => model.ApplicationType, (new IHSDC.WebApp.Models.DropDownClass()).LoadAppType(), "--Select--", new { @data_show_subtext = "true", required = "required", onchange = "changeApp(event);", @class = "select form-control", @data_live_search = "true" })
-                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
-                        </div>
-
-                    </td>
-
-                </tr>
-                <tr>
-                    <td style="border-top:none;">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.CarLoanType, htmlAttributes: new { @class = "control-label " })
-                            @Html.DropDownListFor(model => model.CarLoanType, (new IHSDC.WebApp.Models.DropDownClass()).LoadLoanType(), "--Select--", new { @data_show_subtext = "true", required = "required", disabled = "disabled", @class = "select form-control", @data_live_search = "true" })
-                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
-                        </div>
-
-                    </td>
-                    <td style="border-top:none;">
                         <div class="form-group">
                             <label>Aadhar No</label>
                             <div>
@@ -769,6 +804,11 @@
                             </div>
                         </div>
                     </td>
+
+                </tr>
+                <tr>
+
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             <lable><b>PAN No</b></lable>
@@ -780,23 +820,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="border-top:none;">
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.FrequencyOfLoan, htmlAttributes: new { @class = "control-label " })
-                            @Html.DropDownListFor(model => model.FrequencyOfLoan, new SelectList(new List<object>(), "Value", "Text"), "--Select--", new { id = "FrequencyOfLoan", @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
-                            @Html.ValidationMessageFor(model => model.FrequencyOfLoan, "", new { @class = "text-danger" })
-                        </div>
-
-                    </td>
-
                 </tr>
             </table>
         </div>
         <div class="tab">
             <h1>Salary Details</h1>
 
-            <table>
+            <table style="width: 100% !important;">
                 <tr>
 
                     <td style="border-top:none;">
@@ -1042,7 +1072,7 @@
                             <div>
                                 @Html.DropDownListFor(model => model.Veh_Type, new List<SelectListItem>
                            {
-                              new SelectListItem{ Text="--Select--", Value = "0" },
+                              new SelectListItem{ Text="--Select--", Value = "NULL" },
                               new SelectListItem{ Text="Petrol/Hybrid", Value = "Petrol/Hybrid" },
                               new SelectListItem{ Text="Diesel", Value = "Diesel" },
                               new SelectListItem{ Text="CNG", Value = "CNG" },
@@ -1106,36 +1136,11 @@
                         </div>
                     </td>
 
-                    @*<td style="border-top:none;">
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Loan_amount_admissible, htmlAttributes: new { @class = "control-label " })
-                                <div>
-                                    @Html.EditorFor(model => model.Loan_amount_admissible, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()", @maxlength = "6" } })
-                                    @Html.ValidationMessageFor(model => model.Loan_amount_admissible, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                        </td>*@
+
 
                 </tr>
                 <tr>
-                    @*<td style="border-top:none;">
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Amount_Applied_For_Loan, htmlAttributes: new { @class = "control-label " })
-                                <div>
-                                    @Html.EditorFor(model => model.Amount_Applied_For_Loan, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
-                                    @Html.ValidationMessageFor(model => model.Amount_Applied_For_Loan, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                        </td>*@
-                    @*<td style="border-top:none;">
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.Amount_Applied_For_Loan, htmlAttributes: new { @class = "control-label " })
-                                <div>
-                                    @Html.EditorFor(model => model.Amount_Applied_For_Loan, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "validateAmount(this)", onkeypress = "myFunction()" } })
-                                    @Html.ValidationMessageFor(model => model.Amount_Applied_For_Loan, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                        </td>*@
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.Amount_Applied_For_Loan, htmlAttributes: new { @class = "control-label " })
@@ -1145,15 +1150,7 @@
                             </div>
                         </div>
                     </td>
-                    @*<td style="border-top:none;">
-                            <div class="form-group">
-                                @Html.LabelFor(model => model.No_Of_EMI_Applied, htmlAttributes: new { @class = "control-label " })
-                                <div>
-                                    @Html.EditorFor(model => model.No_Of_EMI_Applied, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()", @maxlength = "3" } })
-                                    @Html.ValidationMessageFor(model => model.No_Of_EMI_Applied, "", new { @class = "text-danger" })
-                                </div>
-                            </div>
-                        </td>*@
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             @Html.LabelFor(model => model.No_Of_EMI_Applied, htmlAttributes: new { @class = "control-label " })
@@ -1224,7 +1221,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Pin_Code, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Pin_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
+                                @Html.EditorFor(model => model.Pin_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataNo(this)", onkeypress = "myFunction()" } })
                                 @Html.ValidationMessageFor(model => model.Pin_Code, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -1268,15 +1265,18 @@
                     </td>
                 </tr>
                 <tr>
+
                     <td style="border-top:none;">
                         <div class="form-group">
-                            @Html.LabelFor(model => model.E_Mail_Id, htmlAttributes: new { @class = "control-label " })
+                            @Html.LabelFor(model => model.E_Mail_Id, htmlAttributes: new { @class = "control-label" })
                             <div>
-                                @Html.EditorFor(model => model.E_Mail_Id, new { htmlAttributes = new { @class = "form-control", @required = "required" } })   @*, @onkeyup = "ValInData1(this)"*@
+                                @Html.EditorFor(model => model.E_Mail_Id, new { htmlAttributes = new { @class = "form-control", @id = "E_Mail_Id", @type = "email", @required = "required" } })
+                                <span id="emailError" class="text-danger" style="display:none;"></span>
                                 @Html.ValidationMessageFor(model => model.E_Mail_Id, "", new { @class = "text-danger" })
                             </div>
                         </div>
                     </td>
+
                     <td style="border-top:none;">
                         <div class="form-group">
                             <label>Previous Loan Taken from AGIF</label>
@@ -1334,7 +1334,7 @@
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                 <button type="submit" style="display:none;" id="create" value="Create">Submit</button>
-                @*<button type="button" id="DataFill" value="DataFill">Demo data fill</button>*@
+                <button type="button" id="DataFill" value="DataFill">Demo data fill</button>
             </div>
         </div>
         <!-- Circles which indicates the steps of the form: -->
@@ -1348,6 +1348,8 @@
         </div>
     </div>
 }
+
+
 
 <script>
     function validateAmount(input) {
@@ -1385,94 +1387,23 @@
     }
 </script>
 
-<script>
-    // Function to show/hide fields based on the loan type
-    function showHideFields(loanType) {
-        // Hide all fields
-        $('#caFields').hide();
-        $('#pcaFields').hide();
 
-        // Show fields based on selected loan type
-        if (loanType === 'ca') {
-            $('#caFields').show();
-        } else if (loanType === 'pca') {
-            $('#pcaFields').show();
-        }
-    }
 
-    // jQuery code to handle click event on loan type
-    $(document).ready(function () {
-        // Trigger click event on the initial selection
-        var initialLoanType = $('.loan-type:first').data('loan-type');
-        showHideFields(initialLoanType);
-
-        // Handle click event on loan type
-        $('.loan-type').click(function (e) {
-            e.preventDefault(); // Prevent the default action
-
-            var loanType = $(this).data('loan-type');
-            showHideFields(loanType);
-        });
-    });
-</script>
 
 <script>
-    function changeApp(event) {
-        var selectedValue = event.target.value; // Get the selected value of Application Type dropdown
-        var frequencyDropdown = document.getElementById('FrequencyOfLoan'); // Get the Frequency of Loan dropdown
 
-        // Clear existing options
-        frequencyDropdown.innerHTML = '';
-
-        // Define options based on the selected application type
-        if (selectedValue === '2') { // Car
-            addOption(frequencyDropdown, '0', '--select--');
-            addOption(frequencyDropdown, '1st Time', '1st Time');
-            addOption(frequencyDropdown, '2nd Time', '2nd Time');
-
-            $("#CarLoanType").prop('disabled', false);
-
-            // Add more options as needed
-        } else if (selectedValue === '7') { // Two Wheeler
-            $("#CarLoanType").prop('disabled', true);
-            addOption(frequencyDropdown, '0', '--select--');
-            addOption(frequencyDropdown, '1st Time', '1st Time');
-            addOption(frequencyDropdown, '2nd Time', '2nd Time');
-            addOption(frequencyDropdown, '3rd Time', '3rd Time');
-            // Add more options as needed
-        }
-    }
-
-    function addOption(selectElement, value, text) {
-        var option = document.createElement('option');
-        option.value = value;
-        option.text = text;
-        selectElement.add(option);
-    }
-
-    function validateForm() {
-        var frequencyDropdown = document.getElementById('FrequencyOfLoan');
-        var selectedValue = frequencyDropdown.value;
-        if (selectedValue === '0') {
-            alert('Please select an option from the dropdown.');
-            return false; // Prevent form submission
-        }
-        return true; // Allow form submission
-    }
-</script>
-<script>
-    // Function to execute on page load
     window.onload = function () {
-        debugger;
-        $('#FrequencyOfLoan').change(function () {
+        $('#Total_Cost').change(function () {
 
             var ResidualService = $('#Residual_Service').val();
 
             var Frequency = $('#FrequencyOfLoan').val();
-
+            var vehicalType = $('#ApplicationType').val();
             var EMI = 0;
-            var Residual = (ResidualService * 12) - 8;
-            if (Frequency == "1") {
+            /*var Residual = (ResidualService * 12) - 8;*/
+            var Residual = Math.round((ResidualService * 12) - 8);
+
+            if (Frequency == "1st Time" && (vehicalType == "Car" || vehicalType == "2")) {
 
                 EMI = 96;
                 if (EMI < Residual) {
@@ -1484,7 +1415,7 @@
                     document.getElementById("EMI_Eligible_for_loan").value = Residual;
                 }
             }
-            else if (Frequency == "2") {
+            else if (Frequency == "2nd Time" && (vehicalType == "Car" || vehicalType == "2")) {
 
                 EMI = 72;
                 if (EMI < Residual) {
@@ -1523,9 +1454,9 @@
             var Amount = 0;
             var data = 0;
 
-
+            debugger;
             var Amount;
-            var data = CostExShowroom * 0.9;
+            var data = Math.round(CostExShowroom * 0.9);
 
             if ((vehicalType == "Car" || vehicalType == "2")) {
 
@@ -1566,41 +1497,20 @@
 </script>
 
 
-@*<script>
-        Inputmask().mask("CDA_Account_No");
-    </script>*@
 <script>
-    Inputmask("99/999/999999A", {
-        definitions: {
-            'A': {
-                validator: "[A-Za-z]",
-                cardinality: 1,
-                casing: "upper" // optional, forces the letter to be uppercase
+    $(document).ready(function () {
+        $('.ic').on('change', function () {
+            var prefix = $('#dropdownSelect').val();
+            var icNumber = $(this).val();
+
+            if (prefix === '0' && icNumber) {
+                alert('First fill Prefix then IC');
+                $(this).val(''); // Clear the IC number input
+                $('#dropdownSelect').focus(); // Set focus back to the dropdown
             }
-        }
-    }).mask(document.getElementById("CDA_Account_No"));
-    Inputmask("AAAAA9999A", {
-        definitions: {
-            'A': {
-                validator: "[A-Za-z]",
-                cardinality: 1,
-                casing: "upper" // optional, forces the letter to be uppercase
-            }
-        }
-    }).mask(document.getElementById("PANNo"));
-    Inputmask("AAAA9999999", {
-        definitions: {
-            'A': {
-                validator: "[A-Za-z]",
-                cardinality: 1,
-                casing: "upper" // optional, forces the letter to be uppercase
-            }
-        }
-    }).mask(document.getElementById("IFSC_Code"));
+        });
+    });
 </script>
-
-
-
 
 <script src="~/Content/CustomJS/Create.js"></script>
 

@@ -20,13 +20,10 @@ namespace IHSDC.WebApp.Models
         public List<SelectListItem> LoadRanks()
         {
             DBConnection con = new DBConnection();
-            // Assuming RankList is a list of Rank objects with properties ID and Name
             var RankList = con.rankList();
-
-            // Create a list of SelectListItem objects from RankList
             List<SelectListItem> items = RankList.Select(r => new SelectListItem
             {
-                Value = r.Id.ToString(), // Assuming ID is an integer
+                Value = r.Id.ToString(),
                 Text = r.rank
             }).ToList();
 
@@ -47,13 +44,21 @@ namespace IHSDC.WebApp.Models
             Unit model = new Unit();
             return new SelectList(con.unitList(), "unitName", "unitName");
         }
+        public SelectList LoadUnitAddress()
+        {
+            return new SelectList(new SelectListItem[]{
+                new SelectListItem{Text="c/o 56 APO",Value="c/o 56 APO"},
+                new SelectListItem{Text="c/o 99 APO",Value="c/o 99 APO"}
+            }, "Value", "Text");
+        }
 
-        //public SelectList CDA_PAO_LoadUnits(string unitName)
-        //{
-        //    DBConnection con = new DBConnection();
-        //    Unit model = new Unit();
-        //    return new SelectList(con.CDA_PAOList(unitName), "unitName", "unitName");
-        //}
+        public SelectList LoadExtentionOfService()
+        {
+            return new SelectList(new SelectListItem[]{
+                new SelectListItem{Text="YES",Value="YES"},
+                new SelectListItem{Text="NO",Value="NO"}
+            }, "Value", "Text");
+        }
 
         public SelectList LoadAppType()
         {
@@ -63,33 +68,21 @@ namespace IHSDC.WebApp.Models
             }, "Value", "Text");
         }
 
-        //public SelectList LoadFrequency()
-        //{
-        //    try
-        //    {
-        //        using (var con = new DBConnection())
-        //        {
-        //            var loan = con.LoanFrequency.ToList(); // Convert to list
-        //            return new SelectList(loan, "Id", "Frequency");
-        //            // Change "Id" and "Name" to the actual properties you want to display
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine("An error occurred: " + ex.Message);
-        //    }
-        //    return new SelectList(new List<object>());
-        //}
-
-
         public SelectList LoadLoanType()
         {
             return new SelectList(new SelectListItem[]{
                 new SelectListItem{Text="New Car",Value="5"},
                 new SelectListItem{Text="Old Car",Value="6"},
                  new SelectListItem{Text="EV",Value="7"}
-                //new SelectListItem{Text="Inward Transfer",Value="8"}
                 
+            }, "Value", "Text");
+        }
+        public SelectList LoadFrequencyType ()
+        {
+            return new SelectList(new SelectListItem[]{
+                new SelectListItem{Text="1st Time",Value="1st Time"},
+                new SelectListItem{Text="2nd Time",Value="2nd Time"}
+
             }, "Value", "Text");
         }
 

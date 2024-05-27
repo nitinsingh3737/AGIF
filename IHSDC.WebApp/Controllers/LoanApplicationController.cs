@@ -41,8 +41,9 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult download()
         {
             try
-            { 
+            {
                 return View();
+
             }
             catch
             {
@@ -52,8 +53,9 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult status()
         {
             try
-            { 
+            {
                 return View();
+
             }
             catch
             {
@@ -62,20 +64,23 @@ namespace IHSDC.WebApp.Controllers
         }
 
 
-       
+
+
+
+
 
         [HttpPost]
         public ActionResult upload(FormCollection collection)
         {
-           try
-            { 
+            try
+            {
                 if (collection["ltype"] == "Car")
                 {
                     CarPcModel data = new CarPcModel();
                     CarPcModel carPc = new CarPcModel();
-                    data.Army_No = collection["armyno"].Trim();
+                    data.Army_No = collection["armyno"].Trim().ToUpper();
                     data = con.carPcModel.FirstOrDefault(x => x.Army_No == data.Army_No);
-                
+
                     if (data != null)
                     {
                         if (data.ApplicationForm == null)
@@ -108,7 +113,9 @@ namespace IHSDC.WebApp.Controllers
                 {
                     CarPcModel data = new CarPcModel();
                     CarPcModel carPc = new CarPcModel();
-                    data.Army_No = collection["armyno"].Trim();
+                    //data.Army_No = collection["armyno"].Trim();
+                    data.Army_No = collection["armyno"].Trim().ToUpper();
+
                     data = con.carPcModel.FirstOrDefault(x => x.Army_No == data.Army_No);
                 
 
@@ -119,6 +126,7 @@ namespace IHSDC.WebApp.Controllers
                 }
                 ViewBag.result = "Application correcponding to your ArmyNo Not Found. Please Fill the Application from a link given in menu bar.";
                 return View();
+
             }
             catch
             {
@@ -136,7 +144,7 @@ namespace IHSDC.WebApp.Controllers
                 {
                     CarPcModel data = new CarPcModel();
                     CarPcModel carPc = new CarPcModel();
-                    data.Army_No = collection["armyno"].Trim();
+                    data.Army_No = collection["armyno"].Trim().ToUpper();
                     var data1 = con.carPcModel.Where(x => x.Army_No == data.Army_No).ToList();
                     data = con.carPcModel.FirstOrDefault(x => x.Army_No == data.Army_No);
                     if (data != null)
@@ -147,6 +155,7 @@ namespace IHSDC.WebApp.Controllers
                 }
                 ViewBag.result = "Application correcponding to your ArmyNo Not Found. Please Fill the Application from a link given in menu bar.";
                 return View();
+              
             }
             catch
             {

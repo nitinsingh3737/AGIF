@@ -25,8 +25,8 @@ namespace IHSDC.WebApp.Controllers
        
         public ActionResult Index()
         {
-            try
-            { 
+            //try
+            //{ 
                 string value = Server.HtmlEncode("<script>alert('Boo!')</script>");
 
                 //PdfDocument
@@ -47,11 +47,11 @@ namespace IHSDC.WebApp.Controllers
                     //   ViewBag.TotalVisits = db.Visits.ToList().Count();
                 }
                 return View();
-            }
-            catch
-            {
-                return View("Error");
-            }
+            //}
+            //catch
+            //{
+            //    return View("Error");
+            //}
         }
 
         public ActionResult ExtendedInsuranceScheme()
@@ -212,84 +212,84 @@ namespace IHSDC.WebApp.Controllers
             }
         }
 
-        public ActionResult DownloadPDF()
-        {
-            try 
-            { 
-                return File("~/_forms/mat/RA_OFF_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult DownloadPDF1()
-        {
-            try
-            { 
-                return File("~/_forms/mat/RA_JCOR_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult DownloadPDF2()
-        {
-            try
-            { 
-                return File("~/_forms/mat/TA_OFF_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult DownloadPDF3()
-        {
-            try
-            { 
-                return File("~/_forms/mat/TA_JCOR_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult DownloadPD4()
-        {
-            try
-            { 
-                return File("~/_forms/mat/APSD_OFF_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult DownloadPDF5()
-        {
-            try
-            {
+        //public ActionResult DownloadPDF()
+        //{
+        //    try 
+        //    { 
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/RA_OFF_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
+        //public ActionResult DownloadPDF1()
+        //{
+        //    try
+        //    { 
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/RA_JCOR_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
+        //public ActionResult DownloadPDF2()
+        //{
+        //    try
+        //    { 
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/TA_OFF_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
+        //public ActionResult DownloadPDF3()
+        //{
+        //    try
+        //    { 
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/TA_JCOR_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
+        //public ActionResult DownloadPD4()
+        //{
+        //    try
+        //    { 
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/APSD_OFF_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
+        //public ActionResult DownloadPDF5()
+        //{
+        //    try
+        //    {
                 
-                return File("~/_forms/mat/APSD_JCOR_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult DownloadPDF6()
-        {
-            try
-            { 
-                return File("~/_forms/mat/DSC_JCOR_OCT_MAR19.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/APSD_JCOR_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
+        //public ActionResult DownloadPDF6()
+        //{
+        //    try
+        //    { 
+        //        return File("~/Home/LetterWatermark?pdf=/_forms/mat/DSC_JCOR_OCT_MAR19.pdf", "application/pdf");
+        //    }
+        //    catch
+        //    {
+        //        return View("Error");
+        //    }
+        //}
 
         public ActionResult LatestNews()
         {
@@ -324,58 +324,10 @@ namespace IHSDC.WebApp.Controllers
             }
         }
 
-        public ActionResult importantLetter()
-        {
-            try
-            { 
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/PRE-EMI REVISION.pdf"));
-                openPdf(PDFReader);
-                return File("~/faq/test.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult importantLetter1()
-        {
-            try 
-            { 
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/AGIF Loan  Inward Payment Using NEFT.pdf"));
-                openPdf(PDFReader);
-                return File("~/faq/test.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult importantLetter2()
-        {
-            try
-            {
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/REVISION OF POLICY FOR GRANT OF HBA.pdf"));
-                openPdf(PDFReader);
-                return File("~/faq/test.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult importantLetter3()
-        {
-            try
-            { 
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/Review of HBA.pdf"));
-                openPdf(PDFReader);
-                return File("~/faq/test.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
+        
+        
+        
+        
         public ActionResult importantLetter4()
         {
             try
@@ -389,33 +341,23 @@ namespace IHSDC.WebApp.Controllers
                 return View("Error");
             }
         }
-        public ActionResult importantLetter5()
+       
+
+        public ActionResult LetterWatermark(string pdf)
         {
             try
-            { 
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/Benevolent Reserve Fund.pdf"));
+            {
+                PdfReader PDFReader = new PdfReader(Server.MapPath(pdf));
                 openPdf(PDFReader);
                 return File("~/faq/test.pdf", "application/pdf");
             }
-            catch
+            catch(Exception ex)
             {
+                Console.WriteLine("Error Message: " + ex.Message);
                 return View("Error");
             }
         }
-        public ActionResult importantLetter6()
-        {
-            try
-            { 
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/FRAUD.pdf"));
-                openPdf(PDFReader);
-                return File("~/faq/test.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
-        public ActionResult ImportantLetter7()
+        public ActionResult ImportantLetter7(string pdf)
         {
             try
             { 
@@ -429,19 +371,7 @@ namespace IHSDC.WebApp.Controllers
             }
         }
 
-        public ActionResult ImportantLetter8()
-        {
-            try
-            { 
-                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/REVISED NOMINATION FORM.pdf"));
-                openPdf(PDFReader);
-                return File("~/faq/test.pdf", "application/pdf");
-            }
-            catch
-            {
-                return View("Error");
-            }
-        }
+        
 
 
         public ActionResult faq()
@@ -601,7 +531,19 @@ namespace IHSDC.WebApp.Controllers
             }
         }
 
-
+        public ActionResult ITRebateCert()
+        {
+            try
+            {
+                PdfReader PDFReader = new PdfReader(Server.MapPath("/important/IT Rebate Cert.pdf"));
+                openPdf(PDFReader);
+                return File("~/faq/test.pdf", "application/pdf");
+            }
+            catch
+            {
+                return View("Error");
+            }
+        }
         public ActionResult Guidelines()
         {
             try
@@ -618,7 +560,8 @@ namespace IHSDC.WebApp.Controllers
 
         public void openPdf(PdfReader PDFReader)
         {
-           
+            try
+            {
                 HttpCookie myCookie = Request.Cookies["IpAddress"];
                 string ipAddress = Request.UserHostAddress;
                 //PdfReader PDFReader = new PdfReader(Server.MapPath("/important/FRAUD.pdf"));
@@ -646,6 +589,11 @@ namespace IHSDC.WebApp.Controllers
                 PDFStamper.FormFlattening = true;
                 PDFStamper.Close();
                 PDFReader.Close();
+            }
+            catch(Exception ex)
+            {
+
+            }
             
         }
     }

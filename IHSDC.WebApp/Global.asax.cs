@@ -36,54 +36,6 @@ namespace IHSDC.WebApp
         }
 
 
-        //protected void Application_BeginRequest()
-        //{
-        //    Response.AddHeader("X-Frame-Options", "DENY");
-        //}
-        //protected void Application_Error(object sender, EventArgs e)
-        //{
-        //    Exception ex = Server.GetLastError();
-
-        //    HttpException httpException = ex as HttpException;
-        //    var routeData = new RouteData();
-        //    routeData.Values["controller"] = "Error";
-        //    routeData.Values["exception"] = ex;
-        //    routeData.Values["action"] = "Index";
-        //    IController controller = new ErrorController();
-        //    controller.Execute(new RequestContext(new HttpContextWrapper(context), routeData));
-        //}
-        //protected void Application_Error(object sender, EventArgs e)
-        //{
-        //    var app = (MvcApplication)sender;
-        //    var context = app.Context;
-        //    var ex = app.Server.GetLastError();
-        //    context.Response.Clear();
-        //    context.ClearError();
-        //    var httpException = ex as HttpException;
-
-        //    var routeData = new RouteData();
-        //    routeData.Values["controller"] = "Error";
-        //    routeData.Values["exception"] = ex;
-        //    routeData.Values["action"] = "Index";
-        //    if (httpException != null)
-        //    {
-        //        switch (httpException.GetHttpCode())
-        //        {
-        //            case 404:
-        //                routeData.Values["action"] = "Index";
-        //                break;
-        //            case 403:
-        //                routeData.Values["action"] = "Index";
-        //                break;
-        //            case 500:
-        //                routeData.Values["action"] = "Index";
-        //                break;
-        //        }
-        //    }
-        //    IController controller = new ErrorController();
-        //    controller.Execute(new RequestContext(new HttpContextWrapper(context), routeData));
-        //}
-
         public void Application_AuthenticateRequest(object sender, EventArgs e)
         {
             string referer = Request.ServerVariables["HTTP_REFERER"];
@@ -92,7 +44,7 @@ namespace IHSDC.WebApp
             {
                 if ((referer == null && login != "/Account/Login"))
                 {
-                    Response.Redirect("/Account/Login");
+                    Response.Redirect("/Account/Login");  
                 }
             }
         }
