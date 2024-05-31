@@ -50,6 +50,33 @@ namespace IHSDC.WebApp.Controllers
                         carPc.AadharNo = EncryptDecrypt.DecryptionData(data.AadharNo);
                         carPc.PANNo = EncryptDecrypt.DecryptionData(data.PANNo);
 
+                        carPc.Regt_Corps = EncryptDecrypt.DecryptionData(data.Regt_Corps);
+                        carPc.Unit = EncryptDecrypt.DecryptionData(data.Unit);
+                        carPc.CDA_Account_No = EncryptDecrypt.DecryptionData(data.CDA_Account_No);
+
+                        //carPc.Pers_Address_Line1 = EncryptDecrypt.DecryptionData(data.Pers_Address_Line1);
+                        //carPc.Pers_Address_Line2 = EncryptDecrypt.DecryptionData(data.Pers_Address_Line2);
+                        //carPc.Pers_Address_Line3 = EncryptDecrypt.DecryptionData(data.Pers_Address_Line3);
+                        //carPc.Pers_Address_Line4 = EncryptDecrypt.DecryptionData(data.Pers_Address_Line4);
+                        carPc.Pin_Code = EncryptDecrypt.DecryptionData(data.Pin_Code);
+
+                        carPc.Payee_Account_No = EncryptDecrypt.DecryptionData(data.Payee_Account_No);
+
+                        carPc.IFSC_Code = EncryptDecrypt.DecryptionData(data.IFSC_Code);
+                        carPc.Unit_Pin = EncryptDecrypt.DecryptionData(data.Unit_Pin);
+                        carPc.CDA_PAO = EncryptDecrypt.DecryptionData(data.CDA_PAO);
+                        carPc.Army_No = EncryptDecrypt.DecryptionData(data.Army_No);
+                        carPc.Old_Army_No = EncryptDecrypt.DecryptionData(data.Old_Army_No);
+
+                        int rankId = Convert.ToInt32(data.Rank);
+
+                        var ranks = new IHSDC.WebApp.Models.DropDownClass().LoadRanks(); // Retrieve all ranks
+                        var rank = ranks.FirstOrDefault(r => r.Value == Convert.ToString(rankId)); // Find rank by ID
+
+                        var rank1 = rank.Text;
+                        carPc.Rank = rank1;
+
+
                         lst.Add(carPc);
                     }
 
@@ -103,7 +130,7 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult ChangeStatus(String id)
         {
             try
-            { 
+            {
                 //Nitesh 15-02-23
                 int NewId = Convert.ToInt32(EncryptDecrypt.Decryption(id));
 
@@ -142,7 +169,6 @@ namespace IHSDC.WebApp.Controllers
                 return View("Error");
             }
         }
-
         //// GET: Car_PC_Advance_Application/Details/5
         [AllowAnonymous]
         public ActionResult Details(String id)
@@ -210,6 +236,24 @@ namespace IHSDC.WebApp.Controllers
                 car_PC_Advance_Application.Mobile_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Mobile_No);
                 car_PC_Advance_Application.E_Mail_Id = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.E_Mail_Id);
 
+                car_PC_Advance_Application.Regt_Corps = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Regt_Corps);
+                car_PC_Advance_Application.Unit = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Unit);
+                car_PC_Advance_Application.CDA_Account_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.CDA_Account_No);
+
+                car_PC_Advance_Application.Pers_Address_Line1 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line1);
+                car_PC_Advance_Application.Pers_Address_Line2 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line2);
+                car_PC_Advance_Application.Pers_Address_Line3 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line3);
+                car_PC_Advance_Application.Pers_Address_Line4 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line4);
+                car_PC_Advance_Application.Pin_Code = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pin_Code);
+
+                car_PC_Advance_Application.Payee_Account_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Payee_Account_No);
+
+                car_PC_Advance_Application.IFSC_Code = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.IFSC_Code);
+                car_PC_Advance_Application.Unit_Pin = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Unit_Pin);
+                car_PC_Advance_Application.CDA_PAO = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.CDA_PAO);
+
+                car_PC_Advance_Application.Army_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Army_No);
+                car_PC_Advance_Application.Old_Army_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Old_Army_No);
 
                 string a = car_PC_Advance_Application.Status.TrimEnd();
                 return View(car_PC_Advance_Application);
@@ -710,7 +754,8 @@ namespace IHSDC.WebApp.Controllers
         public ActionResult Create()
         {
             try
-            { 
+            {
+                ViewBag.Message = TempData["message"];
                 CarPcModel carPcModel = new CarPcModel();
                 return View(carPcModel);
             }
@@ -768,6 +813,27 @@ namespace IHSDC.WebApp.Controllers
                 car_PC_Advance_Application.Mobile_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Mobile_No);
                 car_PC_Advance_Application.E_Mail_Id = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.E_Mail_Id);
 
+
+
+                car_PC_Advance_Application.Regt_Corps = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Regt_Corps);
+                car_PC_Advance_Application.Unit = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Unit);
+                car_PC_Advance_Application.CDA_Account_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.CDA_Account_No);
+
+                car_PC_Advance_Application.Pers_Address_Line1 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line1);
+                car_PC_Advance_Application.Pers_Address_Line2 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line2);
+                car_PC_Advance_Application.Pers_Address_Line3 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line3);
+                car_PC_Advance_Application.Pers_Address_Line4 = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pers_Address_Line4);
+                car_PC_Advance_Application.Pin_Code = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Pin_Code);
+
+                car_PC_Advance_Application.Payee_Account_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Payee_Account_No);
+
+                car_PC_Advance_Application.IFSC_Code = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.IFSC_Code);
+                car_PC_Advance_Application.Unit_Pin = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Unit_Pin);
+
+                car_PC_Advance_Application.CDA_PAO = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.CDA_PAO);
+
+                car_PC_Advance_Application.Army_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Army_No);
+                car_PC_Advance_Application.Old_Army_No = EncryptDecrypt.DecryptionData(car_PC_Advance_Application.Old_Army_No);
 
                 string a = car_PC_Advance_Application.Status.TrimEnd();
                 return View(car_PC_Advance_Application);
@@ -1027,7 +1093,7 @@ namespace IHSDC.WebApp.Controllers
                     car_PC_Advance_Application.Old_Army_No = collection["Oldprefixnum"] + collection["oldIC"] + collection["oldsufixnum"];
 
 
-                    CarPcModel carPc = con.carPcModel.FirstOrDefault(x => x.Army_No == car_PC_Advance_Application.Army_No && x.ApplicationType == car_PC_Advance_Application.ApplicationType);
+                    //CarPcModel carPc = con.carPcModel.FirstOrDefault(x => x.Army_No == car_PC_Advance_Application.Army_No && x.ApplicationType == car_PC_Advance_Application.ApplicationType);
 
 
                     //if (carPc == null)
@@ -1042,8 +1108,29 @@ namespace IHSDC.WebApp.Controllers
 
                         car_PC_Advance_Application.Mobile_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Mobile_No);
                         car_PC_Advance_Application.E_Mail_Id = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.E_Mail_Id);
-                       
-                        con.carPcModel.Add(car_PC_Advance_Application);
+
+
+                    car_PC_Advance_Application.Regt_Corps = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Regt_Corps);
+                    car_PC_Advance_Application.Unit = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Unit);
+                    car_PC_Advance_Application.CDA_Account_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.CDA_Account_No);
+
+                    car_PC_Advance_Application.Pers_Address_Line1 = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Pers_Address_Line1);
+                    car_PC_Advance_Application.Pers_Address_Line2 = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Pers_Address_Line2);
+                    car_PC_Advance_Application.Pers_Address_Line3 = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Pers_Address_Line3);
+                    car_PC_Advance_Application.Pers_Address_Line4 = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Pers_Address_Line4);
+                    car_PC_Advance_Application.Pin_Code = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Pin_Code);
+
+                    car_PC_Advance_Application.Payee_Account_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Payee_Account_No);
+
+                    car_PC_Advance_Application.IFSC_Code = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.IFSC_Code);
+                    car_PC_Advance_Application.Unit_Pin = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Unit_Pin);
+
+                    car_PC_Advance_Application.CDA_PAO = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.CDA_PAO);
+
+                    car_PC_Advance_Application.Army_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Army_No);
+                    car_PC_Advance_Application.Old_Army_No = EncryptDecrypt.EncryptionData(car_PC_Advance_Application.Old_Army_No);
+
+                    con.carPcModel.Add(car_PC_Advance_Application);
                         con.SaveChanges();
 
                         int id = Convert.ToInt32(car_PC_Advance_Application.Application_Id);
@@ -1060,6 +1147,11 @@ namespace IHSDC.WebApp.Controllers
                     //    return View(car_PC_Advance_Application);
                     //}
                 }
+                //catch (Exception ex)
+                //{
+                //    //Exception.ex;
+                //    return RedirectToAction("Create");
+                //}
                 catch (DbEntityValidationException ex)
                 {
                     foreach (var validationErrors in ex.EntityValidationErrors)
@@ -1069,12 +1161,18 @@ namespace IHSDC.WebApp.Controllers
                             System.Diagnostics.Debug.WriteLine("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
                         }
                     }
-                    throw; // re-throw the exception to let it bubble up and be handled by the global exception handler or catch block higher up in the call stack
+                    // Redirect to the Create page with error message
+                    TempData["message"] = "Something went wrong while processing your request. Please try again.";
+                    ModelState.Clear();
+                    return RedirectToAction("Create"); // re-throw the exception to let it bubble up and be handled by the global exception handler or catch block higher up in the call stack
                 }
             }
             else
             {
-                return View(car_PC_Advance_Application);
+                TempData["message"] = "Something went wrong while processing your request. Please try again. !!";
+                ModelState.Clear();
+                //return View(car_PC_Advance_Application);
+                return RedirectToAction("Create");
             }
        
           
@@ -1264,10 +1362,24 @@ namespace IHSDC.WebApp.Controllers
                 con.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch
+            catch (DbEntityValidationException ex)
             {
-                return View("Error");
+                foreach (var validationErrors in ex.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        System.Diagnostics.Debug.WriteLine("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+                    }
+                }
+                // Redirect to the Create page with error message
+                TempData["message"] = "Something went wrong while processing your request. Please try again.";
+                ModelState.Clear();
+                return RedirectToAction("Create"); // re-throw the exception to let it bubble up and be handled by the global exception handler or catch block higher up in the call stack
             }
+            //catch
+            //{
+            //    return View("Error");
+            //}
         }
 
         protected override void Dispose(bool disposing)

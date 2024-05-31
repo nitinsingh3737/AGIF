@@ -24,6 +24,7 @@ namespace IHSDC.WebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Index1(FormCollection collections)
         {
             try

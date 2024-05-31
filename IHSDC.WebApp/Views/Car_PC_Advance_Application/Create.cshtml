@@ -437,14 +437,17 @@
         content: '<div><p>1.    After filling up the application form, user is requested to take the print out of the same and get it countersigned by his CO/ OC Unit. After the countersign of CO/OC Unit on application form, user is requested to scan the required document along with the application form and upload it.</p><p>2.  You can check the status of your application by clicking the status link and providing your army number</p></div><div><p>1. आवेदन पत्र भरने के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि वह उसी का प्रिंट आउट ले और उसकी CO / OC इकाई द्वारा काउंटरसाइन करें। आवेदन पत्र पर CO / OC यूनिट के काउंटरसाइन के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि आवेदन पत्र के साथ आवश्यक दस्तावेज को स्कैन करके उसे अपलोड करें।</p><p>2.   आप स्टेटस लिंक पर क्लिक करके और अपना आर्मी नंबर प्रदान करके अपने आवेदन की स्थिति की जांच कर सकते हैं</p></div>',
     });
 
+    @*$.alert({
+        title:'  <h3 style="color:red;">@ViewBag.Message</h3>'
+    })*@
 </script>
 
-    @*<script>
+@*<script>
         alert("@TempData["Message"]");
     </script>*@
 
 
-    @*<script>
+@*<script>
     @if (TempData["Message"] != null)
     {
         var message = "@ViewBag.Message";
@@ -477,7 +480,7 @@
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="regForm">
         <div class="tab">
-            <h3 style="color:red;">@ViewBag.Message</h3>
+            @*<h3 style="color:red;">@ViewBag.Message</h3>*@
             <h1>Personal Details</h1>
             <table class="table table-borderless" id="PersonalDetail">
 
@@ -1101,7 +1104,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Total_Cost, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Total_Cost, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
+                                @Html.EditorFor(model => model.Total_Cost, new { htmlAttributes = new { @class = "form-control", @maxlength = "9", @required = "required", @onkeyup = "ValInData(this)", onkeypress = "myFunction()" } })
                                 @Html.ValidationMessageFor(model => model.Total_Cost, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -1221,7 +1224,8 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Pin_Code, htmlAttributes: new { @class = "control-label " })
                             <div>
-                                @Html.EditorFor(model => model.Pin_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataNo(this)", onkeypress = "myFunction()" } })
+                              
+                                @Html.EditorFor(model => model.Pin_Code, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataNo(this)", @maxlength = "6", onkeypress = "myFunction()" } })
                                 @Html.ValidationMessageFor(model => model.Pin_Code, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -1334,7 +1338,7 @@
                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
                 <button type="submit" style="display:none;" id="create" value="Create">Submit</button>
-                <button type="button" id="DataFill" value="DataFill">Demo data fill</button>
+                @*<button type="button" id="DataFill" value="DataFill">Demo data fill</button>*@
             </div>
         </div>
         <!-- Circles which indicates the steps of the form: -->

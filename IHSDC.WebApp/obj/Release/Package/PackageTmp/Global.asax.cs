@@ -11,6 +11,7 @@ using iTextSharp.text.log;
 using System.ComponentModel;
 using System.Globalization;
 using IHSDC.WebApp.Models;
+using System.Web.Helpers;
 
 namespace IHSDC.WebApp
 {
@@ -18,6 +19,7 @@ namespace IHSDC.WebApp
     {
         protected void Application_Start()
         {
+           
             System.Web.Helpers.AntiForgeryConfig.SuppressXFrameOptionsHeader = true;
             ApplicationDatabaseHelper.Initialize();
             AreaRegistration.RegisterAllAreas();

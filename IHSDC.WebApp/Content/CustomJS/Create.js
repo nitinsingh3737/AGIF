@@ -162,7 +162,7 @@
 
     $('#dropdownSelect').change(function () {
         var prefix = $(this).val();
-        alert(prefix);
+        /*alert(prefix);*/
         if (prefix === "JC" || prefix === "OR") {
             // Disable the input field if prefix is "JC" or "OR"
             $('#CDA_Account_No').val("77/788/889999N");

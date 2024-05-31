@@ -839,6 +839,12 @@
     <Content Include="loanCert\LOAN_STATMENT-IC44509M-466OA.PDF" />
     <Content Include="loanCert\LOAN_STATMENT-JC389552Y-497JN.PDF" />
     <Content Include="loanCert\LOAN_STATMENT-OR4201063X-52JR.PDF" />
+    <Content Include="CASC43223234M\ApplicationForm.pdf" />
+    <Content Include="CASC43223234M\CancelledCheque.pdf" />
+    <Content Include="CASC43223234M\DrivingLicense.pdf" />
+    <Content Include="CASC43223234M\ExtentionfileUpload.pdf" />
+    <Content Include="CASC43223234M\MonthlyPaySlip.pdf" />
+    <Content Include="CASC43223234M\Quotation.pdf" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
@@ -1114,12 +1120,10 @@
     <Content Include="Scripts\inputmask.date.extensions.js" />
     <Content Include="Scripts\inputmask.dependencyLib.js" />
     <Content Include="Scripts\inputmask.js" />
-    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.min.js" />
     <Content Include="Scripts\jquery\jquery.slim.js" />
     <Content Include="Scripts\jquery\jquery.slim.min.js" />

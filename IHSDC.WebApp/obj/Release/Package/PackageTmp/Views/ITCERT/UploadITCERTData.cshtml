@@ -9,7 +9,7 @@
             @using (Html.BeginForm("upload", "ITCERT", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
 
-        @Html.AntiForgeryToken()
+        @*@Html.AntiForgeryToken()*@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
         <b style="font-size:20px;">ITCERT Data File</b>

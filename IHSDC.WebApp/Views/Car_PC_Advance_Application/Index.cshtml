@@ -81,7 +81,7 @@
                         <td>
                             @if (item.ApplicationForm != null)
                             {
-                                if (Directory.Exists(System.Web.Hosting.HostingEnvironment.MapPath("~/" + item.ApplicationForm)))
+                                if (Directory.Exists(System.Web.Hosting.HostingEnvironment.MapPath("~/upload/" + item.ApplicationForm)))
                                 {
                             <a title="Download All Document Uploaded By User" href='@Url.Action("Download", "Car_PC_Advance_Application", new { folderName = item.ApplicationForm })'>
                                 <i class="glyphicon glyphicon-save"></i>

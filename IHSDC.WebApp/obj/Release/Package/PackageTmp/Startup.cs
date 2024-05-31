@@ -19,7 +19,7 @@ namespace IHSDC.WebApp
         public void Configuration(IAppBuilder app)
         {
 
-            //*app.Response.Headers.Add("X-Frame-Options", "DENY");
+            //app.Response.Headers.Add("X-Frame-Options", "DENY");
 
             
 

@@ -1,5 +1,24 @@
 ﻿$(document).ready(function () {
 
+    $("#E_Mail_Id").on("keyup", function () {
+        
+        validateEmailField();
+    });
+
+    function validateEmailField() {
+        var email = $("#E_Mail_Id").val();
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var endsWithCom = /\.com$/i.test(email);
+
+        if (emailPattern.test(email) && endsWithCom) {
+            $("#emailError").text("").hide();
+        } else {
+            $("#emailError").text("Email must be valid and end with .com").show();
+        }
+    }
+    
+
+
     Inputmask("99/999/999999A", {
         definitions: {
             'A': {
@@ -143,7 +162,7 @@
 
     $('#dropdownSelect').change(function () {
         var prefix = $(this).val();
-        alert(prefix);
+        /*alert(prefix);*/
         if (prefix === "JC" || prefix === "OR") {
             // Disable the input field if prefix is "JC" or "OR"
             $('#CDA_Account_No').val("77/788/889999N");
@@ -1237,6 +1256,8 @@ function validateForm() {
                 }
             }
         });
+
+        
     }
 
     // If the valid status is true, mark the step as finished and valid:
@@ -1245,6 +1266,7 @@ function validateForm() {
     }
     return valid; // return the valid status
 }
+
 
 
 
@@ -1437,5 +1459,4 @@ jQuery(document).ready(function ($) {
 //    });
 //});
 
-
-
+// Add an event listener to the form submission

@@ -39,14 +39,17 @@
 <div class="container" style="background:white;padding:5%;">
     @using (Html.BeginForm("Index1", "ITCERT", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-	        
-	<div class="form-group">
-            <label>Enter ArmyNo OR FolioNo (In Capital)
-</label>           
+        @*@Html.AntiForgeryToken()*@
+
+        <div class="form-group">
+            <label>
+                Enter ArmyNo OR FolioNo (In Capital)
+            </label>
         </div>
-	<div class="form-group">
-            <label>(E.g. IC/JC/OR12345X OR 123/OHB)
-	</label>            <input type="text" id="FolioNo" name="FolioNo" class="form-control" required />
+        <div class="form-group">
+            <label>
+                (E.g. IC/JC/OR12345X OR 123/OHB)
+            </label>            <input type="text" id="FolioNo" name="FolioNo" class="form-control" required />
         </div>
 
         <div class="form-group">
@@ -57,13 +60,6 @@
             </select>
         </div>
 
-        @*<div class="form-group">
-            <label>Year</label>
-            @Html.DropDownList("fyear", (new IHSDC.WebApp.Models.DropDownClass()).loadYear("HBAFIN"), new { @data_show_subtext = "true", @id = "fin", @class = "select form-control", @data_live_search = "true" })
-
-            @Html.DropDownList("year", (new IHSDC.WebApp.Models.DropDownClass()).loadYear("HBAPRO"), new { @data_show_subtext = "true", @id = "pro", @class = "select form-control", @data_live_search = "true" })
-           
-        </div>*@
 
         <button type="submit" class="btn btn-success">Search</button>
     }

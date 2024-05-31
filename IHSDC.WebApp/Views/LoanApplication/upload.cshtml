@@ -9,7 +9,7 @@
     <p style="color:red;">@ViewBag.Mess1</p>
     @using (Html.BeginForm())
     {
-        @Html.AntiForgeryToken()
+        @*@Html.AntiForgeryToken()*@
         <div class="form-group">
             <label>Enter ArmyNo</label>
             <input type="text" id="armyNo" name="armyNo" class="form-control" required />

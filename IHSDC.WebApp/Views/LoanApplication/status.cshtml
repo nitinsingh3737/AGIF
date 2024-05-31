@@ -8,6 +8,7 @@
     <p style="color:red;">@ViewBag.result</p>
     @using (Html.BeginForm())
     {
+        @*@Html.AntiForgeryToken()*@
         <div class="form-group">
             <label>Enter ArmyNo</label>
             <input type="text" id="armyNo" name="armyNo" class="form-control" required />
@@ -17,7 +18,7 @@
             <select id="ltype" name="ltype" class="form-control">
                 <option value="Car/Pc">Car/Pc</option>
                 @*<option value="Claim" disabled>Claim</option>
-                <option value="HBA" disabled>HBA</option>*@
+                    <option value="HBA" disabled>HBA</option>*@
             </select>
         </div>
         <button type="submit" class="btn btn-success">Search</button>
@@ -30,9 +31,13 @@
             {
                 <p style="color:red;margin-top:2%;">Your Application Status for PCA is. <b style="color:green;">@item.Status</b></p>
             }
-            if(item.ApplicationType=="2" || item.ApplicationType=="4" || item.ApplicationType=="5")
+            if (item.ApplicationType == "2" || item.ApplicationType == "4" || item.ApplicationType == "5")
             {
                 <p style="color:red;margin-top:2%;">Your Application Status for CA is. <b style="color:green;">@item.Status</b></p>
+            }
+            if (item.ApplicationType == "7" )
+            {
+                <p style="color:red;margin-top:2%;">Your Application Status for Two Wheeler is. <b style="color:green;">@item.Status</b></p>
             }
         }
 

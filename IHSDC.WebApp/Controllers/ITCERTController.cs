@@ -51,7 +51,7 @@ namespace IHSDC.WebApp.Controllers
         }
         [Authorize]
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public ActionResult upload(HttpPostedFileBase file)
         {
             try
@@ -109,6 +109,7 @@ namespace IHSDC.WebApp.Controllers
 
 
         [HttpPost]
+        //[ValidateAntiForgeryToken]
         public ActionResult Index1(FormCollection collections)
         {
             try

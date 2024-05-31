@@ -267,7 +267,7 @@
                     </div>
                 }
 
-                @if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
+                @*@if (Model.ApplicationType == "2" || Model.ApplicationType == "4" || Model.ApplicationType == "5")
                 {
                     <div class="col-lg-6">
 
@@ -276,7 +276,7 @@
                         @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'DrivingLicense')", accept = ".pdf", id = "uploadForm" })
                         <span id="DrivingLicense" style="color: red;"></span>
                     </div>
-                }
+                }*@
                 @if (Model.CarLoanType == "8")
                 {
 
@@ -388,18 +388,22 @@
                                 <td class="lable-td w-50" style=" width: 60%;">1. Type of Advance Required</td>
                                 <td class="detail-td w-50">
 
-                                    @if (Model.CarLoanType == "5")
+                                    @if (Model.ApplicationType == "2")
+                                    {<span>Car</span>}
+                                    else if (Model.ApplicationType == "5")
                                     {<span>New Car</span>}
-                                    else if (Model.CarLoanType == null)
-                                    {<span>PCA</span>}
-                                    else if (Model.CarLoanType == "6")
+                                    else if (Model.ApplicationType == null)
+                                    {<span>Car</span>}
+                                    else if (Model.ApplicationType == "6")
                                     {<span>Second Hand Car</span>}
-                                    else if (Model.CarLoanType == "7")
+                                    else if (Model.ApplicationType == "7")
                                     {<span>Two Wheeler</span>}
-                                    else if (Model.CarLoanType == "8")
+                                    else if (Model.ApplicationType == "8")
                                     {<span>Inward Transfer</span>}
                                 </td>
-
+                                @*else if (Model.CarLoanType == "8")
+                                {
+                                <span>Inward Transfer</span>}*@
                             </tr>
                         </tbody>
                     </table>

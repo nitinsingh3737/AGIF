@@ -63,10 +63,10 @@ namespace IHSDC.WebApp.Models
 
         [StringLength(50)]
         [Display(Name = "Present Unit")]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string Unit { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         public string CDA_PAO { get; set; }
 
         [Display(Name = "Date of Birth")]
@@ -221,25 +221,25 @@ namespace IHSDC.WebApp.Models
                       ApplyFormatInEditMode = true)]
         public DateTime? Inst_No5_Date { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line1")]
         public string Pers_Address_Line1 { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line2")]
         public string Pers_Address_Line2 { get; set; } 
 
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line3")]
         public string Pers_Address_Line3 { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Pers Address Line4")]
         public string Pers_Address_Line4 { get; set; }
 
-        [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
-        [StringLength(6, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        //[RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
+        //[StringLength(6, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [Display(Name ="PIN Code")]
         public string Pin_Code { get; set; }
         [StringLength(50)]
@@ -261,10 +261,10 @@ namespace IHSDC.WebApp.Models
         [RegularExpression("([0-9 .&'-]+)", ErrorMessage = "Enter only numbers")]
         public int? Site_Pin { get; set; }
         [StringLength(50)]
-        [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
+        //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "Payee Account No")]
         public string Payee_Account_No { get; set; }
-        [StringLength(11, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 11)]
+        //[StringLength(11, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 11)]
         //[RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
         [Display(Name = "IFSC Code")]
         public string IFSC_Code { get; set; }
@@ -276,7 +276,7 @@ namespace IHSDC.WebApp.Models
         [StringLength(50)]
         //[RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Enter valid email address")]
         [Display(Name = "E-Mail Id")]
-        [EmailAddress]
+        //[EmailAddress]
         public string E_Mail_Id { get; set; }
         [StringLength(50)]
         [RegularExpression("([a-zA-Z0-9 .&'-]+)", ErrorMessage = "Enter only alphabets and numbers")]
