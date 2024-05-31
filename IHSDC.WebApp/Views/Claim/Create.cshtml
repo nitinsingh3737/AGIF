@@ -1,0 +1,724 @@
+﻿@model IHSDC.WebApp.Models.Claim
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+@*<link href="~/Content/jquery-ui.css" rel="stylesheet" />*@
+<script src="~/Content/jqueryui.js"></script>
+<script src="~/Content/jquery-ui.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<script src="~/Scripts/globalize/globalize.js"></script>
+<script src="~/Scripts/globalize/cultures/globalize.culture.en-GB.js"></script>
+<script>
+    $(function () {
+        $(".monthPicker").datepicker({
+            dateFormat: "dd/mm/yy"
+        });
+    });
+</script>
+<script>
+    $.noConflict();
+    $.alert({
+        title: 'Important Note',
+        content: '<div><p>1.    After filling up the application form, user is requested to take the print out of the same and get it countersigned by his CO/ OC Unit. After the countersign of CO/OC Unit on application form, user is requested to scan the required document along with the application form and upload it.</p><p>2.  You can check the status of your application by clicking the status link and providing your army number</p></div><div><p>1. आवेदन पत्र भरने के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि वह उसी का प्रिंट आउट ले और उसकी CO / OC इकाई द्वारा काउंटरसाइन करें। आवेदन पत्र पर CO / OC यूनिट के काउंटरसाइन के बाद, उपयोगकर्ता से अनुरोध किया जाता है कि आवेदन पत्र के साथ आवश्यक दस्तावेज को स्कैन करके उसे अपलोड करें।</p><p>2.   आप स्टेटस लिंक पर क्लिक करके और अपना आर्मी नंबर प्रदान करके अपने आवेदन की स्थिति की जांच कर सकते हैं</p></div>',
+    });
+
+</script>
+<script type="text/javascript">
+    function handleInputChange(element, errorMessageId) {
+        var fileInput = element;
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+        if (!allowedExtensions.exec(filePath)) {
+            // If the uploaded file is not a PDF, display an error message
+            $('#' + errorMessageId).text("Only PDF files are allowed.");
+            fileInput.value = ''; // Clear the file input
+            return false;
+        }
+        // Clear any previous error message if a PDF file is selected
+        $('#' + errorMessageId).text("");
+    }
+</script>
+@using (Html.BeginForm("Create", "Claim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div>
+        <h3 style="text-align:center">
+            <strong><u>Personal Details</u></strong>
+        </h3>
+        <br />
+        <table class="table table-borderless">
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Army_No, htmlAttributes: new { @class = "control-label" })
+                        <div style="display: flex;">
+                            <div id="dropdown" class="dropdown-content">
+                                <select id="dropdownSelect" name="prefixnum" class="form-control" onchange="calallser(event);">
+                                    <option value="0">--Prefix Select--</option>
+                                    <option value="IC">IC</option>
+                                    <option value="SS">SS</option>
+                                    <option value="WS">WS</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SL">SL</option>
+                                    <option value="MR">MR</option>
+                                    <option value="MS">MS</option>
+                                    <option value="DR">DR</option>
+                                    <option value="DS">DS</option>
+                                    <option value="NR">NR</option>
+                                    <option value="NS">NS</option>
+                                    <option value="TC">TC</option>
+                                    <option value="JC">JC</option>
+                                    <option value="OR">OR</option>
+                                </select>
+                            </div>
+                            <input maxlength="8" onchange="SetSuffixLetter(this)" onkeypress="return isNumber(event)" size="7" style="border-radius:5px;height:35px;" placeholder="Number" class="col-lg-6 ic" name="IC" type="tel" />
+                            <input maxlength="1" size="1" readonly=true style="border-radius:5px;height:35px;" placeholder="Suffix" class="col-lg-3" name="sufixnum" id="SuffixLetter" type="text" />
+
+                        </div>
+                    </div>
+                </td>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Rank, htmlAttributes: new { @class = "control-label " })
+
+                        <div>
+                            @Html.DropDownListFor(model => model.Rank, (new IHSDC.WebApp.Models.DropDownClass()).LoadRanks(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataLetter(this)" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+
+                        @Html.LabelFor(model => model.Regt_Corps, htmlAttributes: new { @class = "control-label " })
+                        <div>
+
+                            @Html.DropDownListFor(model => model.Regt_Corps, (new IHSDC.WebApp.Models.DropDownClass()).LoadUnits(), "--Select--", new { @data_show_subtext = "true", required = "required", @class = "select form-control", @data_live_search = "true" })
+                            @Html.ValidationMessageFor(model => model.Regt_Corps, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Unit, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Unit, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Unit, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>Enrollment/Commision Date</label>
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Enrollment_Date" name="Enrollment_Date" class="form-control monthPicker" onchange="handler(event);" required="required" />
+                            @Html.ValidationMessageFor(model => model.Enrollment_Date, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Date_Of_Birth, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Date_Of_Birth" name="Date_Of_Birth" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.Date_Of_Birth, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Year_Of_Service, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Year_Of_Service, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Year_Of_Service, "", new { @class = "text-danger" })
+                            <span id="Year_Of_ServiceError" style="color: red;"></span>
+                        </div>
+                    </div>
+                    <label id="mess" name="mess" style="color:red;"></label>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Email_Id, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Email_Id, new { htmlAttributes = new { @class = "form-control", @required = "required" } })   @*, @onkeyup = "ValInData1(this)"*@
+                            @Html.ValidationMessageFor(model => model.Email_Id, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>Aadhar No</label>
+                        <div>
+                            @Html.EditorFor(model => model.Adhar_No, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataNo(this)", @maxlength = "12" } })
+                            @Html.ValidationMessageFor(model => model.Adhar_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <lable><b>PAN No</b></lable>
+                        <div>
+                            @Html.EditorFor(model => model.Pan_No, new { htmlAttributes = new { @class = "form-control", @required = "required", @maxlength = "10", data_inputmask = "'alias': 'AAAAA9999A', 'placeholder': 'AAAAA9999A'" } })
+                            @Html.ValidationMessageFor(model => model.Pan_No, "", new { @class = "text-danger", minlength = "10", maxlength = "10", size = "10" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Mobile_No, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Mobile_No, new { htmlAttributes = new { @class = "form-control", type = "number", @required = "required", @onkeyup = "ValInData(this)", @maxlength = "10", onkeypress = "myFunction()" } })
+                            @Html.ValidationMessageFor(model => model.Mobile_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Purpose_of_withdrawal, htmlAttributes: new { @class = "control-label" })
+
+                        <div>
+                            @Html.DropDownListFor(model => model.Purpose_of_withdrawal, new List<SelectListItem>
+                       {
+                          new SelectListItem{ Text="--Select--", Value = "0" },
+                          new SelectListItem{ Text="Edn of ward", Value = "Edn of ward" },
+                          new SelectListItem{ Text="Marriage of ward", Value = "Marriage of ward" },
+                          new SelectListItem{ Text="Renovation", Value = "Renovation" },
+                          new SelectListItem{ Text="Repair of House", Value = "Repair of House" },
+
+
+                       }, new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                    <span><strong><u>Note:</u>(All fields above are mendatory)</strong></span>
+                </td>
+
+
+
+            </tr>
+        </table>
+
+
+        <hr />
+        <h3 style="text-align:center">
+            <strong><u>Details of Existing AGIF Loans</u></strong>
+        </h3>
+        <br />
+
+        <table class="table table-borderless">
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>House Building Advance Loan</label>
+                        <div>
+                            @Html.DropDownListFor(model => model.House_Building_Advance_Loan, new List<SelectListItem>
+                            {
+                               new SelectListItem{ Text="--Select--", Value = "0" },
+                               new SelectListItem{ Text="YES", Value = "YES" },
+                               new SelectListItem{ Text="NO", Value = "NO" },
+                            }, new { @class = "form-control Extension", id = "House_Building_Advance_Loan", onchange = "handleExtensionChange(event);" })
+
+                        </div>
+
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.House_Building_Date_of_Loan_taken, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="House_Building_Date_of_Loan_taken" name="House_Building_Date_of_Loan_taken" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.House_Building_Date_of_Loan_taken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.House_Building_Duration_of_Loan, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.House_Building_Duration_of_Loan, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.House_Building_Duration_of_Loan, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.House_Building_Amount_Taken, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.House_Building_Amount_Taken, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.House_Building_Amount_Taken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+
+            </tr>
+            <tr>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>Conveyance Advance Loan</label>
+                        <div>
+                            @Html.DropDownListFor(model => model.Conveyance_Advance_Loan, new List<SelectListItem>
+                            {
+                               new SelectListItem{ Text="--Select--", Value = "0" },
+                               new SelectListItem{ Text="YES", Value = "YES" },
+                               new SelectListItem{ Text="NO", Value = "NO" },
+                            }, new { @class = "form-control Extension", id = "Conveyance_Advance_Loan", onchange = "handleExtensionChange(event);" })
+
+                        </div>
+
+                    </div>
+                </td>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Conveyance_Date_of_Loan_taken, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Conveyance_Date_of_Loan_taken" name="Conveyance_Date_of_Loan_taken" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.Conveyance_Date_of_Loan_taken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Conveyance_Duration_of_Loan, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Conveyance_Duration_of_Loan, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Conveyance_Duration_of_Loan, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Conveyance_Amount_Taken, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Conveyance_Amount_Taken, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Conveyance_Amount_Taken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>Computer Advance Loan</label>
+                        <div>
+                            @Html.DropDownListFor(model => model.Computer_Advance_Loan, new List<SelectListItem>
+                            {
+                               new SelectListItem{ Text="--Select--", Value = "0" },
+                               new SelectListItem{ Text="YES", Value = "YES" },
+                               new SelectListItem{ Text="NO", Value = "NO" },
+                            }, new { @class = "form-control Extension", id = "Computer_Advance_Loan", onchange = "handleExtensionChange(event);" })
+
+                        </div>
+
+                    </div>
+                </td>
+
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Computer_Date_of_Loan_taken, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Computer_Date_of_Loan_taken" name="Computer_Date_of_Loan_taken" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.Computer_Date_of_Loan_taken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Computer_Duration_of_Loan, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Computer_Duration_of_Loan, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Computer_Duration_of_Loan, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Computer_Amount_Taken, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Computer_Amount_Taken, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Computer_Amount_Taken, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h3 style="text-align:center">
+            <strong><u>(STRIKE OUT THE WHICH EVER IS NOT APPLICABLE)</u></strong>
+        </h3>
+        <table class="table table-borderless">
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>Amount of withdrawal required (Withdrawal will be limited to actual expenditure or 90% of Maturity Benefit Whichever is less)</label>
+
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <div>
+                            @Html.EditorFor(model => model.Amount_of_withdrawal, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.Amount_of_withdrawal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+        <h3 style="text-align:center">
+            <strong><u>Particulars of Children(For Education/Marriage of Wards only)</u></strong>
+        </h3>
+        <table class="table table-borderless">
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name_of_Child, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Name_of_Child, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInDataLetter(this)" } })
+                            @Html.ValidationMessageFor(model => model.Name_of_Child, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.date_of_Birth_Child, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="date_of_Birth_Child" name="date_of_Birth_Child" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.date_of_Birth_Child, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DO_Part_II_No, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.DO_Part_II_No, new { htmlAttributes = new { @class = "form-control", @required = "required", @onkeyup = "ValInData(this)" } })
+                            @Html.ValidationMessageFor(model => model.DO_Part_II_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DO_Part_II_Date, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="DO_Part_II_Date" name="DO_Part_II_Date" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.DO_Part_II_Date, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <h3 style="text-align:center">
+            <strong><u>For Education only(Applicable for children studying in 12th Class and above)</u></strong>
+        </h3>
+        <table class="table table-borderless">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Presently_studying, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Presently_studying, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Presently_studying, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Course, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Course, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Course, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.College_Name, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.College_Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.College_Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Total_Expenditure_Amount, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Total_Expenditure_Amount, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Total_Expenditure_Amount, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <div class="form-group">
+
+
+                        @Html.LabelFor(model => model.Attach_Expenditure_doc, htmlAttributes: new { @class = "control-label " })
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'DrivingLicense')", accept = ".pdf", id = "uploadForm" })
+                        <span id="DrivingLicense" style="color: red;"></span>
+                    </div>
+                </td>
+
+                @*<td>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Total_Expenditure_Amount, htmlAttributes: new { @class = "control-label " })
+                            <div>
+                                @Html.EditorFor(model => model.Total_Expenditure_Amount, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Total_Expenditure_Amount, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </td>*@
+            </tr>
+        </table>
+
+        <h3 style="text-align:center">
+            <strong><u>For Marriage Purpose Only</u></strong>
+        </h3>
+        <table class="table table-borderless">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Age, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Date_of_Mairrage, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Date_of_Mairrage, new { htmlAttributes = new { @class = "form-control monthPicker" } })
+                            @Html.ValidationMessageFor(model => model.Date_of_Mairrage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+
+        <h3 style="text-align:center">
+            <strong><u>For Renovation/Repair of House only(Applicable only in last two years of service).</u></strong>
+        </h3>
+        <table class="table table-borderless">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name_of_Property_holder, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Name_of_Property_holder, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name_of_Property_holder, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Estimated_Cost_of_Expenditure, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Estimated_Cost_of_Expenditure, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Estimated_Cost_of_Expenditure, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Date_of_Retirement, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Date_of_Retirement" name="Date_of_Retirement" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.Date_of_Retirement, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        <label>No of withdrawal</label>
+                        <div>
+                            @Html.DropDownListFor(model => model.No_of_withdrawal, new List<SelectListItem>
+                            {
+                               new SelectListItem{ Text="--Select--", Value = "0" },
+                               new SelectListItem{ Text="First", Value = "First" },
+                               new SelectListItem{ Text="Second", Value = "Second" },
+                            }, new { @class = "form-control Extension", id = "No_of_withdrawal", onchange = "handleExtensionChange(event);" })
+
+                        </div>
+
+                    </div>
+                    <span><strong><u>Note:</u>(Maximum two withdrawals permitted in entire service)</strong></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Reason_for_first_withdrawal, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Reason_for_first_withdrawal, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Reason_for_first_withdrawal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Amount_Paid, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Amount_Paid, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Amount_Paid, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td style="border-top:none;">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Date_of_withdrawal, htmlAttributes: new { @class = "control-label ", type = "date" })
+                        <div>
+                            <input type="text" placeholder="dd/mm/yyyy" id="Date_of_withdrawal" name="Date_of_withdrawal" class="form-control monthPicker" required="required" />
+                            @Html.ValidationMessageFor(model => model.Date_of_withdrawal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <h3 style="text-align:center">
+            <strong><u>Bank Details</u></strong>
+        </h3>
+        <br />
+        <table class="table table-borderless">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Account_No, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Account_No, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Account_No, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label>
+                            IFSC Code
+                        </label>
+                        <div>
+                            @Html.EditorFor(model => model.IFSC_Code, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.IFSC_Code, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Branch_Name, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Branch_Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Branch_Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <label>Name of the Bank</label>
+                        <div>
+                            @Html.EditorFor(model => model.Name_of_Bank, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name_of_Bank, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Contact_No_of_Bank, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Contact_No_of_Bank, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Contact_No_of_Bank, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Bank_Address, htmlAttributes: new { @class = "control-label " })
+                        <div>
+                            @Html.EditorFor(model => model.Bank_Address, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Bank_Address, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="submit" id="create" class="btn btn-success" value="Create">Submit</button>
+            <button type="button" id="DataFill" value="DataFill">Demo data fill</button>
+        </div>
+    </div>
+    <br />
+    <br />
+}
+
+
+<script src="~/Content/DeveloperJs/Claim.js"></script>
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function (event) {
+        var fileInput = document.getElementById('fileInput');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+            alert('Please upload a PDF file.');
+            event.preventDefault();
+        }
+    });
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

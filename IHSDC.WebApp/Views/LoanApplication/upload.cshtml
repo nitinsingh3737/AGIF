@@ -22,8 +22,30 @@
             </select>
         </div>
         <div id="result"></div>
+<<<<<<< HEAD
 
         <button type="submit" class="btn btn-success">Search</button>
 
+=======
+        <input type="hidden" id="action" name="action" value="" />
+        <button type="button" id="btnUpload" class="btn btn-success" onclick="setAction('upload')">Upload</button>
+        <button type="button" id="btnDownload" class="btn btn-success" onclick="setAction('download')">Download</button>
+        <button type="button" id="btnStatus" class="btn btn-success" onclick="setAction('status')">Status</button>
+>>>>>>> cc0fd982df66e8895ac39474586d345b2433c359
     }
 </div>
+
+<script>
+    function setAction(action) {
+        document.getElementById('action').value = action;
+        document.forms[0].submit();
+    }
+</script>
+<script>
+    $('#btnUpload').click(function () {
+        alert("hii");
+    });
+</script>
+
+
+@*<script src="~/Content/CustomJS/LoanApplication.js"></script>*@

@@ -782,7 +782,11 @@ namespace IHSDC.WebApp.Controllers
                 ViewBag.Message = TempData["message"];
                 ViewBag.ApplicationId = TempData["ApplicationId"];
 
-                int NewId = Convert.ToInt32(EncryptDecrypt.Decryption(id));
+
+                int NewId = 48;
+
+                //int NewId = Convert.ToInt32(EncryptDecrypt.Decryption(id));
+                //int NewId = Convert.ToInt32(id);
 
               
                 //int newid = convert.toint32(encryptdecrypt.decryption(id));
@@ -1086,6 +1090,14 @@ namespace IHSDC.WebApp.Controllers
                         collection["oldprefixnum"] = "";
                     }
 
+<<<<<<< HEAD
+=======
+                   
+                   
+                    car_PC_Advance_Application.Army_No = collection["prefixnum"] + collection["IC"] + collection["sufixnum"];
+
+                    car_PC_Advance_Application.Old_Army_No = collection["prefixnum"] + collection["oldIC"] + collection["oldsufixnum"];
+>>>>>>> cc0fd982df66e8895ac39474586d345b2433c359
 
 
                     car_PC_Advance_Application.Army_No = collection["prefixnum"] + collection["IC"] + collection["sufixnum"];
@@ -1401,7 +1413,12 @@ namespace IHSDC.WebApp.Controllers
         
             return Json(data, JsonRequestBehavior.AllowGet);
         }
+<<<<<<< HEAD
        
+=======
+
+        
+>>>>>>> cc0fd982df66e8895ac39474586d345b2433c359
         [HttpGet]
         public ActionResult CheckArmyNo(string frequency)
         {

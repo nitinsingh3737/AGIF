@@ -1,0 +1,642 @@
+﻿@model IHSDC.WebApp.Models.Claim
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+
+<link href="~/Content/Print.css" type="text/css" rel="stylesheet" media="all" />
+<style>
+
+    lable {
+        font-size: larger;
+    }
+
+    #container {
+        background: white;
+    }
+
+    .table {
+        margin-bottom: 0px;
+    }
+
+    .jconfirm .jconfirm-box-container.jconfirm-no-transition {
+        width: fit-content;
+    }
+
+    .col-sm-6 {
+        margin-left: 0%;
+    }
+
+    .jconfirm-title-c {
+        text-align: center
+    }
+
+
+    .watermark {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 60px;
+        color: rgb(128, 128, 128,1);
+        /* Adjust the color and opacity of the watermark */
+        pointer-events: none; /* Make sure the watermark doesn't interfere with mouse events */
+        z-index: 9999; /* Make sure the watermark is on top of everything */
+    }
+</style>
+
+<script src="~/Scripts/search/1.js"></script>
+<script src="~/Scripts/search/2.js"></script>
+<link href="~/Scripts/search/3.css" rel="stylesheet" />
+<script src="~/Scripts/search/4.js"></script>
+<script src="~/Scripts/jquery/jquery.min.js"></script>
+<link href="~/Content/sweetalert.css" rel="stylesheet" />
+<script src="~/Scripts/sweetalert.min.js"></script>
+@{
+    ViewBag.Title = "Unit Info";
+
+    var message = TempData["Message"] ?? string.Empty;
+    var messageStatus = TempData["messageStatus"] ?? string.Empty;
+    var messagemidStatus = TempData["messagemidStatus"] ?? string.Empty;
+}
+
+
+<script type="text/javascript">
+    function handleInputChange(element, errorMessageId) {
+        var fileInput = element;
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i; // Regular expression to match only PDF files
+
+        if (!allowedExtensions.exec(filePath)) {
+            // If the uploaded file is not a PDF, display an error message
+            $('#' + errorMessageId).text("Only PDF files are allowed.");
+            fileInput.value = ''; // Clear the file input
+            return false;
+        }
+        // Clear any previous error message if a PDF file is selected
+        $('#' + errorMessageId).text("");
+    }
+</script>
+
+
+<script>
+    function printData() {
+        // Get the values of ip and time from ViewBag
+        var ip = '@ViewBag.IpAddress';
+        var time = '@ViewBag.time';
+
+        // Add watermark with ip and time values
+        var watermark = document.createElement('div');
+        watermark.classList.add('watermark');
+        watermark.textContent = `${ip} ${time}`;
+        document.body.appendChild(watermark);
+
+        // Apply CSS styling to the watermark
+        watermark.style.color = 'gray'; // Gray color
+        watermark.style.fontFamily = 'Arial, sans-serif'; // Font resembling watermark
+
+        // Hide elements
+        document.getElementById("p").style.display = "none";
+        document.getElementById("header").style.display = "none";
+
+        // Print
+        window.print();
+
+        // Show elements
+        document.getElementById("p").style.display = "block";
+        document.getElementById("header").style.display = "block";
+
+        // Remove watermark after printing
+        watermark.remove();
+    }
+</script>
+
+
+<script>
+    function printData2() {
+        //var divToPrint = document.getElementById("printTable");
+        //newWin = window.open("");
+        //newWin.document.body.innerHTML=(divToPrint.outerHTML);
+
+        //newWin.print();
+        //newWin.close();
+        // document.getElementById("top").style.display = "none";
+        document.getElementById("p").style.display = "none";
+        document.getElementById("header").style.display = "none";
+        //document.getElementById("footer").style.display = "none";
+        window.print();
+        // document.getElementById("top").style.display = "block";
+        document.getElementById("p").style.display = "block";
+        document.getElementById("header").style.display = "block";
+        document.getElementById("footer").style.display = "block";
+
+    }
+    //$('button').on('click', function () {
+    //    printData();
+    //})
+
+    $("#btn").click(function () {
+        //Hide all other elements other than printarea.
+        $("#printarea").show();
+        window.print();
+    });
+</script>
+<script>
+    $.noConflict();
+    jQuery(document).ready(function ($) {
+
+        var bar = $('.progress-bar');
+        var percent = $('.percent');
+        var status = $('#status');
+
+        $('#Myform1').ajaxForm({
+            beforeSend: function () {
+                status.empty();
+                var percentVal = '0%';
+                bar.width(percentVal);
+                percent.html(percentVal);
+                document.getElementById("prbar").style.display = "block";
+                //$('#prbar').attr.style.display = "block";
+            },
+            uploadProgress: function (event, position, total, percentComplete) {
+                var percentVal = percentComplete + '%';
+                bar.width(percentVal);
+                percent.html(percentVal);
+            },
+            complete: function (xhr) {
+                status.html("Documents Uploaded.");
+
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+  var message = '@message';
+    var messageStatus = '@messageStatus';
+    var messagemidStatus = '@messagemidStatus ';
+    if (message)
+            sweetAlert(message, messagemidStatus, messageStatus);
+
+
+</script>
+
+<span>@TempData["info"]</span>
+@if (ViewBag.action == "upload")
+{
+
+    <div class="container" id="top" style="background:white;padding:5%;">
+        <div class="alert alert-info" role="alert">
+            Files to be uploaded in PDF format only. File size should be maximum 3MB.
+        </div>
+        @using (Html.BeginForm("UploadApplicationForm", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data", id = "Myform" }))
+        {
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="row">
+                    <div class="col-lg-12">
+                        <lable>Application Form</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", name = "testing", onchange = "handleInputChange(this,'Application')", accept = ".pdf", id = "uploadForm" })
+                        <span id="Application" style="color: red;"></span>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-6">
+                        <lable>Quotation</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'Quotation')", accept = ".pdf", id = "uploadForm" })
+                        @Html.HiddenFor(model => model.Army_No)
+                        @Html.HiddenFor(model => model.Application_Id)
+                        <span id="Quotation" style="color: red;"></span>
+                    </div>
+                
+
+                <div class="col-lg-6">
+                    <lable>Monthly Pay Slip</lable>
+                    @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'MonthlySlip')", accept = ".pdf", id = "uploadForm" })
+                    <span id="MonthlySlip" style="color: red;"></span>
+                </div>
+              
+            </div>
+            <div class="row">
+               
+                    <div class="col-lg-6">
+                        <lable>Cancelled Cheque</lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'CancelledCheque')", accept = ".pdf", id = "uploadForm" })
+                        <span id="CancelledCheque" style="color: red;"></span>
+
+                    </div>
+                
+
+                    <div class="col-lg-6">
+
+
+                        <lable>Statement of A/C or BAL AMT Pending </lable>
+                        @Html.TextBox("file", "", new { type = "file", required = "required", @class = "form-control", onchange = "handleInputChange(this,'AMTPending')", accept = ".pdf", id = "uploadForm" })
+                        <span id="AMTPending" style="color: red;"></span>
+
+                    </div>
+
+            </div>
+
+            <div class="row" style="margin-top:2%;">
+                <div class="col-lg-6"><button type="submit" class="btn btn-success" id="Upload" value="Upload" disabled>Upload</button></div>
+
+            </div>
+            <script>
+                $(document).ready(function () {
+                    // Function to check if all required fields are filled
+                    function checkRequiredFields() {
+                        var allFilled = true;
+                        $('input[required]').each(function () {
+                            if (!$(this).val()) {
+                                allFilled = false;
+                                return false; // Exit the loop early if any required field is empty
+                            }
+                        });
+                        return allFilled;
+                    }
+
+                    // Enable/disable upload button based on required fields
+                    $('input[required]').on('input', function () {
+                        var uploadButton = $('#Upload');
+                        if (checkRequiredFields()) {
+                            uploadButton.prop('disabled', false);
+                        } else {
+                            uploadButton.prop('disabled', true);
+                        }
+                    });
+                });
+            </script>
+        }
+        <div id="prbar" style="display:none;margin-top:2%;">
+            <div class="progress" style="width:100%">
+                <div class="progress-bar"></div>
+
+            </div>
+            <div class="percent">0%</div>
+            <div id="status"></div>
+        </div>
+    </div>
+}
+@if (@ViewBag.action == "download")
+{
+    <div class="container" id="PrintD" style="background:white;margin-top:3%;">
+
+        <input type="button" value="PRINT" name="print" id="p" onclick="printData()" />
+        <div id="printTable" style="height:95%;width:95%;">
+            <h5 style="text-align:center">
+                <strong>
+                    <u>
+                        APPLICATION FOR WITHDRAWAL UPTO 90 PERCENT OF  MATURITY BENEFIT ON COMPLETION OF 15 YRS
+                        OF SERVICE FOR EDUCATION /MARRIAGE OF CHILDREN OR RENOVATION /REPAIR OF HOUSE IN THE LAST TWO
+                        YEARS OF SERVICE
+                    </u>
+                </strong>
+            </h5>
+            <h6 style="text-align:center">
+                @*Application Form:@if (Model.CarLoanType == "5")
+            {<span>New Car</span>}
+            else if (Model.CarLoanType == null)
+            {<span>PCA</span>}
+            else if (Model.CarLoanType == "6")
+            {<span>Old Car</span>}
+            else if (Model.CarLoanType == "7")
+            {<span>Two Wheeler</span>}
+            else if (Model.CarLoanType == "8")
+            {<span>Inward Transfer</span>}*@
+                <strong><u>PART -1</u></strong>
+            </h6>
+            <br />
+            @*<div class="heading">
+            <h2>Personal Detail</h2>
+        </div>*@
+
+            <table class="w-100">
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-50" style=" width: 60%;">1. Type of Advance Required</td>
+                                    <td class="detail-td w-50">
+                                        <span>Claim </span>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Application_Id)</td> @*FrequencyOfLoan*@
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="" style="width: 0%;">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-50">2. ArmyNo</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Army_No)</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+
+                    @*<td class="w-70">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td" style="width: 75%;">
+                                    Old SS/JC/Army No(In case of Offr/JCO)
+                                </td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Rank)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>*@
+
+
+                </tr>
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-50">3. Rank</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Rank)</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="w-37">
+                        <table class="table">
+
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-37">
+                                        Regt_Corps
+                                    </td>
+                                    <td class="detail-td w-50" style="width: 27%;">
+                                        @Html.DisplayFor(model => model.Regt_Corps)
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td " style="width: 59%;">
+                                        4. Name   (In block capital letters)
+                                    </td>
+                                    <td class="detail-td ">@Html.DisplayFor(model => model.Name) </td>
+
+                                </tr>
+                                <tr>
+                                    <td class="lable-td w-50">6. Unit</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Unit)</td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-50">5. Regt/Corps</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Regt_Corps)</td>
+                                </tr>
+
+
+                                @*<tr>
+                                <td class="lable-td w-50">7.Fmn HQ</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.)</td>
+                            </tr>*@
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    @*<td class="w-37">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="lable-td w-50">8.c/o 56/99 APO,PIN</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Unit_Address)</td>
+                            </tr>
+                            <tr>
+                                <td class="lable-td w-50" style="width: 70%;">
+                                    10. Type of Commission (For Offrs Only)
+                                </td>
+                                <td class="detail-td w-50"> </td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </td>*@
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-50">9.Date Of Birth</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Date_Of_Birth)</td>
+                                </tr>
+                                <tr>
+                                    <td class="lable-td w-50" style="
+    width: 63%;
+">
+                                        11. Date of Commission/Enrolment
+                                    </td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Enrollment_Date)</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="lable-td w-50">12. Mobile No</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Mobile_No)</td>
+                                </tr>
+                                <tr>
+                                    <td class="lable-td w-50">14. E-Mail</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Email_Id)</td>
+                                </tr>
+
+
+
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="w-70">
+                        <table class="table">
+                            <tbody>
+                                @*<tr>
+                                <td class="lable-td " style="width: 63%;">
+                                    13. Date of Promotion(Sub Maj)
+                                </td>
+                                <td class="detail-td">
+                                    @Html.DisplayFor(model => model.Promotion_Date)
+                                </td>
+                            </tr>*@
+                                <tr>
+                                    <td class="lable-td w-50">15. Adhar Card No</td>
+                                    <td class="detail-td w-50">@Html.DisplayFor(model => model.Adhar_No)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td class="w-37">
+                        <table class="table">
+                            <tr>
+                                <td class="lable-td w-50">16. PAN Card No</td>
+                                <td class="detail-td w-50">@Html.DisplayFor(model => model.Pan_No)</td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+
+                
+            </table>
+
+            <div class="heading">
+                <h2> <u>23. Certificate</u></h2>
+            </div>
+            <table class="w-100">
+            </table>
+            <div class="container" style="width:95%">
+                
+                    <br />
+                    <br />
+                    <p style="text-align:justify;">
+                        (a) Certified that the particulars given above are correct
+                    </p>
+                    <p style="text-align:justify;">
+                        (b) I understand that , if I withdraw money from maturity amount , it will reduce my ultimate
+                        saving amount receivable at the time of retirement/release/discharge.<strong>
+                            I am aware  that Rate of Interest of AGIF is more than DSOP/AFPP Fund.
+                        </strong>
+                    </p>
+                    <p style="text-align:justify;">
+                        (c)	Following documents are attached with the application (<strong>Strike out whichever is not applicable</strong>):-
+
+                    </p>
+                    <p style="text-align:justify;">
+                        (i)   Attested copy of Birth Pt II Order of child(In case of edn/marriage of child).
+                        (ii)  Attested copy of Fee details of child (For Edn of Child).
+                        (iii) Cancelled cheque/First page of pass book for NEFT.
+                        (iv)  Latest Pay Slip.
+                        (v)   Marriage invitation Card(In case of marriage of child).
+                        (vi)  Estimate of cost of expdr(For renovation of House in the last two years of service).
+                        (vii) If the withdrawal is for the second time , gap after first withdrawal should be more than six months.
+
+                    </p>
+                  
+                    <p style="margin-top:5%;">
+                        Unit: <span style="float:right;margin-right:5%;">
+                            (Signature of the applicant)
+                            No:
+                        </span>
+                    </p>
+                    <p style="margin-top:5%;">
+                        Date: <span style="float:right;margin-right:5%;">Rank:</span>
+                    </p>
+                    <p style="margin-top:5%;">
+                        <span style="float:right;margin-right:5%;">Name:</span>
+                    </p>
+                    <p>
+                        <strong></strong>
+                    </p>
+                    <br />
+                    <br />
+                    <p style="text-align:center">
+                        <strong>COUNTERSIGNED</strong>
+
+                    </p>
+                    <p style="text-align:center">
+                        (Application to be countersigned by the CO unit/OC Tps not below rank of Col)
+                    </p>
+                    <br />
+                    <br />
+                    <p style="text-align:justify;">
+                        "It is certified that Army No, Rank , Name and Date of Enrolment has been verified from the Field Service(FS) Docu of individual
+                        and found correct. The purpose of withdrawal is genuine and recommended."
+                    </p>
+                    <br />
+                    <br />
+                    <br />
+                    <p style="margin-top:5%;">
+                        Station: <span style="float:right;margin-right:5%;">
+                            (Signature of the applicant)
+                            Rank:
+                        </span>
+                    </p>
+                    <p style="margin-top:5%;">
+                        Date:   <span style="float:right;margin-right:5%;">Name:</span>
+                    </p>
+                    <p style="margin-top:5%;">
+                        <span style="float:right;margin-right:5%;">Designation:</span>
+                    </p>
+                  
+
+
+
+                </div>
+
+                <br />
+
+            </div>
+    </div>
+}
+
+
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function (event) {
+        var fileInput = document.getElementById('fileInput');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+            alert('Please upload a PDF file.');
+            event.preventDefault();
+        }
+    });
+</script>
+

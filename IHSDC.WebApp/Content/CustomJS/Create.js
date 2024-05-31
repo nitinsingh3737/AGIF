@@ -74,7 +74,11 @@
         $('#Date_Of_Birth').val("01/04/2000");
         $('#Enrollment_Date').val("01/04/2018");
         $('#Extension_of_Service_in_Present_Rank').val("YES");
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cc0fd982df66e8895ac39474586d345b2433c359
 
         $('#ExtentionfileUpload').val("abc.pdf");
         $('#Promotion_Date').val("01/04/2024");
@@ -1425,7 +1429,48 @@ jQuery(document).ready(function ($) {
 
 //08-05-24
 
+<<<<<<< HEAD
 //$("#FrequencyOfLoan").change(function () {
+=======
+$("#FrequencyOfLoan").change(function () {
+
+    // Get the selected value of #FrequencyOfLoan
+    var selectedValue = $(this).val();
+    var armyNo = $('#dropdownSelect').val() + $('.ic').val() + $('#SuffixLetter').val();
+    // Make the AJAX call with the selected value as a parameter
+    $.ajax({
+        url: "/Car_PC_Advance_Application/CheckArmyNo",
+        type: "GET",
+        dataType: "json",
+        data: { frequency: armyNo }, // Pass the parameter here
+        //success: function (data) {
+        //    $("#dataContainer").html(data);
+        //},
+        success: function (data) {
+            if (data.length >= 1) {
+                // Show SweetAlert message
+                Swal.fire({
+                    title: 'Warning!',
+                    text: 'You have already applied for a loan in this category.',
+                    icon: 'warning',
+                    confirmButtonText: 'OK'
+                }).then(function () {
+                    // Redirect or do whatever action you want here to restrict page movement
+                    // For example, redirect to a specific page
+                    window.location.href = "/Car_PC_Advance_Application/Create"; // Replace with your desired URL
+                });
+            } else {
+                // Proceed with normal operations
+                // Initialize the DataTable or any other action you want to perform
+                $('#dataTable').DataTable();
+            }
+        },
+        error: function () {
+            alert('Error occurred while fetching data.');
+        }
+    });
+});
+>>>>>>> cc0fd982df66e8895ac39474586d345b2433c359
 
 
 //    var selectedValue = $(this).val();

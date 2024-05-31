@@ -77,7 +77,7 @@ namespace IHSDC.WebApp.Models
         }
 
 
-        [Display(Name = "Enrollment_Date")]
+        [Display(Name = "Enrollment Date")]
         public string Enrollment_Date { get; set; }
 
         [Display(Name = "Promotion Date")]
