@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layoutagi.cshtml";
 }
 @*<link href="~/Style/tabs.css" rel="stylesheet" />*@
-<script src="~/Scripts/dataTables1/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/dataTables1/jquery/jquery.min.js"></script>
 <link href="~/Content/dataTables1/dataTables/demo_table_jui.css" rel="stylesheet" />
 <script>
     $(document).ready(function () {
@@ -31,7 +31,7 @@
         @Html.ActionLink("Export To CSV", "ExportToCsv")
         @using (Html.BeginForm("ExportToCsvDateWise", "Car_PC_Advance_Application", FormMethod.Post, new { enctype = "multipart/form-data" }))
         {
-            <input type="date" id="date" name="date" />
+            <input type="date" id="date" name="date" required/>
             <button type="submit" value="Download">ExportToCsvDateWise</button>
         }
         <table id="table" class="table table-striped table-bordered" style="width:100%">
@@ -81,7 +81,7 @@
                         <td>
                             @if (item.ApplicationForm != null)
                             {
-                                if (Directory.Exists(System.Web.Hosting.HostingEnvironment.MapPath("~/" + item.ApplicationForm)))
+                                if (Directory.Exists(System.Web.Hosting.HostingEnvironment.MapPath("~/upload/" + item.ApplicationForm)))
                                 {
                             <a title="Download All Document Uploaded By User" href='@Url.Action("Download", "Car_PC_Advance_Application", new { folderName = item.ApplicationForm })'>
                                 <i class="glyphicon glyphicon-save"></i>

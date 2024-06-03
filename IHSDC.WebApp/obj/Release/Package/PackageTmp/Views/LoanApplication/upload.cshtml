@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "HandleAction";
+    Layout = "~/Views/Shared/_Layoutagi.cshtml";
+}
+
+<div class="container" style="background:white;padding:5%;">
+    <p style="color:red;">@ViewBag.result</p>
+    <p style="color:red;">@ViewBag.Mess1</p>
+    @using (Html.BeginForm())
+    {
+        @*@Html.AntiForgeryToken()*@
+        <div class="form-group">
+            <label>Enter ArmyNo</label>
+            <input type="text" id="armyNo" name="armyNo" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label>Select Application Type</label>
+            <select id="ltype" name="ltype" class="form-control">
+                <option value="Car">Car</option>
+                <option value="Car/Pc">Car/Pc</option>
+            </select>
+        </div>
+        <div id="result"></div>
+
+        <button type="submit" class="btn btn-success">Search</button>
+
+    }
+</div>

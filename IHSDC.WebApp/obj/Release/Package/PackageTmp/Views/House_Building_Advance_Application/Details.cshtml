@@ -1,0 +1,1032 @@
+﻿@model IHSDC.WebApp.Models.House_Building_Advance_Application
+
+@{
+    ViewBag.Title = "detai";
+    Layout = "~/Views/Shared/_Layoutagiff.cshtml";
+}
+
+<link href="~/Style/car_pc_d.css" rel="stylesheet" />
+<style>
+    .printTable {
+        display: block;
+        
+        width: 700px;
+        border:1px;
+    }
+</style>
+<script>
+
+    function printData() {
+        var divToPrint = document.getElementById("printTable");
+        newWin = window.open("");
+        newWin.document.write(divToPrint.outerHTML);
+        newWin.print();
+        newWin.close();
+    }
+
+    $('button').on('click', function () {
+        printData();
+    })
+</script>
+
+<div class="di" >
+    <h2><u>Details Of HBA Received</u></h2>
+    <input type="button" value="PRINT" name="print" onclick="printData()" />
+
+                    <table id="printTable" >
+                        <tr>
+                            <td colspan="2">
+                                <table class="ta">
+                                    <colgroup>
+                                        <col width="100" style="text-align:left;" />
+                                        <col width="150" style="text-align:left;" />
+                                        <col width="100" style="text-align:left;" />
+                                        <col width="150" style="text-align:left;" />
+                                        <col width="100" style="text-align:left;" />
+                                        <col width="150" style="text-align:left;" />
+
+                                    </colgroup>
+
+                                    <tr>
+                                        <td colspan="8" style="font-size:16px;font-weight:bold">Personal Details</td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            <dl>
+                                                <dt>
+                                                    @Html.DisplayNameFor(model => model.Loanee_Name)
+                                                </dt>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.Loanee_Name)
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dt>
+                                                    @Html.DisplayNameFor(model => model.Army_No)
+                                                </dt>
+                                            </dl>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Army_No)
+                                            </dd>
+                                        </td>
+
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.Old_Army_No)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Old_Army_No)
+                                            </dd>
+                                        </td>
+                                        </dl>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.Rank)
+                                            </dt>
+                                        </td>
+                                        <td>
+                                            <dl>
+                                                <dd>
+                                                    @Html.DisplayFor(model => model.Rank)
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <dl>
+                                            <td>
+                                            <dt>
+                                                @Html.DisplayNameFor(model => model.Regt_Corps)
+                                            </dt>
+                            </td>
+                            <td>
+                                <dl>
+                                    <dd>
+                                        @Html.DisplayFor(model => model.Regt_Corps)
+                                    </dd>
+                            </td>
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Unit)
+                                </dt>
+                            </td>
+
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Unit)
+                                </dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.CDA_PAO)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.CDA_PAO)
+                                </dd>
+                            </td>
+
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Date_Of_Birth)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Date_Of_Birth)
+                                </dd>
+                            </td></dl>
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Enrollment_Date)
+                                </dt>
+                            </td>
+
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Enrollment_Date)
+                                </dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Promotion_Date)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Promotion_Date)
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Retirement_Date)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Retirement_Date)
+                                </dd>
+                            </td>
+
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Year_Of_Service)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Year_Of_Service)
+                                </dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Residual_Service)
+                                </dt>
+                            </td>
+                            <td>
+                                <dd>
+                                    @Html.DisplayFor(model => model.Residual_Service)
+                                </dd>
+                            </td>
+                            
+
+                        </tr>
+                    </table><br />
+    <table>
+        <colgroup>
+            <col width="200" />
+            <col width="200" />
+            <col width="200" />
+            <col width="200" />
+        </colgroup>
+
+
+        <tr>
+            <td colspan="2" style="font-size:16px;font-weight:bold">Salary Details</td>
+            <td colspan="2" style="font-size:16px;font-weight:bold">Loan Details</td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Salary_Slip_Month_Year)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Salary_Slip_Month_Year)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Purpose_For_Loan_Applied)
+                    </dt>
+            </td>
+            <td><dl>
+                <dd>
+                    @Html.DisplayFor(model => model.Purpose_For_Loan_Applied)
+                </dd>
+
+                </dl>
+                </td>
+        </tr>
+
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.CDA_Account_No)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.CDA_Account_No)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Board_Type)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.Board_Type)
+                    </dd>
+
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Basic_Salary)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Basic_Salary)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Society_City)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.Society_City)
+                    </dd>
+
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rank_Grade_Pay)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Rank_Grade_Pay)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Authority)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.Authority)
+                    </dd>
+
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DSOP_AFPP)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.DSOP_AFPP)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Total_Cost)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.Total_Cost)
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MSP)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.MSP)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Amount_Applied)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Amount_Applied)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.AGIF)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.AGIF)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.No_Of_EMI_Applied)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.No_Of_EMI_Applied)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.NPA_X_Pay)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.NPA_X_Pay)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI1_Amount)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.EMI1_Amount)
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Income_Tax_Monthly)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Income_Tax_Monthly)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI1_Date)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.EMI1_Date)
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tech_Pay)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Tech_Pay)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI2_Amount)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI2_Amount)
+                </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Rev_IT)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Rev_IT)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI2_Date)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI2_Date)
+                </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.TPTL_Pay)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.TPTL_Pay)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI3_Amount)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI3_Amount)
+                </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.PLI)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.PLI)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI3_Date)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI3_Date)
+                </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.DA)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.DA)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI4_Amount)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.EMI4_Amount)
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MISC)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.MISC)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI4_Date)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI4_Date)
+                </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.MISC_Pay)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.MISC_Pay)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI5_Amount)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI5_Amount)
+                </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Total)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Total)
+                </dd>
+            </td>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EMI5_Date)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.EMI5_Date)
+                    </dd>
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Salary_After_Deduction)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Salary_After_Deduction)
+                </dd>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td colspan="4" style="font-size:16px;font-weight:bold">Address Details</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size:16px;font-weight:bold">Permenant Address</td>
+            <td colspan="2" style="font-size:16px;font-weight:bold">Site Address</td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pers_Address_Line1)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Pers_Address_Line1)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Site_Address_Line1)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Site_Address_Line1)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pers_Address_Line2)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Pers_Address_Line2)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Site_Address_Line2)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Site_Address_Line2)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pers_Address_Line3)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Pers_Address_Line3)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Site_Address_Line3)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Site_Address_Line3)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pers_Address_Line4)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Pers_Address_Line4)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Site_Address_Line4)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Site_Address_Line4)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pin_Code)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Pin_Code)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Site_City)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Site_City)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Site_Pin)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Site_Pin)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="font-size:16px;font-weight:bold">Accounts Details</td>
+
+            <td colspan="2" style="font-size:16px;font-weight:bold">Previous Loan Details</td>
+
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Payee_Account_No)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Payee_Account_No)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Previous_Loan_Source)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Previous_Loan_Source)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.IFSC_Code)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.IFSC_Code)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Previous_Loan_Purpose)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Previous_Loan_Purpose)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Mobile_No)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Mobile_No)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Amount)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.E_Mail_Id)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.E_Mail_Id)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.EMI)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.EMI)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Payable_At_Bank_Name)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.Payable_At_Bank_Name)
+                    </dd>
+                </dl>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Previous_Loan_Is_Paid)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Previous_Loan_Is_Paid)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Payable_In_Favour)
+                    </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Payable_In_Favour)
+                </dd>
+                </dl>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Remark)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Remark)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Dispatch_Address_Type)
+                    </dt>
+                    </td><td>
+                    <dd>
+                        @Html.DisplayFor(model => model.Dispatch_Address_Type)
+                    </dd>
+                </dl>
+            </td>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpdatedBy)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.UpdatedBy)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Payable_To)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Payable_To)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Dispatch_Address_Line1)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Dispatch_Address_Line1)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Dispatch_Address_Line2)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Dispatch_Address_Line2)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Dispatch_Address_Line3)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Dispatch_Address_Line3)
+                </dd>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Dispatch_Address_Line4)
+                </dt>
+            </td>
+            <td>
+                <dd>
+                    @Html.DisplayFor(model => model.Dispatch_Address_Line4)
+                </dd>
+            </td>
+        </tr>
+    </table>
+
+    </td>
+    </tr>
+    </table>
+
+
+
+
+    <div>
+        <p>
+            @Html.ActionLink("Change Approval Status", "Details", new { id = Model.Application_Id }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>
+
+
+
+
