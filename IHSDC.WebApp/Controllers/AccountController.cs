@@ -741,6 +741,17 @@ namespace IHSDC.WebApp.Controllers
                 }
                 db.SaveChanges();
                 Session.Abandon();
+                 Session.Clear();
+
+ //if (Request.Cookies["ASP.NET_SessionId"] != null)
+ //{
+ //    var cookie = new HttpCookie("ASP.NET_SessionId");
+ //    cookie.Expires = DateTime.Now.AddDays(-1); // Set the expiration date to the past to remove it
+ //    Response.Cookies.Add(cookie);
+ //}
+ //HttpContext.Session.Clear();
+ ////Session.SessionID
+ //string newSessionId = Session.SessionID;
             }
             return RedirectToAction("Index", "Home");
         }
